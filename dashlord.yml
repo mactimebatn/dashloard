@@ -1,6 +1,6 @@
-title: DashLord test
+title: DashLord Test
 description: Bonnes pratiques techniques
-entity: Minefi
+entity: Ministère de l'économie, des finances et de la relance
 footer: Powered by SocialGouv
 marianne: true
 tools:
@@ -14,11 +14,11 @@ tools:
   lighthouse: true
   thirdparties: true
   nuclei: true
-  updownio: false
+  updownio: true
   dependabot: false
-  codescan: true
+  codescan: false
   stats: false
   declaration-a11y: true
 urls:
- - url: https://www.economie.gouv.fr
+  - url: https://www.economie.gouv.fr
     title : portail economie.gouv
