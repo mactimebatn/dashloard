@@ -1,10 +1,10 @@
-title: DashLord example
+title: DashLord test
 description: Bonnes pratiques techniques
-entity: Ministères sociaux
+entity: Minefi
 footer: Powered by SocialGouv
-marianne: false
+marianne: true
 tools:
-  404: true
+  404: false
   screenshot: true
   nmap: true
   zap: true
@@ -20,9 +20,5 @@ tools:
   stats: false
   declaration-a11y: true
 urls:
-  - url: https://www.fabrique.social.gouv.fr
-    repositories:
-      - socialgouv/www
-    docker:
-      - ghcr.io/socialgouv/fabrique/frontend
-  - url: https://beta.gouv.fr
+ - url: https://www.economie.gouv.fr
+    title : portail economie.gouv
