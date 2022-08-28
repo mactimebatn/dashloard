@@ -1,6 +1,6 @@
 {
 	"@version": "2.11.1",
-	"@generated": "Mon, 22 Aug 2022 13:07:51",
+	"@generated": "Sun, 28 Aug 2022 04:41:30",
 	"site":[ 
 		{
 			"@name": "https://www.economie.gouv.fr",
@@ -549,15 +549,22 @@
 							"param": "",
 							"attack": "",
 							"evidence": ""
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/tracfin",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
 						}
 					],
-					"count": "3",
+					"count": "4",
 					"solution": "<p>Ensure that no sensitive information is leaked via redirect responses. Redirect responses should have almost no content.</p>",
 					"otherinfo": "<p>Location header URI length: 40 [https://www.economie.gouv.fr/filter/tips].</p><p>Predicted response size: 340.</p><p>Response Body Length: 406.</p>",
 					"reference": "",
 					"cweid": "201",
 					"wascid": "13",
-					"sourceid": "314"
+					"sourceid": "309"
 				},
 				{
 					"pluginid": "10017",
@@ -656,32 +663,6 @@
 					"sourceid": "1"
 				},
 				{
-					"pluginid": "10110",
-					"alertRef": "10110",
-					"alert": "Dangerous JS Functions",
-					"name": "Dangerous JS Functions",
-					"riskcode": "1",
-					"confidence": "1",
-					"riskdesc": "Low (Low)",
-					"desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>",
-					"instances":[ 
-						{
-							"uri": "https://www.economie.gouv.fr/core/assets/vendor/jquery/jquery.min.js?v=3.6.0",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "Eval"
-						}
-					],
-					"count": "1",
-					"solution": "<p>See the references for security advice on the use of these functions.</p>",
-					"otherinfo": "",
-					"reference": "<p>https://angular.io/guide/security</p>",
-					"cweid": "749",
-					"wascid": "-1",
-					"sourceid": "2737"
-				},
-				{
 					"pluginid": "10063",
 					"alertRef": "10063",
 					"alert": "Permissions Policy Header Not Set",
@@ -693,41 +674,6 @@
 					"instances":[ 
 						{
 							"uri": "https://www.economie.gouv.fr/core/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/assets/vendor/jquery-once/jquery.once.min.js?v=2.2.3",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/assets/vendor/jquery/jquery.min.js?v=3.6.0",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/assets/vendor/once/once.min.js?v=1.0.1",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/misc/polyfills/element.matches.js?v=9.3.21",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/misc/polyfills/object.assign.js?v=9.3.21",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -748,7 +694,7 @@
 							"evidence": ""
 						}
 					],
-					"count": "8",
+					"count": "3",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</p><p>https://developers.google.com/web/updates/2018/06/feature-policy</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
@@ -874,86 +820,86 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "1660917751"
+							"evidence": "147358472"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "355571367"
+							"evidence": "1661523528"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "780110118"
+							"evidence": "26610155"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/core/*.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "921568194"
+							"evidence": "708870205"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/core/*.css$",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "698909658"
+							"evidence": "375718594"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/core/*.gif",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "921469285"
+							"evidence": "665388047"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/core/*.jpg",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "698909661"
+							"evidence": "709034087"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/core/*.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "716146037"
+							"evidence": "375718596"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/core/*.js$",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "921469283"
+							"evidence": "708870207"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/robots.txt",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "752092271"
+							"evidence": "213713869"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/sitemap.xml",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "874023630"
+							"evidence": "410518527"
 						}
 					],
 					"count": "11",
 					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
-					"otherinfo": "<p>1660917751, which evaluates to: 2022-08-19 14:02:31</p>",
+					"otherinfo": "<p>147358472, which evaluates to: 1974-09-02 12:54:32</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "1"
+					"sourceid": "50"
 				},
 				{
 					"pluginid": "10094",
@@ -1284,14 +1230,14 @@
 							"method": "GET",
 							"param": "Cache-Control",
 							"attack": "",
-							"evidence": "max-age=600, public"
+							"evidence": "max-age=1200"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/",
 							"method": "GET",
 							"param": "Cache-Control",
 							"attack": "",
-							"evidence": "max-age=1200"
+							"evidence": "max-age=600, public"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/entreprises",
@@ -1322,7 +1268,7 @@
 							"evidence": "max-age=1200"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/ministres/jean-noel-barrot",
+							"uri": "https://www.economie.gouv.fr/ministres/roland-lescure",
 							"method": "GET",
 							"param": "Cache-Control",
 							"attack": "",
@@ -1380,7 +1326,7 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "max-age=600"
+							"evidence": "max-age=1200"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/core/*.css",

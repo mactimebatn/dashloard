@@ -6,7 +6,7 @@
     },
     {
       "type": "unknown",
-      "url": "https://tracker.quadran.eu/qwa/appyuser.txt?owa_timestamp=1661173729&owa_page_url=https%3A%2F%2Fwww.economie.gouv.fr%2F&owa_page_title=Accueil+%7C+economie.gouv.fr&owa_event_type=base.page_request&owa_HTTP_REFERER=&owa_cv1=isfl%3D1&owa_cv2=ttl%3D1748&owa_cv3=ttd%3D1414&owa_cv6=con%3D179&owa_cv7=req%3D153&owa_cv8=res%3D6&owa_cv9=pro%3D1410&owa_is_new_visitor=true&owa_visitor_id=877884339&owa_fsts=1661173729&owa_dsfs=0&owa_last_req=&owa_session_id=1822866111&owa_is_new_session=true&owa_nps=1&owa_dsps=0&owa_medium=direct&owa_source=%28none%29&owa_search_terms=%28none%29&owa_session_referer=%28none%29&owa_network_type=undefined&owa_network_effectiveType=4g&owa_network_downlink=9.1&owa_site_id=9ea10e2f87c7a0f246c4ec2e3f2e57ab&"
+      "url": "https://tracker.quadran.eu/qwa/appyuser.txt?owa_timestamp=1661661751&owa_page_url=https%3A%2F%2Fwww.economie.gouv.fr%2F&owa_page_title=Accueil+%7C+economie.gouv.fr&owa_event_type=base.page_request&owa_HTTP_REFERER=&owa_cv1=isfl%3D1&owa_cv2=ttl%3D1960&owa_cv3=ttd%3D1641&owa_cv6=con%3D171&owa_cv7=req%3D146&owa_cv8=res%3D8&owa_cv9=pro%3D1635&owa_is_new_visitor=true&owa_visitor_id=-536077789&owa_fsts=1661661751&owa_dsfs=0&owa_last_req=&owa_session_id=1134127811&owa_is_new_session=true&owa_nps=1&owa_dsps=0&owa_medium=direct&owa_source=%28none%29&owa_search_terms=%28none%29&owa_session_referer=%28none%29&owa_network_type=undefined&owa_network_effectiveType=4g&owa_network_downlink=9.5&owa_site_id=9ea10e2f87c7a0f246c4ec2e3f2e57ab&"
     },
     {
       "type": "unknown",
@@ -18,7 +18,7 @@
     },
     {
       "type": "xiti",
-      "url": "https://logs4.xiti.com/hit.xiti?s=483556&idclient=b82bc59c-9b22-4ae1-91d1-1800c240c74c&ts=1661173729419&page_url=https://www.economie.gouv.fr/&vtag=5.29.3&ptag=js&r=800x600x24x24&re=800x600&hl=13x8x49&lng=en-US&idp=1308498256802&jv=0&p=accueil&s2=1&vrn=1&ref=",
+      "url": "https://logs4.xiti.com/hit.xiti?s=483556&idclient=41ddb555-fb86-4a69-b73c-21be730c8156&ts=1661661752358&page_url=https://www.economie.gouv.fr/&vtag=5.29.3&ptag=js&r=800x600x24x24&re=800x600&hl=4x42x32&lng=en-US&idp=0442327328617&jv=0&p=accueil&s2=1&vrn=1&ref=",
       "details": {
         "id": "xiti",
         "message": "Use hosted Matomo instance"
@@ -76,13 +76,13 @@
     "cache-control": "max-age=600, public",
     "content-encoding": "br",
     "content-language": "fr",
-    "content-length": "15551",
+    "content-length": "15524",
     "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src 'self' data: https:; frame-ancestors 'self' bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;",
     "content-type": "text/html; charset=UTF-8",
-    "date": "Mon, 22 Aug 2022 13:02:57 GMT",
-    "etag": "W/\"1661173265\"",
-    "expires": "Mon, 22 Aug 2022 13:12:57 GMT",
-    "last-modified": "Mon, 22 Aug 2022 13:01:05 GMT",
+    "date": "Sun, 28 Aug 2022 03:55:45 GMT",
+    "etag": "\"1661655823\"",
+    "expires": "Sun, 28 Aug 2022 04:05:45 GMT",
+    "last-modified": "Sun, 28 Aug 2022 03:03:43 GMT",
     "link": "<https://www.economie.gouv.fr/>; rel=\"canonical\", <https://www.economie.gouv.fr/>; rel=\"shortlink\"",
     "permissions-policy": "interest-cohort=()",
     "referrer-policy": "same-origin",
@@ -93,11 +93,12 @@
     "x-cdn-pop": "bhs",
     "x-cdn-pop-ip": "137.74.122.0/26",
     "x-content-type-options": "nosniff",
-    "x-drupal-cache": "MISS",
+    "x-drupal-cache": "HIT",
     "x-drupal-dynamic-cache": "UNCACHEABLE",
     "x-frame-options": "SAMEORIGIN",
+    "x-grace": "full",
     "x-proxy-cache": "HIT",
-    "x-request-id": "898894185",
+    "x-request-id": "125895020",
     "x-ua-compatible": "IE=edge",
     "x-xss-protection": "1;mode=block"
   },
@@ -216,7 +217,7 @@
     },
     {
       "hostname": "tag.aticdn.net",
-      "ip": "108.138.167.96",
+      "ip": "108.156.211.87",
       "geoip": {
         "continent": {
           "code": "NA",
@@ -270,7 +271,7 @@
     },
     {
       "hostname": "try.abtasty.com",
-      "ip": "13.226.204.63",
+      "ip": "108.156.224.86",
       "geoip": {
         "continent": {
           "code": "NA",
@@ -324,7 +325,7 @@
     },
     {
       "hostname": "logs4.xiti.com",
-      "ip": "108.156.217.62",
+      "ip": "13.226.33.20",
       "geoip": {
         "continent": {
           "code": "NA",
@@ -548,7 +549,7 @@
     },
     {
       "hostname": "widgets-images.abtasty.com",
-      "ip": "108.156.211.44",
+      "ip": "65.8.228.2",
       "geoip": {
         "continent": {
           "code": "NA",
