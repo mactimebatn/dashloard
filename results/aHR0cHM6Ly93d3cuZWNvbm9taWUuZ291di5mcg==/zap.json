@@ -1,6 +1,6 @@
 {
 	"@version": "2.11.1",
-	"@generated": "Sun, 11 Sep 2022 04:57:41",
+	"@generated": "Sun, 18 Sep 2022 04:56:00",
 	"site":[ 
 		{
 			"@name": "https://www.economie.gouv.fr",
@@ -534,82 +534,110 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "1662653297"
+							"evidence": "1663084136"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr",
+							"uri": "https://www.economie.gouv.fr/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "225969424"
+							"evidence": "1663084136"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr",
+							"uri": "https://www.economie.gouv.fr/apie",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "604931086"
+							"evidence": "1650646116"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.css",
+							"uri": "https://www.economie.gouv.fr/entreprises",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "1064637376"
+							"evidence": "1661259016"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.css$",
+							"uri": "https://www.economie.gouv.fr/ministeres",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "823068505"
+							"evidence": "1361015049"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.gif",
+							"uri": "https://www.economie.gouv.fr/ministeres",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "823068511"
+							"evidence": "1584432812"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.jpg",
+							"uri": "https://www.economie.gouv.fr/ministeres",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "1064637380"
+							"evidence": "1651073105"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.js",
+							"uri": "https://www.economie.gouv.fr/ministeres",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "823068509"
+							"evidence": "1663318300"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.js$",
+							"uri": "https://www.economie.gouv.fr/ministeres",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "1064637378"
+							"evidence": "1833994344"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/robots.txt",
+							"uri": "https://www.economie.gouv.fr/ministres/bruno-le-maire",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "831489666"
+							"evidence": "1659598066"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/sitemap.xml",
+							"uri": "https://www.economie.gouv.fr/ministres/gabriel-attal",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "823068503"
+							"evidence": "1657889696"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/ministres/jean-noel-barrot",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1659941776"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/ministres/olivia-gregoire",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1659941564"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/ministres/roland-lescure",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1659942397"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/particuliers",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1663163837"
 						}
 					],
-					"count": "11",
+					"count": "15",
 					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
-					"otherinfo": "<p>1662653297, which evaluates to: 2022-09-08 16:08:17</p>",
+					"otherinfo": "<p>1663084136, which evaluates to: 2022-09-13 15:48:56</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
@@ -743,8 +771,8 @@
 					"alert": "Re-examine Cache-control Directives",
 					"name": "Re-examine Cache-control Directives",
 					"riskcode": "0",
-					"confidence": "2",
-					"riskdesc": "Informational (Medium)",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
 					"desc": "<p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</p>",
 					"instances":[ 
 						{
@@ -752,14 +780,14 @@
 							"method": "GET",
 							"param": "Cache-Control",
 							"attack": "",
-							"evidence": "max-age=1200"
+							"evidence": "max-age=600, public"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/",
 							"method": "GET",
 							"param": "Cache-Control",
 							"attack": "",
-							"evidence": "max-age=1200"
+							"evidence": "max-age=600, public"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/entreprises",
@@ -790,7 +818,7 @@
 							"evidence": "max-age=1200"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/ministres/roland-lescure",
+							"uri": "https://www.economie.gouv.fr/ministres/jean-noel-barrot",
 							"method": "GET",
 							"param": "Cache-Control",
 							"attack": "",
@@ -828,7 +856,7 @@
 					"count": "11",
 					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
 					"otherinfo": "",
-					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p>",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
 					"cweid": "525",
 					"wascid": "13",
 					"sourceid": "1"
