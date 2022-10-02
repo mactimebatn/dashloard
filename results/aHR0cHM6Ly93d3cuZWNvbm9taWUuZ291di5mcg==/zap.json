@@ -1,6 +1,6 @@
 {
 	"@version": "2.11.1",
-	"@generated": "Sun, 25 Sep 2022 04:53:15",
+	"@generated": "Sun, 2 Oct 2022 02:44:56",
 	"site":[ 
 		{
 			"@name": "https://www.economie.gouv.fr",
@@ -26,70 +26,70 @@
 							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/comment/reply/",
+							"uri": "https://www.economie.gouv.fr/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.css$",
+							"uri": "https://www.economie.gouv.fr/agence-participations-etat",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.js$",
+							"uri": "https://www.economie.gouv.fr/entreprises",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.svg",
+							"uri": "https://www.economie.gouv.fr/ministeres",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/filter/tips",
+							"uri": "https://www.economie.gouv.fr/ministres/bruno-le-maire",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/node/add/",
+							"uri": "https://www.economie.gouv.fr/ministres/gabriel-attal",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.css$",
+							"uri": "https://www.economie.gouv.fr/ministres/jean-noel-barrot",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.js$",
+							"uri": "https://www.economie.gouv.fr/ministres/olivia-gregoire",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.svg",
+							"uri": "https://www.economie.gouv.fr/ministres/roland-lescure",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/search/",
+							"uri": "https://www.economie.gouv.fr/particuliers",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -122,14 +122,14 @@
 							"evidence": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src 'self' data: https:; frame-ancestors 'self' bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/filter/tips",
+							"uri": "https://www.economie.gouv.fr/",
 							"method": "GET",
 							"param": "Content-Security-Policy",
 							"attack": "",
 							"evidence": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src 'self' data: https:; frame-ancestors 'self' bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/index.php/filter/tips",
+							"uri": "https://www.economie.gouv.fr/particuliers",
 							"method": "GET",
 							"param": "Content-Security-Policy",
 							"attack": "",
@@ -162,14 +162,14 @@
 							"evidence": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src 'self' data: https:; frame-ancestors 'self' bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/filter/tips",
+							"uri": "https://www.economie.gouv.fr/",
 							"method": "GET",
 							"param": "Content-Security-Policy",
 							"attack": "",
 							"evidence": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src 'self' data: https:; frame-ancestors 'self' bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/index.php/filter/tips",
+							"uri": "https://www.economie.gouv.fr/particuliers",
 							"method": "GET",
 							"param": "Content-Security-Policy",
 							"attack": "",
@@ -202,14 +202,14 @@
 							"evidence": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src 'self' data: https:; frame-ancestors 'self' bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/filter/tips",
+							"uri": "https://www.economie.gouv.fr/",
 							"method": "GET",
 							"param": "Content-Security-Policy",
 							"attack": "",
 							"evidence": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src 'self' data: https:; frame-ancestors 'self' bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/index.php/filter/tips",
+							"uri": "https://www.economie.gouv.fr/particuliers",
 							"method": "GET",
 							"param": "Content-Security-Policy",
 							"attack": "",
@@ -249,27 +249,6 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.gif",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.jpeg",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.jpg",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
 							"uri": "https://www.economie.gouv.fr/core/*.js",
 							"method": "GET",
 							"param": "",
@@ -282,50 +261,15 @@
 							"param": "",
 							"attack": "",
 							"evidence": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.png",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.svg",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.css",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.css$",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
 						}
 					],
-					"count": "12",
+					"count": "4",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header, to achieve optimal browser support: \"Content-Security-Policy\" for Chrome 25+, Firefox 23+ and Safari 7+, \"X-Content-Security-Policy\" for Firefox 4.0+ and Internet Explorer 10+, and \"X-WebKit-CSP\" for Chrome 14+ and Safari 6+.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "258"
+					"sourceid": "2805"
 				},
 				{
 					"pluginid": "10098",
@@ -345,21 +289,56 @@
 							"evidence": "Access-Control-Allow-Origin: *"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/admin/",
+							"uri": "https://www.economie.gouv.fr/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "Access-Control-Allow-Origin: *"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/filter/tips",
+							"uri": "https://www.economie.gouv.fr/entreprises",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "Access-Control-Allow-Origin: *"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/index.php/admin/",
+							"uri": "https://www.economie.gouv.fr/ministeres",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/ministres/bruno-le-maire",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/ministres/gabriel-attal",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/ministres/jean-noel-barrot",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/ministres/roland-lescure",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/particuliers",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -374,41 +353,6 @@
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/sitemap.xml",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "Access-Control-Allow-Origin: *"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/user/login",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "Access-Control-Allow-Origin: *"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/user/logout",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "Access-Control-Allow-Origin: *"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/user/password",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "Access-Control-Allow-Origin: *"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/user/register",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "Access-Control-Allow-Origin: *"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/web.config",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -441,77 +385,84 @@
 							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/comment/reply/",
+							"uri": "https://www.economie.gouv.fr/",
 							"method": "GET",
 							"param": "https://tracker.quadran.eu/qa-combined.js",
 							"attack": "",
 							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.css$",
+							"uri": "https://www.economie.gouv.fr/entreprises",
 							"method": "GET",
 							"param": "https://tracker.quadran.eu/qa-combined.js",
 							"attack": "",
 							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.js$",
+							"uri": "https://www.economie.gouv.fr/ministres/bruno-le-maire",
+							"method": "GET",
+							"param": "https://platform.twitter.com/widgets.js",
+							"attack": "",
+							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/ministres/bruno-le-maire",
 							"method": "GET",
 							"param": "https://tracker.quadran.eu/qa-combined.js",
 							"attack": "",
 							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.svg",
+							"uri": "https://www.economie.gouv.fr/ministres/gabriel-attal",
+							"method": "GET",
+							"param": "https://platform.twitter.com/widgets.js",
+							"attack": "",
+							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/ministres/gabriel-attal",
 							"method": "GET",
 							"param": "https://tracker.quadran.eu/qa-combined.js",
 							"attack": "",
 							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/filter/tips",
+							"uri": "https://www.economie.gouv.fr/ministres/jean-noel-barrot",
+							"method": "GET",
+							"param": "https://platform.twitter.com/widgets.js",
+							"attack": "",
+							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/ministres/jean-noel-barrot",
 							"method": "GET",
 							"param": "https://tracker.quadran.eu/qa-combined.js",
 							"attack": "",
 							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/node/add/",
+							"uri": "https://www.economie.gouv.fr/ministres/roland-lescure",
+							"method": "GET",
+							"param": "https://platform.twitter.com/widgets.js",
+							"attack": "",
+							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/ministres/roland-lescure",
 							"method": "GET",
 							"param": "https://tracker.quadran.eu/qa-combined.js",
 							"attack": "",
 							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.css$",
-							"method": "GET",
-							"param": "https://tracker.quadran.eu/qa-combined.js",
-							"attack": "",
-							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.js$",
-							"method": "GET",
-							"param": "https://tracker.quadran.eu/qa-combined.js",
-							"attack": "",
-							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.svg",
-							"method": "GET",
-							"param": "https://tracker.quadran.eu/qa-combined.js",
-							"attack": "",
-							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/search/",
+							"uri": "https://www.economie.gouv.fr/particuliers",
 							"method": "GET",
 							"param": "https://tracker.quadran.eu/qa-combined.js",
 							"attack": "",
 							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
 						}
 					],
-					"count": "11",
+					"count": "12",
 					"solution": "<p>Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application.</p>",
 					"otherinfo": "",
 					"reference": "",
@@ -534,14 +485,14 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "1663949316"
+							"evidence": "1664529951"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "1663949316"
+							"evidence": "1664529951"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/entreprises",
@@ -607,18 +558,11 @@
 							"evidence": "1659941776"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/ministres/olivia-gregoire",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "1659941564"
-						},
-						{
 							"uri": "https://www.economie.gouv.fr/ministres/roland-lescure",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "1659942397"
+							"evidence": "1664273149"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/particuliers",
@@ -628,39 +572,13 @@
 							"evidence": "1663923502"
 						}
 					],
-					"count": "14",
+					"count": "13",
 					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
-					"otherinfo": "<p>1663949316, which evaluates to: 2022-09-23 16:08:36</p>",
+					"otherinfo": "<p>1664529951, which evaluates to: 2022-09-30 09:25:51</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
 					"sourceid": "1"
-				},
-				{
-					"pluginid": "10019",
-					"alertRef": "10019",
-					"alert": "Content-Type Header Missing",
-					"name": "Content-Type Header Missing",
-					"riskcode": "0",
-					"confidence": "2",
-					"riskdesc": "Informational (Medium)",
-					"desc": "<p>The Content-Type header was either missing or empty.</p>",
-					"instances":[ 
-						{
-							"uri": "https://www.economie.gouv.fr/web.config",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						}
-					],
-					"count": "1",
-					"solution": "<p>Ensure each page is setting the specific and appropriate content-type value for the content being delivered.</p>",
-					"otherinfo": "",
-					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p>",
-					"cweid": "345",
-					"wascid": "12",
-					"sourceid": "288"
 				},
 				{
 					"pluginid": "10027",
@@ -680,70 +598,70 @@
 							"evidence": "user"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/comment/reply/",
+							"uri": "https://www.economie.gouv.fr/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "user"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.css$",
+							"uri": "https://www.economie.gouv.fr/agence-participations-etat",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "user"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.js$",
+							"uri": "https://www.economie.gouv.fr/entreprises",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "user"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.svg",
+							"uri": "https://www.economie.gouv.fr/ministeres",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "user"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/filter/tips",
+							"uri": "https://www.economie.gouv.fr/ministres/bruno-le-maire",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "user"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/node/add/",
+							"uri": "https://www.economie.gouv.fr/ministres/gabriel-attal",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "user"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.css$",
+							"uri": "https://www.economie.gouv.fr/ministres/jean-noel-barrot",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "user"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.js$",
+							"uri": "https://www.economie.gouv.fr/ministres/olivia-gregoire",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "user"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.svg",
+							"uri": "https://www.economie.gouv.fr/ministres/roland-lescure",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "user"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/search/",
+							"uri": "https://www.economie.gouv.fr/particuliers",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -776,11 +694,18 @@
 							"evidence": "max-age=1200"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/",
+							"uri": "https://www.economie.gouv.fr",
 							"method": "GET",
 							"param": "Cache-Control",
 							"attack": "",
 							"evidence": "max-age=600, public"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/",
+							"method": "GET",
+							"param": "Cache-Control",
+							"attack": "",
+							"evidence": "max-age=1200"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/entreprises",
@@ -790,7 +715,7 @@
 							"evidence": "max-age=1200"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/filter/tips",
+							"uri": "https://www.economie.gouv.fr/ministeres",
 							"method": "GET",
 							"param": "Cache-Control",
 							"attack": "",
@@ -811,6 +736,13 @@
 							"evidence": "max-age=1200"
 						},
 						{
+							"uri": "https://www.economie.gouv.fr/ministres/jean-noel-barrot",
+							"method": "GET",
+							"param": "Cache-Control",
+							"attack": "",
+							"evidence": "max-age=1200"
+						},
+						{
 							"uri": "https://www.economie.gouv.fr/ministres/roland-lescure",
 							"method": "GET",
 							"param": "Cache-Control",
@@ -825,18 +757,11 @@
 							"evidence": "max-age=1200"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/recherche-resultat",
-							"method": "GET",
-							"param": "Cache-Control",
-							"attack": "",
-							"evidence": "max-age=1200"
-						},
-						{
 							"uri": "https://www.economie.gouv.fr/robots.txt",
 							"method": "GET",
 							"param": "Cache-Control",
 							"attack": "",
-							"evidence": "max-age=600, public"
+							"evidence": "max-age=1200"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/sitemap.xml",
@@ -846,7 +771,7 @@
 							"evidence": "max-age=1200"
 						}
 					],
-					"count": "11",
+					"count": "12",
 					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
 					"otherinfo": "",
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
