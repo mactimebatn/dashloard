@@ -1,4 +1,4 @@
-# Nmap 7.92 scan initiated Sun Oct  9 02:35:47 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.economie.gouv.fr
+# Nmap 7.92 scan initiated Sun Oct 16 02:50:30 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln www.economie.gouv.fr
 Host: 46.105.202.193 ()	Status: Up
 Host: 46.105.202.193 ()	Ports: 80/open/tcp//http///, 443/open/tcp//ssl|https///	Ignored State: filtered (998)
-# Nmap done at Sun Oct  9 02:38:15 2022 -- 1 IP address (1 host up) scanned in 147.39 seconds
+# Nmap done at Sun Oct 16 02:53:19 2022 -- 1 IP address (1 host up) scanned in 169.55 seconds
