@@ -6,8 +6,8 @@
     "http": {
       "url": "https://www.economie.gouv.fr",
       "algorithm_version": 2,
-      "end_time": "Sun, 05 Feb 2023 01:08:37 GMT",
-      "grade": "B",
+      "end_time": "Sun, 12 Feb 2023 01:09:37 GMT",
+      "grade": "B+",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
       "response_headers": {
@@ -20,14 +20,14 @@
         "Cache-Control": "max-age=600, public",
         "Connection": "keep-alive",
         "Content-Encoding": "gzip",
-        "Content-Length": "17369",
+        "Content-Length": "17509",
         "Content-Security-Policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src 'self' data: https:; frame-ancestors 'self' bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;",
         "Content-Type": "text/html; charset=UTF-8",
         "Content-language": "fr",
-        "Date": "Sun, 05 Feb 2023 00:45:00 GMT",
-        "ETag": "\"1675553146-gzip\"",
-        "Expires": "Sun, 05 Feb 2023 00:55:00 GMT",
-        "Last-Modified": "Sat, 04 Feb 2023 23:25:46 GMT",
+        "Date": "Sun, 12 Feb 2023 00:52:37 GMT",
+        "ETag": "\"1676162526-gzip\"",
+        "Expires": "Sun, 12 Feb 2023 01:02:36 GMT",
+        "Last-Modified": "Sun, 12 Feb 2023 00:42:06 GMT",
         "Link": "<https://www.economie.gouv.fr/>; rel=\"canonical\", <https://www.economie.gouv.fr/>; rel=\"shortlink\"",
         "Permissions-Policy": "interest-cohort=()",
         "Referrer-Policy": "same-origin",
@@ -41,19 +41,18 @@
         "X-Drupal-Cache": "HIT",
         "X-Drupal-Dynamic-Cache": "UNCACHEABLE",
         "X-Frame-Options": "SAMEORIGIN",
-        "X-Grace": "full",
-        "X-Proxy-Cache": "HIT",
-        "X-Request-ID": "93914075",
+        "X-Proxy-Cache": "EXPIRED",
+        "X-Request-ID": "645202973",
         "X-UA-Compatible": "IE=edge",
         "X-XSS-Protection": "1;mode=block"
       },
-      "scan_id": 33831444,
-      "score": 75,
-      "start_time": "Sun, 05 Feb 2023 01:08:24 GMT",
+      "scan_id": 34176031,
+      "score": 80,
+      "start_time": "Sun, 12 Feb 2023 01:09:25 GMT",
       "state": "FINISHED",
       "status_code": 200,
-      "tests_failed": 2,
-      "tests_passed": 10,
+      "tests_failed": 1,
+      "tests_passed": 11,
       "tests_quantity": 12,
       "details": {
         "content-security-policy": {
@@ -62,33 +61,33 @@
           "output": {
             "data": {
               "child-src": [
-                "https:",
-                "platform.twitter.com"
+                "platform.twitter.com",
+                "https:"
               ],
               "default-src": [
-                "https:",
+                "'unsafe-inline'",
                 "'unsafe-eval'",
-                "'unsafe-inline'"
+                "https:"
               ],
               "font-src": [
+                "data:",
                 "'self'",
-                "https:",
-                "data:"
+                "https:"
               ],
               "frame-ancestors": [
-                "bloctel.fr",
-                "'self'",
-                "*.bloctel.gouv.fr",
-                "http://*.bloctel.fr",
-                "bloctel.gouv.fr",
                 "http://bloctel.gouv.fr",
                 "*.bloctel.fr",
+                "bloctel.gouv.fr",
+                "http://*.bloctel.fr",
+                "*.bloctel.gouv.fr",
+                "http://*.bloctel.gouv.fr",
+                "'self'",
                 "http://bloctel.fr",
-                "http://*.bloctel.gouv.fr"
+                "bloctel.fr"
               ],
               "img-src": [
-                "https:",
-                "data:"
+                "data:",
+                "https:"
               ],
               "object-src": [
                 "https:"
@@ -218,17 +217,12 @@
           "expectation": "sri-implemented-and-external-scripts-loaded-securely",
           "name": "subresource-integrity",
           "output": {
-            "data": {
-              "https://tracker.quadran.eu/qa-combined.js": {
-                "crossorigin": null,
-                "integrity": null
-              }
-            }
+            "data": {}
           },
-          "pass": false,
-          "result": "sri-not-implemented-but-external-scripts-loaded-securely",
-          "score_description": "Subresource Integrity (SRI) not implemented, but all external scripts are loaded over HTTPS",
-          "score_modifier": -5
+          "pass": true,
+          "result": "sri-not-implemented-but-all-scripts-loaded-from-secure-origin",
+          "score_description": "Subresource Integrity (SRI) not implemented, but all scripts are loaded from a similar origin",
+          "score_modifier": 0
         },
         "x-content-type-options": {
           "expectation": "x-content-type-options-nosniff",
@@ -402,7 +396,7 @@
         "finding": "not offered"
       },
       {
-        "id": "cipherlist_AVERAGE",
+        "id": "cipherlist_OBSOLETED",
         "ip": "www.economie.gouv.fr/46.105.202.193",
         "port": "443",
         "severity": "LOW",
@@ -410,14 +404,14 @@
         "finding": "offered"
       },
       {
-        "id": "cipherlist_GOOD",
+        "id": "cipherlist_STRONG_NOFS",
         "ip": "www.economie.gouv.fr/46.105.202.193",
         "port": "443",
         "severity": "OK",
         "finding": "offered"
       },
       {
-        "id": "cipherlist_STRONG",
+        "id": "cipherlist_STRONG_FS",
         "ip": "www.economie.gouv.fr/46.105.202.193",
         "port": "443",
         "severity": "OK",
@@ -666,7 +660,7 @@
         "ip": "www.economie.gouv.fr/46.105.202.193",
         "port": "443",
         "severity": "OK",
-        "finding": "139 >= 60 days"
+        "finding": "132 >= 60 days"
       },
       {
         "id": "cert_notBefore",
@@ -869,14 +863,14 @@
         "ip": "www.economie.gouv.fr/46.105.202.193",
         "port": "443",
         "severity": "INFO",
-        "finding": "-1499 seconds from localtime"
+        "finding": "-131 seconds from localtime"
       },
       {
         "id": "HTTP_headerTime",
         "ip": "www.economie.gouv.fr/46.105.202.193",
         "port": "443",
         "severity": "INFO",
-        "finding": "1675560366"
+        "finding": "1676166290"
       },
       {
         "id": "ipv4_in_header",
@@ -1526,22 +1520,14 @@
         "ip": "www.economie.gouv.fr/46.105.202.193",
         "port": "443",
         "severity": "INFO",
-        "finding": "146"
+        "finding": "68"
       }
     ],
     "thirdparties": {
       "trackers": [
         {
           "type": "unknown",
-          "url": "https://tracker.quadran.eu/qa-combined.js"
-        },
-        {
-          "type": "unknown",
           "url": "https://tag.aticdn.net/483556/smarttag.js"
-        },
-        {
-          "type": "unknown",
-          "url": "https://tracker.quadran.eu/qwa/appyuser.txt?owa_timestamp=1675561787&owa_page_url=https%3A%2F%2Fwww.economie.gouv.fr%2F&owa_page_title=Accueil+%7C+economie.gouv.fr&owa_event_type=base.page_request&owa_HTTP_REFERER=&owa_cv1=isfl%3D1&owa_cv2=ttl%3D1566&owa_cv3=ttd%3D1265&owa_cv6=con%3D163&owa_cv7=req%3D135&owa_cv8=res%3D8&owa_cv9=pro%3D1260&owa_is_new_visitor=true&owa_visitor_id=-1055625167&owa_fsts=1675561787&owa_dsfs=0&owa_last_req=&owa_session_id=-768262981&owa_is_new_session=true&owa_nps=1&owa_dsps=0&owa_medium=direct&owa_source=%28none%29&owa_search_terms=%28none%29&owa_session_referer=%28none%29&owa_network_type=undefined&owa_network_effectiveType=4g&owa_network_downlink=10&owa_site_id=9ea10e2f87c7a0f246c4ec2e3f2e57ab&"
         },
         {
           "type": "unknown",
@@ -1549,7 +1535,7 @@
         },
         {
           "type": "xiti",
-          "url": "https://logs4.xiti.com/hit.xiti?s=483556&idclient=133c40eb-e270-4468-a09e-32c079ef52c5&ts=1675561787683&page_url=https://www.economie.gouv.fr/&vtag=5.29.3&ptag=js&r=800x600x24x24&re=800x600&hl=1x49x47&lng=en-US&idp=0149479379666&jv=0&p=accueil&s2=1&vrn=1&ref=",
+          "url": "https://logs4.xiti.com/hit.xiti?s=483556&idclient=0e9a1438-32cd-4389-a86b-120bfd07d64f&ts=1676166387551&page_url=https://www.economie.gouv.fr/&vtag=5.29.3&ptag=js&r=800x600x24x24&re=800x600&hl=1x46x27&lng=en-US&idp=0146274101142&jv=0&p=accueil&s2=1&vrn=1&ref=",
           "details": {
             "id": "xiti",
             "message": "Use hosted Matomo instance"
@@ -1557,7 +1543,7 @@
         },
         {
           "type": "unknown",
-          "url": "https://try.abtasty.com/shared/analytics.a70891b838f23a60b584.js"
+          "url": "https://try.abtasty.com/shared/analytics.68291f2e89e82e0edd45.js"
         },
         {
           "type": "unknown",
@@ -1570,6 +1556,10 @@
         {
           "type": "unknown",
           "url": "https://try.abtasty.com/a513b8f61404f9eb2dbf3bd8922842d2/877125.1092094.json?2bfcc0b3d12cfa4d21e2e87296343a41"
+        },
+        {
+          "type": "unknown",
+          "url": "https://ariane.abtasty.com/troubleshooting"
         },
         {
           "type": "unknown",
@@ -1594,7 +1584,7 @@
           "value": "%7B%22name%22%3A%22atidvisitor%22%2C%22val%22%3A%7B%22vrn%22%3A%22-483556-%22%7D%2C%22options%22%3A%7B%22path%22%3A%22%2F%22%2C%22session%22%3A15724800%2C%22end%22%3A15724800%7D%7D",
           "domain": "www.economie.gouv.fr",
           "path": "/",
-          "expires": 1691286587.332646,
+          "expires": 1691891187.439764,
           "size": 191,
           "httpOnly": false,
           "secure": false,
@@ -1605,10 +1595,10 @@
         },
         {
           "name": "atuserid",
-          "value": "%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%22133c40eb-e270-4468-a09e-32c079ef52c5%22%2C%22options%22%3A%7B%22end%22%3A%222024-03-08T01%3A49%3A47.320Z%22%2C%22path%22%3A%22%2F%22%7D%7D",
+          "value": "%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%220e9a1438-32cd-4389-a86b-120bfd07d64f%22%2C%22options%22%3A%7B%22end%22%3A%222024-03-15T01%3A46%3A27.431Z%22%2C%22path%22%3A%22%2F%22%7D%7D",
           "domain": "www.economie.gouv.fr",
           "path": "/",
-          "expires": 1709862587,
+          "expires": 1710467187,
           "size": 194,
           "httpOnly": false,
           "secure": false,
@@ -1625,16 +1615,16 @@
         "access-control-allow-origin": "*",
         "access-control-expose-headers": "Content-Length,Content-Range",
         "allow": "GET, POST, HEAD",
-        "cache-control": "max-age=1200",
+        "cache-control": "max-age=600, public",
         "content-encoding": "br",
         "content-language": "fr",
-        "content-length": "15603",
+        "content-length": "15736",
         "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src 'self' data: https:; frame-ancestors 'self' bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Sun, 05 Feb 2023 00:59:34 GMT",
-        "etag": "W/\"1675557692\"",
-        "expires": "Sun, 05 Feb 2023 01:09:34 GMT",
-        "last-modified": "Sun, 05 Feb 2023 00:41:32 GMT",
+        "date": "Sun, 12 Feb 2023 01:16:15 GMT",
+        "etag": "\"1676162526\"",
+        "expires": "Sun, 12 Feb 2023 01:26:15 GMT",
+        "last-modified": "Sun, 12 Feb 2023 00:42:06 GMT",
         "link": "<https://www.economie.gouv.fr/>; rel=\"canonical\", <https://www.economie.gouv.fr/>; rel=\"shortlink\"",
         "permissions-policy": "interest-cohort=()",
         "referrer-policy": "same-origin",
@@ -1645,12 +1635,12 @@
         "x-cdn-pop": "bhs",
         "x-cdn-pop-ip": "137.74.122.0/26",
         "x-content-type-options": "nosniff",
-        "x-drupal-cache": "MISS",
+        "x-drupal-cache": "HIT",
         "x-drupal-dynamic-cache": "UNCACHEABLE",
         "x-frame-options": "SAMEORIGIN",
         "x-grace": "full",
         "x-proxy-cache": "HIT",
-        "x-request-id": "900040032",
+        "x-request-id": "101222509",
         "x-ua-compatible": "IE=edge",
         "x-xss-protection": "1;mode=block"
       },
@@ -1712,95 +1702,8 @@
           }
         },
         {
-          "hostname": "tracker.quadran.eu",
-          "ip": "23.67.33.106",
-          "geoip": {
-            "city": {
-              "geoname_id": 5393015,
-              "names": {
-                "de": "Santa Clara",
-                "en": "Santa Clara",
-                "es": "Santa Clara",
-                "fr": "Santa Clara",
-                "ja": "サンタクララ",
-                "pt-BR": "Santa Clara",
-                "ru": "Санта-Клара",
-                "zh-CN": "圣克拉拉"
-              }
-            },
-            "continent": {
-              "code": "NA",
-              "geoname_id": 6255149,
-              "names": {
-                "de": "Nordamerika",
-                "en": "North America",
-                "es": "Norteamérica",
-                "fr": "Amérique du Nord",
-                "ja": "北アメリカ",
-                "pt-BR": "América do Norte",
-                "ru": "Северная Америка",
-                "zh-CN": "北美洲"
-              }
-            },
-            "country": {
-              "geoname_id": 6252001,
-              "iso_code": "US",
-              "names": {
-                "de": "Vereinigte Staaten",
-                "en": "United States",
-                "es": "Estados Unidos",
-                "fr": "États Unis",
-                "ja": "アメリカ",
-                "pt-BR": "EUA",
-                "ru": "США",
-                "zh-CN": "美国"
-              }
-            },
-            "location": {
-              "accuracy_radius": 20,
-              "latitude": 37.353,
-              "longitude": -121.9543,
-              "metro_code": 807,
-              "time_zone": "America/Los_Angeles"
-            },
-            "postal": {
-              "code": "95052"
-            },
-            "registered_country": {
-              "geoname_id": 6252001,
-              "iso_code": "US",
-              "names": {
-                "de": "Vereinigte Staaten",
-                "en": "United States",
-                "es": "Estados Unidos",
-                "fr": "États Unis",
-                "ja": "アメリカ",
-                "pt-BR": "EUA",
-                "ru": "США",
-                "zh-CN": "美国"
-              }
-            },
-            "subdivisions": [
-              {
-                "geoname_id": 5332921,
-                "iso_code": "CA",
-                "names": {
-                  "de": "Kalifornien",
-                  "en": "California",
-                  "es": "California",
-                  "fr": "Californie",
-                  "ja": "カリフォルニア州",
-                  "pt-BR": "Califórnia",
-                  "ru": "Калифорния",
-                  "zh-CN": "加州"
-                }
-              }
-            ]
-          }
-        },
-        {
           "hostname": "tag.aticdn.net",
-          "ip": "108.139.1.103",
+          "ip": "18.160.18.16",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -1854,7 +1757,7 @@
         },
         {
           "hostname": "try.abtasty.com",
-          "ip": "18.155.181.62",
+          "ip": "18.160.10.17",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -1908,7 +1811,7 @@
         },
         {
           "hostname": "logs4.xiti.com",
-          "ip": "18.155.184.60",
+          "ip": "18.154.229.58",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -2132,7 +2035,7 @@
         },
         {
           "hostname": "widgets-images.abtasty.com",
-          "ip": "18.155.181.17",
+          "ip": "18.160.18.67",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -2260,24 +2163,6 @@
               "id": 17,
               "slug": "font-scripts",
               "name": "Font scripts"
-            }
-          ],
-          "rootPath": true
-        },
-        {
-          "slug": "open-web-analytics",
-          "name": "Open Web Analytics",
-          "description": null,
-          "confidence": 100,
-          "version": null,
-          "icon": "Open Web Analytics.png",
-          "website": "http://www.openwebanalytics.com",
-          "cpe": "cpe:2.3:a:openwebanalytics:open_web_analytics:*:*:*:*:*:*:*:*",
-          "categories": [
-            {
-              "id": 10,
-              "slug": "analytics",
-              "name": "Analytics"
             }
           ],
           "rootPath": true
@@ -2446,7 +2331,7 @@
     "zap": {
       "@programName": "OWASP ZAP",
       "@version": "2.12.0",
-      "@generated": "Sun, 5 Feb 2023 01:48:45",
+      "@generated": "Sun, 12 Feb 2023 01:45:40",
       "site": [
         {
           "@name": "https://www.economie.gouv.fr",
@@ -2454,13 +2339,6 @@
           "@port": "443",
           "@ssl": "true",
           "alerts": [
-            {
-              "name": "PII Disclosure",
-              "riskcode": "3",
-              "confidence": "3",
-              "riskdesc": "High (High)",
-              "desc": "<p>The response contains Personally Identifiable Information, such as CC number, SSN and similar sensitive data.</p>"
-            },
             {
               "name": "Absence of Anti-CSRF Tokens",
               "riskcode": "2",
@@ -2511,6 +2389,13 @@
               "desc": "<p>The integrity attribute is missing on a script or link tag served by an external server. The integrity tag prevents an attacker who have gained access to this server from injecting a malicious content. </p>"
             },
             {
+              "name": "Vulnerable JS Library",
+              "riskcode": "2",
+              "confidence": "2",
+              "riskdesc": "Medium (Medium)",
+              "desc": "<p>The identified library jquery.datatables, version 1.11.2 is vulnerable.</p>"
+            },
+            {
               "name": "Big Redirect Detected (Potential Sensitive Information Leak)",
               "riskcode": "1",
               "confidence": "2",
@@ -2523,6 +2408,13 @@
               "confidence": "2",
               "riskdesc": "Low (Medium)",
               "desc": "<p>The page includes one or more script files from a third-party domain.</p>"
+            },
+            {
+              "name": "Dangerous JS Functions",
+              "riskcode": "1",
+              "confidence": "1",
+              "riskdesc": "Low (Low)",
+              "desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>"
             },
             {
               "name": "Permissions Policy Header Not Set",
@@ -2596,7 +2488,7 @@
       {
         "requestedUrl": "https://www.economie.gouv.fr/",
         "finalUrl": "https://www.economie.gouv.fr/",
-        "fetchTime": "2023-02-05T01:49:07.181Z",
+        "fetchTime": "2023-02-12T01:45:56.801Z",
         "runWarnings": [],
         "categories": {
           "performance": {
@@ -2607,7 +2499,7 @@
               "snapshot"
             ],
             "id": "performance",
-            "score": 0.3237159729003906
+            "score": 0.39119930267333985
           },
           "accessibility": {
             "title": "Accessibility",
@@ -2659,53 +2551,53 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 10673,
+            "numericValue": 9232,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 3454,
-                  "firstMeaningfulPaint": 4489,
-                  "largestContentfulPaint": 8940,
-                  "interactive": 10673,
-                  "speedIndex": 4480,
-                  "totalBlockingTime": 422,
-                  "maxPotentialFID": 327,
+                  "firstContentfulPaint": 2727,
+                  "firstMeaningfulPaint": 4023,
+                  "largestContentfulPaint": 9982,
+                  "interactive": 9232,
+                  "speedIndex": 4086,
+                  "totalBlockingTime": 249,
+                  "maxPotentialFID": 230,
                   "cumulativeLayoutShift": 0.0012608506944444446,
                   "cumulativeLayoutShiftMainFrame": 0.0012608506944444446,
                   "totalCumulativeLayoutShift": 0.0012608506944444446,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 274174735,
+                  "observedTimeOriginTs": 324121069,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 274174735,
-                  "observedFirstPaint": 814,
-                  "observedFirstPaintTs": 274989123,
-                  "observedFirstContentfulPaint": 814,
-                  "observedFirstContentfulPaintTs": 274989123,
-                  "observedFirstContentfulPaintAllFrames": 814,
-                  "observedFirstContentfulPaintAllFramesTs": 274989123,
-                  "observedFirstMeaningfulPaint": 1063,
-                  "observedFirstMeaningfulPaintTs": 275238116,
-                  "observedLargestContentfulPaint": 1108,
-                  "observedLargestContentfulPaintTs": 275283178,
-                  "observedLargestContentfulPaintAllFrames": 1108,
-                  "observedLargestContentfulPaintAllFramesTs": 275283178,
-                  "observedTraceEnd": 4580,
-                  "observedTraceEndTs": 278754939,
-                  "observedLoad": 1244,
-                  "observedLoadTs": 275418424,
-                  "observedDomContentLoaded": 1118,
-                  "observedDomContentLoadedTs": 275292885,
+                  "observedNavigationStartTs": 324121069,
+                  "observedFirstPaint": 498,
+                  "observedFirstPaintTs": 324619478,
+                  "observedFirstContentfulPaint": 498,
+                  "observedFirstContentfulPaintTs": 324619478,
+                  "observedFirstContentfulPaintAllFrames": 498,
+                  "observedFirstContentfulPaintAllFramesTs": 324619478,
+                  "observedFirstMeaningfulPaint": 611,
+                  "observedFirstMeaningfulPaintTs": 324732562,
+                  "observedLargestContentfulPaint": 1427,
+                  "observedLargestContentfulPaintTs": 325547895,
+                  "observedLargestContentfulPaintAllFrames": 1427,
+                  "observedLargestContentfulPaintAllFramesTs": 325547895,
+                  "observedTraceEnd": 4352,
+                  "observedTraceEndTs": 328473105,
+                  "observedLoad": 1206,
+                  "observedLoadTs": 325327444,
+                  "observedDomContentLoaded": 626,
+                  "observedDomContentLoadedTs": 324746649,
                   "observedCumulativeLayoutShift": 0.0012608506944444446,
                   "observedCumulativeLayoutShiftMainFrame": 0.0012608506944444446,
                   "observedTotalCumulativeLayoutShift": 0.0012608506944444446,
-                  "observedFirstVisualChange": 797,
-                  "observedFirstVisualChangeTs": 274971735,
-                  "observedLastVisualChange": 1530,
-                  "observedLastVisualChangeTs": 275704735,
-                  "observedSpeedIndex": 1263,
-                  "observedSpeedIndexTs": 275438149
+                  "observedFirstVisualChange": 499,
+                  "observedFirstVisualChangeTs": 324620069,
+                  "observedLastVisualChange": 1432,
+                  "observedLastVisualChangeTs": 325553069,
+                  "observedSpeedIndex": 1102,
+                  "observedSpeedIndexTs": 325222657
                 },
                 {
                   "lcpInvalidated": false
@@ -2723,23 +2615,23 @@
               "type": "debugdata",
               "items": [
                 {
-                  "numRequests": 150,
-                  "numScripts": 42,
+                  "numRequests": 148,
+                  "numScripts": 40,
                   "numStylesheets": 69,
                   "numFonts": 8,
-                  "numTasks": 1724,
-                  "numTasksOver10ms": 20,
-                  "numTasksOver25ms": 11,
-                  "numTasksOver50ms": 5,
-                  "numTasksOver100ms": 0,
+                  "numTasks": 2346,
+                  "numTasksOver10ms": 14,
+                  "numTasksOver25ms": 6,
+                  "numTasksOver50ms": 2,
+                  "numTasksOver100ms": 1,
                   "numTasksOver500ms": 0,
-                  "rtt": 1.2409999999999997,
-                  "throughput": 41441909.41574358,
-                  "maxRtt": 136.44,
-                  "maxServerLatency": 63.52799999999999,
-                  "totalByteWeight": 1972812,
-                  "totalTaskTime": 1227.8689999999929,
-                  "mainDocumentTransferSize": 16973
+                  "rtt": 1.6770000000000032,
+                  "throughput": 35102741.237729594,
+                  "maxRtt": 67.158,
+                  "maxServerLatency": 32.119,
+                  "totalByteWeight": 1619005,
+                  "totalTaskTime": 873.4360000000265,
+                  "mainDocumentTransferSize": 17117
                 }
               ]
             }
@@ -2760,7 +2652,7 @@
     "betagouv": null,
     "ecoindex": null,
     "summary": {
-      "httpGrade": "B",
+      "httpGrade": "B+",
       "nmapGrade": "A",
       "nmapOpenPortsCount": 2,
       "nmapOpenPortsGrade": "A",
@@ -2770,9 +2662,9 @@
       "cookiesGrade": "B",
       "cookiesCount": 2,
       "trackersGrade": "F",
-      "trackersCount": 13,
-      "lighthouse_performance": 0.3237159729003906,
-      "lighthouse_performanceGrade": "E",
+      "trackersCount": 12,
+      "lighthouse_performance": 0.39119930267333985,
+      "lighthouse_performanceGrade": "D",
       "lighthouse_accessibility": 1,
       "lighthouse_accessibilityGrade": "A",
       "lighthouse_best-practices": 0.92,
