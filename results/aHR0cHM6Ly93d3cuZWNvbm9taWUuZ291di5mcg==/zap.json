@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Sun, 5 Feb 2023 01:48:45",
+	"@generated": "Sun, 12 Feb 2023 01:45:40",
 	"site":[ 
 		{
 			"@name": "https://www.economie.gouv.fr",
@@ -9,32 +9,6 @@
 			"@port": "443",
 			"@ssl": "true",
 			"alerts": [ 
-				{
-					"pluginid": "10062",
-					"alertRef": "10062",
-					"alert": "PII Disclosure",
-					"name": "PII Disclosure",
-					"riskcode": "3",
-					"confidence": "3",
-					"riskdesc": "High (High)",
-					"desc": "<p>The response contains Personally Identifiable Information, such as CC number, SSN and similar sensitive data.</p>",
-					"instances":[ 
-						{
-							"uri": "https://www.economie.gouv.fr/cedef",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "673336990183"
-						}
-					],
-					"count": "1",
-					"solution": "",
-					"otherinfo": "<p>Credit Card Type detected: Maestro</p><p>Bank Identification Number: 673336</p><p>Brand: MAESTRO</p><p>Category: </p><p>Issuer: VSB INTERNATIONAL B.V.</p>",
-					"reference": "",
-					"cweid": "359",
-					"wascid": "13",
-					"sourceid": "705"
-				},
 				{
 					"pluginid": "10202",
 					"alertRef": "10202",
@@ -169,7 +143,7 @@
 					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "50"
+					"sourceid": "40"
 				},
 				{
 					"pluginid": "10055",
@@ -209,7 +183,7 @@
 					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "50"
+					"sourceid": "40"
 				},
 				{
 					"pluginid": "10055",
@@ -249,7 +223,7 @@
 					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "50"
+					"sourceid": "40"
 				},
 				{
 					"pluginid": "10038",
@@ -325,14 +299,14 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.css",
+							"uri": "https://www.economie.gouv.fr/profiles/*.css$",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.css$",
+							"uri": "https://www.economie.gouv.fr/profiles/*.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -352,7 +326,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "262"
+					"sourceid": "261"
 				},
 				{
 					"pluginid": "10098",
@@ -448,7 +422,7 @@
 					"reference": "<p>https://vulncat.fortify.com/en/detail?id=desc.config.dotnet.html5_overly_permissive_cors_policy</p>",
 					"cweid": "264",
 					"wascid": "14",
-					"sourceid": "1"
+					"sourceid": "40"
 				},
 				{
 					"pluginid": "90003",
@@ -461,90 +435,109 @@
 					"desc": "<p>The integrity attribute is missing on a script or link tag served by an external server. The integrity tag prevents an attacker who have gained access to this server from injecting a malicious content. </p>",
 					"instances":[ 
 						{
-							"uri": "https://www.economie.gouv.fr",
+							"uri": "https://www.economie.gouv.fr/cedef",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
+							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/comment/reply/",
+							"uri": "https://www.economie.gouv.fr/cisirh",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
+							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.css$",
+							"uri": "https://www.economie.gouv.fr/dgccrf",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
+							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.js$",
+							"uri": "https://www.economie.gouv.fr/mediateur-des-entreprises",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
+							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.svg",
+							"uri": "https://www.economie.gouv.fr/ministres/bruno-le-maire",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
+							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/filter/tips",
+							"uri": "https://www.economie.gouv.fr/ministres/gabriel-attal",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
+							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/node/add/",
+							"uri": "https://www.economie.gouv.fr/ministres/jean-noel-barrot",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
+							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.css$",
+							"uri": "https://www.economie.gouv.fr/ministres/olivia-gregoire",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
+							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.js$",
+							"uri": "https://www.economie.gouv.fr/ministres/roland-lescure",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
+							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.svg",
+							"uri": "https://www.economie.gouv.fr/plan-entreprises-pacte",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/search/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
+							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
 						}
 					],
-					"count": "11",
+					"count": "10",
 					"solution": "<p>Provide a valid integrity attribute to the tag.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en/docs/Web/Security/Subresource_Integrity</p>",
 					"cweid": "345",
 					"wascid": "15",
-					"sourceid": "50"
+					"sourceid": "784"
+				},
+				{
+					"pluginid": "10003",
+					"alertRef": "10003",
+					"alert": "Vulnerable JS Library",
+					"name": "Vulnerable JS Library",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>The identified library jquery.datatables, version 1.11.2 is vulnerable.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.economie.gouv.fr/libraries/DataTables/datatables.min.js?v=9.3.22",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://www.datatables.net\n DataTables 1.11.2"
+						}
+					],
+					"count": "1",
+					"solution": "<p>Please upgrade to the latest version of jquery.datatables.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://cdn.datatables.net/1.11.3/</p><p>https://github.com/DataTables/Dist-DataTables/commit/59a8d3f8a3c1138ab08704e783bc52bfe88d7c9b</p><p></p>",
+					"cweid": "829",
+					"wascid": "-1",
+					"sourceid": "2769"
 				},
 				{
 					"pluginid": "10044",
@@ -584,7 +577,7 @@
 					"reference": "",
 					"cweid": "201",
 					"wascid": "13",
-					"sourceid": "323"
+					"sourceid": "322"
 				},
 				{
 					"pluginid": "10017",
@@ -597,90 +590,123 @@
 					"desc": "<p>The page includes one or more script files from a third-party domain.</p>",
 					"instances":[ 
 						{
-							"uri": "https://www.economie.gouv.fr",
+							"uri": "https://www.economie.gouv.fr/cedef",
 							"method": "GET",
-							"param": "https://tracker.quadran.eu/qa-combined.js",
+							"param": "https://platform.twitter.com/widgets.js",
 							"attack": "",
-							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
+							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/comment/reply/",
+							"uri": "https://www.economie.gouv.fr/cisirh",
 							"method": "GET",
-							"param": "https://tracker.quadran.eu/qa-combined.js",
+							"param": "https://platform.twitter.com/widgets.js",
 							"attack": "",
-							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
+							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.css$",
+							"uri": "https://www.economie.gouv.fr/dgccrf",
 							"method": "GET",
-							"param": "https://tracker.quadran.eu/qa-combined.js",
+							"param": "https://platform.twitter.com/widgets.js",
 							"attack": "",
-							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
+							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.js$",
+							"uri": "https://www.economie.gouv.fr/mediateur-des-entreprises",
 							"method": "GET",
-							"param": "https://tracker.quadran.eu/qa-combined.js",
+							"param": "https://platform.twitter.com/widgets.js",
 							"attack": "",
-							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
+							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.svg",
+							"uri": "https://www.economie.gouv.fr/ministres/bruno-le-maire",
 							"method": "GET",
-							"param": "https://tracker.quadran.eu/qa-combined.js",
+							"param": "https://platform.twitter.com/widgets.js",
 							"attack": "",
-							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
+							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/filter/tips",
+							"uri": "https://www.economie.gouv.fr/ministres/gabriel-attal",
 							"method": "GET",
-							"param": "https://tracker.quadran.eu/qa-combined.js",
+							"param": "https://platform.twitter.com/widgets.js",
 							"attack": "",
-							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
+							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/node/add/",
+							"uri": "https://www.economie.gouv.fr/ministres/jean-noel-barrot",
 							"method": "GET",
-							"param": "https://tracker.quadran.eu/qa-combined.js",
+							"param": "https://platform.twitter.com/widgets.js",
 							"attack": "",
-							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
+							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.css$",
+							"uri": "https://www.economie.gouv.fr/ministres/olivia-gregoire",
 							"method": "GET",
-							"param": "https://tracker.quadran.eu/qa-combined.js",
+							"param": "https://platform.twitter.com/widgets.js",
 							"attack": "",
-							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
+							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.js$",
+							"uri": "https://www.economie.gouv.fr/ministres/roland-lescure",
 							"method": "GET",
-							"param": "https://tracker.quadran.eu/qa-combined.js",
+							"param": "https://platform.twitter.com/widgets.js",
 							"attack": "",
-							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
+							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.svg",
+							"uri": "https://www.economie.gouv.fr/plan-entreprises-pacte",
 							"method": "GET",
-							"param": "https://tracker.quadran.eu/qa-combined.js",
+							"param": "https://platform.twitter.com/widgets.js",
 							"attack": "",
-							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/search/",
-							"method": "GET",
-							"param": "https://tracker.quadran.eu/qa-combined.js",
-							"attack": "",
-							"evidence": "<script src=\"https://tracker.quadran.eu/qa-combined.js\" type=\"text/javascript\"></script>"
+							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>"
 						}
 					],
-					"count": "11",
+					"count": "10",
 					"solution": "<p>Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application.</p>",
 					"otherinfo": "",
 					"reference": "",
 					"cweid": "829",
 					"wascid": "15",
-					"sourceid": "50"
+					"sourceid": "784"
+				},
+				{
+					"pluginid": "10110",
+					"alertRef": "10110",
+					"alert": "Dangerous JS Functions",
+					"name": "Dangerous JS Functions",
+					"riskcode": "1",
+					"confidence": "1",
+					"riskdesc": "Low (Low)",
+					"desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.economie.gouv.fr/core/assets/vendor/jquery/jquery.min.js?v=3.6.0",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Eval"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/libraries/shariff/shariff.complete.js?v=9.3.22",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "eval"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/libraries/tarteaucitron/tarteaucitron.js?rpnoxx",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "eval"
+						}
+					],
+					"count": "3",
+					"solution": "<p>See the references for security advice on the use of these functions.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://angular.io/guide/security</p>",
+					"cweid": "749",
+					"wascid": "-1",
+					"sourceid": "2735"
 				},
 				{
 					"pluginid": "10063",
@@ -694,6 +720,69 @@
 					"instances":[ 
 						{
 							"uri": "https://www.economie.gouv.fr/core/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/core/assets/vendor/jquery-once/jquery.once.min.js?v=2.2.3",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/core/assets/vendor/once/once.min.js?v=1.0.1",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/core/misc/drupal.init.js?v=9.3.22",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/core/misc/drupal.js?v=9.3.22",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/core/misc/drupalSettingsLoader.js?v=9.3.22",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/core/misc/polyfills/element.matches.js?v=9.3.22",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/core/misc/polyfills/object.assign.js?v=9.3.22",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/files/languages/fr_57NNo47XaQuAgEOGxVKOwcRenNmhdanrVWIKh8UzjX4.js?rpnoxx",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/modules/internal/tarteaucitron/js/load.js?rpnoxx",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -714,13 +803,13 @@
 							"evidence": ""
 						}
 					],
-					"count": "3",
+					"count": "12",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</p><p>https://developers.google.com/web/updates/2018/06/feature-policy</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "287"
+					"sourceid": "286"
 				},
 				{
 					"pluginid": "10035",
@@ -815,22 +904,15 @@
 							"param": "",
 							"attack": "",
 							"evidence": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.jpg",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
 						}
 					],
-					"count": "13",
+					"count": "12",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</p><p>https://owasp.org/www-community/Security_Headers</p><p>http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</p><p>http://caniuse.com/stricttransportsecurity</p><p>http://tools.ietf.org/html/rfc6797</p>",
 					"cweid": "319",
 					"wascid": "15",
-					"sourceid": "262"
+					"sourceid": "261"
 				},
 				{
 					"pluginid": "10096",
@@ -847,14 +929,35 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "1675419172"
+							"evidence": "1675870135"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "1675419172"
+							"evidence": "1675870135"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/agence-participations-etat",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1675878664"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/apie",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1668520262"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/cge",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1633336409"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/entreprises",
@@ -862,41 +965,6 @@
 							"param": "",
 							"attack": "",
 							"evidence": "1672932095"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/ministeres",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "1361015049"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/ministeres",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "1584432812"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/ministeres",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "1651073105"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/ministeres",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "1672831698"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/ministeres",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "1833994344"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/ministres/bruno-le-maire",
@@ -941,13 +1009,13 @@
 							"evidence": "1673450521"
 						}
 					],
-					"count": "14",
+					"count": "12",
 					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
-					"otherinfo": "<p>1675419172, which evaluates to: 2023-02-03 10:12:52</p>",
+					"otherinfo": "<p>1675870135, which evaluates to: 2023-02-08 15:28:55</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "50"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10094",
@@ -1043,7 +1111,7 @@
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "50"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10019",
@@ -1165,7 +1233,7 @@
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "50"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10109",
@@ -1261,7 +1329,7 @@
 					"reference": "",
 					"cweid": "-1",
 					"wascid": "-1",
-					"sourceid": "50"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10015",
@@ -1292,7 +1360,7 @@
 							"method": "GET",
 							"param": "Cache-Control",
 							"attack": "",
-							"evidence": "max-age=600, public"
+							"evidence": "max-age=1200"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/entreprises",
@@ -1317,6 +1385,13 @@
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/ministres/gabriel-attal",
+							"method": "GET",
+							"param": "Cache-Control",
+							"attack": "",
+							"evidence": "max-age=1200"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/ministres/jean-noel-barrot",
 							"method": "GET",
 							"param": "Cache-Control",
 							"attack": "",
@@ -1348,7 +1423,7 @@
 							"method": "GET",
 							"param": "Cache-Control",
 							"attack": "",
-							"evidence": "max-age=600, public"
+							"evidence": "max-age=1200"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/sitemap.xml",
@@ -1358,7 +1433,7 @@
 							"evidence": "max-age=1200"
 						}
 					],
-					"count": "12",
+					"count": "13",
 					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
 					"otherinfo": "",
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
@@ -1451,7 +1526,7 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "max-age=600"
+							"evidence": "max-age=1200"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/sitemap.xml",
