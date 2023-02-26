@@ -6,7 +6,7 @@
     "http": {
       "url": "https://www.economie.gouv.fr",
       "algorithm_version": 2,
-      "end_time": "Sun, 19 Feb 2023 01:05:02 GMT",
+      "end_time": "Sun, 26 Feb 2023 01:19:16 GMT",
       "grade": "B+",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
@@ -20,14 +20,14 @@
         "Cache-Control": "max-age=600, public",
         "Connection": "keep-alive",
         "Content-Encoding": "gzip",
-        "Content-Length": "17596",
+        "Content-Length": "17553",
         "Content-Security-Policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src 'self' data: https:; frame-ancestors 'self' bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;",
         "Content-Type": "text/html; charset=UTF-8",
         "Content-language": "fr",
-        "Date": "Sun, 19 Feb 2023 01:00:23 GMT",
-        "ETag": "\"1676767467-gzip\"",
-        "Expires": "Sun, 19 Feb 2023 01:10:23 GMT",
-        "Last-Modified": "Sun, 19 Feb 2023 00:44:27 GMT",
+        "Date": "Sun, 26 Feb 2023 01:13:30 GMT",
+        "ETag": "\"1677373069-gzip\"",
+        "Expires": "Sun, 26 Feb 2023 01:23:30 GMT",
+        "Last-Modified": "Sun, 26 Feb 2023 00:57:49 GMT",
         "Link": "<https://www.economie.gouv.fr/>; rel=\"canonical\", <https://www.economie.gouv.fr/>; rel=\"shortlink\"",
         "Permissions-Policy": "interest-cohort=()",
         "Referrer-Policy": "same-origin",
@@ -42,13 +42,13 @@
         "X-Drupal-Dynamic-Cache": "UNCACHEABLE",
         "X-Frame-Options": "SAMEORIGIN",
         "X-Proxy-Cache": "HIT",
-        "X-Request-ID": "277512900",
+        "X-Request-ID": "16220719",
         "X-UA-Compatible": "IE=edge",
         "X-XSS-Protection": "1;mode=block"
       },
-      "scan_id": 34451276,
+      "scan_id": 34692203,
       "score": 80,
-      "start_time": "Sun, 19 Feb 2023 01:04:03 GMT",
+      "start_time": "Sun, 26 Feb 2023 01:19:03 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 1,
@@ -61,28 +61,28 @@
           "output": {
             "data": {
               "child-src": [
-                "https:",
-                "platform.twitter.com"
+                "platform.twitter.com",
+                "https:"
               ],
               "default-src": [
-                "https:",
+                "'unsafe-eval'",
                 "'unsafe-inline'",
-                "'unsafe-eval'"
+                "https:"
               ],
               "font-src": [
-                "'self'",
                 "https:",
+                "'self'",
                 "data:"
               ],
               "frame-ancestors": [
-                "http://bloctel.gouv.fr",
                 "'self'",
+                "http://bloctel.gouv.fr",
                 "http://*.bloctel.gouv.fr",
-                "http://*.bloctel.fr",
+                "*.bloctel.fr",
+                "http://bloctel.fr",
                 "bloctel.fr",
                 "bloctel.gouv.fr",
-                "http://bloctel.fr",
-                "*.bloctel.fr",
+                "http://*.bloctel.fr",
                 "*.bloctel.gouv.fr"
               ],
               "img-src": [
@@ -660,7 +660,7 @@
         "ip": "www.economie.gouv.fr/46.105.202.193",
         "port": "443",
         "severity": "OK",
-        "finding": "125 >= 60 days"
+        "finding": "118 >= 60 days"
       },
       {
         "id": "cert_notBefore",
@@ -863,14 +863,14 @@
         "ip": "www.economie.gouv.fr/46.105.202.193",
         "port": "443",
         "severity": "INFO",
-        "finding": "-19 seconds from localtime"
+        "finding": "-1517 seconds from localtime"
       },
       {
         "id": "HTTP_headerTime",
         "ip": "www.economie.gouv.fr/46.105.202.193",
         "port": "443",
         "severity": "INFO",
-        "finding": "1676771235"
+        "finding": "1677374967"
       },
       {
         "id": "ipv4_in_header",
@@ -1520,7 +1520,7 @@
         "ip": "www.economie.gouv.fr/46.105.202.193",
         "port": "443",
         "severity": "INFO",
-        "finding": "71"
+        "finding": "133"
       }
     ],
     "thirdparties": {
@@ -1535,7 +1535,7 @@
         },
         {
           "type": "xiti",
-          "url": "https://logs4.xiti.com/hit.xiti?s=483556&idclient=d6e40f85-c7f3-4fdf-8fd5-0d24fc3afc2d&ts=1676771219082&page_url=https://www.economie.gouv.fr/&vtag=5.29.3&ptag=js&r=800x600x24x24&re=800x600&hl=1x46x59&lng=en-US&idp=0146587736099&jv=0&p=accueil&s2=1&vrn=1&ref=",
+          "url": "https://logs4.xiti.com/hit.xiti?s=483556&idclient=6146a855-35ae-4bd5-bef8-b0c96b10d6cc&ts=1677376414646&page_url=https://www.economie.gouv.fr/&vtag=5.29.3&ptag=js&r=800x600x24x24&re=800x600&hl=1x53x34&lng=en-US&idp=0153332288005&jv=0&p=accueil&s2=1&vrn=1&ref=",
           "details": {
             "id": "xiti",
             "message": "Use hosted Matomo instance"
@@ -1584,7 +1584,7 @@
           "value": "%7B%22name%22%3A%22atidvisitor%22%2C%22val%22%3A%7B%22vrn%22%3A%22-483556-%22%7D%2C%22options%22%3A%7B%22path%22%3A%22%2F%22%2C%22session%22%3A15724800%2C%22end%22%3A15724800%7D%7D",
           "domain": "www.economie.gouv.fr",
           "path": "/",
-          "expires": 1692496018.921562,
+          "expires": 1693101213.952009,
           "size": 191,
           "httpOnly": false,
           "secure": false,
@@ -1595,10 +1595,10 @@
         },
         {
           "name": "atuserid",
-          "value": "%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%22d6e40f85-c7f3-4fdf-8fd5-0d24fc3afc2d%22%2C%22options%22%3A%7B%22end%22%3A%222024-03-22T01%3A46%3A58.913Z%22%2C%22path%22%3A%22%2F%22%7D%7D",
+          "value": "%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%226146a855-35ae-4bd5-bef8-b0c96b10d6cc%22%2C%22options%22%3A%7B%22end%22%3A%222024-03-29T01%3A53%3A33.944Z%22%2C%22path%22%3A%22%2F%22%7D%7D",
           "domain": "www.economie.gouv.fr",
           "path": "/",
-          "expires": 1711072018,
+          "expires": 1711677213,
           "size": 194,
           "httpOnly": false,
           "secure": false,
@@ -1615,16 +1615,16 @@
         "access-control-allow-origin": "*",
         "access-control-expose-headers": "Content-Length,Content-Range",
         "allow": "GET, POST, HEAD",
-        "cache-control": "max-age=1200",
+        "cache-control": "max-age=600, public",
         "content-encoding": "br",
         "content-language": "fr",
-        "content-length": "15795",
+        "content-length": "15738",
         "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src 'self' data: https:; frame-ancestors 'self' bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;",
         "content-type": "text/html; charset=UTF-8",
-        "date": "Sun, 19 Feb 2023 01:32:01 GMT",
-        "etag": "W/\"1676767467\"",
-        "expires": "Sun, 19 Feb 2023 01:42:01 GMT",
-        "last-modified": "Sun, 19 Feb 2023 00:44:27 GMT",
+        "date": "Sun, 26 Feb 2023 01:21:20 GMT",
+        "etag": "\"1677373069\"",
+        "expires": "Sun, 26 Feb 2023 01:31:20 GMT",
+        "last-modified": "Sun, 26 Feb 2023 00:57:49 GMT",
         "link": "<https://www.economie.gouv.fr/>; rel=\"canonical\", <https://www.economie.gouv.fr/>; rel=\"shortlink\"",
         "permissions-policy": "interest-cohort=()",
         "referrer-policy": "same-origin",
@@ -1635,11 +1635,12 @@
         "x-cdn-pop": "bhs",
         "x-cdn-pop-ip": "137.74.122.0/26",
         "x-content-type-options": "nosniff",
-        "x-drupal-cache": "HIT",
+        "x-drupal-cache": "MISS",
         "x-drupal-dynamic-cache": "UNCACHEABLE",
         "x-frame-options": "SAMEORIGIN",
+        "x-grace": "full",
         "x-proxy-cache": "HIT",
-        "x-request-id": "1026459717",
+        "x-request-id": "417334396",
         "x-ua-compatible": "IE=edge",
         "x-xss-protection": "1;mode=block"
       },
@@ -1702,7 +1703,7 @@
         },
         {
           "hostname": "tag.aticdn.net",
-          "ip": "13.32.151.75",
+          "ip": "13.225.41.67",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -1756,7 +1757,7 @@
         },
         {
           "hostname": "try.abtasty.com",
-          "ip": "13.249.39.26",
+          "ip": "13.249.74.93",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -1810,7 +1811,7 @@
         },
         {
           "hostname": "logs4.xiti.com",
-          "ip": "99.86.190.18",
+          "ip": "18.160.233.60",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -2034,7 +2035,7 @@
         },
         {
           "hostname": "widgets-images.abtasty.com",
-          "ip": "13.32.208.96",
+          "ip": "108.156.211.44",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -2330,7 +2331,7 @@
     "zap": {
       "@programName": "OWASP ZAP",
       "@version": "2.12.0",
-      "@generated": "Sun, 19 Feb 2023 01:46:10",
+      "@generated": "Sun, 26 Feb 2023 01:52:43",
       "site": [
         {
           "@name": "https://www.economie.gouv.fr",
@@ -2444,6 +2445,13 @@
               "desc": "<p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p>"
             },
             {
+              "name": "Content-Type Header Missing",
+              "riskcode": "0",
+              "confidence": "2",
+              "riskdesc": "Informational (Medium)",
+              "desc": "<p>The Content-Type header was either missing or empty.</p>"
+            },
+            {
               "name": "Information Disclosure - Suspicious Comments",
               "riskcode": "0",
               "confidence": "1",
@@ -2480,7 +2488,7 @@
       {
         "requestedUrl": "https://www.economie.gouv.fr/",
         "finalUrl": "https://www.economie.gouv.fr/",
-        "fetchTime": "2023-02-19T01:46:27.061Z",
+        "fetchTime": "2023-02-26T01:53:00.203Z",
         "runWarnings": [],
         "categories": {
           "performance": {
@@ -2491,7 +2499,7 @@
               "snapshot"
             ],
             "id": "performance",
-            "score": 0.3708200454711914
+            "score": 0.3582029342651367
           },
           "accessibility": {
             "title": "Accessibility",
@@ -2543,53 +2551,53 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 9428,
+            "numericValue": 9774,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 2718,
-                  "firstMeaningfulPaint": 4262,
-                  "largestContentfulPaint": 7408,
-                  "interactive": 9428,
-                  "speedIndex": 3349,
-                  "totalBlockingTime": 220,
-                  "maxPotentialFID": 260,
+                  "firstContentfulPaint": 3009,
+                  "firstMeaningfulPaint": 3974,
+                  "largestContentfulPaint": 7699,
+                  "interactive": 9774,
+                  "speedIndex": 3680,
+                  "totalBlockingTime": 218,
+                  "maxPotentialFID": 237,
                   "cumulativeLayoutShift": 0.0012608506944444446,
                   "cumulativeLayoutShiftMainFrame": 0.0012608506944444446,
                   "totalCumulativeLayoutShift": 0.0012608506944444446,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 246375764,
+                  "observedTimeOriginTs": 343882753,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 246375764,
-                  "observedFirstPaint": 514,
-                  "observedFirstPaintTs": 246889809,
-                  "observedFirstContentfulPaint": 514,
-                  "observedFirstContentfulPaintTs": 246889809,
-                  "observedFirstContentfulPaintAllFrames": 514,
-                  "observedFirstContentfulPaintAllFramesTs": 246889809,
-                  "observedFirstMeaningfulPaint": 637,
-                  "observedFirstMeaningfulPaintTs": 247013162,
-                  "observedLargestContentfulPaint": 637,
-                  "observedLargestContentfulPaintTs": 247013162,
-                  "observedLargestContentfulPaintAllFrames": 637,
-                  "observedLargestContentfulPaintAllFramesTs": 247013162,
-                  "observedTraceEnd": 3915,
-                  "observedTraceEndTs": 250290648,
-                  "observedLoad": 753,
-                  "observedLoadTs": 247129162,
-                  "observedDomContentLoaded": 644,
-                  "observedDomContentLoadedTs": 247020237,
+                  "observedNavigationStartTs": 343882753,
+                  "observedFirstPaint": 565,
+                  "observedFirstPaintTs": 344447747,
+                  "observedFirstContentfulPaint": 565,
+                  "observedFirstContentfulPaintTs": 344447747,
+                  "observedFirstContentfulPaintAllFrames": 565,
+                  "observedFirstContentfulPaintAllFramesTs": 344447747,
+                  "observedFirstMeaningfulPaint": 726,
+                  "observedFirstMeaningfulPaintTs": 344608701,
+                  "observedLargestContentfulPaint": 827,
+                  "observedLargestContentfulPaintTs": 344709465,
+                  "observedLargestContentfulPaintAllFrames": 827,
+                  "observedLargestContentfulPaintAllFramesTs": 344709465,
+                  "observedTraceEnd": 4191,
+                  "observedTraceEndTs": 348073970,
+                  "observedLoad": 924,
+                  "observedLoadTs": 344806540,
+                  "observedDomContentLoaded": 768,
+                  "observedDomContentLoadedTs": 344651007,
                   "observedCumulativeLayoutShift": 0.0012608506944444446,
                   "observedCumulativeLayoutShiftMainFrame": 0.0012608506944444446,
                   "observedTotalCumulativeLayoutShift": 0.0012608506944444446,
-                  "observedFirstVisualChange": 514,
-                  "observedFirstVisualChangeTs": 246889764,
-                  "observedLastVisualChange": 897,
-                  "observedLastVisualChangeTs": 247272764,
-                  "observedSpeedIndex": 721,
-                  "observedSpeedIndexTs": 247097116
+                  "observedFirstVisualChange": 570,
+                  "observedFirstVisualChangeTs": 344452753,
+                  "observedLastVisualChange": 1120,
+                  "observedLastVisualChangeTs": 345002753,
+                  "observedSpeedIndex": 912,
+                  "observedSpeedIndexTs": 344795208
                 },
                 {
                   "lcpInvalidated": false
@@ -2611,19 +2619,19 @@
                   "numScripts": 40,
                   "numStylesheets": 69,
                   "numFonts": 8,
-                  "numTasks": 2215,
-                  "numTasksOver10ms": 11,
-                  "numTasksOver25ms": 6,
+                  "numTasks": 2182,
+                  "numTasksOver10ms": 14,
+                  "numTasksOver25ms": 8,
                   "numTasksOver50ms": 2,
-                  "numTasksOver100ms": 1,
+                  "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 1.759999999999998,
-                  "throughput": 68006511.03621882,
-                  "maxRtt": 67.45499999999998,
-                  "maxServerLatency": 31.927,
-                  "totalByteWeight": 1725851,
-                  "totalTaskTime": 839.0670000000243,
-                  "mainDocumentTransferSize": 17180
+                  "rtt": 9.589000000000006,
+                  "throughput": 40230556.22886074,
+                  "maxRtt": 100.13499999999999,
+                  "maxServerLatency": 42.46199999999999,
+                  "totalByteWeight": 1792001,
+                  "totalTaskTime": 847.7620000000167,
+                  "mainDocumentTransferSize": 17110
                 }
               ]
             }
@@ -2655,7 +2663,7 @@
       "cookiesCount": 2,
       "trackersGrade": "F",
       "trackersCount": 12,
-      "lighthouse_performance": 0.3708200454711914,
+      "lighthouse_performance": 0.3582029342651367,
       "lighthouse_performanceGrade": "D",
       "lighthouse_accessibility": 1,
       "lighthouse_accessibilityGrade": "A",
