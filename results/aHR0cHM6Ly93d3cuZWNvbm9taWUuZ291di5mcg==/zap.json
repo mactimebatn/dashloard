@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
 	"@version": "2.12.0",
-	"@generated": "Sun, 26 Mar 2023 01:40:56",
+	"@generated": "Sun, 2 Apr 2023 01:29:41",
 	"site":[ 
 		{
 			"@name": "https://www.economie.gouv.fr",
@@ -34,6 +34,13 @@
 							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">"
 						},
 						{
+							"uri": "https://www.economie.gouv.fr/comment/reply/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">"
+						},
+						{
 							"uri": "https://www.economie.gouv.fr/core/*.css$",
 							"method": "GET",
 							"param": "",
@@ -48,62 +55,62 @@
 							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/entreprises",
+							"uri": "https://www.economie.gouv.fr/core/*.svg",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/ministres/bruno-le-maire",
+							"uri": "https://www.economie.gouv.fr/filter/tips",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/ministres/gabriel-attal",
+							"uri": "https://www.economie.gouv.fr/node/add/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/ministres/jean-noel-barrot",
+							"uri": "https://www.economie.gouv.fr/profiles/*.css$",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/ministres/olivia-gregoire",
+							"uri": "https://www.economie.gouv.fr/profiles/*.js$",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/ministres/roland-lescure",
+							"uri": "https://www.economie.gouv.fr/profiles/*.svg",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/particuliers",
+							"uri": "https://www.economie.gouv.fr/search/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">"
 						}
 					],
-					"count": "11",
+					"count": "12",
 					"solution": "<p>Phase: Architecture and Design</p><p>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</p><p>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</p><p></p><p>Phase: Implementation</p><p>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</p><p></p><p>Phase: Architecture and Design</p><p>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Use the ESAPI Session Management control.</p><p>This control includes a component for CSRF.</p><p></p><p>Do not use the GET method for any request that triggers a state change.</p><p></p><p>Phase: Implementation</p><p>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</p>",
 					"otherinfo": "<p>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"search-865-input\" ].</p>",
 					"reference": "<p>http://projects.webappsec.org/Cross-Site-Request-Forgery</p><p>http://cwe.mitre.org/data/definitions/352.html</p>",
 					"cweid": "352",
 					"wascid": "9",
-					"sourceid": "6"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10055",
@@ -130,7 +137,7 @@
 							"evidence": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src 'self' data: https:; frame-ancestors 'self' bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/particuliers",
+							"uri": "https://www.economie.gouv.fr/filter/tips",
 							"method": "GET",
 							"param": "Content-Security-Policy",
 							"attack": "",
@@ -143,7 +150,7 @@
 					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10055",
@@ -170,7 +177,7 @@
 							"evidence": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src 'self' data: https:; frame-ancestors 'self' bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/particuliers",
+							"uri": "https://www.economie.gouv.fr/filter/tips",
 							"method": "GET",
 							"param": "Content-Security-Policy",
 							"attack": "",
@@ -183,7 +190,7 @@
 					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "6"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10055",
@@ -210,7 +217,7 @@
 							"evidence": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src 'self' data: https:; frame-ancestors 'self' bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/particuliers",
+							"uri": "https://www.economie.gouv.fr/filter/tips",
 							"method": "GET",
 							"param": "Content-Security-Policy",
 							"attack": "",
@@ -223,7 +230,7 @@
 					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "6"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10038",
@@ -326,7 +333,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "262"
+					"sourceid": "165"
 				},
 				{
 					"pluginid": "10098",
@@ -353,42 +360,14 @@
 							"evidence": "Access-Control-Allow-Origin: *"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/entreprises",
+							"uri": "https://www.economie.gouv.fr/admin/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "Access-Control-Allow-Origin: *"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/ministres/bruno-le-maire",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "Access-Control-Allow-Origin: *"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/ministres/gabriel-attal",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "Access-Control-Allow-Origin: *"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/ministres/jean-noel-barrot",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "Access-Control-Allow-Origin: *"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/ministres/olivia-gregoire",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "Access-Control-Allow-Origin: *"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/ministres/roland-lescure",
+							"uri": "https://www.economie.gouv.fr/filter/tips",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -414,6 +393,34 @@
 							"param": "",
 							"attack": "",
 							"evidence": "Access-Control-Allow-Origin: *"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/user/login",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/user/password",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/user/register",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/web.config",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *"
 						}
 					],
 					"count": "11",
@@ -423,6 +430,58 @@
 					"cweid": "264",
 					"wascid": "14",
 					"sourceid": "1"
+				},
+				{
+					"pluginid": "10020",
+					"alertRef": "10020-1",
+					"alert": "Missing Anti-clickjacking Header",
+					"name": "Missing Anti-clickjacking Header",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>The response does not include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options to protect against 'ClickJacking' attacks.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.economie.gouv.fr/p",
+							"method": "GET",
+							"param": "X-Frame-Options",
+							"attack": "",
+							"evidence": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</p><p>If you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's \"frame-ancestors\" directive.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</p>",
+					"cweid": "1021",
+					"wascid": "15",
+					"sourceid": "2547"
+				},
+				{
+					"pluginid": "10099",
+					"alertRef": "10099",
+					"alert": "Source Code Disclosure - PHP",
+					"name": "Source Code Disclosure - PHP",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>Application Source Code was disclosed by the web server - PHP</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.economie.gouv.fr/files/2022-11/APE_Rapport_Etat_Actionnaire_2022_0.pdf",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<?=\u009F.5\u00CF'\u00D0s\\x0007\u00A0e\u00BE\u00E2\u00AB\u008F\u00C3\u009Fj\\x0002\u00CB\u00D8\\x0001\u00FAk\u00FF^\u00D1_\u00ED\u008A;\u00BFn\u00A7\u00C4\u00A1\\x0005\u00FAw\u00AAlL\u00FFL\u00B8f\u009B\u00FBa{\u00FF\u00DF\u0082\u00E3\u0085\\x001b\u00F4-1\u00E0-\u00DC{\u00FEB3\u009C\u00BF\u00EELM\u00F8\u00A8\u0097\\x001b\u0093\u00BE\u00E9\u00FF6\u00E5\\x001f\\x0005\u00A0)T\u00CD\u00F7\u0088\u0087\u00BB|G\u00EA\u00B9`\u0095{vwt\u00FF\u00AD\u00CD5s\u00F2$\u00AE2\u00B0\u00F7\u00F1\u00AE\u009Azn\u00DC\u00F1\u00F8\u00BD(\u00BE\u0086\u00E6\u00AF\\x0005.f\\x001cW\u00AA\u00FE\u009C\\x0013?\u009C>4\\x0014t\u0091\u00C5-\u00A79\u00E4\"\\x0017\u00FF>\u0096m_e\u00F8\u00FE\u00DD\u00CF\u00A5\u00ABB\u00D9\\x0013\u0097\u00CB/\u00B96\u00C6\u00DB\u00C0d!\u00DE\u00A1\\x000f\u00E7\u00F9k\u00DA\u00F6\\x000eo\u00FF\u00ABp\u00F4\u00E6o\u0081\n=\\x001c\u00C5\u00CB\u00C3w*d\u009F/\u00CF\\x0005\\x0010\u0083\u00DF|\u00AF\u00B9]\u00F8\u00EB\u00E5\u00E1\u00F5\u0099o\u00BD9{w\u00F8\u0086\u0092.rR\u00D0\\x0015\\\\x0019l%\u00AC\u0084\u009EJ\\x00191~\u00E8F\\x001fN\\x001d\u00D2\u00A1\u008B@\u0087\u00C0#E\u00E2\u009B\u00E7/\u00E9\\x0013qx\\x0007\u00CFW\u00ED4p\u00C4\u00D1\u00A0m\u00B6\u00F3\\x0016+2!\u00B1\\x001bV\u00A3\u00DF>D\u00BF'\\x0011\u009E6\u00B6U1\u00C9\u00CD\u0099\\x001c\u00E7J\u009B\u00C7\u00A1t\u00DDo\u00D7\u00C4\u00DA\u00A4t\u00BE3\u00EA\\x0008\u00A7\u00C2\u00A9xm=.\\x001a\u00CB\u00C5\u00F2\u00A1\u009D\u00F5Yr\u00E8,\u0086\u008A\\x0010o\u00B9{=\u009B/\u00BA\u00D3\tnG\u00DB\u0085\u00C8\u0097\u009A\\x001c\u00DAX\u00B9w\u00A6vw\u00E7t\u009BIn\u00EC\u00D1\u00A4\u00D9\u00BF\\x0010\\x0008\u0086\u008B+~\u00AFy\u00B8\u0096\u00C4f\u00C4]\u00E6k;\u00FD\\x000f\u00ED\u00D5\u00B2\u00DB6\\x000c\\x0004\u00EF\u00FE\n\\x001e#\u00C0VER/#\u00A7\u00A2i\u0080\\x001c\n\u00A4E\u0080^rQb!\u00A1A\u00C9\\x000fY-\u00FA\u00F7\u00DD\u00E5\u0092\u0094\u00E4(v!\u00A7\\x0008`\\x0004\u0082D\u00EEcvvf\\x0011d\u00F01_\\x00062C\u00B6;\u00D1\u00AE\u00A3\u00E7\u00AF\n\u00C3'o\u00A4U\u00B9\\x001f\u00BB\u00ADi\u00B7[\u008D\u00F1`\u00DF\u00BC\u00D2\u00F7\\x0012\u0089\u00A9z}\\x000cn\\x0003\\x0003+S'I\u0080oX\u008C\u00D5#h`\u00AA\u00F1HXGF\u00C0\u00AFH\u00DB\n\u00D3\u00DA\u00B2\u00B6\u00EB\u00E0_\u00D6\u00CD\u00B8\u00DC^\u00861L\u0089\u00F7A\u00C2TN^\u009EUIt\u008Bxt\u00A1\u00AF\\x0014\\x0008\u0086\u008DE\nU\u00D3r\u00A6Q\u00BE\u00CC\u00AFg\\x001a\u00EB\u00B2(\u00BE~a\\x0000\u00AE\u0091Cd\u00EBf\\x0010l\u0082\u0099\u00E99\u00AB\u00FA\u00A7\u0095\u00F5\u00DC\\x001b\u00ABM\u00FD\u00C2\u00B0}f\u00B7\u00EC\u00ABrJ\u00B58\u0098>(\u0090)\u00D7\u00D55\u00E3\u00938uX\u00A6\u008Ea\u0085\t\u00D4%n\u00AF\u00EAgN\u00C4\u00E1RnXAU\u00B0\u00B5\u00F0J\u0096(\\x000b\u00AB\u00D1LZ\\x0015\u00D7,\u00BE8\u00AF>?I\u00C3F\u0085r2\u00D26d\u00E8M:{qf\\x0018\u00F0\\x001fU\u00D7D\r$Yq\u0091O\u00E9f\\x0012\u00E6r\u00E9\u009B\u00F9\\x0011I\\x000f\u0083\\x000c\\x0012\u00E7\u00A1\u00FA\\x000b\u00DF\u00EAkG\u0086\u00E4\u00C7\u0090c\u0091\u0082\u00B7\u00EAP\u00E8I\u00C8\u00CC\u00C2\\x0008H\u00C9%\u0083\u00CF\\x0017\u00B01\u00C1\\x001buu\u00BC\\x0002\u00B2\u00B84Gc\\x0001\u00F4\u00F8\u00C4Zk\\x0000[_\u00BF1\u00A9\\x0003\u00A8V\u00C4\u00C8/\u00F5\u00BB\u00BB\u00D2c\u00E5\u0084\u00A5d\u0086\t\u00FA\u00D00w*\u00B7\u00A6\u00F6\u00B5AF\u00A1ac\u00DC\u00DF\\x0001\u0093\u00D3\u00AD\u00A3K\u00A0PZ[\u00C9\u00D20r\u009B\u0085\u00DB\"\\x0007\u00C5\u00B2\u00FFG\u0088&\u0089\u00ADn\u00F1A\u00E3\u00E1\u00BF\u0088\u00C2(\\x0002\\x0013\u00FB\u009B\r\u00E3\u008CM\u00B6'\u00B7\u00CE\u00BB\\x0008\t\u00A5X:\u00A6\u008F\u0082E\u00C6\u00DC\u00EF\u00C9*\u009B\\x001e\u00CFY\u00D1\\x00069\u00C6N\u0086m\u00D7\u0096\u009Az\\x0000\u00A8\\x0006J\\x001d\u00B4z}\u00A4c\\x000e\u00C0\u0093\"\u00C1w\u00E2\u008F(\u00A3\u00ED\\x001e\u0094fA)\u00F5\u00EB\u00F3\u0096M\u00DF4\u00D3a\u0095\u00B0\u00D0\u00C1\u00E7Qr\u008Ei\\x001f\n\u00DC&\u00B9S\u0097\"\r\u00A3\u0094\u00F14\u008C\u00DD\\x001d\u00E7\u00D4\"<\u00B3\u0097j\u00C2\u00F7\u0098\u0086\u00D4v\":\u00D9\\x0006\u00DF\u00B7v\u00AF=\n\\x0019[\u00FD\u00EC\\x0006a\\x0004\u00B3/\u00EE\u00FE\u0095MI\u00A3\u0094\u00B8\u0080\u0085V\u00AD5W\u00B6\u0081v\u00DF\u00D0\u0094RM\u00E6c\u0081\\x0000{\\x001d\u00A0\u00B2l\u00D7z\u00B9\u00B2!.\u00E8\u00E9\u00FB\u00A1-\u00C0\u00B40i\\x0017\u00F5\u00ADi[WPk{\u00D9\\x000fR\u00EC=\u00F9K\u00CAt$\u008A\u00E3#\u00A8'@y\u00D8*I\u00E7DFAzM\\x0000\t\u00DF\u00DF}\u008E\u0099?\u00DD\u00F4\\x0006\u00D2Y\\x0017T6\u0090\u008C\u00A7GM\u00DC\u008ECv \u00CBb>\u00B4\u0082qr\\x0016He\u00ED\u00DD\u0081\u00D7\u00D6@M\u00AD\u00FA\u00A5\u0098.=\r\u00ABSK\u00B3A$\u00A2$\u00C6\u00C3\u00A9\u00F0\u00C8r\u00F8\u00B6c\u00A2\u00E1\u00A42\\x000b\u008EA\u00C7:Hc80\u00F8\u00AC\u00E8!\n\\x0015)\\x00044\\x0000\u00E0h0\u00EE\u00D0\u00BA\u00A1x6\u00FB\u00CA\u00B0\u00B3u3\u00E7\u00A4\u00EED\u00B1\\x0006N\u00D0K[\u008C\u00CE\u00E3\u00CC\u0090\\x001d\u00F8\\x0003x  \u00AF\u00E2)\u0090\u00D2\u00E3jA_\\x000ex\\x0005?~\\x00082\u00E3\u00D2\u009E_\u00E7t\u00DA\\x0017\u00AD\u00AA\u00C2O\u0086yt\\x0003\u00B87\u00D05\u00EEf\u008BUr\u00C8\u00C7\u0094^\t\\x0007_\\x001ff\u00BBY\u009C\u0084\u00B1L\u0098\u00949XV\u00C6\u00B9\\x000ce\u009E\u00B2,\n\u00F34e\u00FBr\u00F6\u0093\u00D5\u00F0\\x0016\u00E7\u00F0\u009A\\x0010y.9\u00B9\\\\x0011&\u00B1X\u00E6Q\u00C2b\\x0008\u0093\u00A7\u0090}\\x0006\u0087da\u00C6\u00B9H\u0081\u009D\u009F\u00AB\u00D9\u00A7\u00BB*b7\u009B\u00D9w\u00F8\u00FB+\u00C0\\x0000Oq\\x001b\u00B9\rendstream\rendobj\r6899 0 obj\r<</BitsPerComponent 8/ColorSpace 6563 0 R/Filter/DCTDecode/Height 101/Intent/RelativeColorimetric/Length 3271/Metadata 6900 0 R/Name/X/Subtype/Image/Type/XObject/Width 161>>stream\r\n\u00FF\u00D8\u00FF\u00EE\\x0000\\x000eAdobe\\x0000d\\x0000\\x0000\\x0000\\x0000\\x0001\u00FF\u00DB\\x0000\u00C5\\x0000\\x0012\\x000e\\x000e\\x000e\\x000e\\x000e\\x0015\\x000e\\x000e\\x0015\\x001b\\x0012\\x0012\\x0012\\x0014\\x001a\\x0019\\x0016\\x0016\\x0019\\x001a\\x001e\\x0017\\x0019!!\\x001c\\x001e#\\x001e#!,#\\x001e#!.333.!>BBBB>DDDDDDDDDDDDDDD\\x0001\\x0014\\x0011\\x0011\\x0015\\x0011\\x0014\\x0013\\x0011\\x0015\\x0019\\x0018\\x0013\\x0014\\x0013\\x0016\\x001d\"\\x001a\\x001a\\x001a\\x001d!\\x001b\\x001d\"\\x001d\\x001b!# #$$# #$$$$$$$,,,,,,44444====DDDDDD\\x0002\\x0014\\x0011\\x0011\\x0015\\x0011\\x0014\\x0013\\x0011\\x0015\\x0019\\x0018\\x0013\\x0014\\x0013\\x0016\\x001d\"\\x001a\\x001a\\x001a\\x001d!\\x001b\\x001d\"\\x001d\\x001b!# #$$# #$$$$$$$,,,,,,44444====DDDDDD\u00FF\u00DD\\x0000\\x0004\\x0000\\x000b\u00FF\u00C0\\x0000\\x0011\\x0008\\x0000e\\x0000\u00A1\\x0003\\x0000\"\\x0000\\x0001\\x0011\\x0001\\x0002\\x0011\\x0002\u00FF\u00C4\\x0001\u00A2\\x0000\\x0000\\x0001\\x0004\\x0002\\x0002\\x0003\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0002\\x0003\\x0005\\x0006\\x0001\\x0004\\x0007\\x0008\t\n\\x000b\\x0001\\x0000\\x0002\\x0001\\x0002\\x0007\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0002\\x0003\\x0001\\x0000\\x0004\\x0005\\x0006\\x0007\\x0008\t\n\\x000b\\x0010\\x0000\\x0000\\x0002\\x0002\\x0002\\x0003\\x0003e1\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0001\\x0002\\x0011\\x0004\\x0012\\x0003\\x00131!2Q\\x0005\\x0006\\x0007\\x0008\t\n\\x0014\\x0015\\x0016\\x0017\\x0018\\x0019\\x001a\"#$%&'()*3456789:ABCDEFGHIJRSTUVWXYZabcdefghijqrstuvwxyz\u0081\u0082\u0083\u0084\u0085\u0086\u0087\u0088\u0089\u008A\u0091\u0092\u0093\u0094\u0095\u0096\u0097\u0098\u0099\u009A\u00A1\u00A2\u00A3\u00A4\u00A5\u00A6\u00A7\u00A8\u00A9\u00AA\u00B1\u00B2\u00B3\u00B4\u00B5\u00B6\u00B7\u00B8\u00B9\u00BA\u00C1\u00C2\u00C3\u00C4\u00C5\u00C6\u00C7\u00C8\u00C9\u00CA\u00D1\u00D2\u00D3\u00D4\u00D5\u00D6\u00D7\u00D8\u00D9\u00DA\u00E1\u00E2\u00E3\u00E4\u00E5\u00E6\u00E7\u00E8\u00E9\u00EA\u00F0\u00F1\u00F2\u00F3\u00F4\u00F5\u00F6\u00F7\u00F8\u00F9\u00FA\\x0011\\x0000\\x0000\\x0002\\x0000\\x0003\\x0003\\x0001\u0099\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0001\\x0002\\x0011!\\x0003\\x00121\\x0004\\x0005\\x0006\\x0007\\x0008\t\n\\x0013\\x0014\\x0015\\x0016\\x0017\\x0018\\x0019\\x001a\"#$%&'()*23456789:ABCDEFGHIJQRSTUVWXYZabcdefghijqrstuvwxyz\u0081\u0082\u0083\u0084\u0085\u0086\u0087\u0088\u0089\u008A\u0091\u0092\u0093\u0094\u0095\u0096\u0097\u0098\u0099\u009A\u00A1\u00A2\u00A3\u00A4\u00A5\u00A6\u00A7\u00A8\u00A9\u00AA\u00B1\u00B2\u00B3\u00B4\u00B5\u00B6\u00B7\u00B8\u00B9\u00BA\u00C1\u00C2\u00C3\u00C4\u00C5\u00C6\u00C7\u00C8\u00C9\u00CA\u00D1\u00D2\u00D3\u00D4\u00D5\u00D6\u00D7\u00D8\u00D9\u00DA\u00E1\u00E2\u00E3\u00E4\u00E5\u00E6\u00E7\u00E8\u00E9\u00EA\u00F0\u00F1\u00F2\u00F3\u00F4\u00F5\u00F6\u00F7\u00F8\u00F9\u00FA\u00FF\u00DA\\x0000\\x000c\\x0003\\x0000\\x0000\\x0001\\x0011\\x0002\\x0011\\x0000?\\x0000\u00B7\u00A2\u00FE\\x000f\u0091\u0086\\x000c\u00C9ah\u00A4\\x0008\u00C9@$\\x001d\\x0019XI\\x0018\u00CA\u00C0\u0082\\x0019\\x00182\\x00184\u0088\u0086\t21B\u0083ng\u00C4LC\\x001ad\u00EC\u00C7\u0089\u0097+\u00EA&!RANC;8j\u00C8\u00D8\u0084\u00ADI\u0080\u0093p>\u00A2A\u00D4\u00C8\u00D4\\x0019c\u0099\u00B5!\u00B0b\u00911\\x0002D\u00A2A\u00B4[\r6rd\u008B\u008C\u00CC\u00E0\\x0004\u0089\\x0013\u00E0\u008A\u0082\u00B9H\\x0013\"\u00A0\u0090Zn\u0099RCRt+\u0083Y\u0088\u00C8A\u00B9^\u00C5\u0081\u00C4\u00E4$\u0091!Hq \u009A)\\x0011\u0091\u0098\u009Fa3\\x0012\"$\\\u009A0\u00C5\u00A9\\x001b\\x0016 \\x0016h\u0088\u0094\\x0013\u0081\t\u00A4\u00F8\u00A2\r\u00A0\u00E5$\u0088(\u00CC!x8j\u00A6\u00E1$\u0092loV\\x001d$\\x001f\\x0002Sr\\x0012&\\x0016I\\x0012\u0085\\x001aj\\x0008$\u00930\u0084\\dI,=@\\x0008$\u0088\u00CC.\u0080 \u00D3\u0086\u0089!\u0080\\x000c,\\x000b\\x0010$\u00FF\u00D0\u009FM\u0096\u00D1%\\x0018u\u00C2\u00CA$\u0089\u00E8\u00AE\u00B2YDkQ\u00BD0\u00FB\\x0005\u00C8\u0091\u0093\u00D0\u00C3It\t\\x0011\u00A6,\u0084\u00E6%\\x0004\u009B\u009C\u00D65\\x0010M\u00F1\u00F48FA\\x000b\u00C9\u00A6.\\x0008\u0088\u0089RTl\u00A2\u00E4l\\x001eD\u0088h74M\u00F0n8\u0092Y\\x0002#L-\\x0011$\\x00073\u00E2&!\u00DB\u009AI\u00E3\u00C4\u00BB\u009C\u00E3\u00D3\\x0011\\x0004\u00F8\u00E4\u00B3,\\x0011\"]\\x000b4+\u00C2M\u00C0n2%6%\u0093\u00D2Y>\\x0007\\x001c\u00AEG\\x001b\u008D\u00C4nT\u008E<\"Z\u00C9\u00F7\u00944\\\u00EC\\x0013e\u00A2\u008BG#\u00AC\u0089\u00EA*\u008FN\u0082\u00B7\u00C3'\u00D0\u00D3\u00A1\u0090\u00C34Qs&\u008B\u0091\u008A\u0099\u00B5L\u008Do\u0086\u00F4\u008Fl\u00A0\\x0008\u00D6\u0088\u00C9\\x0011\u00BA\n$i\"M2N\\x0018\u00A3\\x0014\u0080\u0092\\x00125$&6\u0093\u0082\u008B\u0085\u00C6\u00E1E\u00C8\u0089$\u0091\u00A6\u00FCEJ3\u00B3\u00DE\u0084k1\u00CA\u00C9r\u00B8M\u00C8\u00E7D\u009CDo\u00D4_[c\u00D6\\x00064\\x0016\u00E0\u009E\u009B\u0095#q i\u00A8\u00D4i\u009B\u00FB\\x001cF\u00F8\u00A0\u00DC\\x0014\u00E0\u00A2\u00C6d\u00AD\u00C4\u00E13I$Im\u0095\\x001e\u00BE\\x0012\u00CFD\\x0014\u0081\\x0011\u00A2Z\\x0011\u00A2D\u0092FN\u0089(\u00AC\u00D4\u00CFX%24&Du\u00C1\u00A4\u00E38\\x0011\u00B6\u00E31\\x0012\u00E3r$f$X\u00E6f/\\x0011\\x0005\u00A1\\x0012\u00AE\\x0007:H\u00A8\u008CH\"\u009BdV#\\x001c\\x0005\\x0002$\u009CdMB\\x0011$\\x001c\u00840\u00E6#3%@\u0087IdAI5[\u00E8Q)B\u008D\\x0012\u0084R\\x0001D\u0085S9\\x0008e\\x00036\u00E3f\u0080\\x001b&\u00AB\\x000eP\\x0004\\x0019\u00A6$\u0089 \u0090\\x000c\u0080@\u0091\u00FF\u00D1\u008F6\u00CD\u0084\u00AB\\x0000\u00CDO\u00A1\u00C4\\x0018h\\x0019\u00AC\u00C8l\u00B8\u00DC(\u00A0O\u0084\\x0001\\x0012\u00D5\t\u00A6D\\x001aH\rC1\u00B2\u0081\u00AC\u0083\u00A8\u0086P|\\x000f\\x0011\u0090I\\x0019\\x0012i\u0086\\x0019\\x0019\u00A4\u0090u\\x0002Y\u008D\u00B4\tD#\u009D\u0089 \u00FACa\u00C0\u00C94\u00CDF\\x0018\u00B24\u00C8\u00C2\u0096\u00A4\u0092A\u00D6A\u00A9\\x0013T\\x0000\u0085w\u00A9'\u0094\\x0011(\u00CA$\u00D3Eh\u00A6h\u00A8\u009FID\u00A3\\x0010\u0086n#L\u00C9\\x0016\u00CD\u0096\u00FA\u00FAJ\r#bK\u00A8\u008EjIpB\\x0011\\x0019\u0092I\tg\\x0003(\u00940\u00CCd\"\u009B\\x001d\u00C8H\u00A8\u00CC\u00913S\u00D7\u008F\u00A2\\x00196K\u0095\\x0014\u00CD\u00C0\u00E2q\u009AI\\x0013\u00C6\u00EBQ\u00DE\u0088\u0088:\u0094E\"\u00C6L\u00D9n\\x0015\\x0013S\u008F\u00DCdH\u00B5]\\x0004\u00D6o E\\x001a\u00D0\u008D2I\u0081\\x001a~\u0084\u0099aD!M29\u00A9\t7\\x001c\\x0011\u00D8\u00A9\u0099&F\u0092(\\x0019\\x0011\u00B4\"EZ5,kAI\u00C0\u00C7p8M\u00C2\u00C7\"D\u00D2zDkH\u00EFt\\x0011 \u00C7@\u009C\u00ECg\\x001aNCH\u00914\\x0011\u008FH\u00CD\\x0012R\u009E\u009A\u0084\\\\x0014\u00DC\u00AC'\\x001cx\u00E0I\u00C4\u00DC\u00A8\\x0004h\u00A4|\u00B3\t$&\u009B\u00A0HH\u00E1\u0086\u00890h\u00C9t\u008D\u0081HDc\u0089\u008Ak}Y\u009D\u009B\u00C1\\x001b\u008Cr\"\\x000c\u00A0\u00E5I2ji)\\x001a\t\\x0012\u0091#\u00D1\r\u00B7\n\\x0008\u009B\u00C0\u00C5\u009A\\x0005\u00A2\\x0015\u00E3Z\u00A3_3`D\u00C0\u0082\u0089(`\u00D9A%\r\u00C4\\x001c\u00C4H\u008DBq\u009B\u00D0\u00F2\\x000e5\u00BD\\x0012\u0089 \u00C2L4\u00E6f\u00999\\x0011A\\x0012Z\u00CDCy\\x0014\u00CC\u00D1Xh\u0098\u00E8-fO\u00A3d\u0090%\\x00014\u0094\\x0004Dj\u0086\\nSI3!\u00B7@\\x001a\u00E8 \u0089$\u00B1\u00B1@\\x0010b\u0088!`X\u00CA\u0080\u00A1BG\u00FF\u00D2\u009AE\u00AA\u009E\\x0000\u00CC\u0083H9\\x0016\\x0016di\\x0010\u00B75\u0089!D\u0092f\\x001eKS4)\u0099\\x0000\u0093Ea\u00E4L\u0094#\\x001c\u00EEGK\u00E9\u00BC\np\u00B3\u009Ci>,B%\u0091\u00C3\\x0013\\x0004\u0085hSA\"j1\u0097\\x0011\u0092)\\x0006Qr\u00A2\u0090\r\"Xr\u00C5\\x0001\u00A1%BV\u00C8\u0089\\x0011\u008D\u0087;\u0099\\x0012@\u00D6t\\x0001\\x0010\u00C4h\u00E4s&\u00A7\u00D7\u00D0\u00F3!f\u0089\u008D\\x0016*.v\u00C9\\x0013\u0080\u00C9\u00C6\u00FA\u00FA\u0091\u00BD\u00E5\\x0006\u00AA\u0085\t\u0099\\x0011\u00A2\u00A4\\x0004\"bBt\u0091M\\x0013%\"\u00B7\u00C7\u00F2\u00D4^\\x0008K\u0091\u00C6\u00E7r\u00A2\u0092\\x0004\u00E6B>##@\u0088\u008D\u00F0\u00C9P+\\x001af\u00C07,|\u00CAd&\u00E4*\u00A1\\x00134Q\u00D1\u00BE\u009F(m8\u0090`0\u00D1\u008F\\x0010A\u00C4fK\u008FIi\u009D\u009D\u00F1f\\x0014i\u00A2%H\u00CAh\u009AY\u0080DI\u00CD+\u00A1H1\t\u0098\u00C7E\\x00072I:\u0091D\u0088\u009Ch\u00C7\u00A4\u00F8J}\u0081\\x0011\\x0010S\u0082;\\x0001\u00C0\u0081\u00A6\u00E3q>\u00D0\\x001f_6\u00C2q\u0080\u00E5w8\\x0014\u00E022#8\u00FC\u00D6\u00A7\u00D35<z5\u0099\u00CE\\x0016jdh\u00A4\u008A\\x000eDN\u0082\u008B\u00E1\u00E8\u008C\u00C0\\x0011\u0092\\x0015\u00D35\u00E4E\rI3\u00C2\\x0010\u0094hIT\u008938h\u00AC\u00A2\u00E4M\\x0013zd&X.E\u00A9a\\x0011*s\\x001b\u00E9\u00A2E\u008F%\u0087\u00DC,d\u009Cf\u00A4\u00A8\\x0002\u00E1\u00B2!Z\\x0011\u00A4\u0099%!#,\u00C8Z\\x001226\\x0002I\\x0013ACa\\x0013AO\u0082=J \u00E2\\x000eW\u00C5\\x0018Y\u00A1\\x000cL>\u00E4r\u00A9\"\"\u00A0\u0098x\u00925\r\"l\u0092dt\\x0005\u008D\u00C2x(\u00C9$\u0085\\x0011\u00A6f\\x0004\\x00123H?@\\x001a\u00EE3\u008F\u0086\u00C5\\x0000A\u0089 \u0095\u0081a \\x0010$\u00FF\u00D3\u0098u\u0091\\x0019\u00B5!\u0092$\u0094\u00F0o\u00BA\u0091\u0080\\x0019'\\x00120\\x0000\u0089\\x0001\\x0012\u00ACD\\x001a#2I\u0080\u0084f8\\x0012r\u00A0d\u00A1\\x001a\u00E1a\u00B9\u0090I\u00E1\u008B\u0083\u00A5\\x0003z@t8\u00E0\\x0001\\x0012$\u0094HB\u00EC\u00D4A\u00B8\u0090M\\x0012}#\\x000e\\x0019%\\x0000ba\u00D2\u0084\\x0000Y8P\u0080\\x0010f)!\\x0002\u009A\t$O\\x0003n\\x0017\\x001aN$\u008C\u00D4\u00F4XRp\u00B8\u00CD\u00F1D\u00B3\\x0011\u00B0Ps\u00A2\u00C2\"2@\u0093Z\u00CC\u00D6\u00B7\u00C5Y\u0089\u00E8\u0083FHH\u00D31+\u0086\u0088\u00D4\r\u00B9\\x0011r9\\m\\x001cF\u00D1#2}\u0080*\\x0008[\u0089\u00C0\u008B\u0085FI&\u0092UQ\u00A4|\u00A7\u0081\\x000cfc\u009D\u00CEh\u00B5b\u00A4\u008A)\u00BCM\u00C8h\u00B8\u00C9W\u00A5\u00A4\u0096\u00D8m2\u009Cl\u00B4\u0094\u00EAq\u00A2h\\x0015R\u0091\u0091\u009F([\u00A3H\u00CDy#3)\n\u009A\u00D0\u00C4(\\x0008\u008D4DG]\\x0008p\u00B2\t\u00C2f\u00E3$M4\u00D3M$\u0094\u0089Y\u00DE\u00C0\r\u0087bi-\u00B2\rq\u00E4|\u00A1\u00AC\u00E4M&:$\u00B4\\x0012AoL\u00C9o\u00B0\\x000b\\x000c\\x001b\u009D\"#h\u0092\u0092:\t\u0099\u009F\u00D0\u00C0\u00A14I\u00A8d\u0094\u0080\u00FD\\x0013\\x0012\u0088\u00898j\u00A3m4\u008C\u00DF\\x0008\u0083jQ\u00BE\u008C\u00B8\u009C\u00E8\u00A4\u00E3$\u00DC\u0084\u00F0\u00D4p'g\\x000e\"\u00E7c\\x0019\u00D0tA\u00C8\\x001d\"8a\u0091\u00A4d\\x0000\u00C9vj\u0098\u00D7IO\\x0008e\\x0014I\u00E0\u00DBq\u00C43\u0095mL\u009F _9a\u00E2c\u00B8\u008D\u00F4\u009Fo@\u00CC\u0089%\\x0000\u00A45\\n4I\u00F4<jPq\u00D0\u0088\u00CB\u00A5\\x0010\\x0006SQ#]\\x0013\"5\u00AC<\u00EC|\\x00011\u00D0Z\u00C2\u00DDH\u00A8Q\u00A1\\x0014\\x001an@nAn\u0094@\u00E9DR\u00E8\u00A1\u00FF\u00D4\u00B8(\u0080D2\\x0002\\x0006\\x0004eA\u0086C\u009D\\x0017\\x0001\\x0012\u00C8\u00D337\u00C4Q}1\u00B0A\u0087+\\x0015\u00C2\u00E5M\u00D8\u0099-%)k:\\x0000\\x00133\u00861\\x0006ICF\u009ApPE$\\x0012'\\x0019\u00B5MFDfkQ\u00DE\u0084;\"\nI\u00B8\u00DC\u0085\\x0011\u00A4\u0091\"\u0093\u00F5232\u00D1\"fBm\u00CF\\x0004\u00D7\\x001b\u0091\u00F5\u00C6f\u0081\u00DE\u00CDCA\u00CD\\x0006\u00F3\\x001d\u00CAFnU\u00A6t\\x0002l\u0091u\u00A0\\x0011\u00AF\\x001b\\x0012:\u00E2\u00A2P\u00A4L\\x000e\u00E2\u00A0\u00CB\u0085\u0090\u00C5M2\u0090\u00A6h\u00A9K}!\u00AC\u00CB\u0082JnfA\u009B\\x001d\u00CC\u00E4L\u00CDF\u008A-\u00E0^\u00BE\u00A4f\u00A0\u0094XNg\nMI\u008E\u0099!h\u0099$\\\u00B1\u00BC\u00E0p\u009B\u00B8\u009C\u00AE\u00A4\u00C8\u00C8\u009E\\x0018\u00B7DH\u0090\u009A\u0084\u008A\u00E0Z\u00C2\\x000e$\u008C\u0098\u0095\u00C7\u00AA!\u00DBAY\u0082\u00E74\\\u00A8$\u00E9$\u009A\u00A2\u009154\u008E\\x0001fFbU\u00C1\\x0005'**Z\u0091E\\x0012ZM\u00CDJ}\u00810\u00F3\u009E\t\u00EEFJ\\x0006\u00D9df\u00FD\u00B3\r\"\u0082t\\x0014\\x0018\u00A8\u0092&\u0081\u00B3\t'\u00ABI\\x0014L\u00B1\u00C6 \u0090\\x001a$\u008C\u0088\u00D0\u0098\u0095\u00E2\"24\u008Cm9`\u00AD\\x0004\u00D6bn\u00B7*h\u00A6H\u00A8\u00DA\u00A2\u0091\u009B\u00E9PVJ\\x0011nVy\u009B%7\\x001b\u008D\u00C6n7\\x0013\u00E3W1\u00BE\\x0015\u00E8\u0096$\u00DC,t\u008D\"I&\\x000b\u00AC\u00DE\\x001b\u00EA\\x0007\u00CA\\x001b\t\u00C1-\u008E\u00C8M\u00B3\u0091\u00C2H\u0094\\x0003\u00C2\u00D1\\x000664J\u00A6ls \\x0017\u0090\u008D6#\u0081';\u00E9$\u00DC\u00DE\u00AC\u00CDez[\u00E8u\u009ANg\\x000c\u0083p1\u00D4F\u00A2v$\u0091\u00A4\u0082\u00CE\u00F4K\tJ\tl\u00C62G\\x0010NRu\u00AD\u00F1\\x0004\u0091'\u00CB2\u00DF\\x0000\u0084O\u008E<r\u00B8\\I \u00B7\u00AE\u00D3D\u00F4J1$kB%\u00D2#I8a\u00A4G\u0084\\x0010hP\\x0019\u00AF&I\u00CDI3!\u00BA\u00E2p2\\x0012\u008F\\x001c\u00C4D\u008A*]\u009C$\u00D1q \u00995I\u00A2\u008C\u009F\u00AFKD\\x001fq\u00B8\\\u00ADc\u00E2j\u0091\u00BD6\u00CB\u00EB\\x0003\u00A4\u00C7@\u00C8\u009D\u0091\u00F2D\u00F0\u00D4De\u00A2!$\u0084\u00D1\\x001af\u00BCT\u0093\u00E0\\x00083\"\u0090\\x0002\"\u009C\\x0007A7\u00C7\u00B1\u00E9\u0087\\x001cnW\\x0013\u0094\u008D\u00D6\u0091$\u00A7\u00AA\u00A0\\x0000\u009CN2#%-f\u00FA\u00B7\u00D0\u00A4PE\\x0002R$H\u00AE\\x0000\u0094\\x0018K\u00C9\u00AA\u0092XP\nMS\\x0019P\u00CA\u0086\\x0006D\u0088\\x0018P\\x00142\\x0001B\u0087\u00FF\u00D5\u00B8\u0080\u0080\\x0000`B\u008002 \\x0010\\x0002R \u00A1\u0083\\x0014B\\x0002T\u00FA\\x0005(\u00C6h \u00A0\u0088\\x00120202(\u00C5\\x000c\u00A8ac4\\x0010\u0091\\x0004(e\u00E8\u00CA\u009F\\x0006\\x0008*\u0080$P\u00C9\\x0010\\x00142\\x0001B\u0086\\x0000\\x0000\\x0008\\x0014\\x0001\u0091\u0080\n\\x00142\\x0001\u0080\n\\x0014?\u00FF\u00D9\rendstream\rendobj\r6900 0 obj\r<</Length 6652/Subtype/XML/Type/Metadata>>stream\r\n<x:xmpmeta xmlns:x=\"adobe:ns:meta/\" x:xmptk=\"Adobe XMP Core 7.1-c000 79.a8731b9, 2021/09/09-00:37:38        \">\n <rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\">\n  <rdf:Description rdf:about=\"\"\n    xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n    xmlns:xmp=\"http://ns.adobe.com/xap/1.0/\"\n    xmlns:xmpMM=\"http://ns.adobe.com/xap/1.0/mm/\"\n    xmlns:stRef=\"http://ns.adobe.com/xap/1.0/sType/ResourceRef#\"\n    xmlns:stEvt=\"http://ns.adobe.com/xap/1.0/sType/ResourceEvent#\"\n    xmlns:photoshop=\"http://ns.adobe.com/photoshop/1.0/\"\n    xmlns:crs=\"http://ns.adobe.com/camera-raw-settings/1.0/\"\n    xmlns:xmpRights=\"http://ns.adobe.com/xap/1.0/rights/\"\n    xmlns:MicrosoftPhoto=\"http://ns.microsoft.com/photo/1.0\"\n    xmlns:pur=\"http://prismstandard.org/namespaces/prismusagerights/2.1/\"\n   dc:format=\"image/jpeg\"\n   xmp:CreatorTool=\"Adobe Photoshop CS Windows\"\n   xmp:MetadataDate=\"2020-06-25T16:21:38+02:00\"\n   xmp:CreateDate=\"2015-04-28T11:33:40+02:00\"\n   xmp:ModifyDate=\"2020-06-25T16:21:38+02:00\"\n   xmpMM:DocumentID=\"adobe:docid:photoshop:609b549f-ebfa-11e4-9d4d-fd4c4205b745\"\n   xmpMM:InstanceID=\"xmp.iid:88968106EFB6EA119A0891057E47079B\"\n   xmpMM:OriginalDocumentID=\"adobe:docid:photoshop:609b549f-ebfa-11e4-9d4d-fd4c4205b745\"\n   photoshop:LegacyIPTCDigest=\"1CDEB142F84491F3BBD27DEB688291A7\"\n   photoshop:Country=\"Finland\"\n   photoshop:Headline=\"Successful investment\"\n   photoshop:Credit=\"Fantasista - stock.adobe.com\"\n   photoshop:Source=\"82237245\"\n   photoshop:ColorMode=\"3\"\n   photoshop:ICCProfile=\"sRGB IEC61966-2.1\"\n   photoshop:DateCreated=\"2015-04-28T11:33:40\"\n   crs:AlreadyApplied=\"True\"\n   xmpRights:Marked=\"False\">\n   <dc:title>\n    <rdf:Alt>\n     <rdf:li xml:lang=\"x-default\">Successful investment</rdf:li>\n    </rdf:Alt>\n   </dc:title>\n   <dc:subject>\n    <rdf:Bag>\n     <rdf:li>plant</rdf:li>\n     <rdf:li>growth</rdf:li>\n     <rdf:li>investment</rdf:li>\n     <rdf:li>business</rdf:li>\n     <rdf:li>success</rdf:li>\n     <rdf:li>seed</rdf:li>\n     <rdf:li>grow</rdf:li>\n     <rdf:li>invest</rdf:li>\n     <rdf:li>banking</rdf:li>\n     <rdf:li>bank</rdf:li>\n     <rdf:li>branch</rdf:li>\n     <rdf:li>background</rdf:li>\n     <rdf:li>care</rdf:li>\n     <rdf:li>cash</rdf:li>\n     <rdf:li>coin</rdf:li>\n     <rdf:li>concept</rdf:li>\n     <rdf:li>currency</rdf:li>\n     <rdf:li>earnings</rdf:li>\n     <rdf:li>economic</rdf:li>\n     <rdf:li>euro</rdf:li>\n     <rdf:li>europe</rdf:li>\n     <rdf:li>finance</rdf:li>\n     <rdf:li>flower</rdf:li>\n     <rdf:li>gold</rdf:li>\n     <rdf:li>green</rdf:li>\n     <rdf:li>heap</rdf:li>\n     <rdf:li>help</rdf:li>\n     <rdf:li>ideas</rdf:li>\n     <rdf:li>interest</rdf:li>\n     <rdf:li>loan</rdf:li>\n     <rdf:li>many</rdf:li>\n     <rdf:li>market</rdf:li>\n     <rdf:li>monetary</rdf:li>\n     <rdf:li>money</rdf:li>\n     <rdf:li>nature</rdf:li>\n     <rdf:li>pile</rdf:li>\n     <rdf:li>progress</rdf:li>\n     <rdf:li>savings</rdf:li>\n     <rdf:li>symbol</rdf:li>\n     <rdf:li>tree</rdf:li>\n     <rdf:li>wealth</rdf:li>\n     <rdf:li>plant</rdf:li>\n     <rdf:li>growth</rdf:li>\n     <rdf:li>investment</rdf:li>\n     <rdf:li>business</rdf:li>\n     <rdf:li>success</rdf:li>\n     <rdf:li>seed</rdf:li>\n     <rdf:li>grow</rdf:li>\n     <rdf:li>invest</rdf:li>\n     <rdf:li>banking</rdf:li>\n     <rdf:li>bank</rdf:li>\n     <rdf:li>branch</rdf:li>\n     <rdf:li>background</rdf:li>\n     <rdf:li>care</rdf:li>\n     <rdf:li>cash</rdf:li>\n     <rdf:li>coin</rdf:li>\n     <rdf:li>concept</rdf:li>\n     <rdf:li>currency</rdf:li>\n     <rdf:li>earnings</rdf:li>\n     <rdf:li>economic</rdf:li>\n     <rdf:li>euro</rdf:li>\n     <rdf:li>europe</rdf:li>\n     <rdf:li>finance</rdf:li>\n     <rdf:li>flower</rdf:li>\n     <rdf:li>gold</rdf:li>\n     <rdf:li>green</rdf:li>\n     <rdf:li>heap</rdf:li>\n     <rdf:li>help</rdf:li>\n     <rdf:li>ideas</rdf:li>\n     <rdf:li>interest</rdf:li>\n     <rdf:li>loan</rdf:li>\n     <rdf:li>many</rdf:li>\n     <rdf:li>market</rdf:li>\n     <rdf:li>monetary</rdf:li>\n     <rdf:li>money</rdf:li>\n     <rdf:li>nature</rdf:li>\n     <rdf:li>pile</rdf:li>\n     <rdf:li>progress</rdf:li>\n     <rdf:li>savings</rdf:li>\n     <rdf:li>symbol</rdf:li>\n     <rdf:li>tree</rdf:li>\n     <rdf:li>wealth</rdf:li>\n    </rdf:Bag>\n   </dc:subject>\n   <dc:rights>\n    <rdf:Alt>\n     <rdf:li xml:lang=\"x-default\">\u00C2\u00A9Fantasista - stock.adobe.com</rdf:li>\n    </rdf:Alt>\n   </dc:rights>\n   <dc:description>\n    <rdf:Alt>\n     <rdf:li xml:lang=\"x-default\">Successful investment. Plant and coins on table.</rdf:li>\n    </rdf:Alt>\n   </dc:description>\n   <xmpMM:DerivedFrom\n    stRef:documentID=\"adobe:docid:photoshop:8b7f71fc-ebf9-11e4-9d4d-fd4c4205b745\"\n    stRef:instanceID=\"uuid:8b7f7204-ebf9-11e4-9d4d-fd4c4205b745\"/>\n   <xmpMM:History>\n    <rdf:Seq>\n     <rdf:li\n      stEvt:action=\"saved\"\n      stEvt:instanceID=\"xmp.iid:87968106EFB6EA119A0891057E47079B\"\n      stEvt:when=\"2020-06-25T16:21:38+02:00\"\n      stEvt:softwareAgent=\"Adobe Photoshop CS5.1 Windows\"\n      stEvt:changed=\"/\"/>\n     <rdf:li\n      stEvt:action=\"saved\"\n      stEvt:instanceID=\"xmp.iid:88968106EFB6EA119A0891057E47079B\"\n      stEvt:when=\"2020-06-25T16:21:38+02:00\"\n      stEvt:softwareAgent=\"Adobe Photoshop CS5.1 Windows\"\n      stEvt:changed=\"/\"/>\n    </rdf:Seq>\n   </xmpMM:History>\n   <MicrosoftPhoto:LastKeywordXMP>\n    <rdf:Bag>\n     <rdf:li>plant</rdf:li>\n     <rdf:li>growth</rdf:li>\n     <rdf:li>investment</rdf:li>\n     <rdf:li>business</rdf:li>\n     <rdf:li>success</rdf:li>\n     <rdf:li>seed</rdf:li>\n     <rdf:li>grow</rdf:li>\n     <rdf:li>invest</rdf:li>\n     <rdf:li>banking</rdf:li>\n     <rdf:li>bank</rdf:li>\n     <rdf:li>branch</rdf:li>\n     <rdf:li>background</rdf:li>\n     <rdf:li>care</rdf:li>\n     <rdf:li>cash</rdf:li>\n     <rdf:li>coin</rdf:li>\n     <rdf:li>concept</rdf:li>\n     <rdf:li>currency</rdf:li>\n     <rdf:li>earnings</rdf:li>\n     <rdf:li>economic</rdf:li>\n     <rdf:li>euro</rdf:li>\n     <rdf:li>europe</rdf:li>\n     <rdf:li>finance</rdf:li>\n     <rdf:li>flower</rdf:li>\n     <rdf:li>gold</rdf:li>\n     <rdf:li>green</rdf:li>\n     <rdf:li>heap</rdf:li>\n     <rdf:li>help</rdf:li>\n     <rdf:li>ideas</rdf:li>\n     <rdf:li>interest</rdf:li>\n     <rdf:li>loan</rdf:li>\n     <rdf:li>many</rdf:li>\n     <rdf:li>market</rdf:li>\n     <rdf:li>monetary</rdf:li>\n     <rdf:li>money</rdf:li>\n     <rdf:li>nature</rdf:li>\n     <rdf:li>pile</rdf:li>\n     <rdf:li>progress</rdf:li>\n     <rdf:li>savings</rdf:li>\n     <rdf:li>symbol</rdf:li>\n     <rdf:li>tree</rdf:li>\n     <rdf:li>wealth</rdf:li>\n    </rdf:Bag>\n   </MicrosoftPhoto:LastKeywordXMP>\n   <pur:creditLine>\n    <rdf:Bag>\n     <rdf:li>Fantasista - stock.adobe.com</rdf:li>\n    </rdf:Bag>\n   </pur:creditLine>\n  </rdf:Description>\n </rdf:RDF>\n</x:xmpmeta>\n\rendstream\rendobj\r6901 0 obj\r<</Metadata 6902 0 R>>\rendobj\r6902 0 obj\r<</Length 5430/Subtype/XML/Type/Metadata>>stream\r\n<?xpacket begin=\"\u00EF\u00BB\u00BF\" id=\"W5M0MpCehiHzreSzNTczkc9d\"?>"
+						}
+					],
+					"count": "1",
+					"solution": "<p>Ensure that application Source Code is not available with alternative extensions, and ensure that source code is not present within other files or data deployed to the web server, or served by the web server. </p>",
+					"otherinfo": "<p><?=\u009F.5\u00CF'\u00D0s\\x0007\u00A0e\u00BE\u00E2\u00AB\u008F\u00C3\u009Fj\\x0002\u00CB\u00D8\\x0001\u00FAk\u00FF^\u00D1_\u00ED\u008A;\u00BFn\u00A7\u00C4\u00A1\\x0005\u00FAw\u00AAlL\u00FFL\u00B8f\u009B\u00FBa{\u00FF\u00DF\u0082\u00E3\u0085\\x001b\u00F4-1\u00E0-\u00DC{\u00FEB3\u009C\u00BF\u00EELM\u00F8\u00A8\u0097\\x001b\u0093\u00BE\u00E9\u00FF6\u00E5\\x001f\\x0005\u00A0)T\u00CD\u00F7\u0088\u0087\u00BB|G\u00EA\u00B9`\u0095{vwt\u00FF\u00AD\u00CD5s\u00F2$\u00AE2\u00B0\u00F7\u00F1\u00AE\u009Azn\u00DC\u00F1\u00F8\u00BD(\u00BE\u0086\u00E6\u00AF\\x0005.f\\x001cW\u00AA\u00FE\u009C\\x0013?\u009C>4\\x0014t\u0091\u00C5-\u00A79\u00E4\"\\x0017\u00FF>\u0096m_e\u00F8\u00FE\u00DD\u00CF\u00A5\u00ABB\u00D9\\x0013\u0097\u00CB/\u00B96\u00C6\u00DB\u00C0d!\u00DE\u00A1\\x000f\u00E7\u00F9k\u00DA\u00F6\\x000eo\u00FF\u00ABp\u00F4\u00E6o\u0081</p><p>=\\x001c\u00C5\u00CB\u00C3w*d\u009F/\u00CF\\x0005\\x0010\u0083\u00DF|\u00AF\u00B9]\u00F8\u00EB\u00E5\u00E1\u00F5\u0099o\u00BD9{w\u00F8\u0086\u0092.rR\u00D0\\x0015\\\\x0019l%\u00AC\u0084\u009EJ\\x00191~\u00E8F\\x001fN\\x001d\u00D2\u00A1\u008B@\u0087\u00C0#E\u00E2\u009B\u00E7/\u00E9\\x0013qx\\x0007\u00CFW\u00ED4p\u00C4\u00D1\u00A0m\u00B6\u00F3\\x0016+2!\u00B1\\x001bV\u00A3\u00DF>D\u00BF'\\x0011\u009E6\u00B6U1\u00C9\u00CD\u0099\\x001c\u00E7J\u009B\u00C7\u00A1t\u00DDo\u00D7\u00C4\u00DA\u00A4t\u00BE3\u00EA\\x0008\u00A7\u00C2\u00A9xm=.\\x001a\u00CB\u00C5\u00F2\u00A1\u009D\u00F5Yr\u00E8,\u0086\u008A\\x0010o\u00B9{=\u009B/\u00BA\u00D3\tnG\u00DB\u0085\u00C8\u0097\u009A\\x001c\u00DAX\u00B9w\u00A6vw\u00E7t\u009BIn\u00EC\u00D1\u00A4\u00D9\u00BF\\x0010\\x0008\u0086\u008B+~\u00AFy\u00B8\u0096\u00C4f\u00C4]\u00E6k;\u00FD\\x000f\u00ED\u00D5\u00B2\u00DB6\\x000c\\x0004\u00EF\u00FE</p><p>\\x001e#\u00C0VER/#\u00A7\u00A2i\u0080\\x001c</p><p>\u00A4E\u0080^rQb!\u00A1A\u00C9\\x000fY-\u00FA\u00F7\u00DD\u00E5\u0092\u0094\u00E4(v!\u00A7\\x0008`\\x0004\u0082D\u00EEcvvf\\x0011d\u00F01_\\x00062C\u00B6;\u00D1\u00AE\u00A3\u00E7\u00AF</p><p>\u00C3'o\u00A4U\u00B9\\x001f\u00BB\u00ADi\u00B7[\u008D\u00F1`\u00DF\u00BC\u00D2\u00F7\\x0012\u0089\u00A9z}\\x000cn\\x0003\\x0003+S'I\u0080oX\u008C\u00D5#h`\u00AA\u00F1HXGF\u00C0\u00AFH\u00DB</p><p>\u00D3\u00DA\u00B2\u00B6\u00EB\u00E0_\u00D6\u00CD\u00B8\u00DC^\u00861L\u0089\u00F7A\u00C2TN^\u009EUIt\u008Bxt\u00A1\u00AF\\x0014\\x0008\u0086\u008DE</p><p>U\u00D3r\u00A6Q\u00BE\u00CC\u00AFg\\x001a\u00EB\u00B2(\u00BE~a\\x0000\u00AE\u0091Cd\u00EBf\\x0010l\u0082\u0099\u00E99\u00AB\u00FA\u00A7\u0095\u00F5\u00DC\\x001b\u00ABM\u00FD\u00C2\u00B0}f\u00B7\u00EC\u00ABrJ\u00B58\u0098>(\u0090)\u00D7\u00D55\u00E3\u00938uX\u00A6\u008Ea\u0085\t\u00D4%n\u00AF\u00EAgN\u00C4\u00E1RnXAU\u00B0\u00B5\u00F0J\u0096(\\x000b\u00AB\u00D1LZ\\x0015\u00D7,\u00BE8\u00AF>?I\u00C3F\u0085r2\u00D26d\u00E8M:{qf\\x0018\u00F0\\x001fU\u00D7D\r$Yq\u0091O\u00E9f\\x0012\u00E6r\u00E9\u009B\u00F9\\x0011I\\x000f\u0083\\x000c\\x0012\u00E7\u00A1\u00FA\\x000b\u00DF\u00EAkG\u0086\u00E4\u00C7\u0090c\u0091\u0082\u00B7\u00EAP\u00E8I\u00C8\u00CC\u00C2\\x0008H\u00C9%\u0083\u00CF\\x0017\u00B01\u00C1\\x001buu\u00BC\\x0002\u00B2\u00B84Gc\\x0001\u00F4\u00F8\u00C4Zk\\x0000[_\u00BF1\u00A9\\x0003\u00A8V\u00C4\u00C8/\u00F5\u00BB\u00BB\u00D2c\u00E5\u0084\u00A5d\u0086\t\u00FA\u00D00w*\u00B7\u00A6\u00F6\u00B5AF\u00A1ac\u00DC\u00DF\\x0001\u0093\u00D3\u00AD\u00A3K\u00A0PZ[\u00C9\u00D20r\u009B\u0085\u00DB\"\\x0007\u00C5\u00B2\u00FFG\u0088&\u0089\u00ADn\u00F1A\u00E3\u00E1\u00BF\u0088\u00C2(\\x0002\\x0013\u00FB\u009B\r\u00E3\u008CM\u00B6'\u00B7\u00CE\u00BB\\x0008\t\u00A5X:\u00A6\u008F\u0082E\u00C6\u00DC\u00EF\u00C9*\u009B\\x001e\u00CFY\u00D1\\x00069\u00C6N\u0086m\u00D7\u0096\u009Az\\x0000\u00A8\\x0006J\\x001d\u00B4z}\u00A4c\\x000e\u00C0\u0093\"\u00C1w\u00E2\u008F(\u00A3\u00ED\\x001e\u0094fA)\u00F5\u00EB\u00F3\u0096M\u00DF4\u00D3a\u0095\u00B0\u00D0\u00C1\u00E7Qr\u008Ei\\x001f</p><p>\u00DC&\u00B9S\u0097\"\r\u00A3\u0094\u00F14\u008C\u00DD\\x001d\u00E7\u00D4\"<\u00B3\u0097j\u00C2\u00F7\u0098\u0086\u00D4v\":\u00D9\\x0006\u00DF\u00B7v\u00AF=</p><p>\\x0019[\u00FD\u00EC\\x0006a\\x0004\u00B3/\u00EE\u00FE\u0095MI\u00A3\u0094\u00B8\u0080\u0085V\u00AD5W\u00B6\u0081v\u00DF\u00D0\u0094RM\u00E6c\u0081\\x0000{\\x001d\u00A0\u00B2l\u00D7z\u00B9\u00B2!.\u00E8\u00E9\u00FB\u00A1-\u00C0\u00B40i\\x0017\u00F5\u00ADi[WPk{\u00D9\\x000fR\u00EC=\u00F9K\u00CAt$\u008A\u00E3#\u00A8'@y\u00D8*I\u00E7DFAzM\\x0000\t\u00DF\u00DF}\u008E\u0099?\u00DD\u00F4\\x0006\u00D2Y\\x0017T6\u0090\u008C\u00A7GM\u00DC\u008ECv \u00CBb>\u00B4\u0082qr\\x0016He\u00ED\u00DD\u0081\u00D7\u00D6@M\u00AD\u00FA\u00A5\u0098.=\r\u00ABSK\u00B3A$\u00A2$\u00C6\u00C3\u00A9\u00F0\u00C8r\u00F8\u00B6c\u00A2\u00E1\u00A42\\x000b\u008EA\u00C7:Hc80\u00F8\u00AC\u00E8!</p><p>\\x0015)\\x00044\\x0000\u00E0h0\u00EE\u00D0\u00BA\u00A1x6\u00FB\u00CA\u00B0\u00B3u3\u00E7\u00A4\u00EED\u00B1\\x0006N\u00D0K[\u008C\u00CE\u00E3\u00CC\u0090\\x001d\u00F8\\x0003x  \u00AF\u00E2)\u0090\u00D2\u00E3jA_\\x000ex\\x0005?~\\x00082\u00E3\u00D2\u009E_\u00E7t\u00DA\\x0017\u00AD\u00AA\u00C2O\u0086yt\\x0003\u00B87\u00D05\u00EEf\u008BUr\u00C8\u00C7\u0094^\t\\x0007_\\x001ff\u00BBY\u009C\u0084\u00B1L\u0098\u00949XV\u00C6\u00B9\\x000ce\u009E\u00B2,</p><p>\u00F34e\u00FBr\u00F6\u0093\u00D5\u00F0\\x0016\u00E7\u00F0\u009A\\x0010y.9\u00B9\\\\x0011&\u00B1X\u00E6Q\u00C2b\\x0008\u0093\u00A7\u0090}\\x0006\u0087da\u00C6\u00B9H\u0081\u009D\u009F\u00AB\u00D9\u00A7\u00BB*b7\u009B\u00D9w\u00F8\u00FB+\u00C0\\x0000Oq\\x001b\u00B9\rendstream\rendobj\r6899 0 obj\r<</BitsPerComponent 8/ColorSpace 6563 0 R/Filter/DCTDecode/Height 101/Intent/RelativeColorimetric/Length 3271/Metadata 6900 0 R/Name/X/Subtype/Image/Type/XObject/Width 161>>stream</p><p>\u00FF\u00D8\u00FF\u00EE\\x0000\\x000eAdobe\\x0000d\\x0000\\x0000\\x0000\\x0000\\x0001\u00FF\u00DB\\x0000\u00C5\\x0000\\x0012\\x000e\\x000e\\x000e\\x000e\\x000e\\x0015\\x000e\\x000e\\x0015\\x001b\\x0012\\x0012\\x0012\\x0014\\x001a\\x0019\\x0016\\x0016\\x0019\\x001a\\x001e\\x0017\\x0019!!\\x001c\\x001e#\\x001e#!,#\\x001e#!.333.!>BBBB>DDDDDDDDDDDDDDD\\x0001\\x0014\\x0011\\x0011\\x0015\\x0011\\x0014\\x0013\\x0011\\x0015\\x0019\\x0018\\x0013\\x0014\\x0013\\x0016\\x001d\"\\x001a\\x001a\\x001a\\x001d!\\x001b\\x001d\"\\x001d\\x001b!# #$$# #$$$$$$$,,,,,,44444====DDDDDD\\x0002\\x0014\\x0011\\x0011\\x0015\\x0011\\x0014\\x0013\\x0011\\x0015\\x0019\\x0018\\x0013\\x0014\\x0013\\x0016\\x001d\"\\x001a\\x001a\\x001a\\x001d!\\x001b\\x001d\"\\x001d\\x001b!# #$$# #$$$$$$$,,,,,,44444====DDDDDD\u00FF\u00DD\\x0000\\x0004\\x0000\\x000b\u00FF\u00C0\\x0000\\x0011\\x0008\\x0000e\\x0000\u00A1\\x0003\\x0000\"\\x0000\\x0001\\x0011\\x0001\\x0002\\x0011\\x0002\u00FF\u00C4\\x0001\u00A2\\x0000\\x0000\\x0001\\x0004\\x0002\\x0002\\x0003\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0002\\x0003\\x0005\\x0006\\x0001\\x0004\\x0007\\x0008\t</p><p>\\x000b\\x0001\\x0000\\x0002\\x0001\\x0002\\x0007\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0002\\x0003\\x0001\\x0000\\x0004\\x0005\\x0006\\x0007\\x0008\t</p><p>\\x000b\\x0010\\x0000\\x0000\\x0002\\x0002\\x0002\\x0003\\x0003e1\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0001\\x0002\\x0011\\x0004\\x0012\\x0003\\x00131!2Q\\x0005\\x0006\\x0007\\x0008\t</p><p>\\x0014\\x0015\\x0016\\x0017\\x0018\\x0019\\x001a\"#$%&'()*3456789:ABCDEFGHIJRSTUVWXYZabcdefghijqrstuvwxyz\u0081\u0082\u0083\u0084\u0085\u0086\u0087\u0088\u0089\u008A\u0091\u0092\u0093\u0094\u0095\u0096\u0097\u0098\u0099\u009A\u00A1\u00A2\u00A3\u00A4\u00A5\u00A6\u00A7\u00A8\u00A9\u00AA\u00B1\u00B2\u00B3\u00B4\u00B5\u00B6\u00B7\u00B8\u00B9\u00BA\u00C1\u00C2\u00C3\u00C4\u00C5\u00C6\u00C7\u00C8\u00C9\u00CA\u00D1\u00D2\u00D3\u00D4\u00D5\u00D6\u00D7\u00D8\u00D9\u00DA\u00E1\u00E2\u00E3\u00E4\u00E5\u00E6\u00E7\u00E8\u00E9\u00EA\u00F0\u00F1\u00F2\u00F3\u00F4\u00F5\u00F6\u00F7\u00F8\u00F9\u00FA\\x0011\\x0000\\x0000\\x0002\\x0000\\x0003\\x0003\\x0001\u0099\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0000\\x0001\\x0002\\x0011!\\x0003\\x00121\\x0004\\x0005\\x0006\\x0007\\x0008\t</p><p>\\x0013\\x0014\\x0015\\x0016\\x0017\\x0018\\x0019\\x001a\"#$%&'()*23456789:ABCDEFGHIJQRSTUVWXYZabcdefghijqrstuvwxyz\u0081\u0082\u0083\u0084\u0085\u0086\u0087\u0088\u0089\u008A\u0091\u0092\u0093\u0094\u0095\u0096\u0097\u0098\u0099\u009A\u00A1\u00A2\u00A3\u00A4\u00A5\u00A6\u00A7\u00A8\u00A9\u00AA\u00B1\u00B2\u00B3\u00B4\u00B5\u00B6\u00B7\u00B8\u00B9\u00BA\u00C1\u00C2\u00C3\u00C4\u00C5\u00C6\u00C7\u00C8\u00C9\u00CA\u00D1\u00D2\u00D3\u00D4\u00D5\u00D6\u00D7\u00D8\u00D9\u00DA\u00E1\u00E2\u00E3\u00E4\u00E5\u00E6\u00E7\u00E8\u00E9\u00EA\u00F0\u00F1\u00F2\u00F3\u00F4\u00F5\u00F6\u00F7\u00F8\u00F9\u00FA\u00FF\u00DA\\x0000\\x000c\\x0003\\x0000\\x0000\\x0001\\x0011\\x0002\\x0011\\x0000?\\x0000\u00B7\u00A2\u00FE\\x000f\u0091\u0086\\x000c\u00C9ah\u00A4\\x0008\u00C9@$\\x001d\\x0019XI\\x0018\u00CA\u00C0\u0082\\x0019\\x00182\\x00184\u0088\u0086\t21B\u0083ng\u00C4LC\\x001ad\u00EC\u00C7\u0089\u0097+\u00EA&!RANC;8j\u00C8\u00D8\u0084\u00ADI\u0080\u0093p>\u00A2A\u00D4\u00C8\u00D4\\x0019c\u0099\u00B5!\u00B0b\u00911\\x0002D\u00A2A\u00B4[\r6rd\u008B\u008C\u00CC\u00E0\\x0004\u0089\\x0013\u00E0\u008A\u0082\u00B9H\\x0013\"\u00A0\u0090Zn\u0099RCRt+\u0083Y\u0088\u00C8A\u00B9^\u00C5\u0081\u00C4\u00E4$\u0091!Hq \u009A)\\x0011\u0091\u0098\u009Fa3\\x0012\"$\\\u009A0\u00C5\u00A9\\x001b\\x0016 \\x0016h\u0088\u0094\\x0013\u0081\t\u00A4\u00F8\u00A2\r\u00A0\u00E5$\u0088(\u00CC!x8j\u00A6\u00E1$\u0092loV\\x001d$\\x001f\\x0002Sr\\x0012&\\x0016I\\x0012\u0085\\x001aj\\x0008$\u00930\u0084\\dI,=@\\x0008$\u0088\u00CC.\u0080 \u00D3\u0086\u0089!\u0080\\x000c,\\x000b\\x0010$\u00FF\u00D0\u009FM\u0096\u00D1%\\x0018u\u00C2\u00CA$\u0089\u00E8\u00AE\u00B2YDkQ\u00BD0\u00FB\\x0005\u00C8\u0091\u0093\u00D0\u00C3It\t\\x0011\u00A6,\u0084\u00E6%\\x0004\u009B\u009C\u00D65\\x0010M\u00F1\u00F48FA\\x000b\u00C9\u00A6.\\x0008\u0088\u0089RTl\u00A2\u00E4l\\x001eD\u0088h74M\u00F0n8\u0092Y\\x0002#L-\\x0011$\\x00073\u00E2&!\u00DB\u009AI\u00E3\u00C4\u00BB\u009C\u00E3\u00D3\\x0011\\x0004\u00F8\u00E4\u00B3,\\x0011\"]\\x000b4+\u00C2M\u00C0n2%6%\u0093\u00D2Y>\\x0007\\x001c\u00AEG\\x001b\u008D\u00C4nT\u008E<\"Z\u00C9\u00F7\u00944\\\u00EC\\x0013e\u00A2\u008BG#\u00AC\u0089\u00EA*\u008FN\u0082\u00B7\u00C3'\u00D0\u00D3\u00A1\u0090\u00C34Qs&\u008B\u0091\u008A\u0099\u00B5L\u008Do\u0086\u00F4\u008Fl\u00A0\\x0008\u00D6\u0088\u00C9\\x0011\u00BA</p><p>$i\"M2N\\x0018\u00A3\\x0014\u0080\u0092\\x00125$&6\u0093\u0082\u008B\u0085\u00C6\u00E1E\u00C8\u0089$\u0091\u00A6\u00FCEJ3\u00B3\u00DE\u0084k1\u00CA\u00C9r\u00B8M\u00C8\u00E7D\u009CDo\u00D4_[c\u00D6\\x00064\\x0016\u00E0\u009E\u009B\u0095#q i\u00A8\u00D4i\u009B\u00FB\\x001cF\u00F8\u00A0\u00DC\\x0014\u00E0\u00A2\u00C6d\u00AD\u00C4\u00E13I$Im\u0095\\x001e\u00BE\\x0012\u00CFD\\x0014\u0081\\x0011\u00A2Z\\x0011\u00A2D\u0092FN\u0089(\u00AC\u00D4\u00CFX%24&Du\u00C1\u00A4\u00E38\\x0011\u00B6\u00E31\\x0012\u00E3r$f$X\u00E6f/\\x0011\\x0005\u00A1\\x0012\u00AE\\x0007:H\u00A8\u008CH\"\u009BdV#\\x001c\\x0005\\x0002$\u009CdMB\\x0011$\\x001c\u00840\u00E6#3%@\u0087IdAI5[\u00E8Q)B\u008D\\x0012\u0084R\\x0001D\u0085S9\\x0008e\\x00036\u00E3f\u0080\\x001b&\u00AB\\x000eP\\x0004\\x0019\u00A6$\u0089 \u0090\\x000c\u0080@\u0091\u00FF\u00D1\u008F6\u00CD\u0084\u00AB\\x0000\u00CDO\u00A1\u00C4\\x0018h\\x0019\u00AC\u00C8l\u00B8\u00DC(\u00A0O\u0084\\x0001\\x0012\u00D5\t\u00A6D\\x001aH\rC1\u00B2\u0081\u00AC\u0083\u00A8\u0086P|\\x000f\\x0011\u0090I\\x0019\\x0012i\u0086\\x0019\\x0019\u00A4\u0090u\\x0002Y\u008D\u00B4\tD#\u009D\u0089 \u00FACa\u00C0\u00C94\u00CDF\\x0018\u00B24\u00C8\u00C2\u0096\u00A4\u0092A\u00D6A\u00A9\\x0013T\\x0000\u0085w\u00A9'\u0094\\x0011(\u00CA$\u00D3Eh\u00A6h\u00A8\u009FID\u00A3\\x0010\u0086n#L\u00C9\\x0016\u00CD\u0096\u00FA\u00FAJ\r#bK\u00A8\u008EjIpB\\x0011\\x0019\u0092I\tg\\x0003(\u00940\u00CCd\"\u009B\\x001d\u00C8H\u00A8\u00CC\u00913S\u00D7\u008F\u00A2\\x00196K\u0095\\x0014\u00CD\u00C0\u00E2q\u009AI\\x0013\u00C6\u00EBQ\u00DE\u0088\u0088:\u0094E\"\u00C6L\u00D9n\\x0015\\x0013S\u008F\u00DCdH\u00B5]\\x0004\u00D6o E\\x001a\u00D0\u008D2I\u0081\\x001a~\u0084\u0099aD!M29\u00A9\t7\\x001c\\x0011\u00D8\u00A9\u0099&F\u0092(\\x0019\\x0011\u00B4\"EZ5,kAI\u00C0\u00C7p8M\u00C2\u00C7\"D\u00D2zDkH\u00EFt\\x0011 \u00C7@\u009C\u00ECg\\x001aNCH\u00914\\x0011\u008FH\u00CD\\x0012R\u009E\u009A\u0084\\\\x0014\u00DC\u00AC'\\x001cx\u00E0I\u00C4\u00DC\u00A8\\x0004h\u00A4|\u00B3\t$&\u009B\u00A0HH\u00E1\u0086\u00890h\u00C9t\u008D\u0081HDc\u0089\u008Ak}Y\u009D\u009B\u00C1\\x001b\u008Cr\"\\x000c\u00A0\u00E5I2ji)\\x001a\t\\x0012\u0091#\u00D1\r\u00B7</p><p>\\x0008\u009B\u00C0\u00C5\u009A\\x0005\u00A2\\x0015\u00E3Z\u00A3_3`D\u00C0\u0082\u0089(`\u00D9A%\r\u00C4\\x001c\u00C4H\u008DBq\u009B\u00D0\u00F2\\x000e5\u00BD\\x0012\u0089 \u00C2L4\u00E6f\u00999\\x0011A\\x0012Z\u00CDCy\\x0014\u00CC\u00D1Xh\u0098\u00E8-fO\u00A3d\u0090%\\x00014\u0094\\x0004Dj\u0086\\nSI3!\u00B7@\\x001a\u00E8 \u0089$\u00B1\u00B1@\\x0010b\u0088!`X\u00CA\u0080\u00A1BG\u00FF\u00D2\u009AE\u00AA\u009E\\x0000\u00CC\u0083H9\\x0016\\x0016di\\x0010\u00B75\u0089!D\u0092f\\x001eKS4)\u0099\\x0000\u0093Ea\u00E4L\u0094#\\x001c\u00EEGK\u00E9\u00BC</p><p>p\u00B3\u009Ci>,B%\u0091\u00C3\\x0013\\x0004\u0085hSA\"j1\u0097\\x0011\u0092)\\x0006Qr\u00A2\u0090\r\"Xr\u00C5\\x0001\u00A1%BV\u00C8\u0089\\x0011\u008D\u0087;\u0099\\x0012@\u00D6t\\x0001\\x0010\u00C4h\u00E4s&\u00A7\u00D7\u00D0\u00F3!f\u0089\u008D\\x0016*.v\u00C9\\x0013\u0080\u00C9\u00C6\u00FA\u00FA\u0091\u00BD\u00E5\\x0006\u00AA\u0085\t\u0099\\x0011\u00A2\u00A4\\x0004\"bBt\u0091M\\x0013%\"\u00B7\u00C7\u00F2\u00D4^\\x0008K\u0091\u00C6\u00E7r\u00A2\u0092\\x0004\u00E6B>##@\u0088\u008D\u00F0\u00C9P+\\x001af\u00C07,|\u00CAd&\u00E4*\u00A1\\x00134Q\u00D1\u00BE\u009F(m8\u0090`0\u00D1\u008F\\x0010A\u00C4fK\u008FIi\u009D\u009D\u00F1f\\x0014i\u00A2%H\u00CAh\u009AY\u0080DI\u00CD+\u00A1H1\t\u0098\u00C7E\\x00072I:\u0091D\u0088\u009Ch\u00C7\u00A4\u00F8J}\u0081\\x0011\\x0010S\u0082;\\x0001\u00C0\u0081\u00A6\u00E3q>\u00D0\\x001f_6\u00C2q\u0080\u00E5w8\\x0014\u00E022#8\u00FC\u00D6\u00A7\u00D35<z5\u0099\u00CE\\x0016jdh\u00A4\u008A\\x000eDN\u0082\u008B\u00E1\u00E8\u008C\u00C0\\x0011\u0092\\x0015\u00D35\u00E4E\rI3\u00C2\\x0010\u0094hIT\u008938h\u00AC\u00A2\u00E4M\\x0013zd&X.E\u00A9a\\x0011*s\\x001b\u00E9\u00A2E\u008F%\u0087\u00DC,d\u009Cf\u00A4\u00A8\\x0002\u00E1\u00B2!Z\\x0011\u00A4\u0099%!#,\u00C8Z\\x001226\\x0002I\\x0013ACa\\x0013AO\u0082=J \u00E2\\x000eW\u00C5\\x0018Y\u00A1\\x000cL>\u00E4r\u00A9\"\"\u00A0\u0098x\u00925\r\"l\u0092dt\\x0005\u008D\u00C2x(\u00C9$\u0085\\x0011\u00A6f\\x0004\\x00123H?@\\x001a\u00EE3\u008F\u0086\u00C5\\x0000A\u0089 \u0095\u0081a \\x0010$\u00FF\u00D3\u0098u\u0091\\x0019\u00B5!\u0092$\u0094\u00F0o\u00BA\u0091\u0080\\x0019'\\x00120\\x0000\u0089\\x0001\\x0012\u00ACD\\x001a#2I\u0080\u0084f8\\x0012r\u00A0d\u00A1\\x001a\u00E1a\u00B9\u0090I\u00E1\u008B\u0083\u00A5\\x0003z@t8\u00E0\\x0001\\x0012$\u0094HB\u00EC\u00D4A\u00B8\u0090M\\x0012}#\\x000e\\x0019%\\x0000ba\u00D2\u0084\\x0000Y8P\u0080\\x0010f)!\\x0002\u009A\t$O\\x0003n\\x0017\\x001aN$\u008C\u00D4\u00F4XRp\u00B8\u00CD\u00F1D\u00B3\\x0011\u00B0Ps\u00A2\u00C2\"2@\u0093Z\u00CC\u00D6\u00B7\u00C5Y\u0089\u00E8\u0083FHH\u00D31+\u0086\u0088\u00D4\r\u00B9\\x0011r9\\m\\x001cF\u00D1#2}\u0080*\\x0008[\u0089\u00C0\u008B\u0085FI&\u0092UQ\u00A4|\u00A7\u0081\\x000cfc\u009D\u00CEh\u00B5b\u00A4\u008A)\u00BCM\u00C8h\u00B8\u00C9W\u00A5\u00A4\u0096\u00D8m2\u009Cl\u00B4\u0094\u00EAq\u00A2h\\x0015R\u0091\u0091\u009F([\u00A3H\u00CDy#3)</p><p>\u009A\u00D0\u00C4(\\x0008\u008D4DG]\\x0008p\u00B2\t\u00C2f\u00E3$M4\u00D3M$\u0094\u0089Y\u00DE\u00C0\r\u0087bi-\u00B2\rq\u00E4|\u00A1\u00AC\u00E4M&:$\u00B4\\x0012AoL\u00C9o\u00B0\\x000b\\x000c\\x001b\u009D\"#h\u0092\u0092:\t\u0099\u009F\u00D0\u00C0\u00A14I\u00A8d\u0094\u0080\u00FD\\x0013\\x0012\u0088\u00898j\u00A3m4\u008C\u00DF\\x0008\u0083jQ\u00BE\u008C\u00B8\u009C\u00E8\u00A4\u00E3$\u00DC\u0084\u00F0\u00D4p'g\\x000e\"\u00E7c\\x0019\u00D0tA\u00C8\\x001d\"8a\u0091\u00A4d\\x0000\u00C9vj\u0098\u00D7IO\\x0008e\\x0014I\u00E0\u00DBq\u00C43\u0095mL\u009F _9a\u00E2c\u00B8\u008D\u00F4\u009Fo@\u00CC\u0089%\\x0000\u00A45\\n4I\u00F4<jPq\u00D0\u0088\u00CB\u00A5\\x0010\\x0006SQ#]\\x0013\"5\u00AC<\u00EC|\\x00011\u00D0Z\u00C2\u00DDH\u00A8Q\u00A1\\x0014\\x001an@nAn\u0094@\u00E9DR\u00E8\u00A1\u00FF\u00D4\u00B8(\u0080D2\\x0002\\x0006\\x0004eA\u0086C\u009D\\x0017\\x0001\\x0012\u00C8\u00D337\u00C4Q}1\u00B0A\u0087+\\x0015\u00C2\u00E5M\u00D8\u0099-%)k:\\x0000\\x00133\u00861\\x0006ICF\u009ApPE$\\x0012'\\x0019\u00B5MFDfkQ\u00DE\u0084;\"</p><p>I\u00B8\u00DC\u0085\\x0011\u00A4\u0091\"\u0093\u00F5232\u00D1\"fBm\u00CF\\x0004\u00D7\\x001b\u0091\u00F5\u00C6f\u0081\u00DE\u00CDCA\u00CD\\x0006\u00F3\\x001d\u00CAFnU\u00A6t\\x0002l\u0091u\u00A0\\x0011\u00AF\\x001b\\x0012:\u00E2\u00A2P\u00A4L\\x000e\u00E2\u00A0\u00CB\u0085\u0090\u00C5M2\u0090\u00A6h\u00A9K}!\u00AC\u00CB\u0082JnfA\u009B\\x001d\u00CC\u00E4L\u00CDF\u008A-\u00E0^\u00BE\u00A4f\u00A0\u0094XNg</p><p>MI\u008E\u0099!h\u0099$\\\u00B1\u00BC\u00E0p\u009B\u00B8\u009C\u00AE\u00A4\u00C8\u00C8\u009E\\x0018\u00B7DH\u0090\u009A\u0084\u008A\u00E0Z\u00C2\\x000e$\u008C\u0098\u0095\u00C7\u00AA!\u00DBAY\u0082\u00E74\\\u00A8$\u00E9$\u009A\u00A2\u009154\u008E\\x0001fFbU\u00C1\\x0005'**Z\u0091E\\x0012ZM\u00CDJ}\u00810\u00F3\u009E\t\u00EEFJ\\x0006\u00D9df\u00FD\u00B3\r\"\u0082t\\x0014\\x0018\u00A8\u0092&\u0081\u00B3\t'\u00ABI\\x0014L\u00B1\u00C6 \u0090\\x001a$\u008C\u0088\u00D0\u0098\u0095\u00E2\"24\u008Cm9`\u00AD\\x0004\u00D6bn\u00B7*h\u00A6H\u00A8\u00DA\u00A2\u0091\u009B\u00E9PVJ\\x0011nVy\u009B%7\\x001b\u008D\u00C6n7\\x0013\u00E3W1\u00BE\\x0015\u00E8\u0096$\u00DC,t\u008D\"I&\\x000b\u00AC\u00DE\\x001b\u00EA\\x0007\u00CA\\x001b\t\u00C1-\u008E\u00C8M\u00B3\u0091\u00C2H\u0094\\x0003\u00C2\u00D1\\x000664J\u00A6ls \\x0017\u0090\u008D6#\u0081';\u00E9$\u00DC\u00DE\u00AC\u00CDez[\u00E8u\u009ANg\\x000c\u0083p1\u00D4F\u00A2v$\u0091\u00A4\u0082\u00CE\u00F4K\tJ\tl\u00C62G\\x0010NRu\u00AD\u00F1\\x0004\u0091'\u00CB2\u00DF\\x0000\u0084O\u008E<r\u00B8\\I \u00B7\u00AE\u00D3D\u00F4J1$kB%\u00D2#I8a\u00A4G\u0084\\x0010hP\\x0019\u00AF&I\u00CDI3!\u00BA\u00E2p2\\x0012\u008F\\x001c\u00C4D\u008A*]\u009C$\u00D1q \u00995I\u00A2\u008C\u009F\u00AFKD\\x001fq\u00B8\\\u00ADc\u00E2j\u0091\u00BD6\u00CB\u00EB\\x0003\u00A4\u00C7@\u00C8\u009D\u0091\u00F2D\u00F0\u00D4De\u00A2!$\u0084\u00D1\\x001af\u00BCT\u0093\u00E0\\x00083\"\u0090\\x0002\"\u009C\\x0007A7\u00C7\u00B1\u00E9\u0087\\x001cnW\\x0013\u0094\u008D\u00D6\u0091$\u00A7\u00AA\u00A0\\x0000\u009CN2#%-f\u00FA\u00B7\u00D0\u00A4PE\\x0002R$H\u00AE\\x0000\u0094\\x0018K\u00C9\u00AA\u0092XP</p><p>MS\\x0019P\u00CA\u0086\\x0006D\u0088\\x0018P\\x00142\\x0001B\u0087\u00FF\u00D5\u00B8\u0080\u0080\\x0000`B\u008002 \\x0010\\x0002R \u00A1\u0083\\x0014B\\x0002T\u00FA\\x0005(\u00C6h \u00A0\u0088\\x00120202(\u00C5\\x000c\u00A8ac4\\x0010\u0091\\x0004(e\u00E8\u00CA\u009F\\x0006\\x0008*\u0080$P\u00C9\\x0010\\x00142\\x0001B\u0086\\x0000\\x0000\\x0008\\x0014\\x0001\u0091\u0080</p><p>\\x00142\\x0001\u0080</p><p>\\x0014?\u00FF\u00D9\rendstream\rendobj\r6900 0 obj\r<</Length 6652/Subtype/XML/Type/Metadata>>stream</p><p><x:xmpmeta xmlns:x=\"adobe:ns:meta/\" x:xmptk=\"Adobe XMP Core 7.1-c000 79.a8731b9, 2021/09/09-00:37:38        \"></p><p> <rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"></p><p>  <rdf:Description rdf:about=\"\"</p><p>    xmlns:dc=\"http://purl.org/dc/elements/1.1/\"</p><p>    xmlns:xmp=\"http://ns.adobe.com/xap/1.0/\"</p><p>    xmlns:xmpMM=\"http://ns.adobe.com/xap/1.0/mm/\"</p><p>    xmlns:stRef=\"http://ns.adobe.com/xap/1.0/sType/ResourceRef#\"</p><p>    xmlns:stEvt=\"http://ns.adobe.com/xap/1.0/sType/ResourceEvent#\"</p><p>    xmlns:photoshop=\"http://ns.adobe.com/photoshop/1.0/\"</p><p>    xmlns:crs=\"http://ns.adobe.com/camera-raw-settings/1.0/\"</p><p>    xmlns:xmpRights=\"http://ns.adobe.com/xap/1.0/rights/\"</p><p>    xmlns:MicrosoftPhoto=\"http://ns.microsoft.com/photo/1.0\"</p><p>    xmlns:pur=\"http://prismstandard.org/namespaces/prismusagerights/2.1/\"</p><p>   dc:format=\"image/jpeg\"</p><p>   xmp:CreatorTool=\"Adobe Photoshop CS Windows\"</p><p>   xmp:MetadataDate=\"2020-06-25T16:21:38+02:00\"</p><p>   xmp:CreateDate=\"2015-04-28T11:33:40+02:00\"</p><p>   xmp:ModifyDate=\"2020-06-25T16:21:38+02:00\"</p><p>   xmpMM:DocumentID=\"adobe:docid:photoshop:609b549f-ebfa-11e4-9d4d-fd4c4205b745\"</p><p>   xmpMM:InstanceID=\"xmp.iid:88968106EFB6EA119A0891057E47079B\"</p><p>   xmpMM:OriginalDocumentID=\"adobe:docid:photoshop:609b549f-ebfa-11e4-9d4d-fd4c4205b745\"</p><p>   photoshop:LegacyIPTCDigest=\"1CDEB142F84491F3BBD27DEB688291A7\"</p><p>   photoshop:Country=\"Finland\"</p><p>   photoshop:Headline=\"Successful investment\"</p><p>   photoshop:Credit=\"Fantasista - stock.adobe.com\"</p><p>   photoshop:Source=\"82237245\"</p><p>   photoshop:ColorMode=\"3\"</p><p>   photoshop:ICCProfile=\"sRGB IEC61966-2.1\"</p><p>   photoshop:DateCreated=\"2015-04-28T11:33:40\"</p><p>   crs:AlreadyApplied=\"True\"</p><p>   xmpRights:Marked=\"False\"></p><p>   <dc:title></p><p>    <rdf:Alt></p><p>     <rdf:li xml:lang=\"x-default\">Successful investment</rdf:li></p><p>    </rdf:Alt></p><p>   </dc:title></p><p>   <dc:subject></p><p>    <rdf:Bag></p><p>     <rdf:li>plant</rdf:li></p><p>     <rdf:li>growth</rdf:li></p><p>     <rdf:li>investment</rdf:li></p><p>     <rdf:li>business</rdf:li></p><p>     <rdf:li>success</rdf:li></p><p>     <rdf:li>seed</rdf:li></p><p>     <rdf:li>grow</rdf:li></p><p>     <rdf:li>invest</rdf:li></p><p>     <rdf:li>banking</rdf:li></p><p>     <rdf:li>bank</rdf:li></p><p>     <rdf:li>branch</rdf:li></p><p>     <rdf:li>background</rdf:li></p><p>     <rdf:li>care</rdf:li></p><p>     <rdf:li>cash</rdf:li></p><p>     <rdf:li>coin</rdf:li></p><p>     <rdf:li>concept</rdf:li></p><p>     <rdf:li>currency</rdf:li></p><p>     <rdf:li>earnings</rdf:li></p><p>     <rdf:li>economic</rdf:li></p><p>     <rdf:li>euro</rdf:li></p><p>     <rdf:li>europe</rdf:li></p><p>     <rdf:li>finance</rdf:li></p><p>     <rdf:li>flower</rdf:li></p><p>     <rdf:li>gold</rdf:li></p><p>     <rdf:li>green</rdf:li></p><p>     <rdf:li>heap</rdf:li></p><p>     <rdf:li>help</rdf:li></p><p>     <rdf:li>ideas</rdf:li></p><p>     <rdf:li>interest</rdf:li></p><p>     <rdf:li>loan</rdf:li></p><p>     <rdf:li>many</rdf:li></p><p>     <rdf:li>market</rdf:li></p><p>     <rdf:li>monetary</rdf:li></p><p>     <rdf:li>money</rdf:li></p><p>     <rdf:li>nature</rdf:li></p><p>     <rdf:li>pile</rdf:li></p><p>     <rdf:li>progress</rdf:li></p><p>     <rdf:li>savings</rdf:li></p><p>     <rdf:li>symbol</rdf:li></p><p>     <rdf:li>tree</rdf:li></p><p>     <rdf:li>wealth</rdf:li></p><p>     <rdf:li>plant</rdf:li></p><p>     <rdf:li>growth</rdf:li></p><p>     <rdf:li>investment</rdf:li></p><p>     <rdf:li>business</rdf:li></p><p>     <rdf:li>success</rdf:li></p><p>     <rdf:li>seed</rdf:li></p><p>     <rdf:li>grow</rdf:li></p><p>     <rdf:li>invest</rdf:li></p><p>     <rdf:li>banking</rdf:li></p><p>     <rdf:li>bank</rdf:li></p><p>     <rdf:li>branch</rdf:li></p><p>     <rdf:li>background</rdf:li></p><p>     <rdf:li>care</rdf:li></p><p>     <rdf:li>cash</rdf:li></p><p>     <rdf:li>coin</rdf:li></p><p>     <rdf:li>concept</rdf:li></p><p>     <rdf:li>currency</rdf:li></p><p>     <rdf:li>earnings</rdf:li></p><p>     <rdf:li>economic</rdf:li></p><p>     <rdf:li>euro</rdf:li></p><p>     <rdf:li>europe</rdf:li></p><p>     <rdf:li>finance</rdf:li></p><p>     <rdf:li>flower</rdf:li></p><p>     <rdf:li>gold</rdf:li></p><p>     <rdf:li>green</rdf:li></p><p>     <rdf:li>heap</rdf:li></p><p>     <rdf:li>help</rdf:li></p><p>     <rdf:li>ideas</rdf:li></p><p>     <rdf:li>interest</rdf:li></p><p>     <rdf:li>loan</rdf:li></p><p>     <rdf:li>many</rdf:li></p><p>     <rdf:li>market</rdf:li></p><p>     <rdf:li>monetary</rdf:li></p><p>     <rdf:li>money</rdf:li></p><p>     <rdf:li>nature</rdf:li></p><p>     <rdf:li>pile</rdf:li></p><p>     <rdf:li>progress</rdf:li></p><p>     <rdf:li>savings</rdf:li></p><p>     <rdf:li>symbol</rdf:li></p><p>     <rdf:li>tree</rdf:li></p><p>     <rdf:li>wealth</rdf:li></p><p>    </rdf:Bag></p><p>   </dc:subject></p><p>   <dc:rights></p><p>    <rdf:Alt></p><p>     <rdf:li xml:lang=\"x-default\">\u00C2\u00A9Fantasista - stock.adobe.com</rdf:li></p><p>    </rdf:Alt></p><p>   </dc:rights></p><p>   <dc:description></p><p>    <rdf:Alt></p><p>     <rdf:li xml:lang=\"x-default\">Successful investment. Plant and coins on table.</rdf:li></p><p>    </rdf:Alt></p><p>   </dc:description></p><p>   <xmpMM:DerivedFrom</p><p>    stRef:documentID=\"adobe:docid:photoshop:8b7f71fc-ebf9-11e4-9d4d-fd4c4205b745\"</p><p>    stRef:instanceID=\"uuid:8b7f7204-ebf9-11e4-9d4d-fd4c4205b745\"/></p><p>   <xmpMM:History></p><p>    <rdf:Seq></p><p>     <rdf:li</p><p>      stEvt:action=\"saved\"</p><p>      stEvt:instanceID=\"xmp.iid:87968106EFB6EA119A0891057E47079B\"</p><p>      stEvt:when=\"2020-06-25T16:21:38+02:00\"</p><p>      stEvt:softwareAgent=\"Adobe Photoshop CS5.1 Windows\"</p><p>      stEvt:changed=\"/\"/></p><p>     <rdf:li</p><p>      stEvt:action=\"saved\"</p><p>      stEvt:instanceID=\"xmp.iid:88968106EFB6EA119A0891057E47079B\"</p><p>      stEvt:when=\"2020-06-25T16:21:38+02:00\"</p><p>      stEvt:softwareAgent=\"Adobe Photoshop CS5.1 Windows\"</p><p>      stEvt:changed=\"/\"/></p><p>    </rdf:Seq></p><p>   </xmpMM:History></p><p>   <MicrosoftPhoto:LastKeywordXMP></p><p>    <rdf:Bag></p><p>     <rdf:li>plant</rdf:li></p><p>     <rdf:li>growth</rdf:li></p><p>     <rdf:li>investment</rdf:li></p><p>     <rdf:li>business</rdf:li></p><p>     <rdf:li>success</rdf:li></p><p>     <rdf:li>seed</rdf:li></p><p>     <rdf:li>grow</rdf:li></p><p>     <rdf:li>invest</rdf:li></p><p>     <rdf:li>banking</rdf:li></p><p>     <rdf:li>bank</rdf:li></p><p>     <rdf:li>branch</rdf:li></p><p>     <rdf:li>background</rdf:li></p><p>     <rdf:li>care</rdf:li></p><p>     <rdf:li>cash</rdf:li></p><p>     <rdf:li>coin</rdf:li></p><p>     <rdf:li>concept</rdf:li></p><p>     <rdf:li>currency</rdf:li></p><p>     <rdf:li>earnings</rdf:li></p><p>     <rdf:li>economic</rdf:li></p><p>     <rdf:li>euro</rdf:li></p><p>     <rdf:li>europe</rdf:li></p><p>     <rdf:li>finance</rdf:li></p><p>     <rdf:li>flower</rdf:li></p><p>     <rdf:li>gold</rdf:li></p><p>     <rdf:li>green</rdf:li></p><p>     <rdf:li>heap</rdf:li></p><p>     <rdf:li>help</rdf:li></p><p>     <rdf:li>ideas</rdf:li></p><p>     <rdf:li>interest</rdf:li></p><p>     <rdf:li>loan</rdf:li></p><p>     <rdf:li>many</rdf:li></p><p>     <rdf:li>market</rdf:li></p><p>     <rdf:li>monetary</rdf:li></p><p>     <rdf:li>money</rdf:li></p><p>     <rdf:li>nature</rdf:li></p><p>     <rdf:li>pile</rdf:li></p><p>     <rdf:li>progress</rdf:li></p><p>     <rdf:li>savings</rdf:li></p><p>     <rdf:li>symbol</rdf:li></p><p>     <rdf:li>tree</rdf:li></p><p>     <rdf:li>wealth</rdf:li></p><p>    </rdf:Bag></p><p>   </MicrosoftPhoto:LastKeywordXMP></p><p>   <pur:creditLine></p><p>    <rdf:Bag></p><p>     <rdf:li>Fantasista - stock.adobe.com</rdf:li></p><p>    </rdf:Bag></p><p>   </pur:creditLine></p><p>  </rdf:Description></p><p> </rdf:RDF></p><p></x:xmpmeta></p><p>\rendstream\rendobj\r6901 0 obj\r<</Metadata 6902 0 R>>\rendobj\r6902 0 obj\r<</Length 5430/Subtype/XML/Type/Metadata>>stream</p><p><?xpacket begin=\"\u00EF\u00BB\u00BF\" id=\"W5M0MpCehiHzreSzNTczkc9d\"?></p>",
+					"reference": "<p>http://blogs.wsj.com/cio/2013/10/08/adobe-source-code-leak-is-bad-news-for-u-s-government/</p>",
+					"cweid": "540",
+					"wascid": "13",
+					"sourceid": "3561"
 				},
 				{
 					"pluginid": "90003",
@@ -511,7 +570,7 @@
 					"reference": "<p>https://developer.mozilla.org/en/docs/Web/Security/Subresource_Integrity</p>",
 					"cweid": "345",
 					"wascid": "15",
-					"sourceid": "588"
+					"sourceid": "541"
 				},
 				{
 					"pluginid": "10003",
@@ -524,20 +583,27 @@
 					"desc": "<p>The identified library jquery.datatables, version 1.11.2 is vulnerable.</p>",
 					"instances":[ 
 						{
-							"uri": "https://www.economie.gouv.fr/libraries/DataTables/datatables.min.js?v=9.4.10",
+							"uri": "https://www.economie.gouv.fr/files/js/js_9mKQsotfThebb85AVY_Ykmwr6BRXTYl2jJDcXV9P7qg.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "http://www.datatables.net\n DataTables 1.11.2"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/files/js/js_FvY_NjLrSU6xo8hFzwyC4dNjh_qdHHaOfW3YOwbhMYI.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "http://www.datatables.net\n DataTables 1.11.2"
 						}
 					],
-					"count": "1",
+					"count": "2",
 					"solution": "<p>Please upgrade to the latest version of jquery.datatables.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://cdn.datatables.net/1.11.3/</p><p>https://github.com/DataTables/Dist-DataTables/commit/59a8d3f8a3c1138ab08704e783bc52bfe88d7c9b</p><p></p>",
 					"cweid": "829",
 					"wascid": "-1",
-					"sourceid": "2790"
+					"sourceid": "2534"
 				},
 				{
 					"pluginid": "10044",
@@ -557,7 +623,7 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/node/3118920",
+							"uri": "https://www.economie.gouv.fr/node/3100155",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -640,7 +706,7 @@
 					"reference": "",
 					"cweid": "201",
 					"wascid": "13",
-					"sourceid": "1226"
+					"sourceid": "650"
 				},
 				{
 					"pluginid": "10017",
@@ -729,7 +795,7 @@
 					"reference": "",
 					"cweid": "829",
 					"wascid": "15",
-					"sourceid": "588"
+					"sourceid": "541"
 				},
 				{
 					"pluginid": "10110",
@@ -742,34 +808,41 @@
 					"desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>",
 					"instances":[ 
 						{
-							"uri": "https://www.economie.gouv.fr/core/assets/vendor/jquery/jquery.min.js?v=3.6.0",
+							"uri": "https://www.economie.gouv.fr/files/js/js_8BitIlFrl6BHdJAJP467SR4D5SaQqL3E48RekJnHUHs.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "eval"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/files/js/js_9AJMgr-tPCHFqqSAreWuspnqT8E0Shm8ytQHqSi0wXA.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "eval"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/files/js/js_eckVg-Hq2yJZ7oHOH8Kg4J2xhvDcTonzlmd5YJ1IDsA.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "Eval"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/libraries/shariff/shariff.complete.js?v=9.4.10",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "eval"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/libraries/tarteaucitron/tarteaucitron.js?rr3lbs",
+							"uri": "https://www.economie.gouv.fr/files/js/js_NmN8P4J8K4GsbSsDbxQwjFJ_DGu8AYZDp9rANgY_g6M.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "eval"
 						}
 					],
-					"count": "3",
+					"count": "4",
 					"solution": "<p>See the references for security advice on the use of these functions.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://angular.io/guide/security</p>",
 					"cweid": "749",
 					"wascid": "-1",
-					"sourceid": "2753"
+					"sourceid": "2538"
 				},
 				{
 					"pluginid": "10063",
@@ -789,63 +862,49 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/assets/vendor/jquery-once/jquery.once.min.js?v=2.2.3",
+							"uri": "https://www.economie.gouv.fr/files/js/js_8BitIlFrl6BHdJAJP467SR4D5SaQqL3E48RekJnHUHs.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/assets/vendor/jquery/jquery.min.js?v=3.6.0",
+							"uri": "https://www.economie.gouv.fr/files/js/js_9mKQsotfThebb85AVY_Ykmwr6BRXTYl2jJDcXV9P7qg.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/assets/vendor/once/once.min.js?v=1.0.1",
+							"uri": "https://www.economie.gouv.fr/files/js/js_eckVg-Hq2yJZ7oHOH8Kg4J2xhvDcTonzlmd5YJ1IDsA.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/misc/drupal.init.js?v=9.4.10",
+							"uri": "https://www.economie.gouv.fr/files/js/js_FvY_NjLrSU6xo8hFzwyC4dNjh_qdHHaOfW3YOwbhMYI.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/misc/drupal.js?v=9.4.10",
+							"uri": "https://www.economie.gouv.fr/files/js/js_Pqdg7rkYlTukr-RiwrAACoqUiA5rpDBUMTPNaBBPHSA.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/misc/drupalSettingsLoader.js?v=9.4.10",
+							"uri": "https://www.economie.gouv.fr/files/js/js_PZKuyDMxlG9Q13UQhgp-wMLVu-h7c9YCj_qZCkxvfM8.js",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/misc/polyfills/element.matches.js?v=9.4.10",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/misc/polyfills/object.assign.js?v=9.4.10",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/modules/internal/tarteaucitron/js/load.js?rr3lbs",
+							"uri": "https://www.economie.gouv.fr/p",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -864,6 +923,20 @@
 							"param": "",
 							"attack": "",
 							"evidence": ""
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/themes/custom/eco_dsfr/js/dsfr.module.min.js?v=9.4.10",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/themes/custom/eco_dsfr/js/dsfr.nomodule.min.js?v=9.4.10",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
 						}
 					],
 					"count": "12",
@@ -872,7 +945,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</p><p>https://developers.google.com/web/updates/2018/06/feature-policy</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "953"
+					"sourceid": "190"
 				},
 				{
 					"pluginid": "10035",
@@ -941,13 +1014,6 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.svg",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": ""
-						},
-						{
 							"uri": "https://www.economie.gouv.fr/profiles/*.css",
 							"method": "GET",
 							"param": "",
@@ -955,7 +1021,14 @@
 							"evidence": ""
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.css$",
+							"uri": "https://www.economie.gouv.fr/profiles/*.gif",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": ""
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/profiles/*.jpg",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -975,7 +1048,7 @@
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</p><p>https://owasp.org/www-community/Security_Headers</p><p>http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</p><p>http://caniuse.com/stricttransportsecurity</p><p>http://tools.ietf.org/html/rfc6797</p>",
 					"cweid": "319",
 					"wascid": "15",
-					"sourceid": "262"
+					"sourceid": "165"
 				},
 				{
 					"pluginid": "10096",
@@ -992,14 +1065,14 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "1679674775"
+							"evidence": "1680266042"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "1679674775"
+							"evidence": "1680266042"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/agence-participations-etat",
@@ -1009,11 +1082,11 @@
 							"evidence": "1676364335"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/apie",
+							"uri": "https://www.economie.gouv.fr/cge",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "1668520262"
+							"evidence": "1676902577"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/entreprises",
@@ -1021,6 +1094,34 @@
 							"param": "",
 							"attack": "",
 							"evidence": "1672932095"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/ministeres",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1584432812"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/ministeres",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1651073105"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/ministeres",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1672831698"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/ministeres",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1833994344"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/ministres/bruno-le-maire",
@@ -1065,13 +1166,39 @@
 							"evidence": "1673450521"
 						}
 					],
-					"count": "11",
+					"count": "15",
 					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
-					"otherinfo": "<p>1679674775, which evaluates to: 2023-03-24 16:19:35</p>",
+					"otherinfo": "<p>1680266042, which evaluates to: 2023-03-31 12:34:02</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
 					"sourceid": "1"
+				},
+				{
+					"pluginid": "10021",
+					"alertRef": "10021",
+					"alert": "X-Content-Type-Options Header Missing",
+					"name": "X-Content-Type-Options Header Missing",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.economie.gouv.fr/p",
+							"method": "GET",
+							"param": "X-Content-Type-Options",
+							"attack": "",
+							"evidence": ""
+						}
+					],
+					"count": "1",
+					"solution": "<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>",
+					"otherinfo": "<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p><p>At \"High\" threshold this scan rule will not alert on client or server error responses.</p>",
+					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p><p>https://owasp.org/www-community/Security_Headers</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "2547"
 				},
 				{
 					"pluginid": "10094",
@@ -1088,82 +1215,82 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "/files/languages/fr_Eiuphgf09XrkRABaEGc08vyuF2RJUngxnfIkcrEF6SM"
+							"evidence": "/files/css/css_UXhib6OGC5UVujE-COxc4mbIuxWsfkvm3erAr6FirRs"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "/files/languages/fr_Eiuphgf09XrkRABaEGc08vyuF2RJUngxnfIkcrEF6SM"
+							"evidence": "/files/css/css_UXhib6OGC5UVujE-COxc4mbIuxWsfkvm3erAr6FirRs"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/comment/reply/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/files/css/css_XFecfAGfud1Ugtm70B4B1u0lla3V2V4qVVaxUlqBlCQ"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/core/*.css$",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "/files/languages/fr_Eiuphgf09XrkRABaEGc08vyuF2RJUngxnfIkcrEF6SM"
+							"evidence": "/files/css/css_XFecfAGfud1Ugtm70B4B1u0lla3V2V4qVVaxUlqBlCQ"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/core/*.js$",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "/files/languages/fr_Eiuphgf09XrkRABaEGc08vyuF2RJUngxnfIkcrEF6SM"
+							"evidence": "/files/css/css_XFecfAGfud1Ugtm70B4B1u0lla3V2V4qVVaxUlqBlCQ"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/entreprises",
+							"uri": "https://www.economie.gouv.fr/core/*.svg",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "/files/languages/fr_Eiuphgf09XrkRABaEGc08vyuF2RJUngxnfIkcrEF6SM"
+							"evidence": "/files/css/css_XFecfAGfud1Ugtm70B4B1u0lla3V2V4qVVaxUlqBlCQ"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/ministres/bruno-le-maire",
+							"uri": "https://www.economie.gouv.fr/node/add/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "/files/languages/fr_Eiuphgf09XrkRABaEGc08vyuF2RJUngxnfIkcrEF6SM"
+							"evidence": "/files/css/css_XFecfAGfud1Ugtm70B4B1u0lla3V2V4qVVaxUlqBlCQ"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/ministres/gabriel-attal",
+							"uri": "https://www.economie.gouv.fr/profiles/*.css$",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "/files/languages/fr_Eiuphgf09XrkRABaEGc08vyuF2RJUngxnfIkcrEF6SM"
+							"evidence": "/files/css/css_XFecfAGfud1Ugtm70B4B1u0lla3V2V4qVVaxUlqBlCQ"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/ministres/jean-noel-barrot",
+							"uri": "https://www.economie.gouv.fr/profiles/*.js$",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "/files/languages/fr_Eiuphgf09XrkRABaEGc08vyuF2RJUngxnfIkcrEF6SM"
+							"evidence": "/files/css/css_XFecfAGfud1Ugtm70B4B1u0lla3V2V4qVVaxUlqBlCQ"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/ministres/olivia-gregoire",
+							"uri": "https://www.economie.gouv.fr/profiles/*.svg",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "/files/languages/fr_Eiuphgf09XrkRABaEGc08vyuF2RJUngxnfIkcrEF6SM"
+							"evidence": "/files/css/css_XFecfAGfud1Ugtm70B4B1u0lla3V2V4qVVaxUlqBlCQ"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/ministres/roland-lescure",
+							"uri": "https://www.economie.gouv.fr/search/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "/files/languages/fr_Eiuphgf09XrkRABaEGc08vyuF2RJUngxnfIkcrEF6SM"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/particuliers",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "/files/languages/fr_Eiuphgf09XrkRABaEGc08vyuF2RJUngxnfIkcrEF6SM"
+							"evidence": "/files/css/css_XFecfAGfud1Ugtm70B4B1u0lla3V2V4qVVaxUlqBlCQ"
 						}
 					],
 					"count": "11",
 					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
-					"otherinfo": "<p>\uFFFD\uFFFD\uFFFDz\uFFFD\uFFFDjx.j\\x0007\uFFFD\uFFFD\uFFFD\uFFFD\\x0012+\uFFFD\uFFFD\\x0007\uFFFD\uFFFDz\uFFFDD\\x0000Z\\x0010g4\uFFFD\uFFFD\uFFFD\\x0017dIRx1\uFFFD\uFFFD$r\uFFFD\\x0005\uFFFD#</p>",
+					"otherinfo": "<p>\uFFFD\uFFFD\uFFFDz\uFFFD\u0732\uFFFD\u0732\uFFFD\uFFFD^\\x0018\uFFFD\uFFFD\uFFFD\uFFFDEn\uFFFDO\uFFFD;\\x00178\uFFFD\uFFFD.\uFFFDk\\x001f\uFFFD\uFFFD\uFFFDz\uFFFD+\uFFFDX\uFFFDF</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
@@ -1193,7 +1320,7 @@
 					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p>",
 					"cweid": "345",
 					"wascid": "12",
-					"sourceid": "955"
+					"sourceid": "193"
 				},
 				{
 					"pluginid": "10027",
@@ -1220,6 +1347,13 @@
 							"evidence": "user"
 						},
 						{
+							"uri": "https://www.economie.gouv.fr/comment/reply/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user"
+						},
+						{
 							"uri": "https://www.economie.gouv.fr/core/*.css$",
 							"method": "GET",
 							"param": "",
@@ -1234,62 +1368,62 @@
 							"evidence": "user"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/entreprises",
+							"uri": "https://www.economie.gouv.fr/core/*.svg",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "user"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/ministres/bruno-le-maire",
+							"uri": "https://www.economie.gouv.fr/filter/tips",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "user"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/ministres/gabriel-attal",
+							"uri": "https://www.economie.gouv.fr/node/add/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "user"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/ministres/jean-noel-barrot",
+							"uri": "https://www.economie.gouv.fr/profiles/*.css$",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "user"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/ministres/olivia-gregoire",
+							"uri": "https://www.economie.gouv.fr/profiles/*.js$",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "user"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/ministres/roland-lescure",
+							"uri": "https://www.economie.gouv.fr/profiles/*.svg",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "user"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/particuliers",
+							"uri": "https://www.economie.gouv.fr/search/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
 							"evidence": "user"
 						}
 					],
-					"count": "11",
+					"count": "12",
 					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
 					"otherinfo": "<p>The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet.</p>",
 					"reference": "",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10109",
@@ -1316,6 +1450,13 @@
 							"evidence": "<a id=\"main-content\" tabindex=\"-1\"></a>"
 						},
 						{
+							"uri": "https://www.economie.gouv.fr/comment/reply/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a class=\"fr-breadcrumb__link\" aria-current=\"page\">Page non trouv\u00E9e</a>"
+						},
+						{
 							"uri": "https://www.economie.gouv.fr/core/*.css$",
 							"method": "GET",
 							"param": "",
@@ -1330,53 +1471,46 @@
 							"evidence": "<a class=\"fr-breadcrumb__link\" aria-current=\"page\">Page non trouv\u00E9e</a>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/entreprises",
+							"uri": "https://www.economie.gouv.fr/core/*.svg",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<a id=\"main-content\" tabindex=\"-1\"></a>"
+							"evidence": "<a class=\"fr-breadcrumb__link\" aria-current=\"page\">Page non trouv\u00E9e</a>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/ministres/bruno-le-maire",
+							"uri": "https://www.economie.gouv.fr/node/add/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<a id=\"main-content\" tabindex=\"-1\"></a>"
+							"evidence": "<a class=\"fr-breadcrumb__link\" aria-current=\"page\">Acc\u00E8s refus\u00E9</a>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/ministres/gabriel-attal",
+							"uri": "https://www.economie.gouv.fr/profiles/*.css$",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<a id=\"main-content\" tabindex=\"-1\"></a>"
+							"evidence": "<a class=\"fr-breadcrumb__link\" aria-current=\"page\">Page non trouv\u00E9e</a>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/ministres/jean-noel-barrot",
+							"uri": "https://www.economie.gouv.fr/profiles/*.js$",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<a id=\"main-content\" tabindex=\"-1\"></a>"
+							"evidence": "<a class=\"fr-breadcrumb__link\" aria-current=\"page\">Page non trouv\u00E9e</a>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/ministres/olivia-gregoire",
+							"uri": "https://www.economie.gouv.fr/profiles/*.svg",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<a id=\"main-content\" tabindex=\"-1\"></a>"
+							"evidence": "<a class=\"fr-breadcrumb__link\" aria-current=\"page\">Page non trouv\u00E9e</a>"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/ministres/roland-lescure",
+							"uri": "https://www.economie.gouv.fr/search/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<a id=\"main-content\" tabindex=\"-1\"></a>"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/particuliers",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<a id=\"main-content\" tabindex=\"-1\"></a>"
+							"evidence": "<a class=\"fr-breadcrumb__link\" aria-current=\"page\">Page non trouv\u00E9e</a>"
 						}
 					],
 					"count": "11",
@@ -1385,7 +1519,7 @@
 					"reference": "",
 					"cweid": "-1",
 					"wascid": "-1",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
 					"pluginid": "10015",
@@ -1419,7 +1553,7 @@
 							"evidence": "max-age=1200"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/ministres/bruno-le-maire",
+							"uri": "https://www.economie.gouv.fr/filter/tips",
 							"method": "GET",
 							"param": "Cache-Control",
 							"attack": "",
@@ -1515,13 +1649,6 @@
 							"evidence": "max-age=1200"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.css$",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "max-age=1200"
-						},
-						{
 							"uri": "https://www.economie.gouv.fr/core/*.gif",
 							"method": "GET",
 							"param": "",
@@ -1551,6 +1678,13 @@
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/core/*.js$",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=1200"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/core/*.png",
 							"method": "GET",
 							"param": "",
 							"attack": "",
