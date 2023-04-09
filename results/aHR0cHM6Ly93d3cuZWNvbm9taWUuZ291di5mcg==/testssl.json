@@ -367,7 +367,7 @@
               "ip"           : "www.economie.gouv.fr/46.105.202.193",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "83 >= 60 days"
+              "finding"      : "76 >= 60 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -570,14 +570,14 @@
               "ip"           : "www.economie.gouv.fr/46.105.202.193",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-359 seconds from localtime"
+              "finding"      : "-117 seconds from localtime"
           }
 ,         {
               "id"           : "HTTP_headerTime",
               "ip"           : "www.economie.gouv.fr/46.105.202.193",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1680398714"
+              "finding"      : "1681003593"
           }
 ,         {
               "id"           : "ipv4_in_header",
@@ -1227,6 +1227,6 @@
               "ip"           : "www.economie.gouv.fr/46.105.202.193",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "68"
+              "finding"      : "70"
           }
 ]
