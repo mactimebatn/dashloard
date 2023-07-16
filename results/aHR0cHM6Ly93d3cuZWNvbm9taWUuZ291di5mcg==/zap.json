@@ -1,7 +1,7 @@
 {
 	"@programName": "OWASP ZAP",
-	"@version": "2.12.0",
-	"@generated": "Sun, 9 Jul 2023 02:03:45",
+	"@version": "2.13.0",
+	"@generated": "Sun, 16 Jul 2023 02:07:51",
 	"site":[ 
 		{
 			"@name": "https://www.economie.gouv.fr",
@@ -44,7 +44,7 @@
 							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"search-865-input\" ]."
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.js$",
+							"uri": "https://www.economie.gouv.fr/entreprises",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -52,7 +52,7 @@
 							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"search-865-input\" ]."
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/entreprises",
+							"uri": "https://www.economie.gouv.fr/ministere",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -350,23 +350,15 @@
 							"attack": "",
 							"evidence": "",
 							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.js$",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
 						}
 					],
-					"count": "13",
+					"count": "12",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "385"
+					"sourceid": "381"
 				},
 				{
 					"pluginid": "10098",
@@ -510,6 +502,14 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://www.economie.gouv.fr/lettres-information?prov=popin",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\" src=\"https://try.abtasty.com/a513b8f61404f9eb2dbf3bd8922842d2.js\"></script>",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://www.economie.gouv.fr/plan-entreprises-pacte",
 							"method": "GET",
 							"param": "",
@@ -518,13 +518,13 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "4",
+					"count": "5",
 					"solution": "<p>Provide a valid integrity attribute to the tag.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en/docs/Web/Security/Subresource_Integrity</p>",
 					"cweid": "345",
 					"wascid": "15",
-					"sourceid": "2464"
+					"sourceid": "2520"
 				},
 				{
 					"pluginid": "10003",
@@ -551,7 +551,7 @@
 					"reference": "<p>https://cdn.datatables.net/1.11.3/</p><p>https://github.com/DataTables/Dist-DataTables/commit/59a8d3f8a3c1138ab08704e783bc52bfe88d7c9b</p><p></p>",
 					"cweid": "829",
 					"wascid": "-1",
-					"sourceid": "2840"
+					"sourceid": "3250"
 				},
 				{
 					"pluginid": "10044",
@@ -586,6 +586,14 @@
 							"attack": "",
 							"evidence": "",
 							"otherinfo": "Location header URI length: 41 [https://www.economie.gouv.fr/particuliers].\nPredicted response size: 341.\nResponse Body Length: 410."
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/node/57063",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Location header URI length: 40 [https://www.economie.gouv.fr/entreprises].\nPredicted response size: 340.\nResponse Body Length: 406."
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/particuliers/epargne-et-investissement",
@@ -652,13 +660,13 @@
 							"otherinfo": "Location header URI length: 62 [https://www.economie.gouv.fr/particuliers/taxe-habitation-tout].\nPredicted response size: 362.\nResponse Body Length: 494."
 						}
 					],
-					"count": "11",
+					"count": "12",
 					"solution": "<p>Ensure that no sensitive information is leaked via redirect responses. Redirect responses should have almost no content.</p>",
 					"otherinfo": "<p>Location header URI length: 40 [https://www.economie.gouv.fr/filter/tips].</p><p>Predicted response size: 340.</p><p>Response Body Length: 406.</p>",
 					"reference": "",
 					"cweid": "201",
 					"wascid": "13",
-					"sourceid": "2374"
+					"sourceid": "2122"
 				},
 				{
 					"pluginid": "10017",
@@ -695,6 +703,14 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://www.economie.gouv.fr/lettres-information?prov=popin",
+							"method": "GET",
+							"param": "https://try.abtasty.com/a513b8f61404f9eb2dbf3bd8922842d2.js",
+							"attack": "",
+							"evidence": "<script type=\"text/javascript\" src=\"https://try.abtasty.com/a513b8f61404f9eb2dbf3bd8922842d2.js\"></script>",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://www.economie.gouv.fr/plan-entreprises-pacte",
 							"method": "GET",
 							"param": "https://platform.twitter.com/widgets.js",
@@ -703,13 +719,13 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "4",
+					"count": "5",
 					"solution": "<p>Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application.</p>",
 					"otherinfo": "",
 					"reference": "",
 					"cweid": "829",
 					"wascid": "15",
-					"sourceid": "2464"
+					"sourceid": "2520"
 				},
 				{
 					"pluginid": "10110",
@@ -730,7 +746,15 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/libraries/tarteaucitron/tarteaucitron.js?rx9xmn",
+							"uri": "https://www.economie.gouv.fr/libraries/shariff/shariff.complete.js?v=9.4.10",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "eval",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/libraries/tarteaucitron/tarteaucitron.js?rxktmt",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -738,13 +762,13 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "2",
+					"count": "3",
 					"solution": "<p>See the references for security advice on the use of these functions.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://angular.io/guide/security</p>",
 					"cweid": "749",
 					"wascid": "-1",
-					"sourceid": "2804"
+					"sourceid": "3169"
 				},
 				{
 					"pluginid": "10063",
@@ -813,14 +837,6 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/misc/jquery.once.bc.js?v=9.4.10",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
 							"uri": "https://www.economie.gouv.fr/core/misc/polyfills/element.matches.js?v=9.4.10",
 							"method": "GET",
 							"param": "",
@@ -830,6 +846,14 @@
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/core/misc/polyfills/object.assign.js?v=9.4.10",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/files/languages/fr_IuLO_MeK1roBPkaAcGwwGQvYBtr5R0g3US0wsNmFWcY.js?rxktmt",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -859,7 +883,7 @@
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy</p><p>https://developers.google.com/web/updates/2018/06/feature-policy</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
 					"cweid": "693",
 					"wascid": "15",
-					"sourceid": "1036"
+					"sourceid": "1260"
 				},
 				{
 					"pluginid": "10035",
@@ -936,6 +960,14 @@
 							"otherinfo": ""
 						},
 						{
+							"uri": "https://www.economie.gouv.fr/core/*.svg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
 							"uri": "https://www.economie.gouv.fr/profiles/*.css",
 							"method": "GET",
 							"param": "",
@@ -944,15 +976,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.gif",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.jpg",
+							"uri": "https://www.economie.gouv.fr/profiles/*.css$",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -974,7 +998,7 @@
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</p><p>https://owasp.org/www-community/Security_Headers</p><p>http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</p><p>http://caniuse.com/stricttransportsecurity</p><p>http://tools.ietf.org/html/rfc6797</p>",
 					"cweid": "319",
 					"wascid": "15",
-					"sourceid": "385"
+					"sourceid": "381"
 				},
 				{
 					"pluginid": "10096",
@@ -991,16 +1015,16 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "1688723190",
-							"otherinfo": "1688723190, which evaluates to: 2023-07-07 09:46:30"
+							"evidence": "1689070623",
+							"otherinfo": "1689070623, which evaluates to: 2023-07-11 10:17:03"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "1688723190",
-							"otherinfo": "1688723190, which evaluates to: 2023-07-07 09:46:30"
+							"evidence": "1689070623",
+							"otherinfo": "1689070623, which evaluates to: 2023-07-11 10:17:03"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/entreprises",
@@ -1011,12 +1035,12 @@
 							"otherinfo": "1672932095, which evaluates to: 2023-01-05 15:21:35"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/ministere/engagements-ministere",
+							"uri": "https://www.economie.gouv.fr/ministere",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "1687771883",
-							"otherinfo": "1687771883, which evaluates to: 2023-06-26 09:31:23"
+							"evidence": "1680774056",
+							"otherinfo": "1680774056, which evaluates to: 2023-04-06 09:40:56"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/ministere/missions-ministere",
@@ -1039,8 +1063,8 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "1688375382",
-							"otherinfo": "1688375382, which evaluates to: 2023-07-03 09:09:42"
+							"evidence": "1689087081",
+							"otherinfo": "1689087081, which evaluates to: 2023-07-11 14:51:21"
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/ministres/jean-noel-barrot",
@@ -1077,7 +1101,7 @@
 					],
 					"count": "11",
 					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
-					"otherinfo": "<p>1688723190, which evaluates to: 2023-07-07 09:46:30</p>",
+					"otherinfo": "<p>1689070623, which evaluates to: 2023-07-11 10:17:03</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
@@ -1118,7 +1142,7 @@
 							"otherinfo": "\uFFFD\uFFFD\uFFFDz\uFFFD\uFFFDjx.j\\x0007\uFFFD\uFFFD\uFFFD\uFFFD\"\uFFFD\uFFFD\uFFFD\u01CA\u05BA\\x0001>F\uFFFDpl0\\x0019\\x000b\uFFFD\\x0006\uFFFD\uFFFDGH7Q-0\uFFFD\u0645Y\uFFFD"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.js$",
+							"uri": "https://www.economie.gouv.fr/entreprises",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1126,7 +1150,15 @@
 							"otherinfo": "\uFFFD\uFFFD\uFFFDz\uFFFD\uFFFDjx.j\\x0007\uFFFD\uFFFD\uFFFD\uFFFD\"\uFFFD\uFFFD\uFFFD\u01CA\u05BA\\x0001>F\uFFFDpl0\\x0019\\x000b\uFFFD\\x0006\uFFFD\uFFFDGH7Q-0\uFFFD\u0645Y\uFFFD"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/entreprises",
+							"uri": "https://www.economie.gouv.fr/ministere",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/files/languages/fr_IuLO_MeK1roBPkaAcGwwGQvYBtr5R0g3US0wsNmFWcY",
+							"otherinfo": "\uFFFD\uFFFD\uFFFDz\uFFFD\uFFFDjx.j\\x0007\uFFFD\uFFFD\uFFFD\uFFFD\"\uFFFD\uFFFD\uFFFD\u01CA\u05BA\\x0001>F\uFFFDpl0\\x0019\\x000b\uFFFD\\x0006\uFFFD\uFFFDGH7Q-0\uFFFD\u0645Y\uFFFD"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/ministere/missions-ministere",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1182,13 +1214,13 @@
 							"otherinfo": "\uFFFD\uFFFD\uFFFDz\uFFFD\uFFFDjx.j\\x0007\uFFFD\uFFFD\uFFFD\uFFFD\"\uFFFD\uFFFD\uFFFD\u01CA\u05BA\\x0001>F\uFFFDpl0\\x0019\\x000b\uFFFD\\x0006\uFFFD\uFFFDGH7Q-0\uFFFD\u0645Y\uFFFD"
 						}
 					],
-					"count": "11",
+					"count": "12",
 					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
 					"otherinfo": "<p>\uFFFD\uFFFD\uFFFDz\uFFFD\uFFFDjx.j\\x0007\uFFFD\uFFFD\uFFFD\uFFFD\"\uFFFD\uFFFD\uFFFD\u01CA\u05BA\\x0001>F\uFFFDpl0\\x0019\\x000b\uFFFD\\x0006\uFFFD\uFFFDGH7Q-0\uFFFD\u0645Y\uFFFD</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "6"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10019",
@@ -1215,7 +1247,7 @@
 					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p>",
 					"cweid": "345",
 					"wascid": "12",
-					"sourceid": "1037"
+					"sourceid": "1817"
 				},
 				{
 					"pluginid": "10027",
@@ -1252,7 +1284,7 @@
 							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.js$",
+							"uri": "https://www.economie.gouv.fr/entreprises",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1260,7 +1292,7 @@
 							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/entreprises",
+							"uri": "https://www.economie.gouv.fr/ministere/missions-ministere",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1359,15 +1391,23 @@
 							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.js$",
+							"uri": "https://www.economie.gouv.fr/entreprises",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<a class=\"fr-breadcrumb__link\" aria-current=\"page\">Page non trouv\u00E9e</a>",
+							"evidence": "<a id=\"main-content\" tabindex=\"-1\"></a>",
 							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/entreprises",
+							"uri": "https://www.economie.gouv.fr/ministere",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<a id=\"main-content\" tabindex=\"-1\"></a>",
+							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/ministere/missions-ministere",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1423,7 +1463,7 @@
 							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
 						}
 					],
-					"count": "11",
+					"count": "12",
 					"solution": "<p>This is an informational alert and so no changes are required.</p>",
 					"otherinfo": "<p>Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</p>",
 					"reference": "",
@@ -1444,23 +1484,23 @@
 						{
 							"uri": "https://www.economie.gouv.fr",
 							"method": "GET",
-							"param": "Cache-Control",
+							"param": "cache-control",
 							"attack": "",
-							"evidence": "max-age=1200",
+							"evidence": "max-age=600, public",
 							"otherinfo": ""
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/",
 							"method": "GET",
-							"param": "Cache-Control",
+							"param": "cache-control",
 							"attack": "",
-							"evidence": "max-age=1200",
+							"evidence": "max-age=600, public",
 							"otherinfo": ""
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/entreprises",
 							"method": "GET",
-							"param": "Cache-Control",
+							"param": "cache-control",
 							"attack": "",
 							"evidence": "max-age=1200",
 							"otherinfo": ""
@@ -1468,7 +1508,7 @@
 						{
 							"uri": "https://www.economie.gouv.fr/ministres/bruno-le-maire",
 							"method": "GET",
-							"param": "Cache-Control",
+							"param": "cache-control",
 							"attack": "",
 							"evidence": "max-age=1200",
 							"otherinfo": ""
@@ -1476,7 +1516,7 @@
 						{
 							"uri": "https://www.economie.gouv.fr/ministres/gabriel-attal",
 							"method": "GET",
-							"param": "Cache-Control",
+							"param": "cache-control",
 							"attack": "",
 							"evidence": "max-age=1200",
 							"otherinfo": ""
@@ -1484,7 +1524,7 @@
 						{
 							"uri": "https://www.economie.gouv.fr/ministres/jean-noel-barrot",
 							"method": "GET",
-							"param": "Cache-Control",
+							"param": "cache-control",
 							"attack": "",
 							"evidence": "max-age=1200",
 							"otherinfo": ""
@@ -1492,7 +1532,7 @@
 						{
 							"uri": "https://www.economie.gouv.fr/ministres/olivia-gregoire",
 							"method": "GET",
-							"param": "Cache-Control",
+							"param": "cache-control",
 							"attack": "",
 							"evidence": "max-age=1200",
 							"otherinfo": ""
@@ -1500,7 +1540,7 @@
 						{
 							"uri": "https://www.economie.gouv.fr/ministres/roland-lescure",
 							"method": "GET",
-							"param": "Cache-Control",
+							"param": "cache-control",
 							"attack": "",
 							"evidence": "max-age=1200",
 							"otherinfo": ""
@@ -1508,7 +1548,7 @@
 						{
 							"uri": "https://www.economie.gouv.fr/particuliers",
 							"method": "GET",
-							"param": "Cache-Control",
+							"param": "cache-control",
 							"attack": "",
 							"evidence": "max-age=1200",
 							"otherinfo": ""
@@ -1516,7 +1556,7 @@
 						{
 							"uri": "https://www.economie.gouv.fr/robots.txt",
 							"method": "GET",
-							"param": "Cache-Control",
+							"param": "cache-control",
 							"attack": "",
 							"evidence": "max-age=600, public",
 							"otherinfo": ""
@@ -1524,7 +1564,7 @@
 						{
 							"uri": "https://www.economie.gouv.fr/sitemap.xml",
 							"method": "GET",
-							"param": "Cache-Control",
+							"param": "cache-control",
 							"attack": "",
 							"evidence": "max-age=1200",
 							"otherinfo": ""
@@ -1553,7 +1593,7 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "max-age=1200",
+							"evidence": "max-age=600",
 							"otherinfo": ""
 						},
 						{
@@ -1561,11 +1601,19 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "max-age=1200",
+							"evidence": "max-age=600",
 							"otherinfo": ""
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/core/*.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=1200",
+							"otherinfo": ""
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/core/*.css$",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1590,14 +1638,6 @@
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/ministres/gabriel-attal",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "max-age=1200",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/ministres/jean-noel-barrot",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1643,7 +1683,7 @@
 					"reference": "<p>https://tools.ietf.org/html/rfc7234</p><p>https://tools.ietf.org/html/rfc7231</p><p>http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "6"
+					"sourceid": "1"
 				}
 			]
 		}
