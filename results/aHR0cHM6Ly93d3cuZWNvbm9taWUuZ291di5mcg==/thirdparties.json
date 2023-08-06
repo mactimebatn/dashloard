@@ -10,7 +10,7 @@
     },
     {
       "type": "xiti",
-      "url": "https://logs4.xiti.com/hit.xiti?s=483556&idclient=476d5ab2-6009-4fbb-b424-ceb9fe34ad00&ts=1690680542445&page_url=https://www.economie.gouv.fr/&vtag=5.29.3&ptag=js&r=800x600x24x24&re=800x600&hl=1x29x2&lng=en-US&idp=0129029323965&jv=0&p=accueil&s2=1&vrn=1&ref=",
+      "url": "https://logs4.xiti.com/hit.xiti?s=483556&idclient=50d5a870-5df1-49ed-931e-c40999f12a22&ts=1691284869414&page_url=https://www.economie.gouv.fr/&vtag=5.29.3&ptag=js&r=800x600x24x24&re=800x600&hl=1x21x9&lng=en-US&idp=0121095171138&jv=0&p=accueil&s2=1&vrn=1&ref=",
       "details": {
         "id": "xiti",
         "message": "Use hosted Matomo instance"
@@ -59,7 +59,7 @@
       "value": "%7B%22name%22%3A%22atidvisitor%22%2C%22val%22%3A%7B%22vrn%22%3A%22-483556-%22%7D%2C%22options%22%3A%7B%22path%22%3A%22%2F%22%2C%22session%22%3A15724800%2C%22end%22%3A15724800%7D%7D",
       "domain": "www.economie.gouv.fr",
       "path": "/",
-      "expires": 1706405342.046894,
+      "expires": 1707009669.140174,
       "size": 191,
       "httpOnly": false,
       "secure": false,
@@ -70,10 +70,10 @@
     },
     {
       "name": "atuserid",
-      "value": "%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%22476d5ab2-6009-4fbb-b424-ceb9fe34ad00%22%2C%22options%22%3A%7B%22end%22%3A%222024-08-30T01%3A29%3A02.033Z%22%2C%22path%22%3A%22%2F%22%7D%7D",
+      "value": "%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%2250d5a870-5df1-49ed-931e-c40999f12a22%22%2C%22options%22%3A%7B%22end%22%3A%222024-09-06T01%3A21%3A09.131Z%22%2C%22path%22%3A%22%2F%22%7D%7D",
       "domain": "www.economie.gouv.fr",
       "path": "/",
-      "expires": 1724981342,
+      "expires": 1725585669,
       "size": 194,
       "httpOnly": false,
       "secure": false,
@@ -90,16 +90,16 @@
     "access-control-allow-origin": "*",
     "access-control-expose-headers": "Content-Length,Content-Range",
     "allow": "GET, POST, HEAD",
-    "cache-control": "max-age=1200",
+    "cache-control": "max-age=600, public",
     "content-encoding": "br",
     "content-language": "fr",
-    "content-length": "16005",
+    "content-length": "15998",
     "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src 'self' data: https:; frame-ancestors 'self' bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;",
     "content-type": "text/html; charset=UTF-8",
-    "date": "Sun, 30 Jul 2023 01:08:33 GMT",
-    "etag": "W/\"1690676821\"",
-    "expires": "Sun, 30 Jul 2023 01:18:33 GMT",
-    "last-modified": "Sun, 30 Jul 2023 00:27:01 GMT",
+    "date": "Sun, 06 Aug 2023 00:59:53 GMT",
+    "etag": "\"1691281565\"",
+    "expires": "Sun, 06 Aug 2023 01:09:53 GMT",
+    "last-modified": "Sun, 06 Aug 2023 00:26:05 GMT",
     "link": "<https://www.economie.gouv.fr/>; rel=\"canonical\", <https://www.economie.gouv.fr/>; rel=\"shortlink\"",
     "permissions-policy": "interest-cohort=()",
     "referrer-policy": "same-origin",
@@ -114,8 +114,8 @@
     "x-drupal-dynamic-cache": "UNCACHEABLE",
     "x-frame-options": "SAMEORIGIN",
     "x-grace": "full",
-    "x-proxy-cache": "REVALIDATED",
-    "x-request-id": "1072109974",
+    "x-proxy-cache": "HIT",
+    "x-request-id": "563612401",
     "x-ua-compatible": "IE=edge",
     "x-xss-protection": "1;mode=block"
   },
@@ -178,7 +178,7 @@
     },
     {
       "hostname": "tag.aticdn.net",
-      "ip": "18.244.214.96",
+      "ip": "13.225.47.126",
       "geoip": {
         "continent": {
           "code": "NA",
@@ -232,7 +232,7 @@
     },
     {
       "hostname": "try.abtasty.com",
-      "ip": "13.33.21.50",
+      "ip": "13.249.74.54",
       "geoip": {
         "continent": {
           "code": "NA",
@@ -286,7 +286,7 @@
     },
     {
       "hostname": "logs4.xiti.com",
-      "ip": "18.238.193.55",
+      "ip": "143.204.161.116",
       "geoip": {
         "continent": {
           "code": "NA",
@@ -510,7 +510,7 @@
     },
     {
       "hostname": "widgets-images.abtasty.com",
-      "ip": "18.65.25.92",
+      "ip": "65.8.228.118",
       "geoip": {
         "continent": {
           "code": "NA",
