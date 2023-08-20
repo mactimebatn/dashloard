@@ -127,7 +127,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Sun, 13 Aug 2023 01:15:00
+		Generated on Sun, 20 Aug 2023 01:15:13
 	</h3>
 
 	<h3>
@@ -245,7 +245,7 @@ td {
 			<tr>
 				<td><a href="#10044">Big Redirect Detected (Potential Sensitive Information Leak)</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">12</td>
+				<td align="center">6</td>
 			</tr>
 			<tr>
 				<td><a href="#10017">Cross-Domain JavaScript Source File Inclusion</a></td>
@@ -260,7 +260,7 @@ td {
 			<tr>
 				<td><a href="#10063">Permissions Policy Header Not Set</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">13</td>
+				<td align="center">12</td>
 			</tr>
 			<tr>
 				<td><a href="#10035">Strict-Transport-Security Header Not Set</a></td>
@@ -270,7 +270,7 @@ td {
 			<tr>
 				<td><a href="#10096">Timestamp Disclosure - Unix</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">11</td>
+				<td align="center">12</td>
 			</tr>
 			<tr>
 				<td><a href="#10021">X-Content-Type-Options Header Missing</a></td>
@@ -300,37 +300,37 @@ td {
 			<tr>
 				<td><a href="#10015">Re-examine Cache-control Directives</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">11</td>
+				<td align="center">12</td>
 			</tr>
 			<tr>
 				<td><a href="#90005">Sec-Fetch-Dest Header is Missing</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">2</td>
+				<td align="center">3</td>
 			</tr>
 			<tr>
 				<td><a href="#90005">Sec-Fetch-Mode Header is Missing</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">2</td>
+				<td align="center">3</td>
 			</tr>
 			<tr>
 				<td><a href="#90005">Sec-Fetch-Site Header is Missing</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">2</td>
+				<td align="center">3</td>
 			</tr>
 			<tr>
 				<td><a href="#90005">Sec-Fetch-User Header is Missing</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">2</td>
+				<td align="center">3</td>
 			</tr>
 			<tr>
 				<td><a href="#10049">Storable and Cacheable Content</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">11</td>
+				<td align="center">12</td>
 			</tr>
 			<tr>
 				<td><a href="#10031">User Controllable HTML Element Attribute (Potential XSS)</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">12</td>
+				<td align="center">9</td>
 			</tr>
 		</table>
 		<div class="spacer-lg"></div>
@@ -400,31 +400,10 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;form class=&quot;header-searchbar&quot; data-drupal-selector=&quot;header-searchbar&quot; action=&quot;/recherche-resultat&quot; method=&quot;GET&quot; id=&quot;header-searchbar&quot; accept-charset=&quot;UTF-8&quot; data-drupal-form-fields=&quot;edit-search,edit-valider&quot;&gt;</td>
 					</tr>
-				
 					<tr>
 						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.economie.gouv.fr/">https://www.economie.gouv.fr/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;form class=&quot;header-searchbar&quot; data-drupal-selector=&quot;header-searchbar&quot; action=&quot;/recherche-resultat&quot; method=&quot;GET&quot; id=&quot;header-searchbar&quot; accept-charset=&quot;UTF-8&quot; data-drupal-form-fields=&quot;edit-search,edit-valider&quot;&gt;</td>
+							class="indent2">Other Info</td>
+						<td width="80%">No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: &quot;search-865-input&quot; ].</td>
 					</tr>
 				
 					<tr>
@@ -452,6 +431,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;form class=&quot;header-searchbar&quot; data-drupal-selector=&quot;header-searchbar&quot; action=&quot;/recherche-resultat&quot; method=&quot;GET&quot; id=&quot;header-searchbar&quot; accept-charset=&quot;UTF-8&quot; data-drupal-form-fields=&quot;edit-search,edit-valider&quot;&gt;</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: &quot;search-865-input&quot; ].</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -477,6 +461,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;form class=&quot;header-searchbar&quot; data-drupal-selector=&quot;header-searchbar&quot; action=&quot;/recherche-resultat&quot; method=&quot;GET&quot; id=&quot;header-searchbar&quot; accept-charset=&quot;UTF-8&quot; data-drupal-form-fields=&quot;edit-search,edit-valider&quot;&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: &quot;search-865-input&quot; ].</td>
 					</tr>
 				
 					<tr>
@@ -504,6 +493,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;form class=&quot;header-searchbar&quot; data-drupal-selector=&quot;header-searchbar&quot; action=&quot;/recherche-resultat&quot; method=&quot;GET&quot; id=&quot;header-searchbar&quot; accept-charset=&quot;UTF-8&quot; data-drupal-form-fields=&quot;edit-search,edit-valider&quot;&gt;</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: &quot;search-865-input&quot; ].</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -529,6 +523,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;form class=&quot;header-searchbar&quot; data-drupal-selector=&quot;header-searchbar&quot; action=&quot;/recherche-resultat&quot; method=&quot;GET&quot; id=&quot;header-searchbar&quot; accept-charset=&quot;UTF-8&quot; data-drupal-form-fields=&quot;edit-search,edit-valider&quot;&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: &quot;search-865-input&quot; ].</td>
 					</tr>
 				
 					<tr>
@@ -556,6 +555,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;form class=&quot;header-searchbar&quot; data-drupal-selector=&quot;header-searchbar&quot; action=&quot;/recherche-resultat&quot; method=&quot;GET&quot; id=&quot;header-searchbar&quot; accept-charset=&quot;UTF-8&quot; data-drupal-form-fields=&quot;edit-search,edit-valider&quot;&gt;</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: &quot;search-865-input&quot; ].</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -581,6 +585,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;form class=&quot;header-searchbar&quot; data-drupal-selector=&quot;header-searchbar&quot; action=&quot;/recherche-resultat&quot; method=&quot;GET&quot; id=&quot;header-searchbar&quot; accept-charset=&quot;UTF-8&quot; data-drupal-form-fields=&quot;edit-search,edit-valider&quot;&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: &quot;search-865-input&quot; ].</td>
 					</tr>
 				
 					<tr>
@@ -608,6 +617,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;form class=&quot;header-searchbar&quot; data-drupal-selector=&quot;header-searchbar&quot; action=&quot;/recherche-resultat&quot; method=&quot;GET&quot; id=&quot;header-searchbar&quot; accept-charset=&quot;UTF-8&quot; data-drupal-form-fields=&quot;edit-search,edit-valider&quot;&gt;</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: &quot;search-865-input&quot; ].</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -634,6 +648,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;form class=&quot;header-searchbar&quot; data-drupal-selector=&quot;header-searchbar&quot; action=&quot;/recherche-resultat&quot; method=&quot;GET&quot; id=&quot;header-searchbar&quot; accept-charset=&quot;UTF-8&quot; data-drupal-form-fields=&quot;edit-search,edit-valider&quot;&gt;</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: &quot;search-865-input&quot; ].</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -659,6 +678,42 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;form class=&quot;header-searchbar&quot; data-drupal-selector=&quot;header-searchbar&quot; action=&quot;/recherche-resultat&quot; method=&quot;GET&quot; id=&quot;header-searchbar&quot; accept-charset=&quot;UTF-8&quot; data-drupal-form-fields=&quot;edit-search,edit-valider&quot;&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: &quot;search-865-input&quot; ].</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.economie.gouv.fr/search/">https://www.economie.gouv.fr/search/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;form class=&quot;header-searchbar&quot; data-drupal-selector=&quot;header-searchbar&quot; action=&quot;/recherche-resultat&quot; method=&quot;GET&quot; id=&quot;header-searchbar&quot; accept-charset=&quot;UTF-8&quot; data-drupal-form-fields=&quot;edit-search,edit-valider&quot;&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: &quot;search-865-input&quot; ].</td>
 					</tr>
 				
 				<tr>
@@ -784,31 +839,13 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">default-src https: &#39;unsafe-eval&#39; &#39;unsafe-inline&#39;; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src &#39;self&#39; data: https:; frame-ancestors &#39;self&#39; bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;</td>
 					</tr>
-				
 					<tr>
 						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.economie.gouv.fr/">https://www.economie.gouv.fr/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Content-Security-Policy</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">default-src https: &#39;unsafe-eval&#39; &#39;unsafe-inline&#39;; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src &#39;self&#39; data: https:; frame-ancestors &#39;self&#39; bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;</td>
+							class="indent2">Other Info</td>
+						<td width="80%">The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: 
+script-src, style-src, img-src, connect-src, frame-src, font-src, media-src, object-src, manifest-src, worker-src, prefetch-src, form-action
+
+The directive(s): form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.</td>
 					</tr>
 				
 					<tr>
@@ -835,6 +872,48 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">default-src https: &#39;unsafe-eval&#39; &#39;unsafe-inline&#39;; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src &#39;self&#39; data: https:; frame-ancestors &#39;self&#39; bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: 
+script-src, style-src, img-src, connect-src, frame-src, font-src, media-src, object-src, manifest-src, worker-src, prefetch-src, form-action
+
+The directive(s): form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.economie.gouv.fr/index.php/filter/tips">https://www.economie.gouv.fr/index.php/filter/tips</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Content-Security-Policy</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">default-src https: &#39;unsafe-eval&#39; &#39;unsafe-inline&#39;; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src &#39;self&#39; data: https:; frame-ancestors &#39;self&#39; bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: 
+script-src, style-src, img-src, connect-src, frame-src, font-src, media-src, object-src, manifest-src, worker-src, prefetch-src, form-action
+
+The directive(s): form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.</td>
 					</tr>
 				
 				<tr>
@@ -930,31 +1009,10 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">default-src https: &#39;unsafe-eval&#39; &#39;unsafe-inline&#39;; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src &#39;self&#39; data: https:; frame-ancestors &#39;self&#39; bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;</td>
 					</tr>
-				
 					<tr>
 						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.economie.gouv.fr/">https://www.economie.gouv.fr/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Content-Security-Policy</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">default-src https: &#39;unsafe-eval&#39; &#39;unsafe-inline&#39;; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src &#39;self&#39; data: https:; frame-ancestors &#39;self&#39; bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;</td>
+							class="indent2">Other Info</td>
+						<td width="80%">script-src includes unsafe-inline.</td>
 					</tr>
 				
 					<tr>
@@ -981,6 +1039,42 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">default-src https: &#39;unsafe-eval&#39; &#39;unsafe-inline&#39;; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src &#39;self&#39; data: https:; frame-ancestors &#39;self&#39; bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">script-src includes unsafe-inline.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.economie.gouv.fr/index.php/filter/tips">https://www.economie.gouv.fr/index.php/filter/tips</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Content-Security-Policy</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">default-src https: &#39;unsafe-eval&#39; &#39;unsafe-inline&#39;; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src &#39;self&#39; data: https:; frame-ancestors &#39;self&#39; bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">script-src includes unsafe-inline.</td>
 					</tr>
 				
 				<tr>
@@ -1076,31 +1170,10 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">default-src https: &#39;unsafe-eval&#39; &#39;unsafe-inline&#39;; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src &#39;self&#39; data: https:; frame-ancestors &#39;self&#39; bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;</td>
 					</tr>
-				
 					<tr>
 						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.economie.gouv.fr/">https://www.economie.gouv.fr/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Content-Security-Policy</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">default-src https: &#39;unsafe-eval&#39; &#39;unsafe-inline&#39;; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src &#39;self&#39; data: https:; frame-ancestors &#39;self&#39; bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;</td>
+							class="indent2">Other Info</td>
+						<td width="80%">style-src includes unsafe-inline.</td>
 					</tr>
 				
 					<tr>
@@ -1127,6 +1200,42 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">default-src https: &#39;unsafe-eval&#39; &#39;unsafe-inline&#39;; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src &#39;self&#39; data: https:; frame-ancestors &#39;self&#39; bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">style-src includes unsafe-inline.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.economie.gouv.fr/index.php/filter/tips">https://www.economie.gouv.fr/index.php/filter/tips</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Content-Security-Policy</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">default-src https: &#39;unsafe-eval&#39; &#39;unsafe-inline&#39;; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src &#39;self&#39; data: https:; frame-ancestors &#39;self&#39; bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">style-src includes unsafe-inline.</td>
 					</tr>
 				
 				<tr>
@@ -1222,6 +1331,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -1246,6 +1360,11 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
 						<td width="80%"></td>
 					</tr>
 				
@@ -1274,6 +1393,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -1298,6 +1422,11 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
 						<td width="80%"></td>
 					</tr>
 				
@@ -1326,6 +1455,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -1350,6 +1484,11 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
 						<td width="80%"></td>
 					</tr>
 				
@@ -1378,6 +1517,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -1402,6 +1546,11 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
 						<td width="80%"></td>
 					</tr>
 				
@@ -1430,6 +1579,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -1454,6 +1608,11 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
 						<td width="80%"></td>
 					</tr>
 				
@@ -1482,6 +1641,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -1506,6 +1670,11 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
 						<td width="80%"></td>
 					</tr>
 				
@@ -1605,31 +1774,10 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">Access-Control-Allow-Origin: *</td>
 					</tr>
-				
 					<tr>
 						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.economie.gouv.fr/">https://www.economie.gouv.fr/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">Access-Control-Allow-Origin: *</td>
+							class="indent2">Other Info</td>
+						<td width="80%">The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</td>
 					</tr>
 				
 					<tr>
@@ -1657,6 +1805,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">Access-Control-Allow-Origin: *</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -1682,6 +1835,42 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">Access-Control-Allow-Origin: *</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.economie.gouv.fr/index.php/admin/">https://www.economie.gouv.fr/index.php/admin/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Access-Control-Allow-Origin: *</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</td>
 					</tr>
 				
 					<tr>
@@ -1709,6 +1898,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">Access-Control-Allow-Origin: *</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -1734,6 +1928,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">Access-Control-Allow-Origin: *</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</td>
 					</tr>
 				
 					<tr>
@@ -1761,6 +1960,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">Access-Control-Allow-Origin: *</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -1786,6 +1990,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">Access-Control-Allow-Origin: *</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</td>
 					</tr>
 				
 					<tr>
@@ -1813,6 +2022,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">Access-Control-Allow-Origin: *</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -1839,6 +2053,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">Access-Control-Allow-Origin: *</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -1864,6 +2083,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">Access-Control-Allow-Origin: *</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</td>
 					</tr>
 				
 				<tr>
@@ -1945,6 +2169,11 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
 						<td width="80%"></td>
 					</tr>
 				
@@ -2029,6 +2258,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;script type=&quot;text/javascript&quot; src=&quot;https://try.abtasty.com/a513b8f61404f9eb2dbf3bd8922842d2.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -2054,6 +2288,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;script type=&quot;text/javascript&quot; src=&quot;https://try.abtasty.com/a513b8f61404f9eb2dbf3bd8922842d2.js&quot;&gt;&lt;/script&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
 					</tr>
 				
 					<tr>
@@ -2081,6 +2320,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -2106,6 +2350,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
 					</tr>
 				
 					<tr>
@@ -2133,6 +2382,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;script type=&quot;text/javascript&quot; src=&quot;https://try.abtasty.com/a513b8f61404f9eb2dbf3bd8922842d2.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -2159,6 +2413,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -2184,6 +2443,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
 					</tr>
 				
 				<tr>
@@ -2264,6 +2528,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">http://www.datatables.net
  DataTables 1.11.2</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
 					</tr>
 				
 				<tr>
@@ -2347,6 +2616,13 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">Location header URI length: 29 [https://www.economie.gouv.fr/].
+Predicted response size: 329.
+Response Body Length: 362.</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -2372,6 +2648,13 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">Location header URI length: 42 [https://www.economie.gouv.fr/en/system/403].
+Predicted response size: 342.
+Response Body Length: 414.</td>
 					</tr>
 				
 					<tr>
@@ -2399,6 +2682,13 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">Location header URI length: 42 [https://www.economie.gouv.fr/en/system/404].
+Predicted response size: 342.
+Response Body Length: 414.</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -2424,6 +2714,13 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">Location header URI length: 40 [https://www.economie.gouv.fr/filter/tips].
+Predicted response size: 340.
+Response Body Length: 406.</td>
 					</tr>
 				
 					<tr>
@@ -2451,57 +2748,12 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
-				
 					<tr>
 						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.economie.gouv.fr/node/48069">https://www.economie.gouv.fr/node/48069</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.economie.gouv.fr/particuliers/epargne-et-investissement">https://www.economie.gouv.fr/particuliers/epargne-et-investissement</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
+							class="indent2">Other Info</td>
+						<td width="80%">Location header URI length: 51 [https://www.economie.gouv.fr/ministere/organigramme].
+Predicted response size: 351.
+Response Body Length: 450.</td>
 					</tr>
 				
 					<tr>
@@ -2529,114 +2781,17 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
-				
 					<tr>
 						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.economie.gouv.fr/particuliers/frais-bancaires">https://www.economie.gouv.fr/particuliers/frais-bancaires</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.economie.gouv.fr/particuliers/investissement-immobilier">https://www.economie.gouv.fr/particuliers/investissement-immobilier</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.economie.gouv.fr/particuliers/mutuelle-et-assurance">https://www.economie.gouv.fr/particuliers/mutuelle-et-assurance</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.economie.gouv.fr/particuliers/taxe-habitation-">https://www.economie.gouv.fr/particuliers/taxe-habitation-</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
+							class="indent2">Other Info</td>
+						<td width="80%">Location header URI length: 92 [https://www.economie.gouv.fr/particuliers/prix-immobilier-estimation-demande-valeur-fonciere].
+Predicted response size: 392.
+Response Body Length: 614.</td>
 					</tr>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">12</td>
+					<td width="80%">6</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -2709,6 +2864,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;script type=&quot;text/javascript&quot; src=&quot;https://try.abtasty.com/a513b8f61404f9eb2dbf3bd8922842d2.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -2734,6 +2894,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;script type=&quot;text/javascript&quot; src=&quot;https://try.abtasty.com/a513b8f61404f9eb2dbf3bd8922842d2.js&quot;&gt;&lt;/script&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
 					</tr>
 				
 					<tr>
@@ -2761,6 +2926,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -2786,6 +2956,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
 					</tr>
 				
 					<tr>
@@ -2813,6 +2988,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;script type=&quot;text/javascript&quot; src=&quot;https://try.abtasty.com/a513b8f61404f9eb2dbf3bd8922842d2.js&quot;&gt;&lt;/script&gt;</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -2839,6 +3019,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -2864,6 +3049,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;script async src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
 					</tr>
 				
 				<tr>
@@ -2941,6 +3131,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">Eval</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -2967,6 +3162,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">eval</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -2992,6 +3192,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">eval</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
 					</tr>
 				
 				<tr>
@@ -3072,6 +3277,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -3098,30 +3308,9 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
-				
 					<tr>
 						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.economie.gouv.fr/core/assets/vendor/jquery/jquery.min.js?v=3.6.0">https://www.economie.gouv.fr/core/assets/vendor/jquery/jquery.min.js?v=3.6.0</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
+							class="indent2">Other Info</td>
 						<td width="80%"></td>
 					</tr>
 				
@@ -3150,6 +3339,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -3174,6 +3368,11 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
 						<td width="80%"></td>
 					</tr>
 				
@@ -3202,6 +3401,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -3226,6 +3430,11 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
 						<td width="80%"></td>
 					</tr>
 				
@@ -3254,6 +3463,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -3278,6 +3492,11 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
 						<td width="80%"></td>
 					</tr>
 				
@@ -3306,6 +3525,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -3330,6 +3554,11 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
 						<td width="80%"></td>
 					</tr>
 				
@@ -3358,6 +3587,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -3384,10 +3618,15 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">13</td>
+					<td width="80%">12</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -3475,6 +3714,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -3499,6 +3743,11 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
 						<td width="80%"></td>
 					</tr>
 				
@@ -3527,6 +3776,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -3551,6 +3805,11 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
 						<td width="80%"></td>
 					</tr>
 				
@@ -3579,6 +3838,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -3603,6 +3867,11 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
 						<td width="80%"></td>
 					</tr>
 				
@@ -3631,6 +3900,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -3655,6 +3929,11 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
 						<td width="80%"></td>
 					</tr>
 				
@@ -3683,6 +3962,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -3707,6 +3991,11 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
 						<td width="80%"></td>
 					</tr>
 				
@@ -3735,6 +4024,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -3759,6 +4053,11 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
 						<td width="80%"></td>
 					</tr>
 				
@@ -3852,6 +4151,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">1690964498</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">1690964498, which evaluates to: 2023-08-02 08:21:38</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -3877,6 +4181,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">1690964498</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">1690964498, which evaluates to: 2023-08-02 08:21:38</td>
 					</tr>
 				
 					<tr>
@@ -3904,11 +4213,16 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">1689773307</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">1689773307, which evaluates to: 2023-07-19 13:28:27</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.economie.gouv.fr/ministere">https://www.economie.gouv.fr/ministere</a></td>
+						<td width="80%"><a href="https://www.economie.gouv.fr/ministere/organigramme">https://www.economie.gouv.fr/ministere/organigramme</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3928,13 +4242,18 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">1680774056</td>
+						<td width="80%">1584432812</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">1584432812, which evaluates to: 2020-03-17 08:13:32</td>
 					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.economie.gouv.fr/ministere/engagements-ministere">https://www.economie.gouv.fr/ministere/engagements-ministere</a></td>
+						<td width="80%"><a href="https://www.economie.gouv.fr/ministere/organigramme">https://www.economie.gouv.fr/ministere/organigramme</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3954,7 +4273,74 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">1687771883</td>
+						<td width="80%">1651073105</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">1651073105, which evaluates to: 2022-04-27 15:25:05</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.economie.gouv.fr/ministere/organigramme">https://www.economie.gouv.fr/ministere/organigramme</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">1691498565</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">1691498565, which evaluates to: 2023-08-08 12:42:45</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.economie.gouv.fr/ministere/organigramme">https://www.economie.gouv.fr/ministere/organigramme</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">1833994344</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">1833994344, which evaluates to: 2028-02-12 18:52:24</td>
 					</tr>
 				
 					<tr>
@@ -3982,6 +4368,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">1691674305</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">1691674305, which evaluates to: 2023-08-10 13:31:45</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -4007,6 +4398,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">1691749155</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">1691749155, which evaluates to: 2023-08-11 10:19:15</td>
 					</tr>
 				
 					<tr>
@@ -4034,6 +4430,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">1691750226</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">1691750226, which evaluates to: 2023-08-11 10:37:06</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -4060,31 +4461,10 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">1690365658</td>
 					</tr>
-				
 					<tr>
 						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.economie.gouv.fr/ministres/thomas-cazenave">https://www.economie.gouv.fr/ministres/thomas-cazenave</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">1691749559</td>
+							class="indent2">Other Info</td>
+						<td width="80%">1690365658, which evaluates to: 2023-07-26 10:00:58</td>
 					</tr>
 				
 					<tr>
@@ -4112,10 +4492,15 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">1689773138</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">1689773138, which evaluates to: 2023-07-19 13:25:38</td>
+					</tr>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">11</td>
+					<td width="80%">12</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -4190,6 +4575,12 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.
+At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</td>
 					</tr>
 				
 				<tr>
@@ -4276,31 +4667,10 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">/files/languages/fr_IuLO_MeK1roBPkaAcGwwGQvYBtr5R0g3US0wsNmFWcY</td>
 					</tr>
-				
 					<tr>
 						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.economie.gouv.fr/">https://www.economie.gouv.fr/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">/files/languages/fr_IuLO_MeK1roBPkaAcGwwGQvYBtr5R0g3US0wsNmFWcY</td>
+							class="indent2">Other Info</td>
+						<td width="80%">���z��jx.j����&quot;���Ǌֺ&gt;F�pl0���GH7Q-0�مY�</td>
 					</tr>
 				
 					<tr>
@@ -4328,6 +4698,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">/files/languages/fr_IuLO_MeK1roBPkaAcGwwGQvYBtr5R0g3US0wsNmFWcY</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">���z��jx.j����&quot;���Ǌֺ&gt;F�pl0���GH7Q-0�مY�</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -4353,6 +4728,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">/files/languages/fr_IuLO_MeK1roBPkaAcGwwGQvYBtr5R0g3US0wsNmFWcY</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">���z��jx.j����&quot;���Ǌֺ&gt;F�pl0���GH7Q-0�مY�</td>
 					</tr>
 				
 					<tr>
@@ -4380,6 +4760,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">/files/languages/fr_IuLO_MeK1roBPkaAcGwwGQvYBtr5R0g3US0wsNmFWcY</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">���z��jx.j����&quot;���Ǌֺ&gt;F�pl0���GH7Q-0�مY�</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -4405,6 +4790,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">/files/languages/fr_IuLO_MeK1roBPkaAcGwwGQvYBtr5R0g3US0wsNmFWcY</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">���z��jx.j����&quot;���Ǌֺ&gt;F�pl0���GH7Q-0�مY�</td>
 					</tr>
 				
 					<tr>
@@ -4432,6 +4822,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">/files/languages/fr_IuLO_MeK1roBPkaAcGwwGQvYBtr5R0g3US0wsNmFWcY</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">���z��jx.j����&quot;���Ǌֺ&gt;F�pl0���GH7Q-0�مY�</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -4457,6 +4852,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">/files/languages/fr_IuLO_MeK1roBPkaAcGwwGQvYBtr5R0g3US0wsNmFWcY</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">���z��jx.j����&quot;���Ǌֺ&gt;F�pl0���GH7Q-0�مY�</td>
 					</tr>
 				
 					<tr>
@@ -4484,6 +4884,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">/files/languages/fr_IuLO_MeK1roBPkaAcGwwGQvYBtr5R0g3US0wsNmFWcY</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">���z��jx.j����&quot;���Ǌֺ&gt;F�pl0���GH7Q-0�مY�</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -4510,6 +4915,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">/files/languages/fr_IuLO_MeK1roBPkaAcGwwGQvYBtr5R0g3US0wsNmFWcY</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">���z��jx.j����&quot;���Ǌֺ&gt;F�pl0���GH7Q-0�مY�</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -4535,6 +4945,42 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">/files/languages/fr_IuLO_MeK1roBPkaAcGwwGQvYBtr5R0g3US0wsNmFWcY</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">���z��jx.j����&quot;���Ǌֺ&gt;F�pl0���GH7Q-0�مY�</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.economie.gouv.fr/search/">https://www.economie.gouv.fr/search/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">/files/languages/fr_IuLO_MeK1roBPkaAcGwwGQvYBtr5R0g3US0wsNmFWcY</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">���z��jx.j����&quot;���Ǌֺ&gt;F�pl0���GH7Q-0�مY�</td>
 					</tr>
 				
 				<tr>
@@ -4613,6 +5059,11 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
 						<td width="80%"></td>
 					</tr>
 				
@@ -4694,31 +5145,10 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">user</td>
 					</tr>
-				
 					<tr>
 						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.economie.gouv.fr/">https://www.economie.gouv.fr/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">user</td>
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bUSER\b and was detected in the element starting with: &quot;&lt;script type=&quot;application/json&quot; data-drupal-selector=&quot;drupal-settings-json&quot;&gt;{&quot;path&quot;:{&quot;baseUrl&quot;:&quot;\/&quot;,&quot;scriptPath&quot;:null,&quot;pathPrefi&quot;, see evidence field for the suspicious comment/snippet.</td>
 					</tr>
 				
 					<tr>
@@ -4746,6 +5176,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">user</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bUSER\b and was detected in the element starting with: &quot;&lt;script type=&quot;application/json&quot; data-drupal-selector=&quot;drupal-settings-json&quot;&gt;{&quot;path&quot;:{&quot;baseUrl&quot;:&quot;\/&quot;,&quot;scriptPath&quot;:null,&quot;pathPrefi&quot;, see evidence field for the suspicious comment/snippet.</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -4771,6 +5206,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">user</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bUSER\b and was detected in the element starting with: &quot;&lt;script type=&quot;application/json&quot; data-drupal-selector=&quot;drupal-settings-json&quot;&gt;{&quot;path&quot;:{&quot;baseUrl&quot;:&quot;\/&quot;,&quot;scriptPath&quot;:null,&quot;pathPrefi&quot;, see evidence field for the suspicious comment/snippet.</td>
 					</tr>
 				
 					<tr>
@@ -4798,6 +5238,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">user</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bUSER\b and was detected in the element starting with: &quot;&lt;script type=&quot;application/json&quot; data-drupal-selector=&quot;drupal-settings-json&quot;&gt;{&quot;path&quot;:{&quot;baseUrl&quot;:&quot;\/&quot;,&quot;scriptPath&quot;:null,&quot;pathPrefi&quot;, see evidence field for the suspicious comment/snippet.</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -4823,6 +5268,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">user</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bUSER\b and was detected in the element starting with: &quot;&lt;script type=&quot;application/json&quot; data-drupal-selector=&quot;drupal-settings-json&quot;&gt;{&quot;path&quot;:{&quot;baseUrl&quot;:&quot;\/&quot;,&quot;scriptPath&quot;:null,&quot;pathPrefi&quot;, see evidence field for the suspicious comment/snippet.</td>
 					</tr>
 				
 					<tr>
@@ -4850,6 +5300,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">user</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bUSER\b and was detected in the element starting with: &quot;&lt;script type=&quot;application/json&quot; data-drupal-selector=&quot;drupal-settings-json&quot;&gt;{&quot;path&quot;:{&quot;baseUrl&quot;:&quot;\/&quot;,&quot;scriptPath&quot;:null,&quot;pathPrefi&quot;, see evidence field for the suspicious comment/snippet.</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -4875,6 +5330,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">user</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bUSER\b and was detected in the element starting with: &quot;&lt;script type=&quot;application/json&quot; data-drupal-selector=&quot;drupal-settings-json&quot;&gt;{&quot;path&quot;:{&quot;baseUrl&quot;:&quot;\/&quot;,&quot;scriptPath&quot;:null,&quot;pathPrefi&quot;, see evidence field for the suspicious comment/snippet.</td>
 					</tr>
 				
 					<tr>
@@ -4902,6 +5362,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">user</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bUSER\b and was detected in the element starting with: &quot;&lt;script type=&quot;application/json&quot; data-drupal-selector=&quot;drupal-settings-json&quot;&gt;{&quot;path&quot;:{&quot;baseUrl&quot;:&quot;\/&quot;,&quot;scriptPath&quot;:null,&quot;pathPrefi&quot;, see evidence field for the suspicious comment/snippet.</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -4928,6 +5393,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">user</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bUSER\b and was detected in the element starting with: &quot;&lt;script type=&quot;application/json&quot; data-drupal-selector=&quot;drupal-settings-json&quot;&gt;{&quot;path&quot;:{&quot;baseUrl&quot;:&quot;\/&quot;,&quot;scriptPath&quot;:null,&quot;pathPrefi&quot;, see evidence field for the suspicious comment/snippet.</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -4953,6 +5423,42 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">user</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bUSER\b and was detected in the element starting with: &quot;&lt;script type=&quot;application/json&quot; data-drupal-selector=&quot;drupal-settings-json&quot;&gt;{&quot;path&quot;:{&quot;baseUrl&quot;:&quot;\/&quot;,&quot;scriptPath&quot;:null,&quot;pathPrefi&quot;, see evidence field for the suspicious comment/snippet.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.economie.gouv.fr/search/">https://www.economie.gouv.fr/search/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">user</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The following pattern was used: \bUSER\b and was detected in the element starting with: &quot;&lt;script type=&quot;application/json&quot; data-drupal-selector=&quot;drupal-settings-json&quot;&gt;{&quot;path&quot;:{&quot;baseUrl&quot;:&quot;\/&quot;,&quot;scriptPath&quot;:null,&quot;pathPrefi&quot;, see evidence field for the suspicious comment/snippet.</td>
 					</tr>
 				
 				<tr>
@@ -5030,31 +5536,10 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;a id=&quot;main-content&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;</td>
 					</tr>
-				
 					<tr>
 						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.economie.gouv.fr/">https://www.economie.gouv.fr/</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;a id=&quot;main-content&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;</td>
+							class="indent2">Other Info</td>
+						<td width="80%">Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</td>
 					</tr>
 				
 					<tr>
@@ -5082,6 +5567,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;a class=&quot;fr-breadcrumb__link&quot; aria-current=&quot;page&quot;&gt;Page non trouvée&lt;/a&gt;</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -5107,6 +5597,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;a class=&quot;fr-breadcrumb__link&quot; aria-current=&quot;page&quot;&gt;Page non trouvée&lt;/a&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</td>
 					</tr>
 				
 					<tr>
@@ -5134,6 +5629,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;a class=&quot;fr-breadcrumb__link&quot; aria-current=&quot;page&quot;&gt;Page non trouvée&lt;/a&gt;</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -5159,6 +5659,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;a class=&quot;fr-breadcrumb__link&quot; aria-current=&quot;page&quot;&gt;Page non trouvée&lt;/a&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</td>
 					</tr>
 				
 					<tr>
@@ -5186,6 +5691,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;a id=&quot;main-content&quot; tabindex=&quot;-1&quot;&gt;&lt;/a&gt;</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -5211,6 +5721,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;a class=&quot;fr-breadcrumb__link&quot; aria-current=&quot;page&quot;&gt;Accès refusé&lt;/a&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</td>
 					</tr>
 				
 					<tr>
@@ -5238,6 +5753,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;a class=&quot;fr-breadcrumb__link&quot; aria-current=&quot;page&quot;&gt;Page non trouvée&lt;/a&gt;</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -5264,6 +5784,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;a class=&quot;fr-breadcrumb__link&quot; aria-current=&quot;page&quot;&gt;Page non trouvée&lt;/a&gt;</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -5289,6 +5814,42 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">&lt;a class=&quot;fr-breadcrumb__link&quot; aria-current=&quot;page&quot;&gt;Page non trouvée&lt;/a&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.economie.gouv.fr/search/">https://www.economie.gouv.fr/search/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;a class=&quot;fr-breadcrumb__link&quot; aria-current=&quot;page&quot;&gt;Page non trouvée&lt;/a&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</td>
 					</tr>
 				
 				<tr>
@@ -5365,6 +5926,42 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">max-age=1200</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.economie.gouv.fr">https://www.economie.gouv.fr</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">cache-control</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=600, public</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -5389,7 +5986,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">max-age=600, public</td>
+						<td width="80%">max-age=1200</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
 					</tr>
 				
 					<tr>
@@ -5417,6 +6019,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">max-age=1200</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -5442,6 +6049,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">max-age=1200</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
 					</tr>
 				
 					<tr>
@@ -5469,6 +6081,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">max-age=1200</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -5494,6 +6111,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">max-age=1200</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
 					</tr>
 				
 					<tr>
@@ -5521,6 +6143,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">max-age=1200</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -5546,6 +6173,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">max-age=1200</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
 					</tr>
 				
 					<tr>
@@ -5573,6 +6205,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">max-age=1200</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -5597,7 +6234,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">max-age=600, public</td>
+						<td width="80%">max-age=1200</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
 					</tr>
 				
 					<tr>
@@ -5625,10 +6267,15 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">max-age=1200</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">11</td>
+					<td width="80%">12</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -5710,6 +6357,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -5736,10 +6388,46 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.economie.gouv.fr/sitemap.xml">https://www.economie.gouv.fr/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Dest</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">2</td>
+					<td width="80%">3</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -5815,6 +6503,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -5841,10 +6534,46 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.economie.gouv.fr/sitemap.xml">https://www.economie.gouv.fr/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Mode</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">2</td>
+					<td width="80%">3</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -5920,6 +6649,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -5946,10 +6680,46 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.economie.gouv.fr/sitemap.xml">https://www.economie.gouv.fr/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-Site</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">2</td>
+					<td width="80%">3</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -6025,6 +6795,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -6051,10 +6826,46 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.economie.gouv.fr/sitemap.xml">https://www.economie.gouv.fr/sitemap.xml</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">Sec-Fetch-User</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">2</td>
+					<td width="80%">3</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -6130,11 +6941,16 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">max-age=1200</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.economie.gouv.fr/">https://www.economie.gouv.fr/</a></td>
+						<td width="80%"><a href="https://www.economie.gouv.fr">https://www.economie.gouv.fr</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6155,6 +6971,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">max-age=600</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
 					</tr>
 				
 					<tr>
@@ -6182,6 +7003,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">max-age=1200</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -6207,6 +7033,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">max-age=1200</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
 					</tr>
 				
 					<tr>
@@ -6234,6 +7065,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">max-age=1200</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -6259,6 +7095,11 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">max-age=1200</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
 					</tr>
 				
 					<tr>
@@ -6286,6 +7127,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">max-age=1200</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -6311,6 +7157,42 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%">max-age=1200</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="https://www.economie.gouv.fr/core/*.js$">https://www.economie.gouv.fr/core/*.js$</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=1200</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
 					</tr>
 				
 					<tr>
@@ -6338,6 +7220,11 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">max-age=1200</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -6362,7 +7249,12 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">max-age=600</td>
+						<td width="80%">max-age=1200</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
 					</tr>
 				
 					<tr>
@@ -6390,10 +7282,15 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%">max-age=1200</td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">11</td>
+					<td width="80%">12</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -6465,84 +7362,6 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.economie.gouv.fr/recherche-resultat?afficher_extraits=oui&amp;expression_exacte=1&amp;gid&amp;search_api_views_fulltext=ZAP&amp;sort_by=search_api_relevance">https://www.economie.gouv.fr/recherche-resultat?afficher_extraits=oui&amp;expression_exacte=1&amp;gid&amp;search_api_views_fulltext=ZAP&amp;sort_by=search_api_relevance</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">afficher_extraits</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.economie.gouv.fr/recherche-resultat?afficher_extraits=oui&amp;expression_exacte=1&amp;gid&amp;search_api_views_fulltext=ZAP&amp;sort_by=search_api_relevance">https://www.economie.gouv.fr/recherche-resultat?afficher_extraits=oui&amp;expression_exacte=1&amp;gid&amp;search_api_views_fulltext=ZAP&amp;sort_by=search_api_relevance</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">search_api_views_fulltext</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="https://www.economie.gouv.fr/recherche-resultat?afficher_extraits=oui&amp;expression_exacte=1&amp;gid&amp;search_api_views_fulltext=ZAP&amp;sort_by=search_api_relevance">https://www.economie.gouv.fr/recherche-resultat?afficher_extraits=oui&amp;expression_exacte=1&amp;gid&amp;search_api_views_fulltext=ZAP&amp;sort_by=search_api_relevance</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">sort_by</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="https://www.economie.gouv.fr/recherche-resultat?search_api_views_fulltext=concours">https://www.economie.gouv.fr/recherche-resultat?search_api_views_fulltext=concours</a></td>
 					</tr>
 					<tr>
@@ -6564,6 +7383,23 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:
+
+https://www.economie.gouv.fr/recherche-resultat?search_api_views_fulltext=concours
+
+appears to include user input in: 
+
+a(n) [input] tag [value] attribute 
+
+The user input found was:
+search_api_views_fulltext=concours
+
+The user-controlled value was:
+concours</td>
 					</tr>
 				
 					<tr>
@@ -6591,6 +7427,23 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:
+
+https://www.economie.gouv.fr/recherche-resultat?search_api_views_fulltext=formulaire%20dc1
+
+appears to include user input in: 
+
+a(n) [input] tag [value] attribute 
+
+The user input found was:
+search_api_views_fulltext=formulaire dc1
+
+The user-controlled value was:
+formulaire dc1</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -6616,6 +7469,23 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:
+
+https://www.economie.gouv.fr/recherche-resultat?search_api_views_fulltext=forum%20action%20publique
+
+appears to include user input in: 
+
+a(n) [input] tag [value] attribute 
+
+The user input found was:
+search_api_views_fulltext=forum action publique
+
+The user-controlled value was:
+forum action publique</td>
 					</tr>
 				
 					<tr>
@@ -6643,6 +7513,23 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:
+
+https://www.economie.gouv.fr/recherche-resultat?search_api_views_fulltext=pacte
+
+appears to include user input in: 
+
+a(n) [input] tag [value] attribute 
+
+The user input found was:
+search_api_views_fulltext=pacte
+
+The user-controlled value was:
+pacte</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -6668,6 +7555,23 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:
+
+https://www.economie.gouv.fr/recherche-resultat?search_api_views_fulltext=pr%C3%A9l%C3%A8vement%20%C3%A0%20la%20source
+
+appears to include user input in: 
+
+a(n) [input] tag [value] attribute 
+
+The user input found was:
+search_api_views_fulltext=prélèvement à la source
+
+The user-controlled value was:
+prélèvement à la source</td>
 					</tr>
 				
 					<tr>
@@ -6695,6 +7599,23 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:
+
+https://www.economie.gouv.fr/recherche-resultat?search_api_views_fulltext=recrutement
+
+appears to include user input in: 
+
+a(n) [input] tag [value] attribute 
+
+The user input found was:
+search_api_views_fulltext=recrutement
+
+The user-controlled value was:
+recrutement</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -6720,6 +7641,23 @@ td {
 						<td width="20%"
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:
+
+https://www.economie.gouv.fr/recherche-resultat?search_api_views_fulltext=simulateur%20pouvoir%20d&#39;achat
+
+appears to include user input in: 
+
+a(n) [input] tag [value] attribute 
+
+The user input found was:
+search_api_views_fulltext=simulateur pouvoir d&#39;achat
+
+The user-controlled value was:
+simulateur pouvoir d&#39;achat</td>
 					</tr>
 				
 					<tr>
@@ -6747,6 +7685,23 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:
+
+https://www.economie.gouv.fr/recherche-resultat?search_api_views_fulltext=taxe%20d&#39;habitation
+
+appears to include user input in: 
+
+a(n) [input] tag [value] attribute 
+
+The user input found was:
+search_api_views_fulltext=taxe d&#39;habitation
+
+The user-controlled value was:
+taxe d&#39;habitation</td>
+					</tr>
 				
 					<tr>
 						<td width="20%"
@@ -6773,10 +7728,27 @@ td {
 							class="indent2">Evidence</td>
 						<td width="80%"></td>
 					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:
+
+https://www.economie.gouv.fr/recherche-resultat?search_api_views_fulltext=tva
+
+appears to include user input in: 
+
+a(n) [input] tag [value] attribute 
+
+The user input found was:
+search_api_views_fulltext=tva
+
+The user-controlled value was:
+tva</td>
+					</tr>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">12</td>
+					<td width="80%">9</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
