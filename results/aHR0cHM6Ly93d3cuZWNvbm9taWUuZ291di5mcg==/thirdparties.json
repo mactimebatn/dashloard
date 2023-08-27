@@ -10,7 +10,7 @@
     },
     {
       "type": "xiti",
-      "url": "https://logs4.xiti.com/hit.xiti?s=483556&idclient=b97fdb31-105a-464b-be61-a6529448dac0&ts=1692494170857&page_url=https://www.economie.gouv.fr/&vtag=5.29.3&ptag=js&r=800x600x24x24&re=800x600&hl=1x16x10&lng=en-US&idp=0116108091492&jv=0&p=accueil&s2=1&vrn=1&ref=",
+      "url": "https://logs4.xiti.com/hit.xiti?s=483556&idclient=e64dbda0-63b0-448b-9172-b599df8b3509&ts=1693099078142&page_url=https://www.economie.gouv.fr/&vtag=5.29.3&ptag=js&r=800x600x24x24&re=800x600&hl=1x17x58&lng=en-US&idp=0117571494467&jv=0&p=accueil&s2=1&vrn=1&ref=",
       "details": {
         "id": "xiti",
         "message": "Use hosted Matomo instance"
@@ -59,7 +59,7 @@
       "value": "%7B%22name%22%3A%22atidvisitor%22%2C%22val%22%3A%7B%22vrn%22%3A%22-483556-%22%7D%2C%22options%22%3A%7B%22path%22%3A%22%2F%22%2C%22session%22%3A15724800%2C%22end%22%3A15724800%7D%7D",
       "domain": "www.economie.gouv.fr",
       "path": "/",
-      "expires": 1708218970.243719,
+      "expires": 1708823877.869834,
       "size": 191,
       "httpOnly": false,
       "secure": false,
@@ -70,10 +70,10 @@
     },
     {
       "name": "atuserid",
-      "value": "%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%22b97fdb31-105a-464b-be61-a6529448dac0%22%2C%22options%22%3A%7B%22end%22%3A%222024-09-20T01%3A16%3A10.222Z%22%2C%22path%22%3A%22%2F%22%7D%7D",
+      "value": "%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%22e64dbda0-63b0-448b-9172-b599df8b3509%22%2C%22options%22%3A%7B%22end%22%3A%222024-09-27T01%3A17%3A57.860Z%22%2C%22path%22%3A%22%2F%22%7D%7D",
       "domain": "www.economie.gouv.fr",
       "path": "/",
-      "expires": 1726794970,
+      "expires": 1727399877,
       "size": 194,
       "httpOnly": false,
       "secure": false,
@@ -90,16 +90,16 @@
     "access-control-allow-origin": "*",
     "access-control-expose-headers": "Content-Length,Content-Range",
     "allow": "GET, POST, HEAD",
-    "cache-control": "max-age=1200",
+    "cache-control": "max-age=600, public",
     "content-encoding": "br",
     "content-language": "fr",
-    "content-length": "16011",
+    "content-length": "15938",
     "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src 'self' data: https:; frame-ancestors 'self' bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;",
     "content-type": "text/html; charset=UTF-8",
-    "date": "Sun, 20 Aug 2023 00:16:24 GMT",
-    "etag": "W/\"1692487615\"",
-    "expires": "Sun, 20 Aug 2023 00:26:24 GMT",
-    "last-modified": "Sat, 19 Aug 2023 23:26:55 GMT",
+    "date": "Sun, 27 Aug 2023 01:11:54 GMT",
+    "etag": "\"1693096044\"",
+    "expires": "Sun, 27 Aug 2023 01:21:54 GMT",
+    "last-modified": "Sun, 27 Aug 2023 00:27:24 GMT",
     "link": "<https://www.economie.gouv.fr/>; rel=\"canonical\", <https://www.economie.gouv.fr/>; rel=\"shortlink\"",
     "permissions-policy": "interest-cohort=()",
     "referrer-policy": "same-origin",
@@ -113,9 +113,8 @@
     "x-drupal-cache": "HIT",
     "x-drupal-dynamic-cache": "UNCACHEABLE",
     "x-frame-options": "SAMEORIGIN",
-    "x-grace": "full",
     "x-proxy-cache": "HIT",
-    "x-request-id": "472352477",
+    "x-request-id": "653984123",
     "x-ua-compatible": "IE=edge",
     "x-xss-protection": "1;mode=block"
   },
@@ -178,7 +177,7 @@
     },
     {
       "hostname": "tag.aticdn.net",
-      "ip": "13.225.47.26",
+      "ip": "13.225.47.83",
       "geoip": {
         "continent": {
           "code": "NA",
@@ -232,7 +231,7 @@
     },
     {
       "hostname": "try.abtasty.com",
-      "ip": "13.249.74.49",
+      "ip": "13.249.74.116",
       "geoip": {
         "continent": {
           "code": "NA",
