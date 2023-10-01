@@ -1,7 +1,7 @@
 {
 	"@programName": "ZAP",
 	"@version": "2.13.0",
-	"@generated": "Sun, 24 Sep 2023 01:18:05",
+	"@generated": "Sun, 1 Oct 2023 01:23:01",
 	"site":[ 
 		{
 			"@name": "https://www.economie.gouv.fr",
@@ -9,242 +9,6 @@
 			"@port": "443",
 			"@ssl": "true",
 			"alerts": [ 
-				{
-					"pluginid": "10202",
-					"alertRef": "10202",
-					"alert": "Absence of Anti-CSRF Tokens",
-					"name": "Absence of Anti-CSRF Tokens",
-					"riskcode": "2",
-					"confidence": "1",
-					"riskdesc": "Medium (Low)",
-					"desc": "<p>No Anti-CSRF tokens were found in a HTML submission form.</p><p>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</p><p></p><p>CSRF attacks are effective in a number of situations, including:</p><p>    * The victim has an active session on the target site.</p><p>    * The victim is authenticated via HTTP auth on the target site.</p><p>    * The victim is on the same local network as the target site.</p><p></p><p>CSRF has primarily been used to perform an action against a target site using the victim's privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</p>",
-					"instances":[ 
-						{
-							"uri": "https://www.economie.gouv.fr",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">",
-							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"search-865-input\" ]."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/comment/reply/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">",
-							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"search-865-input\" ]."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.css$",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">",
-							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"search-865-input\" ]."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.js$",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">",
-							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"search-865-input\" ]."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.svg",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">",
-							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"search-865-input\" ]."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/filter/tips",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">",
-							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"search-865-input\" ]."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/node/add/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">",
-							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"search-865-input\" ]."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.css$",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">",
-							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"search-865-input\" ]."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.js$",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">",
-							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"search-865-input\" ]."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.svg",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">",
-							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"search-865-input\" ]."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/search/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<form class=\"header-searchbar\" data-drupal-selector=\"header-searchbar\" action=\"/recherche-resultat\" method=\"GET\" id=\"header-searchbar\" accept-charset=\"UTF-8\" data-drupal-form-fields=\"edit-search,edit-valider\">",
-							"otherinfo": "No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"search-865-input\" ]."
-						}
-					],
-					"count": "11",
-					"solution": "<p>Phase: Architecture and Design</p><p>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</p><p>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</p><p></p><p>Phase: Implementation</p><p>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</p><p></p><p>Phase: Architecture and Design</p><p>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</p><p>Note that this can be bypassed using XSS.</p><p></p><p>Use the ESAPI Session Management control.</p><p>This control includes a component for CSRF.</p><p></p><p>Do not use the GET method for any request that triggers a state change.</p><p></p><p>Phase: Implementation</p><p>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</p>",
-					"otherinfo": "<p>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: \"search-865-input\" ].</p>",
-					"reference": "<p>http://projects.webappsec.org/Cross-Site-Request-Forgery</p><p>http://cwe.mitre.org/data/definitions/352.html</p>",
-					"cweid": "352",
-					"wascid": "9",
-					"sourceid": "1"
-				},
-				{
-					"pluginid": "10055",
-					"alertRef": "10055-4",
-					"alert": "CSP: Wildcard Directive",
-					"name": "CSP: Wildcard Directive",
-					"riskcode": "2",
-					"confidence": "3",
-					"riskdesc": "Medium (High)",
-					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
-					"instances":[ 
-						{
-							"uri": "https://www.economie.gouv.fr",
-							"method": "GET",
-							"param": "Content-Security-Policy",
-							"attack": "",
-							"evidence": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src 'self' data: https:; frame-ancestors 'self' bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;",
-							"otherinfo": "The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: \nscript-src, style-src, img-src, connect-src, frame-src, font-src, media-src, object-src, manifest-src, worker-src, prefetch-src, form-action\n\nThe directive(s): form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/filter/tips",
-							"method": "GET",
-							"param": "Content-Security-Policy",
-							"attack": "",
-							"evidence": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src 'self' data: https:; frame-ancestors 'self' bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;",
-							"otherinfo": "The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: \nscript-src, style-src, img-src, connect-src, frame-src, font-src, media-src, object-src, manifest-src, worker-src, prefetch-src, form-action\n\nThe directive(s): form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/index.php/filter/tips",
-							"method": "GET",
-							"param": "Content-Security-Policy",
-							"attack": "",
-							"evidence": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src 'self' data: https:; frame-ancestors 'self' bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;",
-							"otherinfo": "The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: \nscript-src, style-src, img-src, connect-src, frame-src, font-src, media-src, object-src, manifest-src, worker-src, prefetch-src, form-action\n\nThe directive(s): form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything."
-						}
-					],
-					"count": "3",
-					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
-					"otherinfo": "<p>The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: </p><p>script-src, style-src, img-src, connect-src, frame-src, font-src, media-src, object-src, manifest-src, worker-src, prefetch-src, form-action</p><p></p><p>The directive(s): form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.</p>",
-					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
-					"cweid": "693",
-					"wascid": "15",
-					"sourceid": "1"
-				},
-				{
-					"pluginid": "10055",
-					"alertRef": "10055-5",
-					"alert": "CSP: script-src unsafe-inline",
-					"name": "CSP: script-src unsafe-inline",
-					"riskcode": "2",
-					"confidence": "3",
-					"riskdesc": "Medium (High)",
-					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
-					"instances":[ 
-						{
-							"uri": "https://www.economie.gouv.fr",
-							"method": "GET",
-							"param": "Content-Security-Policy",
-							"attack": "",
-							"evidence": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src 'self' data: https:; frame-ancestors 'self' bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;",
-							"otherinfo": "script-src includes unsafe-inline."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/filter/tips",
-							"method": "GET",
-							"param": "Content-Security-Policy",
-							"attack": "",
-							"evidence": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src 'self' data: https:; frame-ancestors 'self' bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;",
-							"otherinfo": "script-src includes unsafe-inline."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/index.php/filter/tips",
-							"method": "GET",
-							"param": "Content-Security-Policy",
-							"attack": "",
-							"evidence": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src 'self' data: https:; frame-ancestors 'self' bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;",
-							"otherinfo": "script-src includes unsafe-inline."
-						}
-					],
-					"count": "3",
-					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
-					"otherinfo": "<p>script-src includes unsafe-inline.</p>",
-					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
-					"cweid": "693",
-					"wascid": "15",
-					"sourceid": "1"
-				},
-				{
-					"pluginid": "10055",
-					"alertRef": "10055-6",
-					"alert": "CSP: style-src unsafe-inline",
-					"name": "CSP: style-src unsafe-inline",
-					"riskcode": "2",
-					"confidence": "3",
-					"riskdesc": "Medium (High)",
-					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
-					"instances":[ 
-						{
-							"uri": "https://www.economie.gouv.fr",
-							"method": "GET",
-							"param": "Content-Security-Policy",
-							"attack": "",
-							"evidence": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src 'self' data: https:; frame-ancestors 'self' bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;",
-							"otherinfo": "style-src includes unsafe-inline."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/filter/tips",
-							"method": "GET",
-							"param": "Content-Security-Policy",
-							"attack": "",
-							"evidence": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src 'self' data: https:; frame-ancestors 'self' bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;",
-							"otherinfo": "style-src includes unsafe-inline."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/index.php/filter/tips",
-							"method": "GET",
-							"param": "Content-Security-Policy",
-							"attack": "",
-							"evidence": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src https: ; child-src https: platform.twitter.com; img-src https: data:; font-src 'self' data: https:; frame-ancestors 'self' bloctel.fr *.bloctel.fr bloctel.gouv.fr *.bloctel.gouv.fr http://bloctel.fr http://*.bloctel.fr http://bloctel.gouv.fr http://*.bloctel.gouv.fr;",
-							"otherinfo": "style-src includes unsafe-inline."
-						}
-					],
-					"count": "3",
-					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
-					"otherinfo": "<p>style-src includes unsafe-inline.</p>",
-					"reference": "<p>http://www.w3.org/TR/CSP2/</p><p>http://www.w3.org/TR/CSP/</p><p>http://caniuse.com/#search=content+security+policy</p><p>http://content-security-policy.com/</p><p>https://github.com/shapesecurity/salvation</p><p>https://developers.google.com/web/fundamentals/security/csp#policy_applies_to_a_wide_variety_of_resources</p>",
-					"cweid": "693",
-					"wascid": "15",
-					"sourceid": "1"
-				},
 				{
 					"pluginid": "10038",
 					"alertRef": "10038-1",
@@ -256,676 +20,79 @@
 					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
 					"instances":[ 
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.css",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.css$",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.gif",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.jpeg",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.jpg",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.js$",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.png",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.svg",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.css",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.css$",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						}
-					],
-					"count": "12",
-					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>",
-					"otherinfo": "",
-					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
-					"cweid": "693",
-					"wascid": "15",
-					"sourceid": "275"
-				},
-				{
-					"pluginid": "10098",
-					"alertRef": "10098",
-					"alert": "Cross-Domain Misconfiguration",
-					"name": "Cross-Domain Misconfiguration",
-					"riskcode": "2",
-					"confidence": "2",
-					"riskdesc": "Medium (Medium)",
-					"desc": "<p>Web browser data loading may be possible, due to a Cross Origin Resource Sharing (CORS) misconfiguration on the web server</p>",
-					"instances":[ 
-						{
 							"uri": "https://www.economie.gouv.fr",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "Access-Control-Allow-Origin: *",
-							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/admin/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "Access-Control-Allow-Origin: *",
-							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/filter/tips",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "Access-Control-Allow-Origin: *",
-							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/index.php/admin/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "Access-Control-Allow-Origin: *",
-							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+							"evidence": "",
+							"otherinfo": ""
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/robots.txt",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "Access-Control-Allow-Origin: *",
-							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+							"evidence": "",
+							"otherinfo": ""
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/sitemap.xml",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "Access-Control-Allow-Origin: *",
-							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/user/login",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "Access-Control-Allow-Origin: *",
-							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/user/logout",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "Access-Control-Allow-Origin: *",
-							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/user/password",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "Access-Control-Allow-Origin: *",
-							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/user/register",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "Access-Control-Allow-Origin: *",
-							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/web.config",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "Access-Control-Allow-Origin: *",
-							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+							"evidence": "",
+							"otherinfo": ""
 						}
 					],
-					"count": "11",
-					"solution": "<p>Ensure that sensitive data is not available in an unauthenticated manner (using IP address white-listing, for instance).</p><p>Configure the \"Access-Control-Allow-Origin\" HTTP header to a more restrictive set of domains, or remove all CORS headers entirely, to allow the web browser to enforce the Same Origin Policy (SOP) in a more restrictive manner.</p>",
-					"otherinfo": "<p>The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</p>",
-					"reference": "<p>https://vulncat.fortify.com/en/detail?id=desc.config.dotnet.html5_overly_permissive_cors_policy</p>",
-					"cweid": "264",
-					"wascid": "14",
+					"count": "3",
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>http://www.w3.org/TR/CSP/</p><p>http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</p><p>http://www.html5rocks.com/en/tutorials/security/content-security-policy/</p><p>http://caniuse.com/#feat=contentsecuritypolicy</p><p>http://content-security-policy.com/</p>",
+					"cweid": "693",
+					"wascid": "15",
 					"sourceid": "6"
 				},
 				{
-					"pluginid": "10020",
-					"alertRef": "10020-1",
-					"alert": "Missing Anti-clickjacking Header",
-					"name": "Missing Anti-clickjacking Header",
-					"riskcode": "2",
-					"confidence": "2",
-					"riskdesc": "Medium (Medium)",
-					"desc": "<p>The response does not include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options to protect against 'ClickJacking' attacks.</p>",
-					"instances":[ 
-						{
-							"uri": "https://www.economie.gouv.fr/p",
-							"method": "GET",
-							"param": "x-frame-options",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						}
-					],
-					"count": "1",
-					"solution": "<p>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</p><p>If you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's \"frame-ancestors\" directive.</p>",
-					"otherinfo": "",
-					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</p>",
-					"cweid": "1021",
-					"wascid": "15",
-					"sourceid": "2806"
-				},
-				{
-					"pluginid": "90003",
-					"alertRef": "90003",
-					"alert": "Sub Resource Integrity Attribute Missing",
-					"name": "Sub Resource Integrity Attribute Missing",
-					"riskcode": "2",
-					"confidence": "3",
-					"riskdesc": "Medium (High)",
-					"desc": "<p>The integrity attribute is missing on a script or link tag served by an external server. The integrity tag prevents an attacker who have gained access to this server from injecting a malicious content. </p>",
-					"instances":[ 
-						{
-							"uri": "https://www.economie.gouv.fr/abonnement-lettre-bercy-infos-entreprises",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<script type=\"text/javascript\" src=\"https://try.abtasty.com/a513b8f61404f9eb2dbf3bd8922842d2.js\"></script>",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/abonnement-lettre-bercy-infos-particuliers",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<script type=\"text/javascript\" src=\"https://try.abtasty.com/a513b8f61404f9eb2dbf3bd8922842d2.js\"></script>",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/cisirh",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/dgccrf",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/lettres-information",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<script type=\"text/javascript\" src=\"https://try.abtasty.com/a513b8f61404f9eb2dbf3bd8922842d2.js\"></script>",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/mediateur-des-entreprises",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/plan-entreprises-pacte",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
-							"otherinfo": ""
-						}
-					],
-					"count": "7",
-					"solution": "<p>Provide a valid integrity attribute to the tag.</p>",
-					"otherinfo": "",
-					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity</p>",
-					"cweid": "345",
-					"wascid": "15",
-					"sourceid": "2305"
-				},
-				{
-					"pluginid": "10003",
-					"alertRef": "10003",
-					"alert": "Vulnerable JS Library",
-					"name": "Vulnerable JS Library",
-					"riskcode": "2",
-					"confidence": "2",
-					"riskdesc": "Medium (Medium)",
-					"desc": "<p>The identified library jquery.datatables, version 1.11.2 is vulnerable.</p>",
-					"instances":[ 
-						{
-							"uri": "https://www.economie.gouv.fr/libraries/DataTables/datatables.min.js?v=9.5.9",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "http://www.datatables.net\n DataTables 1.11.2",
-							"otherinfo": ""
-						}
-					],
-					"count": "1",
-					"solution": "<p>Please upgrade to the latest version of jquery.datatables.</p>",
-					"otherinfo": "",
-					"reference": "<p>https://cdn.datatables.net/1.11.3/</p><p>https://github.com/DataTables/Dist-DataTables/commit/59a8d3f8a3c1138ab08704e783bc52bfe88d7c9b</p><p></p>",
-					"cweid": "829",
-					"wascid": "-1",
-					"sourceid": "2719"
-				},
-				{
-					"pluginid": "10044",
-					"alertRef": "10044",
-					"alert": "Big Redirect Detected (Potential Sensitive Information Leak)",
-					"name": "Big Redirect Detected (Potential Sensitive Information Leak)",
+					"pluginid": "10054",
+					"alertRef": "10054",
+					"alert": "Cookie with SameSite Attribute None",
+					"name": "Cookie with SameSite Attribute None",
 					"riskcode": "1",
 					"confidence": "2",
 					"riskdesc": "Low (Medium)",
-					"desc": "<p>The server has responded with a redirect that seems to provide a large response. This may indicate that although the server sent a redirect it also responded with body content (which may include sensitive details, PII, etc.).</p>",
-					"instances":[ 
-						{
-							"uri": "https://www.economie.gouv.fr/en/home",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "Location header URI length: 31 [https://www.economie.gouv.fr/en].\nPredicted response size: 331.\nResponse Body Length: 370."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/index.php/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "Location header URI length: 29 [https://www.economie.gouv.fr/].\nPredicted response size: 329.\nResponse Body Length: 362."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/index.php/filter/tips",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "Location header URI length: 40 [https://www.economie.gouv.fr/filter/tips].\nPredicted response size: 340.\nResponse Body Length: 406."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/index.php/media/oembed",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "Location header URI length: 41 [https://www.economie.gouv.fr/media/oembed].\nPredicted response size: 341.\nResponse Body Length: 410."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/ministeres",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "Location header URI length: 51 [https://www.economie.gouv.fr/ministere/organigramme].\nPredicted response size: 351.\nResponse Body Length: 450."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/particuliers/epargne-et-investissement",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "Location header URI length: 78 [https://www.economie.gouv.fr/particuliers/epargne-et-investissements-mobiliers].\nPredicted response size: 378.\nResponse Body Length: 558."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/particuliers/estimer-son-bien-avec-patrim",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "Location header URI length: 92 [https://www.economie.gouv.fr/particuliers/prix-immobilier-estimation-demande-valeur-fonciere].\nPredicted response size: 392.\nResponse Body Length: 614."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/particuliers/frais-bancaires",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "Location header URI length: 67 [https://www.economie.gouv.fr/particuliers/tarifs-et-frais-bancaires].\nPredicted response size: 367.\nResponse Body Length: 514."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/particuliers/investissement-immobilier",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "Location header URI length: 69 [https://www.economie.gouv.fr/particuliers/investissements-immobiliers].\nPredicted response size: 369.\nResponse Body Length: 522."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/particuliers/litiges",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "Location header URI length: 66 [https://www.economie.gouv.fr/particuliers/litiges-assurance-banque].\nPredicted response size: 366.\nResponse Body Length: 510."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/particuliers/mutuelle-et-assurance",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "Location header URI length: 65 [https://www.economie.gouv.fr/particuliers/mutuelles-et-assurances].\nPredicted response size: 365.\nResponse Body Length: 506."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/particuliers/taxe-habitation-",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "Location header URI length: 62 [https://www.economie.gouv.fr/particuliers/taxe-habitation-tout].\nPredicted response size: 362.\nResponse Body Length: 494."
-						}
-					],
-					"count": "12",
-					"solution": "<p>Ensure that no sensitive information is leaked via redirect responses. Redirect responses should have almost no content.</p>",
-					"otherinfo": "<p>Location header URI length: 31 [https://www.economie.gouv.fr/en].</p><p>Predicted response size: 331.</p><p>Response Body Length: 370.</p>",
-					"reference": "",
-					"cweid": "201",
-					"wascid": "13",
-					"sourceid": "2021"
-				},
-				{
-					"pluginid": "10017",
-					"alertRef": "10017",
-					"alert": "Cross-Domain JavaScript Source File Inclusion",
-					"name": "Cross-Domain JavaScript Source File Inclusion",
-					"riskcode": "1",
-					"confidence": "2",
-					"riskdesc": "Low (Medium)",
-					"desc": "<p>The page includes one or more script files from a third-party domain.</p>",
-					"instances":[ 
-						{
-							"uri": "https://www.economie.gouv.fr/abonnement-lettre-bercy-infos-entreprises",
-							"method": "GET",
-							"param": "https://try.abtasty.com/a513b8f61404f9eb2dbf3bd8922842d2.js",
-							"attack": "",
-							"evidence": "<script type=\"text/javascript\" src=\"https://try.abtasty.com/a513b8f61404f9eb2dbf3bd8922842d2.js\"></script>",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/abonnement-lettre-bercy-infos-particuliers",
-							"method": "GET",
-							"param": "https://try.abtasty.com/a513b8f61404f9eb2dbf3bd8922842d2.js",
-							"attack": "",
-							"evidence": "<script type=\"text/javascript\" src=\"https://try.abtasty.com/a513b8f61404f9eb2dbf3bd8922842d2.js\"></script>",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/cisirh",
-							"method": "GET",
-							"param": "https://platform.twitter.com/widgets.js",
-							"attack": "",
-							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/dgccrf",
-							"method": "GET",
-							"param": "https://platform.twitter.com/widgets.js",
-							"attack": "",
-							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/lettres-information",
-							"method": "GET",
-							"param": "https://try.abtasty.com/a513b8f61404f9eb2dbf3bd8922842d2.js",
-							"attack": "",
-							"evidence": "<script type=\"text/javascript\" src=\"https://try.abtasty.com/a513b8f61404f9eb2dbf3bd8922842d2.js\"></script>",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/mediateur-des-entreprises",
-							"method": "GET",
-							"param": "https://platform.twitter.com/widgets.js",
-							"attack": "",
-							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/plan-entreprises-pacte",
-							"method": "GET",
-							"param": "https://platform.twitter.com/widgets.js",
-							"attack": "",
-							"evidence": "<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
-							"otherinfo": ""
-						}
-					],
-					"count": "7",
-					"solution": "<p>Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application.</p>",
-					"otherinfo": "",
-					"reference": "",
-					"cweid": "829",
-					"wascid": "15",
-					"sourceid": "2305"
-				},
-				{
-					"pluginid": "10110",
-					"alertRef": "10110",
-					"alert": "Dangerous JS Functions",
-					"name": "Dangerous JS Functions",
-					"riskcode": "1",
-					"confidence": "1",
-					"riskdesc": "Low (Low)",
-					"desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>",
-					"instances":[ 
-						{
-							"uri": "https://www.economie.gouv.fr/core/assets/vendor/jquery/jquery.min.js?v=3.6.3",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "Eval",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/libraries/tarteaucitron/tarteaucitron.js?s1btlk",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "eval",
-							"otherinfo": ""
-						}
-					],
-					"count": "2",
-					"solution": "<p>See the references for security advice on the use of these functions.</p>",
-					"otherinfo": "",
-					"reference": "<p>https://angular.io/guide/security</p>",
-					"cweid": "749",
-					"wascid": "-1",
-					"sourceid": "2686"
-				},
-				{
-					"pluginid": "10063",
-					"alertRef": "10063-1",
-					"alert": "Permissions Policy Header Not Set",
-					"name": "Permissions Policy Header Not Set",
-					"riskcode": "1",
-					"confidence": "2",
-					"riskdesc": "Low (Medium)",
-					"desc": "<p>Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</p>",
+					"desc": "<p>A cookie has been set with its SameSite attribute set to \"none\", which means that the cookie can be sent as a result of a 'cross-site' request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.</p>",
 					"instances":[ 
 						{
 							"uri": "https://www.economie.gouv.fr",
 							"method": "GET",
-							"param": "",
+							"param": "__cf_bm",
 							"attack": "",
-							"evidence": "",
+							"evidence": "Set-Cookie: __cf_bm",
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.css",
+							"uri": "https://www.economie.gouv.fr/robots.txt",
 							"method": "GET",
-							"param": "",
+							"param": "__cf_bm",
 							"attack": "",
-							"evidence": "",
+							"evidence": "Set-Cookie: __cf_bm",
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.css$",
+							"uri": "https://www.economie.gouv.fr/sitemap.xml",
 							"method": "GET",
-							"param": "",
+							"param": "__cf_bm",
 							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.gif",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.jpeg",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.jpg",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.js$",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.png",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.css",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
+							"evidence": "Set-Cookie: __cf_bm",
 							"otherinfo": ""
 						}
 					],
-					"count": "11",
-					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header.</p>",
+					"count": "3",
+					"solution": "<p>Ensure that the SameSite attribute is set to either 'lax' or ideally 'strict' for all cookies.</p>",
 					"otherinfo": "",
-					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy</p><p>https://developer.chrome.com/blog/feature-policy/</p><p>https://scotthelme.co.uk/a-new-security-header-feature-policy/</p><p>https://w3c.github.io/webappsec-feature-policy/</p><p>https://www.smashingmagazine.com/2018/12/feature-policy/</p>",
-					"cweid": "693",
-					"wascid": "15",
+					"reference": "<p>https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site</p>",
+					"cweid": "1275",
+					"wascid": "13",
 					"sourceid": "6"
 				},
 				{
@@ -939,7 +106,7 @@
 					"desc": "<p>HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying user agents (such as a web browser) are to interact with it using only secure HTTPS connections (i.e. HTTP layered over TLS/SSL). HSTS is an IETF standards track protocol and is specified in RFC 6797.</p>",
 					"instances":[ 
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.css",
+							"uri": "https://www.economie.gouv.fr",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -947,7 +114,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.css$",
+							"uri": "https://www.economie.gouv.fr/cdn-cgi/styles/challenges.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -955,7 +122,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.gif",
+							"uri": "https://www.economie.gouv.fr/robots.txt",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -963,71 +130,7 @@
 							"otherinfo": ""
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.jpeg",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.jpg",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.js$",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.png",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.svg",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.css",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.css$",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.js",
+							"uri": "https://www.economie.gouv.fr/sitemap.xml",
 							"method": "GET",
 							"param": "",
 							"attack": "",
@@ -1035,13 +138,13 @@
 							"otherinfo": ""
 						}
 					],
-					"count": "12",
+					"count": "4",
 					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</p><p>https://owasp.org/www-community/Security_Headers</p><p>http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</p><p>http://caniuse.com/stricttransportsecurity</p><p>http://tools.ietf.org/html/rfc6797</p>",
 					"cweid": "319",
 					"wascid": "15",
-					"sourceid": "275"
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10096",
@@ -1058,124 +161,33 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "1695374467",
-							"otherinfo": "1695374467, which evaluates to: 2023-09-22 09:21:07"
+							"evidence": "1696123379",
+							"otherinfo": "1696123379, which evaluates to: 2023-10-01 01:22:59"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/",
+							"uri": "https://www.economie.gouv.fr",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "1695374467",
-							"otherinfo": "1695374467, which evaluates to: 2023-09-22 09:21:07"
+							"evidence": "1696123380",
+							"otherinfo": "1696123380, which evaluates to: 2023-10-01 01:23:00"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/entreprises",
+							"uri": "https://www.economie.gouv.fr/sitemap.xml",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "1689773307",
-							"otherinfo": "1689773307, which evaluates to: 2023-07-19 13:28:27"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/ministere",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "1680774056",
-							"otherinfo": "1680774056, which evaluates to: 2023-04-06 09:40:56"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/ministere/missions-ministere",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "1680772358",
-							"otherinfo": "1680772358, which evaluates to: 2023-04-06 09:12:38"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/ministres/bruno-le-maire",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "1691674305",
-							"otherinfo": "1691674305, which evaluates to: 2023-08-10 13:31:45"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/ministres/jean-noel-barrot",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "1691749155",
-							"otherinfo": "1691749155, which evaluates to: 2023-08-11 10:19:15"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/ministres/olivia-gregoire",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "1691750226",
-							"otherinfo": "1691750226, which evaluates to: 2023-08-11 10:37:06"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/ministres/roland-lescure",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "1695283800",
-							"otherinfo": "1695283800, which evaluates to: 2023-09-21 08:10:00"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/ministres/thomas-cazenave",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "1693570741",
-							"otherinfo": "1693570741, which evaluates to: 2023-09-01 12:19:01"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/particuliers",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "1689773138",
-							"otherinfo": "1689773138, which evaluates to: 2023-07-19 13:25:38"
+							"evidence": "1696123380",
+							"otherinfo": "1696123380, which evaluates to: 2023-10-01 01:23:00"
 						}
 					],
-					"count": "11",
+					"count": "3",
 					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
-					"otherinfo": "<p>1695374467, which evaluates to: 2023-09-22 09:21:07</p>",
+					"otherinfo": "<p>1696123379, which evaluates to: 2023-10-01 01:22:59</p>",
 					"reference": "<p>http://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
 					"sourceid": "1"
-				},
-				{
-					"pluginid": "10021",
-					"alertRef": "10021",
-					"alert": "X-Content-Type-Options Header Missing",
-					"name": "X-Content-Type-Options Header Missing",
-					"riskcode": "1",
-					"confidence": "2",
-					"riskdesc": "Low (Medium)",
-					"desc": "<p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p>",
-					"instances":[ 
-						{
-							"uri": "https://www.economie.gouv.fr/p",
-							"method": "GET",
-							"param": "x-content-type-options",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
-						}
-					],
-					"count": "1",
-					"solution": "<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>",
-					"otherinfo": "<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p><p>At \"High\" threshold this scan rule will not alert on client or server error responses.</p>",
-					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p><p>https://owasp.org/www-community/Security_Headers</p>",
-					"cweid": "693",
-					"wascid": "15",
-					"sourceid": "2806"
 				},
 				{
 					"pluginid": "10094",
@@ -1192,231 +204,100 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "/files/languages/fr_Y0rQQ7ZSQ7ng5TRL8uLt0FcYppPOlB8obPzF2hzVJQ4",
-							"otherinfo": "\uFFFD\uFFFD\uFFFDz\uFFFD\uFFFDjx.j\\x0007\uFFFD\uFFFD\uFFFD\uFFFDcJ\uFFFDC\uFFFDRC\uFFFD\uFFFD\uFFFD4K\uFFFD\uFFFD\uFFFD\uFFFDW\\x0018\uFFFD\uFFFD\u0394\\x001f(l\uFFFD\uFFFD\uFFFD\\x001c\uFFFD%\\x000e"
+							"evidence": "NppXuGjKrvaYyRj2lCph0EpzNueGcs9FhIcj",
+							"otherinfo": "6\uFFFDW\uFFFDh\u02AE\uFFFD\uFFFD\uFFFD\\x0018\uFFFD\uFFFD*a\uFFFDJs6\uFFFDr\uFFFDE\uFFFD\uFFFD#"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/comment/reply/",
+							"uri": "https://www.economie.gouv.fr",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "/files/languages/fr_Y0rQQ7ZSQ7ng5TRL8uLt0FcYppPOlB8obPzF2hzVJQ4",
-							"otherinfo": "\uFFFD\uFFFD\uFFFDz\uFFFD\uFFFDjx.j\\x0007\uFFFD\uFFFD\uFFFD\uFFFDcJ\uFFFDC\uFFFDRC\uFFFD\uFFFD\uFFFD4K\uFFFD\uFFFD\uFFFD\uFFFDW\\x0018\uFFFD\uFFFD\u0394\\x001f(l\uFFFD\uFFFD\uFFFD\\x001c\uFFFD%\\x000e"
+							"evidence": "bNjt39Pss2XOPDrzDiccxwcd5Z6oTzVO5q4H3ZFIRuA-1696123379-0-gaNycGzNCyU",
+							"otherinfo": "l\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDe\uFFFD<:\uFFFD\\x000e'\\x001c\uFFFD\\x0007\\x001d\u57A8O5N\uFFFD\\x0007\u0751HF\uFFFD>\u05EFz\uFFFDm\uFFFD\uFFFD\u07F4\uFFFD\\x0006\uFFFD\uFFFD\uFFFD\uFFFD4,\uFFFD"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.css$",
+							"uri": "https://www.economie.gouv.fr/cdn-cgi/styles/challenges.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "/files/languages/fr_Y0rQQ7ZSQ7ng5TRL8uLt0FcYppPOlB8obPzF2hzVJQ4",
-							"otherinfo": "\uFFFD\uFFFD\uFFFDz\uFFFD\uFFFDjx.j\\x0007\uFFFD\uFFFD\uFFFD\uFFFDcJ\uFFFDC\uFFFDRC\uFFFD\uFFFD\uFFFD4K\uFFFD\uFFFD\uFFFD\uFFFDW\\x0018\uFFFD\uFFFD\u0394\\x001f(l\uFFFD\uFFFD\uFFFD\\x001c\uFFFD%\\x000e"
+							"evidence": "iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAMAAADypuvZAAAAPFBMVEUAAACvDwOyDwKyDwOvEACyDgOyDwKvDwKwDgCyDgKxDgOyDgKvDgKyDwKyDgOxDgKzDgKxDgKxEASyDwMgW5ZmAAAAE3RSTlMAQN+/EJDvMB9wYJ9Qz7CAf6CAtGoj/AAAAcFJREFUSMeVltu2gyAMRLlfBDxt+f9/PTq2VXSwmod2GdhkEoIiiPmYinK1VqXt4MUFk9bVxlTyvxBdienhNoJwoYMY+57hdMzBTA4v4/gRaykT1FuLNI0/j/1g3i2IJ8s9F+owNCx+2UlWQXbexQFjjTjN1/lGALS9xIm9QIXNOoowlFKrFssYTtmvuOXpp2HtT6lUE3f11bH1IQu9qbYUBEr7yq8zCxkWuva8+rtF4RrkP6ESxFPoj7rtW30+jI4UQlZuiejEwZ4cMg65RKjjUDz6NdwWvxw6nnLESEAl230O5cldUAdy8P44hJZTYh40DOIKzFw3QOI6hPk9aDiFHJc3nMirKERgEPd7FKKgiy5DEn3+5JsrAfHNtfjVRLucTPTaCA1rxFVz6AX8yYsIUlXoMqbPWFUeXF1Cyqz7Ej1PAXNBs1B1tsKWKpsX0yFhslTetL4mL8s4j2fyslTbjbT7Va2V7GCG5ukhftijXdsoQhGmzSI4QhHGhVufz4QJ/v6Hug6dK0EK3YuM8/3Lx5h3Z0STywe55oxRejM5Qo4aAtZ8eTBuWp6dl3IXgfnnLpyzBCFctHomnSopejLhH/3AMfEMndTJAAAAAElFTkSuQmCC",
+							"otherinfo": "\uFFFDPNG\r\n\\x001a\n\\x0000\\x0000\\x0000\rIHDR\\x0000\\x0000\\x00004\\x0000\\x0000\\x00004\\x0008\\x0003\\x0000\\x0000\\x0000\uFFFD\uFFFD\uFFFD\\x0000\\x0000\\x0000<PLTE\\x0000\\x0000\\x0000\uFFFD\\x000f\\x0003\uFFFD\\x000f\\x0002\uFFFD\\x000f\\x0003\uFFFD\\x0010\\x0000\uFFFD\\x000e\\x0003\uFFFD\\x000f\\x0002\uFFFD\\x000f\\x0002\uFFFD\\x000e\\x0000\uFFFD\\x000e\\x0002\uFFFD\\x000e\\x0003\uFFFD\\x000e\\x0002\uFFFD\\x000e\\x0002\uFFFD\\x000f\\x0002\uFFFD\\x000e\\x0003\uFFFD\\x000e\\x0002\uFFFD\\x000e\\x0002\uFFFD\\x000e\\x0002\uFFFD\\x0010\\x0004\uFFFD\\x000f\\x0003 [\uFFFDf\\x0000\\x0000\\x0000\\x0013tRNS\\x0000@\u07FF\\x0010\uFFFD\uFFFD0\\x001fp`\uFFFDP\u03F0\uFFFD\uFFFD\uFFFD\uFFFDj#\uFFFD\\x0000\\x0000\\x0001\uFFFDIDATH\u01D5\uFFFD\u06F6\uFFFD \\x000cD\uFFFD_\\x0004<m\uFFFD\uFFFD=:\uFFFDUt\uFFFD\uFFFD\uFFFDv\\x0019\uFFFDd\\x0012\uFFFD\"\uFFFD\uFFFD\uFFFD\uFFFDr\uFFFDV\uFFFD\uFFFD\uFFFD\uFFFD\\x0005\uFFFD\uFFFD\uFFFD\uFFFDT\uFFFD\\x0010]\uFFFD\uFFFD\uFFFD6\uFFFDp\uFFFD\uFFFD\\x0018\uFFFD\uFFFD\uFFFDt\uFFFD\uFFFDL\\x000e/\uFFFD\uFFFD\\x0011k)\\x0013\uFFFD[\uFFFD4\uFFFD?\uFFFD\uFFFD`\uFFFD-\uFFFD'\uFFFD=\\x0017\uFFFD04,~\uFFFDIVAv\uFFFD\uFFFD\\x0001c\uFFFD8\uFFFD\uFFFD\uFFFDF\\x0000\uFFFD\uFFFD\u0109\uFFFD@\uFFFD\uFFFD:\uFFFD0\uFFFDR\uFFFD\\x0016\uFFFD\\x0018N\u066F\uFFFD\uFFFD\uFFFDa\uFFFDO\uFFFDT\\x0013w\uFFFD\u0571\uFFFD!\\x000b\uFFFD\uFFFD\uFFFD\\x0014\\x0004J\uFFFD\u02AF3\\x000b\\x0019\\x0016\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDE\uFFFD\\x001a\uFFFD?\uFFFD\\x0012\uFFFDS\u83FA\uFFFD[}>\uFFFD\uFFFD\\x0014BVn\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\\x001c2\\x000e\uFFFDD\uFFFD\uFFFDP<\uFFFD5\uFFFD\\x0016\uFFFD\\x001c:\uFFFDr\uFFFDH@%\uFFFD}\\x000e\uFFFD\uFFFD]P\\x0007r\uFFFD\uFFFD8\uFFFD\uFFFDSb\\x001e4\\x000c\uFFFD\n\uFFFD\\7@\uFFFD:\uFFFD\uFFFD=h8\uFFFD\\x001c\uFFFD7\uFFFD\u022B(D`\\x0010\uFFFD{\\x0014\uFFFD\uFFFD\uFFFD.C\\x0012}\uFFFD\uFFFD+\\x0001\uFFFD\u0375\uFFFD\uFFFDD\uFFFD\uFFFDL\uFFFD\uFFFD\\x0008\rk\uFFFDUs\uFFFD\\x0005\uFFFD\u024B\\x0008RU\uFFFD2\uFFFD\uFFFDXU\\x001e\\]B\u02AC\uFFFD\\x0012=O\\x0001sA\uFFFDPu\uFFFD\u0096*\uFFFD\\x0017\uFFFD!a\uFFFDT\u07B4\uFFFD&/\uFFFD8\uFFFDg\uFFFDT\u06CD\uFFFD\uFFFDU\uFFFD\uFFFD\uFFFD`\uFFFD\uFFFD\uFFFD!~\u0623]\uFFFD(B\\x0011\uFFFD\uFFFD\"8B\\x0011\u0185[\uFFFD\u03C4\t\uFFFD\uFFFD\uFFFD\uFFFD\\x000e\uFFFD+A\n\u074B\uFFFD\uFFFD\uFFFD\uFFFD\u01D8wgD\uFFFD\uFFFD\\x0007\uFFFD\uFFFDQz39B\uFFFD\\x001a\\x0002\uFFFD|y0nZ\uFFFD\uFFFD\uFFFDr\\x0017\uFFFD\uFFFD\uFFFD.\uFFFD\uFFFD\\x0004!\\\uFFFDz&\uFFFD*)z2\uFFFD\\x001f\uFFFD\uFFFD1\uFFFD\\x000c\uFFFD\uFFFD\uFFFD\\x0000\\x0000\\x0000\\x0000IEND\uFFFDB`\uFFFD"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.js$",
+							"uri": "https://www.economie.gouv.fr/robots.txt",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "/files/languages/fr_Y0rQQ7ZSQ7ng5TRL8uLt0FcYppPOlB8obPzF2hzVJQ4",
-							"otherinfo": "\uFFFD\uFFFD\uFFFDz\uFFFD\uFFFDjx.j\\x0007\uFFFD\uFFFD\uFFFD\uFFFDcJ\uFFFDC\uFFFDRC\uFFFD\uFFFD\uFFFD4K\uFFFD\uFFFD\uFFFD\uFFFDW\\x0018\uFFFD\uFFFD\u0394\\x001f(l\uFFFD\uFFFD\uFFFD\\x001c\uFFFD%\\x000e"
+							"evidence": "SwTH3HxlRu4VhmKfmgNi5C_D2lxxdJZGQmeemyciUA8-1696123380-0-gaNycGzNCzs",
+							"otherinfo": "K\\x0004\uFFFD\uFFFD|eF\uFFFD\\x0015\uFFFDb\uFFFD\uFFFD\\x0003b\uFFFD/\uFFFD\uFFFD\\qt\uFFFDFBg\uFFFD\uFFFD'\"P\\x000f>\u05EFz\uFFFDm\uFFFD\uFFFDO\uFFFD\uFFFD\\x0006\uFFFD\uFFFD\uFFFD\uFFFD4,\uFFFD"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.svg",
+							"uri": "https://www.economie.gouv.fr/sitemap.xml",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "/files/languages/fr_Y0rQQ7ZSQ7ng5TRL8uLt0FcYppPOlB8obPzF2hzVJQ4",
-							"otherinfo": "\uFFFD\uFFFD\uFFFDz\uFFFD\uFFFDjx.j\\x0007\uFFFD\uFFFD\uFFFD\uFFFDcJ\uFFFDC\uFFFDRC\uFFFD\uFFFD\uFFFD4K\uFFFD\uFFFD\uFFFD\uFFFDW\\x0018\uFFFD\uFFFD\u0394\\x001f(l\uFFFD\uFFFD\uFFFD\\x001c\uFFFD%\\x000e"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/filter/tips",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "/files/languages/fr_Y0rQQ7ZSQ7ng5TRL8uLt0FcYppPOlB8obPzF2hzVJQ4",
-							"otherinfo": "\uFFFD\uFFFD\uFFFDz\uFFFD\uFFFDjx.j\\x0007\uFFFD\uFFFD\uFFFD\uFFFDcJ\uFFFDC\uFFFDRC\uFFFD\uFFFD\uFFFD4K\uFFFD\uFFFD\uFFFD\uFFFDW\\x0018\uFFFD\uFFFD\u0394\\x001f(l\uFFFD\uFFFD\uFFFD\\x001c\uFFFD%\\x000e"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/node/add/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "/files/languages/fr_Y0rQQ7ZSQ7ng5TRL8uLt0FcYppPOlB8obPzF2hzVJQ4",
-							"otherinfo": "\uFFFD\uFFFD\uFFFDz\uFFFD\uFFFDjx.j\\x0007\uFFFD\uFFFD\uFFFD\uFFFDcJ\uFFFDC\uFFFDRC\uFFFD\uFFFD\uFFFD4K\uFFFD\uFFFD\uFFFD\uFFFDW\\x0018\uFFFD\uFFFD\u0394\\x001f(l\uFFFD\uFFFD\uFFFD\\x001c\uFFFD%\\x000e"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.css$",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "/files/languages/fr_Y0rQQ7ZSQ7ng5TRL8uLt0FcYppPOlB8obPzF2hzVJQ4",
-							"otherinfo": "\uFFFD\uFFFD\uFFFDz\uFFFD\uFFFDjx.j\\x0007\uFFFD\uFFFD\uFFFD\uFFFDcJ\uFFFDC\uFFFDRC\uFFFD\uFFFD\uFFFD4K\uFFFD\uFFFD\uFFFD\uFFFDW\\x0018\uFFFD\uFFFD\u0394\\x001f(l\uFFFD\uFFFD\uFFFD\\x001c\uFFFD%\\x000e"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.js$",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "/files/languages/fr_Y0rQQ7ZSQ7ng5TRL8uLt0FcYppPOlB8obPzF2hzVJQ4",
-							"otherinfo": "\uFFFD\uFFFD\uFFFDz\uFFFD\uFFFDjx.j\\x0007\uFFFD\uFFFD\uFFFD\uFFFDcJ\uFFFDC\uFFFDRC\uFFFD\uFFFD\uFFFD4K\uFFFD\uFFFD\uFFFD\uFFFDW\\x0018\uFFFD\uFFFD\u0394\\x001f(l\uFFFD\uFFFD\uFFFD\\x001c\uFFFD%\\x000e"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.svg",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "/files/languages/fr_Y0rQQ7ZSQ7ng5TRL8uLt0FcYppPOlB8obPzF2hzVJQ4",
-							"otherinfo": "\uFFFD\uFFFD\uFFFDz\uFFFD\uFFFDjx.j\\x0007\uFFFD\uFFFD\uFFFD\uFFFDcJ\uFFFDC\uFFFDRC\uFFFD\uFFFD\uFFFD4K\uFFFD\uFFFD\uFFFD\uFFFDW\\x0018\uFFFD\uFFFD\u0394\\x001f(l\uFFFD\uFFFD\uFFFD\\x001c\uFFFD%\\x000e"
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/search/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "/files/languages/fr_Y0rQQ7ZSQ7ng5TRL8uLt0FcYppPOlB8obPzF2hzVJQ4",
-							"otherinfo": "\uFFFD\uFFFD\uFFFDz\uFFFD\uFFFDjx.j\\x0007\uFFFD\uFFFD\uFFFD\uFFFDcJ\uFFFDC\uFFFDRC\uFFFD\uFFFD\uFFFD4K\uFFFD\uFFFD\uFFFD\uFFFDW\\x0018\uFFFD\uFFFD\u0394\\x001f(l\uFFFD\uFFFD\uFFFD\\x001c\uFFFD%\\x000e"
+							"evidence": "SwTH3HxlRu4VhmKfmgNi5C_D2lxxdJZGQmeemyciUA8-1696123380-0-gaNycGzNCzs",
+							"otherinfo": "K\\x0004\uFFFD\uFFFD|eF\uFFFD\\x0015\uFFFDb\uFFFD\uFFFD\\x0003b\uFFFD/\uFFFD\uFFFD\\qt\uFFFDFBg\uFFFD\uFFFD'\"P\\x000f>\u05EFz\uFFFDm\uFFFD\uFFFDO\uFFFD\uFFFD\\x0006\uFFFD\uFFFD\uFFFD\uFFFD4,\uFFFD"
 						}
 					],
-					"count": "11",
+					"count": "5",
 					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
-					"otherinfo": "<p>\uFFFD\uFFFD\uFFFDz\uFFFD\uFFFDjx.j\\x0007\uFFFD\uFFFD\uFFFD\uFFFDcJ\uFFFDC\uFFFDRC\uFFFD\uFFFD\uFFFD4K\uFFFD\uFFFD\uFFFD\uFFFDW\\x0018\uFFFD\uFFFD\u0394\\x001f(l\uFFFD\uFFFD\uFFFD\\x001c\uFFFD%\\x000e</p>",
+					"otherinfo": "<p>6\uFFFDW\uFFFDh\u02AE\uFFFD\uFFFD\uFFFD\\x0018\uFFFD\uFFFD*a\uFFFDJs6\uFFFDr\uFFFDE\uFFFD\uFFFD#</p>",
 					"reference": "<p>https://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
 					"cweid": "200",
 					"wascid": "13",
-					"sourceid": "1"
+					"sourceid": "6"
 				},
 				{
-					"pluginid": "10019",
-					"alertRef": "10019",
-					"alert": "Content-Type Header Missing",
-					"name": "Content-Type Header Missing",
-					"riskcode": "0",
-					"confidence": "2",
-					"riskdesc": "Informational (Medium)",
-					"desc": "<p>The Content-Type header was either missing or empty.</p>",
-					"instances":[ 
-						{
-							"uri": "https://www.economie.gouv.fr/web.config",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "",
-							"otherinfo": ""
-						}
-					],
-					"count": "1",
-					"solution": "<p>Ensure each page is setting the specific and appropriate content-type value for the content being delivered.</p>",
-					"otherinfo": "",
-					"reference": "<p>http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</p>",
-					"cweid": "345",
-					"wascid": "12",
-					"sourceid": "297"
-				},
-				{
-					"pluginid": "10027",
-					"alertRef": "10027",
-					"alert": "Information Disclosure - Suspicious Comments",
-					"name": "Information Disclosure - Suspicious Comments",
+					"pluginid": "90033",
+					"alertRef": "90033",
+					"alert": "Loosely Scoped Cookie",
+					"name": "Loosely Scoped Cookie",
 					"riskcode": "0",
 					"confidence": "1",
 					"riskdesc": "Informational (Low)",
-					"desc": "<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>",
+					"desc": "<p>Cookies can be scoped by domain or path. This check is only concerned with domain scope.The domain scope applied to a cookie determines which domains can access it. For example, a cookie can be scoped strictly to a subdomain e.g. www.nottrusted.com, or loosely scoped to a parent domain e.g. nottrusted.com. In the latter case, any subdomain of nottrusted.com can access the cookie. Loosely scoped cookies are common in mega-applications like google.com and live.com. Cookies set from a subdomain like app.foo.bar are transmitted only to that domain by the browser. However, cookies scoped to a parent-level domain may be transmitted to the parent, or any subdomain of the parent.</p>",
 					"instances":[ 
 						{
 							"uri": "https://www.economie.gouv.fr",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "user",
-							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+							"evidence": "",
+							"otherinfo": "The origin domain used for comparison was: \r\nwww.economie.gouv.fr\r\n__cf_bm=TMBs3o084bQHuU5WSaw33MdNU34pUo63ncLZ70TY91c-1696123379-0-AeEFYeXUxr8/9mah9BfevpLAQTIP/Rko+Pa6WO9P10LEX+2NGFb0oJj7lJ2PeI4D5ZzySh/V5KDyKV7HyotxlTg=\r\n"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/comment/reply/",
+							"uri": "https://www.economie.gouv.fr",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "user",
-							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+							"evidence": "",
+							"otherinfo": "The origin domain used for comparison was: \r\nwww.economie.gouv.fr\r\n__cf_bm=V4SLP46vDluerOkaNjSSigT1o8SJODAmDq9eK5jpSoo-1696123380-0-AdAxHWSFTO8ck3jgRzScttgfODdloUs+uX+CoT5c9f3hQk+f8Bfbq5G45YHO5u6a76d5ccvosy6o/vgSWa50p5E=\r\n"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.css$",
+							"uri": "https://www.economie.gouv.fr/robots.txt",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "user",
-							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+							"evidence": "",
+							"otherinfo": "The origin domain used for comparison was: \r\nwww.economie.gouv.fr\r\n__cf_bm=4ZKWAK0T3l1CwWcSh5RvA_WbCiuRIA0YOuDxIJMbGMI-1696123380-0-AUmn+LBaTAFq8TVHpEGtkyD0OGVzGKG7bxCYMqIP570JLMq8Q3TGsiA3gzMy89FDPmQsX93+sjPEMj/5sNgIxkM=\r\n"
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.js$",
+							"uri": "https://www.economie.gouv.fr/sitemap.xml",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "user",
-							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.svg",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "user",
-							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/filter/tips",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "user",
-							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/node/add/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "user",
-							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.css$",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "user",
-							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.js$",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "user",
-							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.svg",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "user",
-							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/search/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "user",
-							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet."
+							"evidence": "",
+							"otherinfo": "The origin domain used for comparison was: \r\nwww.economie.gouv.fr\r\n__cf_bm=QLECJM.9RaVAejSQBCILYFmh6oceLOotglInPgBOOUY-1696123380-0-Ab6hk0dQbrtQnXo4EQAVKchTdqTPTMF/rpW4tzRcZ43tb2PPJsaQEbNBUdfUafOFCrUzT4zUuj0HaNkG4KAm4Yw=\r\n"
 						}
 					],
-					"count": "11",
-					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
-					"otherinfo": "<p>The following pattern was used: \\bUSER\\b and was detected in the element starting with: \"<script type=\"application/json\" data-drupal-selector=\"drupal-settings-json\">{\"path\":{\"baseUrl\":\"\\/\",\"scriptPath\":null,\"pathPrefi\", see evidence field for the suspicious comment/snippet.</p>",
-					"reference": "",
-					"cweid": "200",
-					"wascid": "13",
-					"sourceid": "6"
+					"count": "4",
+					"solution": "<p>Always scope cookies to a FQDN (Fully Qualified Domain Name).</p>",
+					"otherinfo": "<p>The origin domain used for comparison was: </p><p>www.economie.gouv.fr</p><p>__cf_bm=TMBs3o084bQHuU5WSaw33MdNU34pUo63ncLZ70TY91c-1696123379-0-AeEFYeXUxr8/9mah9BfevpLAQTIP/Rko+Pa6WO9P10LEX+2NGFb0oJj7lJ2PeI4D5ZzySh/V5KDyKV7HyotxlTg=</p><p></p>",
+					"reference": "<p>https://tools.ietf.org/html/rfc6265#section-4.1</p><p>https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes.html</p><p>http://code.google.com/p/browsersec/wiki/Part2#Same-origin_policy_for_cookies</p>",
+					"cweid": "565",
+					"wascid": "15",
+					"sourceid": "1"
 				},
 				{
 					"pluginid": "10109",
@@ -1433,202 +314,82 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<a id=\"main-content\" tabindex=\"-1\"></a>",
-							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+							"evidence": "<script>(function(){window._cf_chl_opt={cvId: '2',cZone: \"www.economie.gouv.fr\",cType: 'managed',cNounce: '39067',cRay: '80f0e5d50c10f180',cHash: '282ba75a683bcda',cUPMDTk: \"\\/?__cf_chl_tk=NppXuGjKrvaYyRj2lCph0EpzNueGcs9FhIcj.waKpMo-1696123380-0-gaNycGzNDKU\",cFPWv: 'g',cTTimeMs: '1000',cMTimeMs: '0',cTplV: 5,cTplB: 'cf',cK: \"visitor-time\",fa: \"\\/?__cf_chl_f_tk=NppXuGjKrvaYyRj2lCph0EpzNueGcs9FhIcj.waKpMo-1696123380-0-gaNycGzNDKU\",md: \"bJEP.F6aswnbc6i0V4f3rGWDOhEcuXPMES5UCguRjgI-1696123380-0-ASeKqf74QPDlz3QyDdjMcO8Pug726xKeqpiw7YLcAoxLHvBUqVMqCazP44qwWO2IFewZc-_S716lFK3aW7ArPbSefxZydTkxauTX9YEXdBLdl7bpOqwZCYY4aI-rz9zO6ISE6CRPyxF0CAA4uWF5X5OsZ7HvMSBeANs2NvWVzxd9NQ2ikp3odJnYwFmoy1gQt2txsBanG3N-sONByAvZDPHrkM8Vl7GlZW4CHTwQnH8ZZiR2omLxexyOeHhwnsl3zYqZG1Qt4X3svKvrMBY_gOwOWYgrsX4bkFwmNg0jlkwdZ_K8uI3foWI4AbZ1he4G9dGURpYfvfxcOErS4rTsOWhhcxBj7sM7Ot8W2QWoTVEzf3EGmjVwG0bzpeUuSbxX_wHsXzi5lpGMLOyrtUIrD9f_FiUYXChsW-ifveW4hCQHJfolMnM1eku0D1y0Pd1zvGIt0LlKeqYYUTKluPK_HtJ91vm31hqdH55SJLFYBZsz1nmWNGLBIKLTKHseQTRwexzVKsWq5IZnGptVK0SbWX58XLE0YXjJdd2LC7cAM_aUpmYdmqddIFD7BumEJ1zKc0yY0OKdVFwa45FBLN3cWa30I3nds5d0C_GKWR58yj5w6ZHA0J9jRQJAvlrodpuK-xP36TM5Klz7ik9gmPu27WT-TlRfszurdzaJHwHv-1TY3uASqrVl-z50rb7lrOWvo8zvX3K4WgQ2HKFs06dbWoL5pAXILCaJPUWhnBjzlEgQMYcQksJ45DkImZLwRSogClRnw04nwb2HE2Dw_MFpfG1gibZx2ZGdtkgi4BjB8gpfteuizGWmMVe2mx2tfBaklSH0Oojv45VM2Kh-N_5RUBdC4umaZyJJgYoG40fpqVfd83PFvq9wK5_b_7irO8OhFEC_gjhfpfdzqUWJboPnw42Qn8ZtBq1l_XIjYTSU-_PYEDsgJL5IaoYWOjcdi_C9hl8jMgHwHrAyDgikoGFDkDV3SLaIqJcEC3i0_WMhisoqV0n0ZB88RhdoQZJTgfIubIbqCpL6iK05K1KfCSey4Zt-9X4ggfa5lnbxrAaPRpr2pS-vGrmxCsrlSIl616yRMyvSJd9IXcP7jqQiNKm9rY0gChdnPA1xo2L7ArV7nmsjEzARkwKmMQ1mNypovDRvGpqFYktEWGb0pOkvJXvzy6AClfxHjG2kw4APIr8D3IzQrO9VR-PE_q6L035OA0BwmV2Q8y0zM5qCA1OVvCFYShaWpUv1ANwXShM91F6_qZ8-qMd0qyj_cx7IjoMbRxmDVuIJtaEn4432bmS_5KcJ-FkldXNFLaJN_HQgobh7KJ9pu1U_adrIlRNq4QZrHyBo8zjWmpK3RMNpHt4xqqt3U01H8RpYnx-h_cU-ihFC9DRoy8zjchaipO03P-cvx6ugcfDK947JywjqClLn6ZIgOsmBCTpGRre9038cQ1lmhE4LqcnZYH24BK3r0LxDc5Bush73WPpewy48_4xW9LIBzASm-wVyhN9FwPU2b7YKuUaD2_FlKWmKiGJV3ubGIc4v5gCqDg-pVhFSZ-C3NebXfOvgobXJbcRoyx7WaFXrXAyPo7EQdzev7qP4kdBSFkPUufq7aEl5B_QO6Fdn47ScHsOmki0wkWlGbU4WROWSC5qlyEJX0HY9dFz0GC7fYwi6vaGJSiOqnEYh_aSLxm8ND1UwwmB1yZ5-2AsDd32v51LGyPbG1CisyKHOt6dgLGwl7A5LhirSz4sl0YJw4uA4TAOrQwYHoIn52fq8paMKeNj7nKOhFWKmJyAwe-Mn7_fowV020ekvkfPfDNqb4fOrzR8vTloPnbDxH2AmVihODms31bRNlWo1OdV7OyxiFerjitYvOiFCvz58qFwKyR0i7ZYy0oiJLEQfbZZ_bS5m-Ab0ct-6yrlga78abPFC0eDfmY1EygmrK9X_b_SlNI-VqSfOP1XusJYVeR6Glev0tBgaS56FyjllXTAM7F7GWi3Y7VjnXPawxqgUdX74HZD8fkfQVYApCJpWotsOwGqQ90UrbZhYt05hFroVbcqPkxBh4jsAGJnpDcxpQMvp5CUOT4AUYz0rMZOd59Q551hI4kxCrkSFSXc77wB_KxHxUOQL6jbjk8BtLmdMU7bL4g9vH0em72X11g6hQYc4q6nnYvKVTaG9we1pam4iPNntnOeLMsVyGhzUUyjJfyPozMsKqCi9-OtbYdQf-Lt721dB5FNZTClH45rZmbsH4lOihh4088ZONm6XTDZPfFBo9O3JwWnQkM3I3U1Pzdxi9JDKqtLckBXBkN9GtbXdelrqnPyvjMA0CVHvLV6D_g73B54EZEgnLPMOp-0zKsgQFOzGleDucfzZ69x2IFN5IIJ_EaiMleB8hA8ZJ4mwhpMBKunBKGPH0FBSNMl_48GXDJsIhKekExBZkRHBI0KVgCieHEJnJYDtcK_DcQh7E6iCFObyUKprN6bNCu2NWVLWBZGOppiThLiDzrULV0x7JXTEf8i79NQZDn1lR_2mT8UuSYNz_tKiAW3MIuWNBgEheu-etI9f6WP-ereZ2bd2o88U7tVsBjJbTARP2R0xiitKxAmVJ7fR-7r3YtMKUUm6GaHT9JqcWsZEvh36SsHIJz5pjidCTlEwnk1Ll70oIqgzpWCT58-bk02pkXTqkInthB2_pc28pnIjQL56AGlcCgHzfvh6XDDW27TfFxPTL_PP-6vvOkrxPHNXoqNyW4rKsCyICoGpCH85T-oBeoh4iV4ULH-59okZEMIN18yNBaUBLHO972EBtkeSR8AtMtwQ-ak6klzMu7CFlHbiPMfSXyaaAYHsgcPTB-qjRdS7me1EsM-W99s8yw_w-FSc9IviyqtpfWZap_6G9o-7m_vIa-E04FnVUbbF0FnM2IccTUelfT1mPBp89JRj_97Ql1kKjaH62vdyBBGfCxVF3xHOnL85jO9_z-Xd173fTrqj51_IFRUNvEKxgSCbgaULTmCJJ31dEH9x6MkbyWT76RIOcvrsiDGX1GAC16SXp3DtLDxxHG-gVYVjgz3jFOQ33oY_8s8n-uODkBpEfsVip5-CKUQLKPPDTWGgmGXixHHm2DW2rdRRuNwgDAXXmZInqMky9lKEd7rCGBIqtITr-rTDn0skfeF0sLLjhuCDov5jwLF95-XDJFTFz9Z3CA5e5x4UFL5oKWU8\",cRq: {ru: 'aHR0cHM6Ly93d3cuZWNvbm9taWUuZ291di5mci8=',ra: 'TW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzExNC4wLjAuMCBTYWZhcmkvNTM3LjM2',rm: 'R0VU',d: '+z863rnjyVRv9NTNYluBD0nc5vZyQPzSFdUiC7Ck99cn5yRE/2dl+UA730063CfWDL43MnXT76dUks5vO4jyYJadPXmilr0yd9Pxc4ZpO4Bu1aJwDGpsVmXkOC2wiODMDOzn4hFGvW5FLeKI3l0VxgWDVWBRBU7GM5qAokcUXIWBkkinNMN99TlhQnBWLrPmyHR894BEUF+1iZQ+7x90x1uJnwizjVZwVscqakVlAgqIwuubH79iyPxC7Cy22YxaPGs8XZaptmJKOZ9+vg07rG/H6ebngQ8vJyGgCEWV4hB8d6rCFEeiNxkuItJ/w6bq9bENFCwctiNDCcefs6FeULuh0tLSxSNubgHNbhuWUfhPvtqFNA64Yx0MTbvdPxK9OqXo7b0Ef+fCfEG/Wb2TmS+bxSd8+1GYIg1KJ/bXmpOalJP0/s/kQEcMorgEPSizZBK3hxbdcI+P8upeYv0WpM2U3bLerFOeBtVrFJweiPYFEz5lWYg1JZUNz6G8GjxErmmo4b4M8v47vqSHbRlFaVlFd8L/Xly8N4WYQ1Dep/1PYeMjhxdmoEdDVcaRSbTh',t: 'MTY5NjEyMzM4MC4wMDgwMDA=',cT: Math.floor(Date.now() / 1000),m: 'cVp8ZgQoijtUTWFPLrZTFJz5z5Z7PHqLPtXB5MW7Hgg=',i1: 'BcH8QUYp67f2F4I72SLc8g==',i2: 'Q+Bh9hogNT1RF3XVnP13fQ==',zh: 'KCcaq6Qe4hu4t1LqLr7SSP5zgigeB/PhfSF1nO2AxMM=',uh: '0CF8H7M40rTpO3nQlHachgfkgE8HRlszEVlfLXI8vE4=',hh: 'OHrWIBOUbpWlk/QMVzyAIG5g2TF1Ycx2IA+BVUqbPCI=',}};var cpo = document.createElement('script');cpo.src = '/cdn-cgi/challenge-platform/h/g/orchestrate/chl_page/v1?ray=80f0e5d50c10f180';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null, \"\\/?__cf_chl_rt_tk=NppXuGjKrvaYyRj2lCph0EpzNueGcs9FhIcj.waKpMo-1696123380-0-gaNycGzNDKU\" + window._cf_chl_opt.cOgUHash);cpo.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(cpo);}());</script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/comment/reply/",
+							"uri": "https://www.economie.gouv.fr",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<a class=\"fr-breadcrumb__link\" aria-current=\"page\">Page non trouv\u00E9e</a>",
-							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+							"evidence": "<script>(function(){window._cf_chl_opt={cvId: '2',cZone: \"www.economie.gouv.fr\",cType: 'managed',cNounce: '91438',cRay: '80f0e5d26fb3d225',cHash: '9d0684ad1f2eab8',cUPMDTk: \"\\/?__cf_chl_tk=bNjt39Pss2XOPDrzDiccxwcd5Z6oTzVO5q4H3ZFIRuA-1696123379-0-gaNycGzNCyU\",cFPWv: 'g',cTTimeMs: '1000',cMTimeMs: '0',cTplV: 5,cTplB: 'cf',cK: \"visitor-time\",fa: \"\\/?__cf_chl_f_tk=bNjt39Pss2XOPDrzDiccxwcd5Z6oTzVO5q4H3ZFIRuA-1696123379-0-gaNycGzNCyU\",md: \"YG8dM3JYYCpdpdFta3D5H4M3WE72ktGjIUwjcgZUGy4-1696123379-0-AVN3wDKZRz_xg5qvyLBu4hxaHttDnAgBrZ3O7PyweMtOV62gbW-viBXkpwrAKxWJZY6EP7adVGVidJHbkOd4PdFWQisez-YQm6U6SAuYuqXQ5nVLa2xhYjLRmEqwNQu3b_-1VTMmFMe3GYEmL3Wv-bTavxhdrArpcKIGoWRF6VXnY6ixv1s798xJXebzY9767DPYwbDHRXbgqU_Ge5XSH2GGm5rJy1TZOUznoPpIrggBP3ONZeRCWMP1tf-VuX4lTgJASH3qUrdcqgHFuM6QR2eYV0i9fkUyqnBtR7XbZZjY0Z6XKR5ZHRDXxYdVwh1NN9n0fEcWfGs5nRG2ezUiSnt_7YYU9-24qMsOHgrzsuNQTjvIT8HiK6ZH11aDDIxtIhCO-JFFy6pnjs7t6qY8PrD1OpOFTQM5mMKziRMHvMEdm9efVGkhlYPore0kzkyZ8K2wNhS69OmR43LTV1TmohCaLGyeBAcr8s0WxtFTBMw6qHAb2UtJsLS2MX6KPQ5byLphYvhhHvdvvCy8RcNcr5Z9Q-tGwnaHdEII19IIsa6Ra_9Oc6YKz6dog9wqJ5SVWiOs4Hl7MRGiZ5Yr5-gu4v_ioddBp0ok3dbcxrveyLLEaI21PMnUZjq8dzLZfBrYrFJdcWewCc4OfPKaRo8rQxNXyGSyQdDP8Pk23oFhK3OLuertrUOIDOJ9j6-bCQGwm4rilJ9uoiWj7DM9zJnFSogPaCxUbRmKCir8rbtmzmEF3-KG305Qnk0mEscEDGNQNTxFJdXi1Ogm7WPr8t25lDxn8sJEEQmU2F_uM8LTSucje7gGA5vMPJwUEhu3-YFRiVdgDiHZ6r19QxLlqHDE1GrPlVTlbHPuSXY9KjMi0nxjQe8EHESucITwWMmV3wY7hQOZxsTAwe1Lb9X8VC7L2vlImhP4kja9Q3hfvqSvL0itOK_dBfgpefASyvhdstoj7DpZifjSyjAmMMlfxH9y_1m48S5F7YmdbGHkOeeLcAmNX83hmiAT2FNWbMXxMQhOurCYBybK-TDJd6Ej6HSW7x6MIF16KYEyialSfAf9IvP7W2z5pzsv3JdZaBKOY2se3wjqcSlmFXUBLV5PlvYTx22L3IBeEauFM9VS-MWnCk_Tyy1qAIUoS7KHPefWEGCCkcdw00bZR08hDvgzYixEc3nErTHYfg2jdy1eYCdJtiVglTbmytBHPrG0VBj90vk3HAg9ElgrswhQLKV0PFdsKVie1aVausKrK6eP7iAwsreBaa1QDbkRxWD5D99_VpDmDr8XSiCe87oPlhboZTZLgVKGdymcIMSwezSlfSh628rJPJtB8Owb70RLo5UpH3dZaQr3raIERQNdeRk2fDK3P9rC7F0tb9QPNNtQFZ0UcBvVi3NeMViNTlNV9fF-EWI8E2STnz_o1m8a-0LXmNSOBujK6zuqdZ3f5fvl2TJWsYP1BuJRUD3H8AP4XTbwSrTIJviqhDukMxwnopWIDE1YkIDensT4n97j3-S4QgjLvyhIaJjubRbMnNmtxiiEsV0aQstHZKMQx75hFH9IEwgrHVVg0vk2w-4q8X6AF7_k_2Mauk6y49LIwbLqJUiosZXbiBtVpsua5ZB0DTRDqbKYt1_dlR5aMcKgzZR8G-TT8jPxwmbHbcrFMaKblUrU7WDDr-swdjDM88UsLi79eQB0ObpoMINWErQFMC-e7GlnPtBCsBu3TZVBlf1Q1PozMNiGo1O5m_ASDkXYUbP-T16OrK-06G71IqqhXgRMJsXibnFpsQrClolv9S90-1e1K4Xh7gyPFrcHlhzFd-qWkNfwiM3KvJZXvHv4giW1MoWtnczoe1N1uejTI7GkBvTP9nWQExS9wPsiwgHQ5q055SDDyue2m5VxVOHELQRUNMmX2zgTeQtGxK6_uze0rd1KVNd4Gawi0b58Cot-caTE6E6Mle9REXiRkjtxVFtOpDQNIRppf0WZtSscGdzp6tn1Kn4mUrW61KTUTS9awab6rfLEZh2Qx6zFwR7TZcBvkNcDEPF-WIW5T--Db5D4A8NpiFLBjBnl8EHtT5pLAoQ37o64XWwPaT8HCrEDfwxSL5HH9BPrm96YbaRyQsxuoOIzFAe1NBuMQZrnUd-T7JQ4RWJFbZH-z6QphNKU5mmRsEIw5eV_jDhvfL5MJH3Et09xgUuVrv1qDqZPiXr_v2GNl8D02Hvgl12o_3JywUC0v3SPaB9GtxhNBn9rLEjIuj5xRdSi2kgqXrWfReEP3alUTTNPd8amHDhatLE6roOpkJMmwlNZzNQAlJ7uEMIEo4VfYJBV_-q7UVC5yA1MuuZd0jkbgniRQ7P6pBsmkPvWfLVNeEz8Of_FFE2LvZDsmMptxMwbIILBRrUxtzPZ7Tzfbpo3lIzvc0Y8HqSrp2NCUStuyshL9w7Ye8LaklWbFoNtSAUa1rPdidouVFIk-jcabbV-nIg-z04t4EjX5jby5VarUjlosUAJL4yt355Cf_TYHyZ77hjcvQR6WMisPb_cxgpS0QkYcKbFImjbL5NUvi5eA5kHwEuM_lO6w9IMdoy1eZSg0UC5J7vExNGAem8a0iLRHNsZ-d4Iw-_zxpn1xKPHfgNIU26-uSqCwfoo452uuK3LbXVASrvRwsoanZF-xBOz3NUG4hXd0i965cNQDTxN1U6zeFF1oeL1UbI8D0NV--gD1wdC_kT8nDK5I62hmVQ5B_TnwgMKA-0Pn5BI-cyfSH5VIDWoLX4tmlOizvucy6dYId4FxjCKy3631ipLqMaYN5WQJd1j17TZVYkrTOdq3cU9\",cRq: {ru: 'aHR0cHM6Ly93d3cuZWNvbm9taWUuZ291di5mci8=',ra: 'TW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzExNC4wLjAuMCBTYWZhcmkvNTM3LjM2',rm: 'R0VU',d: 'HSb0WnB9I4Oa59Z5ZwixPntcvQriDo7S4qFuT811BksIT/nNdLlNEpZ2eN7yAkM7Wb3t1GQyC1tiRfEddDx+tR/MOSt2gH3AmBguVHMvD65yIPDmR5vAAWRG5tmD1PaIEHrJ2SlxJkRhRBIvqSazCwqzvc1MIq4biHnmy8bA3h0rY9m3Uwn63BQ8icFWCOwTaOCdzRWFYPNSlppHHQ0ATEg6bJXCnO1PBQHGt+tEzqaiT/HeKCR8404888fvCkVnAhg/WF8finXIBOxBl8RujJReS0Ao4ATVYzR044QW9Y4YHcpB3V30jZxLOD7iQ99F+IQEqBbn6SEB/W9+EoWAhWeQPjW1BBcux2piELcSnEkw5SL+JZXG2RCqJMP92C3zVpj8gT0Sw5441+lc377C0kAHOlrOWNu1N+D3ZuEycfvsDDNi/aI2RGWBhkrTlhhEdmoQ/GurXulVoKEG64e3jZ9AazX5Tl/5O2h9DOibETzcCjb613VOqpXVYEydhLhg058LnxPY7Wp6d1KBlxKGb3lDIyLxsq5qGQmjRUxm8h1oTA/fe2H/DdhmV0z96DcG',t: 'MTY5NjEyMzM3OS41OTQwMDA=',cT: Math.floor(Date.now() / 1000),m: 'yXCbPpERQpL8HeywSVJaRW+MTjUqF9RMTp3Fj5MkJhI=',i1: 'efRAu/VQEFqXNru76YeJkQ==',i2: 'QmrhKX8Boru6EcivJ7kA4w==',zh: 'KCcaq6Qe4hu4t1LqLr7SSP5zgigeB/PhfSF1nO2AxMM=',uh: '0CF8H7M40rTpO3nQlHachgfkgE8HRlszEVlfLXI8vE4=',hh: 'OHrWIBOUbpWlk/QMVzyAIG5g2TF1Ycx2IA+BVUqbPCI=',}};var cpo = document.createElement('script');cpo.src = '/cdn-cgi/challenge-platform/h/g/orchestrate/chl_page/v1?ray=80f0e5d26fb3d225';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null, \"\\/?__cf_chl_rt_tk=bNjt39Pss2XOPDrzDiccxwcd5Z6oTzVO5q4H3ZFIRuA-1696123379-0-gaNycGzNCyU\" + window._cf_chl_opt.cOgUHash);cpo.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(cpo);}());</script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.css$",
+							"uri": "https://www.economie.gouv.fr/robots.txt",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<a class=\"fr-breadcrumb__link\" aria-current=\"page\">Page non trouv\u00E9e</a>",
-							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+							"evidence": "<script>(function(){window._cf_chl_opt={cvId: '2',cZone: \"www.economie.gouv.fr\",cType: 'managed',cNounce: '47467',cRay: '80f0e5d548b3d204',cHash: '3cd241a56627b07',cUPMDTk: \"\\/robots.txt?__cf_chl_tk=SwTH3HxlRu4VhmKfmgNi5C_D2lxxdJZGQmeemyciUA8-1696123380-0-gaNycGzNCzs\",cFPWv: 'g',cTTimeMs: '1000',cMTimeMs: '0',cTplV: 5,cTplB: 'cf',cK: \"visitor-time\",fa: \"\\/robots.txt?__cf_chl_f_tk=SwTH3HxlRu4VhmKfmgNi5C_D2lxxdJZGQmeemyciUA8-1696123380-0-gaNycGzNCzs\",md: \"bPm3vQ23qJ_zboSWKgLh5u8QpMKLmw9oMATOF35LLmA-1696123380-0-AdqtDQLDsOYupaAj0P5jvBHTpPB9Z5IWjIFDKCodWRr0DzIIjhnaXIdrh68llhfMUwPvhaE28b7Ia275mqrK5DEZiwlNBbxeWyUCmMw67RwVPTo6vKlgcU5GxRHiYVyogv7mvRd73_gdjUt1hKl8WnKPafJx5AKNsSgEL94_RoEkqhagNOh_3qBpJxDqhrhfWRnT03LnDzrRyXgUyGJ-Y8r02zjF6oC5RIwNEduWao_iQsDXW0xYGfC4X7C1akvH5exwn_CIpCow5woiXr_-KUl30pH9xTd249tSO6EHahaqm0FEXHVKC6F_YUVBClCjAsBAiDbysHdDiEEqYQE7ULaxT5Gd28Bw4xzmPcMs6rBrEZTCBxYb4SIW5ixjrZYmqZLlujbAFgaC6Q0pmwUMBibMRJciG-GLkwwWrb5-Hyw047u60EDR7Yw9xVSbM02xLKjvXEaJF_WVlWMr_JO6Gm6YedThyM68iZDS4VsTVDp0c-TwOFj6EjPD-ZQWXb69W49dYK9pF3nNDuR28KCfhPiIGCJFw-b-xLz21Un-5Yl5zaui4hg1rCfi4D8Lnu2IsCZOQlqSzz70T_bMncIUE52iec5xPJwfXwYly6wDPyl6YGoc3TadROVyVnFxngv2tCk0psROsZq1vAT50w_YPdJgk6MSIh7r3ZKFqCXGZn86vmt637HHr7zKKoJl0vyQQzXRvrAG6nwGiuKcexzcmsBmmjFzaqMiyJjFesv0GjTw9PkpJAeFCIe7vlqkdoGHk2yt5OhAITwwHW5OgAMIq_VwNWflFzUEjnfbsWk-J5l1d_YhXu091s3WIGc8QY1lNvDcWwcb8SRXgPJvdbL_ySssUbrfuSCvkcmYjcoG3OyrYqwbQmXtOXcQ6rjIPvBBUdU1OpA_RztjXclVJlQfvyDk5JmAyJjHInJm14xgr0LAn652VZbx1SO7qLUiyuR19xMuVT1Td-uRve31LJRH8H0QyS4pobOlUL5v70LIDen67AKEri0H-J1SfSqGZpml-swA9Q0ixgGUhwDCOE9Mj4F4x_eFvxL5aNzISe68zieiVZ8RIcNEoW9zeaxX2kOHR5HqGJ3r_sFJvG9F2OJpSh4D41tK7bez9QfUa_z3A3QC8Ac9qO_-MLlQtm0UlGHMU79D3klcpmnQOjTMh031wAc-lf4dXyUrIGN_sVWLzb5fACOMKPiwFMN-bVr2uor9Q8VUSD8XQo7GtJXQ8mPFAR-P4n84wRnHHActzZIdKXFwRlGfWe38bCh7sfhzL3fM1RSgbuuBReUbbneJR_ETZgwVi7fH8Mstj3Bo89fkIDZVON1dO1emEOy45MN_XpbaXtFQkGBiYAMB8TPyVQ21b9mhpF7jhAB4rokdEtQmBgbkyBrlKrTntzEVo2bgj5odW-n5lJEHbstEss2ZMS3F5LLH2FwbKoy63_AmRLYKJ92WxqYcQScohup9WA3RXY6C8jt231V7WPj79EwiKiMXwA_U4fN4a3mhl8-WqL4oTkytqvDoKklV53Psu7a-qVsVUTGGKGI0fCBOVdXvS1L6O-3M3zEy_C1qNqegCWtMlErwQqp6HDnsmXQsbsEskgIK2T775b0gFUMdiO15wacvESmOk3UnuTN8JLvfLcgnnqG07oAOT4wbDwRZnyre7N6M0IcLMfxYWGbXHJ3MQPuEl_V36WXwdUfcuEfFbQ6sLfMahAf7PTPf6Mi1aGSGA-tAI1kOfUv8eMo9LiKcc6cWonU_wePuVE6b8MfS6wpV_fEswSJKfjrVLGY7OWsX8uuqCQql3oUJiQw_Zxptc7NkvTuS757IfaP7bBjirwrg1Tq_uK1tBjOW5Yl0AW5Gu6G3Vf04ZSqkfuiY6u9PpMZhCtFvChNI2JH2GHLR_kxXeBd_ifjWBQ264Sg9M9u-mddZNt1JYXUFyJHYnfnqszAHfMhiy7nQSfiX2OAD1iWBdUyxdLucQAJozIxG5PDvHaTNMK2p2KeZpAhN69MjgwwZa-W6zVpul4MNPFo_PasZoF1452fjv8FqSNswFh_d8ExTsOCZ6PZd0CiZxBSBq1fbMrfCD5TdvgG3PyEp5iYC-WLAd3BHaP__aYsHu8kbUhTGgq0l2NO_Zv7bEv1ypzCkIx0SOVGcptiCeGuy2fe2D_LyOXSDNPyNToSsWPn7-xJ9sk8Eszwhl7qjcM0qfQ5EQXs7hIrv8EAv0OJg-rkJYBfstl7hsYBqMTsBqG3YjRfyg8RRHR7MTcrKuKk2XycHoler_PMhC_YSP6_suLkxDQgQj-KyAvIxWd1jqhS2jphuZ8Y_Q1Ikc031KFYo7UZTM6S8JkzgzJfCD5563EF0bdETIPlgahIvMpszDxWwG6fXkU0aIF457_2pS3l6KV4n3msOzBFSBgWCYKrdK5RT5Q-wVRn4DhY_AZBF87e5Qpc1GDcPSLkFINJ-LVOtP73QrT42jd6flyfpV54tJZ5p7z0RlR5g-HwZFDeVzsBeaUHRyXRF4Lo2TpQG8dycgSuGtrRVf2hJFOYW-cDwH5jyxjhwLKDqHWGSmfSdcwtfNC0seMvURwLAdtdvU02BEBqCxRV6eOeO89d3eRQZ4snDrbgupd6pmXUq5RMdVlhnTuK_a-CXivHSFnM9Qaq6v2211PwKlL5OaYyMfaFkFL5eE0EG3svbswdwmRbIBsmXaoAGBhem5i8DRbKLYDt2J3kHmLu6B16Asn0QTn9KaaNj8qOW8lOgEXx87wBgsHRxSgRmdKOl5N-9RotsAxMNXDy293fE-XjgDwZk8y6dVkYokiyx-UAE4Ur8LIXFvryareYXlg\",cRq: {ru: 'aHR0cHM6Ly93d3cuZWNvbm9taWUuZ291di5mci9yb2JvdHMudHh0',ra: 'TW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzExNC4wLjAuMCBTYWZhcmkvNTM3LjM2',rm: 'R0VU',d: '0hJHhCjk8UPKDmvsF4pzmZDgg4/Mf/oPTYM6cE4DjQ6ERtaBaUnDr4fxSbZabJhekus0XbXphI9q+LHGVZB7qzaCyUn2krSnWzHKm0g+qtzDVED/o0cbofTuMtfvWoCPs339ktHHvIwQnbv+9uqeiwRp8/MgNY5LVA3IRnFLsSsDq3PHPDGwe4rsd8BHM7s9odhxvW0EMHVcBssPGgwR25aAtxwPQsACMgfH+9/Jr2FWFRvvFADlAX4r6cn3/r73SOS/Wj037iAY+tsAOE9JcikRs43hiSNMN9lxi7DGF5r2pdXhXUqa+QJkxvkodON7sOcZaK4Pfs/BTNHxs+7EeaLVLvwuh/dxo+wJsm+VJiAtjU3bLCaT/pbPxT8hkwK/z8R69lGg8TjQsvD1+Iwgw5lNRYHgWuwt81OKSU//T/yGvVfJ5xq0z5xAOPo8OegiehVZ0rpfp4s3O0PHDMx4rQLVpohUWcB5nSxJp0Vt66jX/C8NmefHgx9HqmaeQWuyRmFXkz9/IFaFhoz5Uo/DOsRiQVBp2OJXjpMboncWV7i35hHociqHNvbalrStnI44',t: 'MTY5NjEyMzM4MC4wNDgwMDA=',cT: Math.floor(Date.now() / 1000),m: '7in/dKmhciGykhugBl9+0pQ2/KM/fkbrVSXUdT6R280=',i1: 'ZbHyA2SHuJAui+kMeaFdJQ==',i2: 'uOsqaUauPtO9TAgK9tXNEQ==',zh: 'KCcaq6Qe4hu4t1LqLr7SSP5zgigeB/PhfSF1nO2AxMM=',uh: '0CF8H7M40rTpO3nQlHachgfkgE8HRlszEVlfLXI8vE4=',hh: 'OHrWIBOUbpWlk/QMVzyAIG5g2TF1Ycx2IA+BVUqbPCI=',}};var cpo = document.createElement('script');cpo.src = '/cdn-cgi/challenge-platform/h/g/orchestrate/chl_page/v1?ray=80f0e5d548b3d204';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null, \"\\/robots.txt?__cf_chl_rt_tk=SwTH3HxlRu4VhmKfmgNi5C_D2lxxdJZGQmeemyciUA8-1696123380-0-gaNycGzNCzs\" + window._cf_chl_opt.cOgUHash);cpo.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(cpo);}());</script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
 						},
 						{
-							"uri": "https://www.economie.gouv.fr/core/*.js$",
+							"uri": "https://www.economie.gouv.fr/sitemap.xml",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<a class=\"fr-breadcrumb__link\" aria-current=\"page\">Page non trouv\u00E9e</a>",
-							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.svg",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<a class=\"fr-breadcrumb__link\" aria-current=\"page\">Page non trouv\u00E9e</a>",
-							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/filter/tips",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<a id=\"main-content\" tabindex=\"-1\"></a>",
-							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/node/add/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<a class=\"fr-breadcrumb__link\" aria-current=\"page\">Acc\u00E8s refus\u00E9</a>",
-							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.css$",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<a class=\"fr-breadcrumb__link\" aria-current=\"page\">Page non trouv\u00E9e</a>",
-							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.js$",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<a class=\"fr-breadcrumb__link\" aria-current=\"page\">Page non trouv\u00E9e</a>",
-							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.svg",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<a class=\"fr-breadcrumb__link\" aria-current=\"page\">Page non trouv\u00E9e</a>",
-							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/search/",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "<a class=\"fr-breadcrumb__link\" aria-current=\"page\">Page non trouv\u00E9e</a>",
-							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
+							"evidence": "<script>(function(){window._cf_chl_opt={cvId: '2',cZone: \"www.economie.gouv.fr\",cType: 'managed',cNounce: '9968',cRay: '80f0e5d53c363c98',cHash: 'da8a799203e07b5',cUPMDTk: \"\\/sitemap.xml?__cf_chl_tk=SwTH3HxlRu4VhmKfmgNi5C_D2lxxdJZGQmeemyciUA8-1696123380-0-gaNycGzNCzs\",cFPWv: 'g',cTTimeMs: '1000',cMTimeMs: '0',cTplV: 5,cTplB: 'cf',cK: \"visitor-time\",fa: \"\\/sitemap.xml?__cf_chl_f_tk=SwTH3HxlRu4VhmKfmgNi5C_D2lxxdJZGQmeemyciUA8-1696123380-0-gaNycGzNCzs\",md: \"IhpoLGVSCOxKTFjiUqiylrs2hvMR_IqrNm5q9iwUFWs-1696123380-0-AYqfVeVfGL1ZCfmxLFW3yfKl8F7xl-3vNEAG_r6pAFcwLH1prn_diPCw6Lh4E34J7YAOMxu5cymZLwNRKiuBNNX2oSb6vNjhNhN_7_a7ltRwG1erXmtllbyrjbsa9Zt8uv8WEf6aAkIpXxMbUdwpOwcc6VBCHmCu4u29547x-aBUkKsghhBMfQ1nOLbN3k0xzMwqnjd88B9nHmP3qmmV5sqT20ll-Vy_I3MaVfZg7xCYaM7YstK1uT-EFLx3BiKzgCRFbxgpKJ0eqP2Ji3lBuchiNdZltzEI-jRDVySxWRAwnVtBmovNRL66sF5rc9jhjMgkZajdDIMArM67Ldwq-vnWnfcwZ9idR0kP8YqWhlIqbtxr8JS2MscK8ButCy7bBCSfRuXLIY7PupyMiKQeUQJNzPWJxfaIvqSMGtwuolqSqQUvPowUAu_OibQOmpW2q6rp0HL769UbvHiRP236H06JY_AP7qMUMpzAF_9Uqb1NdkSMhLze0Y7_DqIkjeC8v3bbcSusm3CQqpqZvAzq9_bwvPwAJOmCL9lnjXCmQ9PZuL6CynYiJxVGsmRHIOxtiue-ds9Q_d5t8iqP2CD80oniUP2S_h7JpZkjzumB0efet-w50dmVbCTRtKbxz98FhCVGU2NI58rf2TnOueQ8JYUpvlbNxEbzQmLM4m_-YIeb9I9mzGsbxE3h0Q7XEDVhmAFON6KD41ZAFlDESN421sx9TMMSKK3pZ6EZVRG4xc9pEbi0vNPjUvS8lzRAgQMw86IJQI2yXysjC6X8Ppmu_w7PmqXKOc-JYsFjpf0aMWeNqY2AwV9q2wQFjjcr4pSgtuDgrdeEJDgq8dyZn2ZybxGWvUMfM3IXm3pf5nYFnQNtSZRhqSKJHgt3IstZgaBTd7hTUp1gk_mdyQ5RqCqHPqWf7edKR2Pvv6Xd07_zHqhec9R8cmuM3Is9D5rND0686tO2ghl4FCcoWH23ZkX7RawTXOFAASWjblcbEWjibJZsKordIP5MAb06xeeFLerpTafSiHb5JsDA-Kz20ujOC_1IE9bOSVd0rYkuz6kY-ym4umm0Su0OSJWYNiDCsRZG-438inSxHJEVARynNGZ5WT84bDPLv-GLD_Hjp65yzWmhzyaQPzdP4VQA4B7UZF8nVIqwKNn7LNnwLNiyJVZILqw-hGY4YqtzW-XKLDQtJIHh_tfkcQfvXxs-K9u_eTGRsG3uvSRdXZFwZszPwOqG1aAIh0_TYOK7J1lPZBQlVoREVGfgZS-HFt1C66X5jck_QiiaFg_YoVBaULogx2vlN4xjy9tqZC4L5VtD7eVs1XOikeIRslFB0s0mdsTVXv_ceSPDjY8rt3gDMr91S05coGF3tN1bdk0Ts3qEYHg8if37Gy0EL-7hmLs914GwQh9CUz6HXAhsQ5wImlzJHEp02VWd1wQ8Iij-GTJw6UO3e4zJh1QCjBzkJCZJLirYpxS1hMD82rj16MYizTTlNRJqfHsWpnPea_Y0LRp2YmlvXOh6M2t9IWYdAu0BMCMirKK3-f7x5_CExWjsoRDwCpH-0YwjkK-YpygD4N20KTbWP_s7IsCTXUWsmV18xHq-sG7LxsdIgR_-4X6pHxWBIYkcdLejWMpJQs3N1NmFdd5Tn2JbaqGAYY-WETTHnCl4aX1AM29kkqOTzd_n10MVyKSR1Oov3cHdIRDNifEgScE1P7fmpGcgBnV-H5O8VexB2GfvKXnK24HYMw4Z_ccODp29Sdv-7pqOZIS0LBljuxBiLK4RROqkBQFFmpojbvlcM_vKgyDysdVOCnumfVKsojBe3FWVwXlTVViCcAmzh9G-Duq4EOo6TrWASQaGUiHWD-Fjv_wVvJDT2Njv8HTdceDmm2ro0n7_iNFxYeVzOt_krypbFtOxdjWZ2UsisYPT1_c16rjl8P7DZhU6JfJ0Hkz6k1K4FHmPi134lT-9AsTgLxWhnplKO_1pIeFmnFDw7zzNA2_KsitYEVZJnImEVLGW7KxClgSetur0OsLGKOZMeB_gnlMDtMSflJNstRqDf2pbsqlWhxWP6B3BmpBP-vkHYZpi33vHMyqeoF4HfqIrVnCn3u9Aebmp-ZBBm6gIS5Zu1yYT20dn5JMGGtAGwWWkgCaYBk4Vp4_iFUQA36tBWBctfO-GUeWR0UDtxaxpcyaL4mhu2PNKqi8w1-H1s3wAyolNPStQXtarveCyu1x4JSGYI-9x7SOrzIgVI_gjc4A54AV2rwAakhHsbSaKM_zJcp2EGKTOj82cwTbJsq-eAIcgTxWyXBbn1xdVsjvYcV8UsVz0UNtIP5cutbujtKVdqY0KzGJEaCx1MYUmPUvrrWlE-LlGrT0eU0NcWtKg2hlNL0GhpbQ82kyilPnRnrA16ls26JEMBFtqvRO5_krpA0trPJqRYPl-oJPQUC4ciODMfzOEy3zwKdlYJ6KADn137fTA944eoXskBOjOvj0xc86-4HaGBWWPlLawjUiDhYFyudRAsYBUJ8QDixmPTsWDsydvAtZ9-fDZPCFInBuMZb-uPoe1sCc04EBS8UrJvHNm_e0Tgbrp_MHlfiNxWE71GVjU2LKvMtE-z5l2RYZ3kvyP2ieliqZ7yVjVLwcZjaeJOseWcZM40ILrLOdtoJnOBzeIX_8AmI3OrHxHVpUY8IZh5sdpjmumtYPEwn6hNW-d5qQ9ib7REc7tXhSJjLndDX3A3QovJ9lRNVeTgmt-XOA5Yrn7v3X0yIdrnx0WVv4jKkCg3Snqke7YfOsrQ6V4cw2FV9C4N7jDMEpg2CbXG8Kt9CBbICon3oP4zFuRLB-X7Q\",cRq: {ru: 'aHR0cHM6Ly93d3cuZWNvbm9taWUuZ291di5mci9zaXRlbWFwLnhtbA==',ra: 'TW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzExNC4wLjAuMCBTYWZhcmkvNTM3LjM2',rm: 'R0VU',d: 'Dkd7KHU837A9HiYgbswGWk9gcP0QftP2PJmp/dx7R67OCgURCGFk++pigo8vjXQt0ePztGr4ZWFOWVHN61LaGPLT5kvwvAdyHvsDrs/9kyjIujH2++Tl2RQ9FfhnOhUdN3XXXvs2bRc6ym3vipyxM8ho1K5FiWsCN3HmqF5fhXo+jV+teD515vi89ySDTfe16UY1k23HssXoO+2IVegyj39YnCjsJlK3ZOOPlRWWnxVil22ndmYlD2quK+1MHv69YbdgPv+fLT+A5GCAc7b1OlzyKRIfc/yKG0oMio/pNj48hGgjl0nQGxOC/ioVOONulfyRHYp7o8QUqgbkxIZIj5+NyXxOp10DmykrRd7VYPDHf7Ft6CbX6XY6I8LnkY4FoOL5kdJtvsjqHY8XXZ7NRVXJLRklhjJGCuBKkRZuoDxNeMlhkEMQ1ggP2bwQfqf8DGHhJooX/UdV1j2qgMLB2dhwWbLNQbCypOKiIG4d6XRmfA6vhz4mHV0xfu6v2hBJWv20YvftiPesj594dpgRg6lNZZXzAG9YIG8Uh+ZIssPFeG9RmvgsGJilyf+9p/dT',t: 'MTY5NjEyMzM4MC4wNDEwMDA=',cT: Math.floor(Date.now() / 1000),m: 'HFetbxh0XWVhaSerxIWBqR3hkqxCP044N6ci5toBeEE=',i1: '7GLYww3OC2c4SQ9rd7+PoA==',i2: 'iK8pyx5h8JlTjPuqKWnXlQ==',zh: 'KCcaq6Qe4hu4t1LqLr7SSP5zgigeB/PhfSF1nO2AxMM=',uh: '0CF8H7M40rTpO3nQlHachgfkgE8HRlszEVlfLXI8vE4=',hh: 'OHrWIBOUbpWlk/QMVzyAIG5g2TF1Ycx2IA+BVUqbPCI=',}};var cpo = document.createElement('script');cpo.src = '/cdn-cgi/challenge-platform/h/g/orchestrate/chl_page/v1?ray=80f0e5d53c363c98';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null, \"\\/sitemap.xml?__cf_chl_rt_tk=SwTH3HxlRu4VhmKfmgNi5C_D2lxxdJZGQmeemyciUA8-1696123380-0-gaNycGzNCzs\" + window._cf_chl_opt.cOgUHash);cpo.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(cpo);}());</script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
 						}
 					],
-					"count": "11",
+					"count": "4",
 					"solution": "<p>This is an informational alert and so no changes are required.</p>",
-					"otherinfo": "<p>Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application.</p>",
+					"otherinfo": "<p>No links have been found while there are scripts, which is an indication that this is a modern web application.</p>",
 					"reference": "",
 					"cweid": "-1",
 					"wascid": "-1",
 					"sourceid": "6"
 				},
 				{
-					"pluginid": "10015",
-					"alertRef": "10015",
-					"alert": "Re-examine Cache-control Directives",
-					"name": "Re-examine Cache-control Directives",
+					"pluginid": "10049",
+					"alertRef": "10049",
+					"alert": "Non-Storable Content",
+					"name": "Non-Storable Content",
 					"riskcode": "0",
-					"confidence": "1",
-					"riskdesc": "Informational (Low)",
-					"desc": "<p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</p>",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are not storable by caching components such as proxy servers. If the response does not contain sensitive, personal or user-specific information, it may benefit from being stored and cached, to improve performance.</p>",
 					"instances":[ 
 						{
 							"uri": "https://www.economie.gouv.fr",
 							"method": "GET",
-							"param": "cache-control",
+							"param": "",
 							"attack": "",
-							"evidence": "max-age=1200",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/",
-							"method": "GET",
-							"param": "cache-control",
-							"attack": "",
-							"evidence": "max-age=600, public",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/entreprises",
-							"method": "GET",
-							"param": "cache-control",
-							"attack": "",
-							"evidence": "max-age=1200",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/filter/tips",
-							"method": "GET",
-							"param": "cache-control",
-							"attack": "",
-							"evidence": "max-age=1200",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/ministere",
-							"method": "GET",
-							"param": "cache-control",
-							"attack": "",
-							"evidence": "max-age=1200",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/ministres/bruno-le-maire",
-							"method": "GET",
-							"param": "cache-control",
-							"attack": "",
-							"evidence": "max-age=1200",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/ministres/jean-noel-barrot",
-							"method": "GET",
-							"param": "cache-control",
-							"attack": "",
-							"evidence": "max-age=1200",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/ministres/roland-lescure",
-							"method": "GET",
-							"param": "cache-control",
-							"attack": "",
-							"evidence": "max-age=1200",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/particuliers",
-							"method": "GET",
-							"param": "cache-control",
-							"attack": "",
-							"evidence": "max-age=1200",
+							"evidence": "no-store",
 							"otherinfo": ""
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/robots.txt",
 							"method": "GET",
-							"param": "cache-control",
+							"param": "",
 							"attack": "",
-							"evidence": "max-age=1200",
+							"evidence": "no-store",
 							"otherinfo": ""
 						},
 						{
 							"uri": "https://www.economie.gouv.fr/sitemap.xml",
 							"method": "GET",
-							"param": "cache-control",
+							"param": "",
 							"attack": "",
-							"evidence": "max-age=1200",
+							"evidence": "no-store",
 							"otherinfo": ""
 						}
 					],
-					"count": "11",
-					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"count": "3",
+					"solution": "<p>The content may be marked as storable by ensuring that the following conditions are satisfied:</p><p>The request method must be understood by the cache and defined as being cacheable (\"GET\", \"HEAD\", and \"POST\" are currently defined as cacheable)</p><p>The response status code must be understood by the cache (one of the 1XX, 2XX, 3XX, 4XX, or 5XX response classes are generally understood)</p><p>The \"no-store\" cache directive must not appear in the request or response header fields</p><p>For caching by \"shared\" caches such as \"proxy\" caches, the \"private\" response directive must not appear in the response</p><p>For caching by \"shared\" caches such as \"proxy\" caches, the \"Authorization\" header field must not appear in the request, unless the response explicitly allows it (using one of the \"must-revalidate\", \"public\", or \"s-maxage\" Cache-Control response directives)</p><p>In addition to the conditions above, at least one of the following conditions must also be satisfied by the response:</p><p>It must contain an \"Expires\" header field</p><p>It must contain a \"max-age\" response directive</p><p>For \"shared\" caches such as \"proxy\" caches, it must contain a \"s-maxage\" response directive</p><p>It must contain a \"Cache Control Extension\" that allows it to be cached</p><p>It must have a status code that is defined as cacheable by default (200, 203, 204, 206, 300, 301, 404, 405, 410, 414, 501).   </p>",
 					"otherinfo": "",
-					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
-					"cweid": "525",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+					"cweid": "524",
 					"wascid": "13",
 					"sourceid": "1"
 				},
@@ -1773,6 +534,57 @@
 					"sourceid": "6"
 				},
 				{
+					"pluginid": "10112",
+					"alertRef": "10112",
+					"alert": "Session Management Response Identified",
+					"name": "Session Management Response Identified",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The given response has been identified as containing a session management token. The 'Other Info' field contains a set of header tokens that can be used in the Header Based Session Management Method. If the request is in a context which has a Session Management Method set to \"Auto-Detect\" then this rule will change the session management to use the tokens identified.</p>",
+					"instances":[ 
+						{
+							"uri": "https://www.economie.gouv.fr",
+							"method": "GET",
+							"param": "__cf_bm",
+							"attack": "",
+							"evidence": "V4SLP46vDluerOkaNjSSigT1o8SJODAmDq9eK5jpSoo-1696123380-0-AdAxHWSFTO8ck3jgRzScttgfODdloUs+uX+CoT5c9f3hQk+f8Bfbq5G45YHO5u6a76d5ccvosy6o/vgSWa50p5E=",
+							"otherinfo": "\ncookie:__cf_bm"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "__cf_bm",
+							"attack": "",
+							"evidence": "4ZKWAK0T3l1CwWcSh5RvA_WbCiuRIA0YOuDxIJMbGMI-1696123380-0-AUmn+LBaTAFq8TVHpEGtkyD0OGVzGKG7bxCYMqIP570JLMq8Q3TGsiA3gzMy89FDPmQsX93+sjPEMj/5sNgIxkM=",
+							"otherinfo": "\ncookie:__cf_bm"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/sitemap.xml",
+							"method": "GET",
+							"param": "__cf_bm",
+							"attack": "",
+							"evidence": "QLECJM.9RaVAejSQBCILYFmh6oceLOotglInPgBOOUY-1696123380-0-Ab6hk0dQbrtQnXo4EQAVKchTdqTPTMF/rpW4tzRcZ43tb2PPJsaQEbNBUdfUafOFCrUzT4zUuj0HaNkG4KAm4Yw=",
+							"otherinfo": "\ncookie:__cf_bm"
+						},
+						{
+							"uri": "https://www.economie.gouv.fr/robots.txt",
+							"method": "GET",
+							"param": "__cf_bm",
+							"attack": "",
+							"evidence": "4ZKWAK0T3l1CwWcSh5RvA_WbCiuRIA0YOuDxIJMbGMI-1696123380-0-AUmn+LBaTAFq8TVHpEGtkyD0OGVzGKG7bxCYMqIP570JLMq8Q3TGsiA3gzMy89FDPmQsX93+sjPEMj/5sNgIxkM=",
+							"otherinfo": "\ncookie:__cf_bm"
+						}
+					],
+					"count": "4",
+					"solution": "<p>This is an informational alert rather than a vulnerability and so there is nothing to fix.</p>",
+					"otherinfo": "<p></p><p>cookie:__cf_bm</p>",
+					"reference": "<p>https://www.zaproxy.org/docs/desktop/addons/authentication-helper/session-mgmt-id</p>",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "6"
+				},
+				{
 					"pluginid": "10049",
 					"alertRef": "10049",
 					"alert": "Storable and Cacheable Content",
@@ -1783,101 +595,21 @@
 					"desc": "<p>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users.  If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where \"shared\" caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p>",
 					"instances":[ 
 						{
-							"uri": "https://www.economie.gouv.fr",
+							"uri": "https://www.economie.gouv.fr/cdn-cgi/styles/challenges.css",
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "max-age=1200",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.css",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "max-age=1200",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.css$",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "max-age=1200",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.gif",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "max-age=1200",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.jpeg",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "max-age=1200",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.jpg",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "max-age=1200",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.js",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "max-age=1200",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/core/*.png",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "max-age=1200",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/profiles/*.css",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "max-age=1200",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/robots.txt",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "max-age=1200",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://www.economie.gouv.fr/sitemap.xml",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "max-age=1200",
+							"evidence": "max-age=7200",
 							"otherinfo": ""
 						}
 					],
-					"count": "11",
+					"count": "1",
 					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request. </p>",
 					"otherinfo": "",
 					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
 					"cweid": "524",
 					"wascid": "13",
-					"sourceid": "6"
+					"sourceid": "10"
 				}
 			]
 		}
