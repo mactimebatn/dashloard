@@ -2,7 +2,7 @@
   "trackers": [
     {
       "type": "cloudflare",
-      "url": "https://challenges.cloudflare.com/turnstile/v0/b/61b90d1d/api.js?onload=rOnjNn4&render=explicit",
+      "url": "https://challenges.cloudflare.com/turnstile/v0/g/9914b343/api.js?onload=FAIg1&render=explicit",
       "details": {
         "id": "cloudflare",
         "message": "Host files locally"
@@ -10,7 +10,7 @@
     },
     {
       "type": "cloudflare",
-      "url": "https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/if/ov2/av0/rcv0/0/momog/0x4AAAAAAADnPIDROrmt1Wwj/light/normal",
+      "url": "https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/g/turnstile/if/ov2/av0/rcv0/0/fdyrh/0x4AAAAAAADnPIDROrmt1Wwj/light/normal",
       "details": {
         "id": "cloudflare",
         "message": "Host files locally"
@@ -20,10 +20,10 @@
   "cookies": [
     {
       "name": "__cf_bm",
-      "value": "b1auFEDHOWVuE3WiEV_jMthJS4gZrxwXW7LjgXf6kqQ-1699147258-0-ASm+gFDpgTRohXwoXIv5m1PIFgch51wjBMmQCI6aO7QA4DS8vRc5SHF4eJyzvmpo7tpm9m92iuHjZMLfKQmz3hA=",
+      "value": "2ZJr8tv8xbrL_6HegGtLgdiV78ArIQbkgbZrYoXoELE-1699752096-0-AdUkWVbbGp48DtQ98ZlwfIX0KzVLiS74NVyhvz59RPDRKhvL6VQLsxl/mjJttImGHlVNWYBmjRnTU2G6/dRILHI=",
       "domain": ".economie.gouv.fr",
       "path": "/",
-      "expires": 1699149058.985614,
+      "expires": 1699753896.248321,
       "size": 152,
       "httpOnly": true,
       "secure": true,
@@ -38,20 +38,22 @@
     "alt-svc": "h3=\":443\"; ma=86400",
     "cache-control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
     "cf-mitigated": "challenge",
-    "cf-ray": "8211470059e11545-CDG",
+    "cf-ray": "824af5893bfed353-CDG",
     "content-encoding": "br",
     "content-type": "text/html; charset=UTF-8",
     "cross-origin-embedder-policy": "require-corp",
     "cross-origin-opener-policy": "same-origin",
     "cross-origin-resource-policy": "same-origin",
-    "date": "Sun, 05 Nov 2023 01:20:58 GMT",
+    "date": "Sun, 12 Nov 2023 01:21:36 GMT",
     "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
     "origin-agent-cluster": "?1",
     "permissions-policy": "accelerometer=(),autoplay=(),browsing-topics=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),interest-cohort=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=()",
     "referrer-policy": "same-origin",
     "server": "cloudflare",
-    "set-cookie": "__cf_bm=b1auFEDHOWVuE3WiEV_jMthJS4gZrxwXW7LjgXf6kqQ-1699147258-0-ASm+gFDpgTRohXwoXIv5m1PIFgch51wjBMmQCI6aO7QA4DS8vRc5SHF4eJyzvmpo7tpm9m92iuHjZMLfKQmz3hA=; path=/; expires=Sun, 05-Nov-23 01:50:58 GMT; domain=.economie.gouv.fr; HttpOnly; Secure; SameSite=None",
+    "set-cookie": "__cf_bm=2ZJr8tv8xbrL_6HegGtLgdiV78ArIQbkgbZrYoXoELE-1699752096-0-AdUkWVbbGp48DtQ98ZlwfIX0KzVLiS74NVyhvz59RPDRKhvL6VQLsxl/mjJttImGHlVNWYBmjRnTU2G6/dRILHI=; path=/; expires=Sun, 12-Nov-23 01:51:36 GMT; domain=.economie.gouv.fr; HttpOnly; Secure; SameSite=None",
+    "strict-transport-security": "max-age=15552000; includeSubDomains; preload",
     "vary": "Accept-Encoding",
+    "x-content-type-options": "nosniff",
     "x-frame-options": "SAMEORIGIN"
   },
   "endpoints": [
