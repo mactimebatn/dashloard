@@ -6,12 +6,12 @@
     "http": {
       "url": "https://www.economie.gouv.fr",
       "algorithm_version": 2,
-      "end_time": "Sun, 14 Jan 2024 01:08:56 GMT",
+      "end_time": "Sun, 21 Jan 2024 01:24:58 GMT",
       "grade": "B-",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
       "response_headers": {
-        "CF-RAY": "8451fd833d540153-CDG",
+        "CF-RAY": "848bc29c38ba3c93-CDG",
         "Cache-Control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
         "Connection": "close",
         "Content-Encoding": "gzip",
@@ -19,13 +19,13 @@
         "Cross-Origin-Embedder-Policy": "require-corp",
         "Cross-Origin-Opener-Policy": "same-origin",
         "Cross-Origin-Resource-Policy": "same-origin",
-        "Date": "Sun, 14 Jan 2024 01:08:52 GMT",
+        "Date": "Sun, 21 Jan 2024 01:24:53 GMT",
         "Expires": "Thu, 01 Jan 1970 00:00:01 GMT",
         "Origin-Agent-Cluster": "?1",
         "Permissions-Policy": "accelerometer=(),autoplay=(),browsing-topics=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),interest-cohort=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=()",
         "Referrer-Policy": "same-origin",
         "Server": "cloudflare",
-        "Set-Cookie": "__cf_bm=6_waitsLGbOjT0_fD0tDWhl6xV9BdiJgTvq9brxIFFw-1705194532-1-Ad1K0aSTeN2wqXlSHnhFqZkfh+g7RutbLsMzpyKPmPM3y64hHOiP3w5fpCUUZGkjpn6xfRkZb/9Gv7+0tgvmAqw=; path=/; expires=Sun, 14-Jan-24 01:38:52 GMT; domain=.economie.gouv.fr; HttpOnly; Secure; SameSite=None",
+        "Set-Cookie": "__cf_bm=7IUF7clumqt7YIlDmvyAHQ5a3K738mAb.5kmjopLGaQ-1705800293-1-AcriN6J/uiQietguyHzWkfToTDtNzX1QiILw/Nh4l52PZvX2Q0PHQRGYRTfxhqIkABP4XCDdUmGzaI18I2LgH64=; path=/; expires=Sun, 21-Jan-24 01:54:53 GMT; domain=.economie.gouv.fr; HttpOnly; Secure; SameSite=None",
         "Strict-Transport-Security": "max-age=15552000; includeSubDomains; preload",
         "Transfer-Encoding": "chunked",
         "Vary": "Accept-Encoding",
@@ -34,9 +34,9 @@
         "alt-svc": "h3=\":443\"; ma=86400",
         "cf-mitigated": "challenge"
       },
-      "scan_id": 46434686,
+      "scan_id": 46790974,
       "score": 65,
-      "start_time": "Sun, 14 Jan 2024 01:08:48 GMT",
+      "start_time": "Sun, 21 Jan 2024 01:24:51 GMT",
       "state": "FINISHED",
       "status_code": 403,
       "tests_failed": 2,
@@ -76,7 +76,7 @@
             "data": {
               "__cf_bm": {
                 "domain": ".economie.gouv.fr",
-                "expires": 1705196332,
+                "expires": 1705802093,
                 "httponly": true,
                 "max-age": null,
                 "path": "/",
@@ -220,6 +220,1114 @@
     "testssl": [
       {
         "id": "service",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "HTTP"
+      },
+      {
+        "id": "pre_128cipher",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "No 128 cipher limit bug"
+      },
+      {
+        "id": "SSLv2",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "not offered"
+      },
+      {
+        "id": "SSLv3",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "not offered"
+      },
+      {
+        "id": "TLS1",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "not offered"
+      },
+      {
+        "id": "TLS1_1",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "not offered"
+      },
+      {
+        "id": "TLS1_2",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "offered"
+      },
+      {
+        "id": "TLS1_3",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "offered with final"
+      },
+      {
+        "id": "ALPN_HTTP2",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "h2"
+      },
+      {
+        "id": "ALPN",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "http/1.1"
+      },
+      {
+        "id": "cipherlist_NULL",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "cwe": "CWE-327",
+        "finding": "not offered"
+      },
+      {
+        "id": "cipherlist_aNULL",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "cwe": "CWE-327",
+        "finding": "not offered"
+      },
+      {
+        "id": "cipherlist_EXPORT",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "cwe": "CWE-327",
+        "finding": "not offered"
+      },
+      {
+        "id": "cipherlist_LOW",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "cwe": "CWE-327",
+        "finding": "not offered"
+      },
+      {
+        "id": "cipherlist_3DES_IDEA",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "cwe": "CWE-310",
+        "finding": "not offered"
+      },
+      {
+        "id": "cipherlist_OBSOLETED",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "LOW",
+        "cwe": "CWE-310",
+        "finding": "offered"
+      },
+      {
+        "id": "cipherlist_STRONG_NOFS",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "offered"
+      },
+      {
+        "id": "cipherlist_STRONG_FS",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "offered"
+      },
+      {
+        "id": "cipher_order-tls1_2",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "server"
+      },
+      {
+        "id": "cipherorder_TLSv1_2",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "ECDHE-RSA-AES128-GCM-SHA256"
+      },
+      {
+        "id": "cipher_order",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "server -- TLS 1.3 client determined"
+      },
+      {
+        "id": "FS",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "offered"
+      },
+      {
+        "id": "FS_ciphers",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA384 ECDHE-RSA-AES256-SHA ECDHE-RSA-CHACHA20-POLY1305-OLD"
+      },
+      {
+        "id": "FS_ECDHE_curves",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "prime256v1 secp384r1 secp521r1"
+      },
+      {
+        "id": "TLS_extensions",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "'server name/#0' 'renegotiation info/#65281' 'EC point formats/#11' 'session ticket/#35' 'next protocol/#13172' 'key share/#51' 'supported versions/#43' 'extended master secret/#23' 'application layer protocol negotiation/#16' 'compress_certificate/#27'"
+      },
+      {
+        "id": "TLS_session_ticket",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "valid for 64800 seconds only (<daily)"
+      },
+      {
+        "id": "SSL_sessionID_support",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "yes"
+      },
+      {
+        "id": "sessionresumption_ticket",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "supported"
+      },
+      {
+        "id": "sessionresumption_ID",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "not supported"
+      },
+      {
+        "id": "TLS_timestamp",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "random"
+      },
+      {
+        "id": "certificate_compression",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "0002/Brotli"
+      },
+      {
+        "id": "clientAuth",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "none"
+      },
+      {
+        "id": "cert_numbers",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "1"
+      },
+      {
+        "id": "cert_signatureAlgorithm",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "SHA256 with RSA"
+      },
+      {
+        "id": "cert_keySize",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "RSA 2048 bits (exponent is 65537)"
+      },
+      {
+        "id": "cert_keyUsage",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "Digital Signature, Key Encipherment"
+      },
+      {
+        "id": "cert_extKeyUsage",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLS Web Server Authentication"
+      },
+      {
+        "id": "cert_serialNumber",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "DE5067410C56A790B2562FBC0DC3AE6A"
+      },
+      {
+        "id": "cert_serialNumberLen",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "16"
+      },
+      {
+        "id": "cert_fingerprintSHA1",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "AD82701A38B93C8F2944E71A51758CFF8B384C55"
+      },
+      {
+        "id": "cert_fingerprintSHA256",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "57B3674819AB773C4CB12C69D397E5AE7E16E45C02E2C98D0D008499C6FDE42A"
+      },
+      {
+        "id": "cert",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
+      },
+      {
+        "id": "cert_commonName",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "www.economie.gouv.fr"
+      },
+      {
+        "id": "cert_commonName_wo_SNI",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "request w/o SNI didn't succeed"
+      },
+      {
+        "id": "cert_subjectAltName",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "economie.gouv.fr www.economie.gouv.fr"
+      },
+      {
+        "id": "cert_trust",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "Ok via SAN and CN (SNI mandatory)"
+      },
+      {
+        "id": "cert_chain_of_trust",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "passed."
+      },
+      {
+        "id": "cert_certificatePolicies_EV",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "no"
+      },
+      {
+        "id": "cert_expirationStatus",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "274 >= 60 days"
+      },
+      {
+        "id": "cert_notBefore",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "2023-10-22 22:00"
+      },
+      {
+        "id": "cert_notAfter",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "2024-10-21 21:59"
+      },
+      {
+        "id": "cert_extlifeSpan",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "certificate has no extended life time according to browser forum"
+      },
+      {
+        "id": "cert_eTLS",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "not present"
+      },
+      {
+        "id": "cert_crlDistributionPoints",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "http://crl.certigna.fr/servicesca.crl http://crl.dhimyotis.com/servicesca.crl"
+      },
+      {
+        "id": "cert_ocspURL",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "http://servicesca.ocsp.dhimyotis.com http://servicesca.ocsp.certigna.fr"
+      },
+      {
+        "id": "OCSP_stapling",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "LOW",
+        "finding": "not offered"
+      },
+      {
+        "id": "cert_mustStapleExtension",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "--"
+      },
+      {
+        "id": "DNS_CAArecord",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "issue=certigna.com, issue=letsencrypt.org, issue=sectigo.com"
+      },
+      {
+        "id": "certificate_transparency",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "yes (certificate extension)"
+      },
+      {
+        "id": "certs_countServer",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "2"
+      },
+      {
+        "id": "certs_list_ordering_problem",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "no"
+      },
+      {
+        "id": "cert_caIssuers",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "Certigna Services CA (DHIMYOTIS from FR)"
+      },
+      {
+        "id": "intermediate_cert <#1>",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
+      },
+      {
+        "id": "intermediate_cert_fingerprintSHA256 <#1>",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "71E653BFBF5E72515B4099BBD5EC8872812B47C6EC1FA9ADD327E1C92C9EA16D"
+      },
+      {
+        "id": "intermediate_cert_notBefore <#1>",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "2015-11-25 11:33"
+      },
+      {
+        "id": "intermediate_cert_notAfter <#1>",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "2025-11-22 11:33"
+      },
+      {
+        "id": "intermediate_cert_expiration <#1>",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "ok > 40 days"
+      },
+      {
+        "id": "intermediate_cert_chain <#1>",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "Certigna Services CA <-- Certigna"
+      },
+      {
+        "id": "intermediate_cert_badOCSP",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "intermediate certificate(s) is/are ok"
+      },
+      {
+        "id": "HTTP_status_code",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "403 Forbidden ('/')"
+      },
+      {
+        "id": "HTTP_clock_skew",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "0 seconds from localtime"
+      },
+      {
+        "id": "HTTP_headerTime",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "1705800388"
+      },
+      {
+        "id": "HSTS_time",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "180 days (=15552000 seconds) > 15552000 seconds"
+      },
+      {
+        "id": "HSTS_subdomains",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "includes subdomains"
+      },
+      {
+        "id": "HSTS_preload",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "domain IS marked for preloading"
+      },
+      {
+        "id": "HPKP",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "No support for HTTP Public Key Pinning"
+      },
+      {
+        "id": "banner_server",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "cloudflare"
+      },
+      {
+        "id": "banner_application",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "No application banner found"
+      },
+      {
+        "id": "cookie_count",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "1 at '/' (30x detected, better try target URL of 30x)"
+      },
+      {
+        "id": "cookie_secure",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "All (1) at '/' marked as secure"
+      },
+      {
+        "id": "cookie_httponly",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "All (1) at '/' marked as HttpOnly (30x detected, better try target URL of 30x)"
+      },
+      {
+        "id": "X-Frame-Options",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "SAMEORIGIN"
+      },
+      {
+        "id": "X-Content-Type-Options",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "nosniff"
+      },
+      {
+        "id": "Permissions-Policy",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "accelerometer=(),autoplay=(),browsing-topics=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),interest-cohort=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=()"
+      },
+      {
+        "id": "Referrer-Policy",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "same-origin"
+      },
+      {
+        "id": "Cache-Control",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+      },
+      {
+        "id": "banner_reverseproxy",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "cwe": "CWE-200",
+        "finding": "--"
+      },
+      {
+        "id": "heartbleed",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2014-0160",
+        "cwe": "CWE-119",
+        "finding": "not vulnerable, no heartbeat extension"
+      },
+      {
+        "id": "CCS",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2014-0224",
+        "cwe": "CWE-310",
+        "finding": "not vulnerable"
+      },
+      {
+        "id": "ticketbleed",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2016-9244",
+        "cwe": "CWE-200",
+        "finding": "not vulnerable"
+      },
+      {
+        "id": "ROBOT",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2017-17382 CVE-2017-17427 CVE-2017-17428 CVE-2017-13098 CVE-2017-1000385 CVE-2017-13099 CVE-2016-6883 CVE-2012-5081 CVE-2017-6168",
+        "cwe": "CWE-203",
+        "finding": "not vulnerable"
+      },
+      {
+        "id": "secure_renego",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "cwe": "CWE-310",
+        "finding": "supported"
+      },
+      {
+        "id": "secure_client_renego",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2011-1473",
+        "cwe": "CWE-310",
+        "finding": "not vulnerable"
+      },
+      {
+        "id": "CRIME_TLS",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2012-4929",
+        "cwe": "CWE-310",
+        "finding": "not vulnerable"
+      },
+      {
+        "id": "BREACH",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "MEDIUM",
+        "cve": "CVE-2013-3587",
+        "cwe": "CWE-310",
+        "finding": "potentially VULNERABLE, br gzip HTTP compression detected  - only supplied '/' tested"
+      },
+      {
+        "id": "POODLE_SSL",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2014-3566",
+        "cwe": "CWE-310",
+        "finding": "not vulnerable, no SSLv3"
+      },
+      {
+        "id": "fallback_SCSV",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "no protocol below TLS 1.2 offered"
+      },
+      {
+        "id": "SWEET32",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2016-2183 CVE-2016-6329",
+        "cwe": "CWE-327",
+        "finding": "not vulnerable"
+      },
+      {
+        "id": "FREAK",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2015-0204",
+        "cwe": "CWE-310",
+        "finding": "not vulnerable"
+      },
+      {
+        "id": "DROWN",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2016-0800 CVE-2016-0703",
+        "cwe": "CWE-310",
+        "finding": "not vulnerable on this host and port"
+      },
+      {
+        "id": "DROWN_hint",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "cve": "CVE-2016-0800 CVE-2016-0703",
+        "cwe": "CWE-310",
+        "finding": "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=57B3674819AB773C4CB12C69D397E5AE7E16E45C02E2C98D0D008499C6FDE42A"
+      },
+      {
+        "id": "LOGJAM",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2015-4000",
+        "cwe": "CWE-310",
+        "finding": "not vulnerable, no DH EXPORT ciphers,"
+      },
+      {
+        "id": "LOGJAM-common_primes",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2015-4000",
+        "cwe": "CWE-310",
+        "finding": "no DH key with <= TLS 1.2"
+      },
+      {
+        "id": "BEAST",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2011-3389",
+        "cwe": "CWE-20",
+        "finding": "not vulnerable, no SSL3 or TLS1"
+      },
+      {
+        "id": "LUCKY13",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "LOW",
+        "cve": "CVE-2013-0169",
+        "cwe": "CWE-310",
+        "finding": "potentially vulnerable, uses TLS CBC ciphers"
+      },
+      {
+        "id": "winshock",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2014-6321",
+        "cwe": "CWE-94",
+        "finding": "not vulnerable"
+      },
+      {
+        "id": "RC4",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2013-2566 CVE-2015-2808",
+        "cwe": "CWE-310",
+        "finding": "not vulnerable"
+      },
+      {
+        "id": "clientsimulation-android_60",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305-OLD"
+      },
+      {
+        "id": "clientsimulation-android_70",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+      },
+      {
+        "id": "clientsimulation-android_81",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+      },
+      {
+        "id": "clientsimulation-android_90",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
+      },
+      {
+        "id": "clientsimulation-android_X",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
+      },
+      {
+        "id": "clientsimulation-android_11",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
+      },
+      {
+        "id": "clientsimulation-android_12",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
+      },
+      {
+        "id": "clientsimulation-chrome_79_win10",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
+      },
+      {
+        "id": "clientsimulation-chrome_101_win10",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
+      },
+      {
+        "id": "clientsimulation-firefox_66_win81",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
+      },
+      {
+        "id": "clientsimulation-firefox_100_win10",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
+      },
+      {
+        "id": "clientsimulation-ie_6_xp",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "No connection"
+      },
+      {
+        "id": "clientsimulation-ie_8_win7",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "No connection"
+      },
+      {
+        "id": "clientsimulation-ie_8_xp",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "No connection"
+      },
+      {
+        "id": "clientsimulation-ie_11_win7",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES128-SHA"
+      },
+      {
+        "id": "clientsimulation-ie_11_win81",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES128-SHA"
+      },
+      {
+        "id": "clientsimulation-ie_11_winphone81",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES128-SHA"
+      },
+      {
+        "id": "clientsimulation-ie_11_win10",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+      },
+      {
+        "id": "clientsimulation-edge_15_win10",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+      },
+      {
+        "id": "clientsimulation-edge_101_win10_21h2",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
+      },
+      {
+        "id": "clientsimulation-safari_121_ios_122",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+      },
+      {
+        "id": "clientsimulation-safari_130_osx_10146",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
+      },
+      {
+        "id": "clientsimulation-safari_154_osx_1231",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
+      },
+      {
+        "id": "clientsimulation-java_7u25",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "No connection"
+      },
+      {
+        "id": "clientsimulation-java_8u161",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+      },
+      {
+        "id": "clientsimulation-java1102",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
+      },
+      {
+        "id": "clientsimulation-java1703",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.3 TLS_AES_256_GCM_SHA384"
+      },
+      {
+        "id": "clientsimulation-go_1178",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
+      },
+      {
+        "id": "clientsimulation-libressl_283",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305"
+      },
+      {
+        "id": "clientsimulation-openssl_102e",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+      },
+      {
+        "id": "clientsimulation-openssl_110l",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305"
+      },
+      {
+        "id": "clientsimulation-openssl_111d",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.3 TLS_AES_256_GCM_SHA384"
+      },
+      {
+        "id": "clientsimulation-openssl_303",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.3 TLS_AES_256_GCM_SHA384"
+      },
+      {
+        "id": "clientsimulation-apple_mail_16_0",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+      },
+      {
+        "id": "clientsimulation-thunderbird_91_9",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
+      },
+      {
+        "id": "rating_spec",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "SSL Labs's 'SSL Server Rating Guide' (version 2009q from 2020-01-30)"
+      },
+      {
+        "id": "rating_doc",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide"
+      },
+      {
+        "id": "protocol_support_score",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "100"
+      },
+      {
+        "id": "protocol_support_score_weighted",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "30"
+      },
+      {
+        "id": "key_exchange_score",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "90"
+      },
+      {
+        "id": "key_exchange_score_weighted",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "27"
+      },
+      {
+        "id": "cipher_strength_score",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "60"
+      },
+      {
+        "id": "cipher_strength_score_weighted",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "24"
+      },
+      {
+        "id": "final_score",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "INFO",
+        "finding": "81"
+      },
+      {
+        "id": "overall_grade",
+        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "port": "443",
+        "severity": "OK",
+        "finding": "A+"
+      },
+      {
+        "id": "service",
         "ip": "www.economie.gouv.fr/141.101.90.96",
         "port": "443",
         "severity": "INFO",
@@ -565,7 +1673,7 @@
         "ip": "www.economie.gouv.fr/141.101.90.96",
         "port": "443",
         "severity": "OK",
-        "finding": "281 >= 60 days"
+        "finding": "274 >= 60 days"
       },
       {
         "id": "cert_notBefore",
@@ -726,7 +1834,7 @@
         "ip": "www.economie.gouv.fr/141.101.90.96",
         "port": "443",
         "severity": "INFO",
-        "finding": "1705195556"
+        "finding": "1705800532"
       },
       {
         "id": "HSTS_time",
@@ -1328,1114 +2436,6 @@
       },
       {
         "id": "service",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "HTTP"
-      },
-      {
-        "id": "pre_128cipher",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "No 128 cipher limit bug"
-      },
-      {
-        "id": "SSLv2",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "not offered"
-      },
-      {
-        "id": "SSLv3",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "not offered"
-      },
-      {
-        "id": "TLS1",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "not offered"
-      },
-      {
-        "id": "TLS1_1",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "not offered"
-      },
-      {
-        "id": "TLS1_2",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "offered"
-      },
-      {
-        "id": "TLS1_3",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "offered with final"
-      },
-      {
-        "id": "ALPN_HTTP2",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "h2"
-      },
-      {
-        "id": "ALPN",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "http/1.1"
-      },
-      {
-        "id": "cipherlist_NULL",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "cwe": "CWE-327",
-        "finding": "not offered"
-      },
-      {
-        "id": "cipherlist_aNULL",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "cwe": "CWE-327",
-        "finding": "not offered"
-      },
-      {
-        "id": "cipherlist_EXPORT",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "cwe": "CWE-327",
-        "finding": "not offered"
-      },
-      {
-        "id": "cipherlist_LOW",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "cwe": "CWE-327",
-        "finding": "not offered"
-      },
-      {
-        "id": "cipherlist_3DES_IDEA",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "cwe": "CWE-310",
-        "finding": "not offered"
-      },
-      {
-        "id": "cipherlist_OBSOLETED",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "LOW",
-        "cwe": "CWE-310",
-        "finding": "offered"
-      },
-      {
-        "id": "cipherlist_STRONG_NOFS",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "offered"
-      },
-      {
-        "id": "cipherlist_STRONG_FS",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "offered"
-      },
-      {
-        "id": "cipher_order-tls1_2",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "server"
-      },
-      {
-        "id": "cipherorder_TLSv1_2",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "ECDHE-RSA-AES128-GCM-SHA256"
-      },
-      {
-        "id": "cipher_order",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "server -- TLS 1.3 client determined"
-      },
-      {
-        "id": "FS",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "offered"
-      },
-      {
-        "id": "FS_ciphers",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA384 ECDHE-RSA-AES256-SHA ECDHE-RSA-CHACHA20-POLY1305-OLD"
-      },
-      {
-        "id": "FS_ECDHE_curves",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "prime256v1 secp384r1 secp521r1"
-      },
-      {
-        "id": "TLS_extensions",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "'server name/#0' 'renegotiation info/#65281' 'EC point formats/#11' 'session ticket/#35' 'next protocol/#13172' 'key share/#51' 'supported versions/#43' 'extended master secret/#23' 'application layer protocol negotiation/#16' 'compress_certificate/#27'"
-      },
-      {
-        "id": "TLS_session_ticket",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "valid for 64800 seconds only (<daily)"
-      },
-      {
-        "id": "SSL_sessionID_support",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "yes"
-      },
-      {
-        "id": "sessionresumption_ticket",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "supported"
-      },
-      {
-        "id": "sessionresumption_ID",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "not supported"
-      },
-      {
-        "id": "TLS_timestamp",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "random"
-      },
-      {
-        "id": "certificate_compression",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "0002/Brotli"
-      },
-      {
-        "id": "clientAuth",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "none"
-      },
-      {
-        "id": "cert_numbers",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "1"
-      },
-      {
-        "id": "cert_signatureAlgorithm",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "SHA256 with RSA"
-      },
-      {
-        "id": "cert_keySize",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "RSA 2048 bits (exponent is 65537)"
-      },
-      {
-        "id": "cert_keyUsage",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "Digital Signature, Key Encipherment"
-      },
-      {
-        "id": "cert_extKeyUsage",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLS Web Server Authentication"
-      },
-      {
-        "id": "cert_serialNumber",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "DE5067410C56A790B2562FBC0DC3AE6A"
-      },
-      {
-        "id": "cert_serialNumberLen",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "16"
-      },
-      {
-        "id": "cert_fingerprintSHA1",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "AD82701A38B93C8F2944E71A51758CFF8B384C55"
-      },
-      {
-        "id": "cert_fingerprintSHA256",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "57B3674819AB773C4CB12C69D397E5AE7E16E45C02E2C98D0D008499C6FDE42A"
-      },
-      {
-        "id": "cert",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
-      },
-      {
-        "id": "cert_commonName",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "www.economie.gouv.fr"
-      },
-      {
-        "id": "cert_commonName_wo_SNI",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "request w/o SNI didn't succeed"
-      },
-      {
-        "id": "cert_subjectAltName",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "economie.gouv.fr www.economie.gouv.fr"
-      },
-      {
-        "id": "cert_trust",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "Ok via SAN and CN (SNI mandatory)"
-      },
-      {
-        "id": "cert_chain_of_trust",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "passed."
-      },
-      {
-        "id": "cert_certificatePolicies_EV",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "no"
-      },
-      {
-        "id": "cert_expirationStatus",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "281 >= 60 days"
-      },
-      {
-        "id": "cert_notBefore",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "2023-10-22 22:00"
-      },
-      {
-        "id": "cert_notAfter",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "2024-10-21 21:59"
-      },
-      {
-        "id": "cert_extlifeSpan",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "certificate has no extended life time according to browser forum"
-      },
-      {
-        "id": "cert_eTLS",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "not present"
-      },
-      {
-        "id": "cert_crlDistributionPoints",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "http://crl.certigna.fr/servicesca.crl http://crl.dhimyotis.com/servicesca.crl"
-      },
-      {
-        "id": "cert_ocspURL",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "http://servicesca.ocsp.dhimyotis.com http://servicesca.ocsp.certigna.fr"
-      },
-      {
-        "id": "OCSP_stapling",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "LOW",
-        "finding": "not offered"
-      },
-      {
-        "id": "cert_mustStapleExtension",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "--"
-      },
-      {
-        "id": "DNS_CAArecord",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "issue=certigna.com, issue=letsencrypt.org, issue=sectigo.com"
-      },
-      {
-        "id": "certificate_transparency",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "yes (certificate extension)"
-      },
-      {
-        "id": "certs_countServer",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "2"
-      },
-      {
-        "id": "certs_list_ordering_problem",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "no"
-      },
-      {
-        "id": "cert_caIssuers",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "Certigna Services CA (DHIMYOTIS from FR)"
-      },
-      {
-        "id": "intermediate_cert <#1>",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
-      },
-      {
-        "id": "intermediate_cert_fingerprintSHA256 <#1>",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "71E653BFBF5E72515B4099BBD5EC8872812B47C6EC1FA9ADD327E1C92C9EA16D"
-      },
-      {
-        "id": "intermediate_cert_notBefore <#1>",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "2015-11-25 11:33"
-      },
-      {
-        "id": "intermediate_cert_notAfter <#1>",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "2025-11-22 11:33"
-      },
-      {
-        "id": "intermediate_cert_expiration <#1>",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "ok > 40 days"
-      },
-      {
-        "id": "intermediate_cert_chain <#1>",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "Certigna Services CA <-- Certigna"
-      },
-      {
-        "id": "intermediate_cert_badOCSP",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "intermediate certificate(s) is/are ok"
-      },
-      {
-        "id": "HTTP_status_code",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "403 Forbidden ('/')"
-      },
-      {
-        "id": "HTTP_clock_skew",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "0 seconds from localtime"
-      },
-      {
-        "id": "HTTP_headerTime",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "1705195702"
-      },
-      {
-        "id": "HSTS_time",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "180 days (=15552000 seconds) > 15552000 seconds"
-      },
-      {
-        "id": "HSTS_subdomains",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "includes subdomains"
-      },
-      {
-        "id": "HSTS_preload",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "domain IS marked for preloading"
-      },
-      {
-        "id": "HPKP",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "No support for HTTP Public Key Pinning"
-      },
-      {
-        "id": "banner_server",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "cloudflare"
-      },
-      {
-        "id": "banner_application",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "No application banner found"
-      },
-      {
-        "id": "cookie_count",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "1 at '/' (30x detected, better try target URL of 30x)"
-      },
-      {
-        "id": "cookie_secure",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "All (1) at '/' marked as secure"
-      },
-      {
-        "id": "cookie_httponly",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "All (1) at '/' marked as HttpOnly (30x detected, better try target URL of 30x)"
-      },
-      {
-        "id": "X-Frame-Options",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "SAMEORIGIN"
-      },
-      {
-        "id": "X-Content-Type-Options",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "nosniff"
-      },
-      {
-        "id": "Permissions-Policy",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "accelerometer=(),autoplay=(),browsing-topics=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),interest-cohort=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=()"
-      },
-      {
-        "id": "Referrer-Policy",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "same-origin"
-      },
-      {
-        "id": "Cache-Control",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
-      },
-      {
-        "id": "banner_reverseproxy",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "cwe": "CWE-200",
-        "finding": "--"
-      },
-      {
-        "id": "heartbleed",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "cve": "CVE-2014-0160",
-        "cwe": "CWE-119",
-        "finding": "not vulnerable, no heartbeat extension"
-      },
-      {
-        "id": "CCS",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "cve": "CVE-2014-0224",
-        "cwe": "CWE-310",
-        "finding": "not vulnerable"
-      },
-      {
-        "id": "ticketbleed",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "cve": "CVE-2016-9244",
-        "cwe": "CWE-200",
-        "finding": "not vulnerable"
-      },
-      {
-        "id": "ROBOT",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "cve": "CVE-2017-17382 CVE-2017-17427 CVE-2017-17428 CVE-2017-13098 CVE-2017-1000385 CVE-2017-13099 CVE-2016-6883 CVE-2012-5081 CVE-2017-6168",
-        "cwe": "CWE-203",
-        "finding": "not vulnerable"
-      },
-      {
-        "id": "secure_renego",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "cwe": "CWE-310",
-        "finding": "supported"
-      },
-      {
-        "id": "secure_client_renego",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "cve": "CVE-2011-1473",
-        "cwe": "CWE-310",
-        "finding": "not vulnerable"
-      },
-      {
-        "id": "CRIME_TLS",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "cve": "CVE-2012-4929",
-        "cwe": "CWE-310",
-        "finding": "not vulnerable"
-      },
-      {
-        "id": "BREACH",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "MEDIUM",
-        "cve": "CVE-2013-3587",
-        "cwe": "CWE-310",
-        "finding": "potentially VULNERABLE, br gzip HTTP compression detected  - only supplied '/' tested"
-      },
-      {
-        "id": "POODLE_SSL",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "cve": "CVE-2014-3566",
-        "cwe": "CWE-310",
-        "finding": "not vulnerable, no SSLv3"
-      },
-      {
-        "id": "fallback_SCSV",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "no protocol below TLS 1.2 offered"
-      },
-      {
-        "id": "SWEET32",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "cve": "CVE-2016-2183 CVE-2016-6329",
-        "cwe": "CWE-327",
-        "finding": "not vulnerable"
-      },
-      {
-        "id": "FREAK",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "cve": "CVE-2015-0204",
-        "cwe": "CWE-310",
-        "finding": "not vulnerable"
-      },
-      {
-        "id": "DROWN",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "cve": "CVE-2016-0800 CVE-2016-0703",
-        "cwe": "CWE-310",
-        "finding": "not vulnerable on this host and port"
-      },
-      {
-        "id": "DROWN_hint",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "cve": "CVE-2016-0800 CVE-2016-0703",
-        "cwe": "CWE-310",
-        "finding": "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=57B3674819AB773C4CB12C69D397E5AE7E16E45C02E2C98D0D008499C6FDE42A"
-      },
-      {
-        "id": "LOGJAM",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "cve": "CVE-2015-4000",
-        "cwe": "CWE-310",
-        "finding": "not vulnerable, no DH EXPORT ciphers,"
-      },
-      {
-        "id": "LOGJAM-common_primes",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "cve": "CVE-2015-4000",
-        "cwe": "CWE-310",
-        "finding": "no DH key with <= TLS 1.2"
-      },
-      {
-        "id": "BEAST",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "cve": "CVE-2011-3389",
-        "cwe": "CWE-20",
-        "finding": "not vulnerable, no SSL3 or TLS1"
-      },
-      {
-        "id": "LUCKY13",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "LOW",
-        "cve": "CVE-2013-0169",
-        "cwe": "CWE-310",
-        "finding": "potentially vulnerable, uses TLS CBC ciphers"
-      },
-      {
-        "id": "winshock",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "cve": "CVE-2014-6321",
-        "cwe": "CWE-94",
-        "finding": "not vulnerable"
-      },
-      {
-        "id": "RC4",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "cve": "CVE-2013-2566 CVE-2015-2808",
-        "cwe": "CWE-310",
-        "finding": "not vulnerable"
-      },
-      {
-        "id": "clientsimulation-android_60",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305-OLD"
-      },
-      {
-        "id": "clientsimulation-android_70",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-      },
-      {
-        "id": "clientsimulation-android_81",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-      },
-      {
-        "id": "clientsimulation-android_90",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
-      },
-      {
-        "id": "clientsimulation-android_X",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
-      },
-      {
-        "id": "clientsimulation-android_11",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
-      },
-      {
-        "id": "clientsimulation-android_12",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
-      },
-      {
-        "id": "clientsimulation-chrome_79_win10",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
-      },
-      {
-        "id": "clientsimulation-chrome_101_win10",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
-      },
-      {
-        "id": "clientsimulation-firefox_66_win81",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
-      },
-      {
-        "id": "clientsimulation-firefox_100_win10",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
-      },
-      {
-        "id": "clientsimulation-ie_6_xp",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "No connection"
-      },
-      {
-        "id": "clientsimulation-ie_8_win7",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "No connection"
-      },
-      {
-        "id": "clientsimulation-ie_8_xp",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "No connection"
-      },
-      {
-        "id": "clientsimulation-ie_11_win7",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.2 ECDHE-RSA-AES128-SHA"
-      },
-      {
-        "id": "clientsimulation-ie_11_win81",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.2 ECDHE-RSA-AES128-SHA"
-      },
-      {
-        "id": "clientsimulation-ie_11_winphone81",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.2 ECDHE-RSA-AES128-SHA"
-      },
-      {
-        "id": "clientsimulation-ie_11_win10",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-      },
-      {
-        "id": "clientsimulation-edge_15_win10",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-      },
-      {
-        "id": "clientsimulation-edge_101_win10_21h2",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
-      },
-      {
-        "id": "clientsimulation-safari_121_ios_122",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
-      },
-      {
-        "id": "clientsimulation-safari_130_osx_10146",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
-      },
-      {
-        "id": "clientsimulation-safari_154_osx_1231",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
-      },
-      {
-        "id": "clientsimulation-java_7u25",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "No connection"
-      },
-      {
-        "id": "clientsimulation-java_8u161",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-      },
-      {
-        "id": "clientsimulation-java1102",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
-      },
-      {
-        "id": "clientsimulation-java1703",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.3 TLS_AES_256_GCM_SHA384"
-      },
-      {
-        "id": "clientsimulation-go_1178",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
-      },
-      {
-        "id": "clientsimulation-libressl_283",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305"
-      },
-      {
-        "id": "clientsimulation-openssl_102e",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-      },
-      {
-        "id": "clientsimulation-openssl_110l",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305"
-      },
-      {
-        "id": "clientsimulation-openssl_111d",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.3 TLS_AES_256_GCM_SHA384"
-      },
-      {
-        "id": "clientsimulation-openssl_303",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.3 TLS_AES_256_GCM_SHA384"
-      },
-      {
-        "id": "clientsimulation-apple_mail_16_0",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
-      },
-      {
-        "id": "clientsimulation-thunderbird_91_9",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
-      },
-      {
-        "id": "rating_spec",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "SSL Labs's 'SSL Server Rating Guide' (version 2009q from 2020-01-30)"
-      },
-      {
-        "id": "rating_doc",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide"
-      },
-      {
-        "id": "protocol_support_score",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "100"
-      },
-      {
-        "id": "protocol_support_score_weighted",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "30"
-      },
-      {
-        "id": "key_exchange_score",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "90"
-      },
-      {
-        "id": "key_exchange_score_weighted",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "27"
-      },
-      {
-        "id": "cipher_strength_score",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "60"
-      },
-      {
-        "id": "cipher_strength_score_weighted",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "24"
-      },
-      {
-        "id": "final_score",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "INFO",
-        "finding": "81"
-      },
-      {
-        "id": "overall_grade",
-        "ip": "www.economie.gouv.fr/141.101.90.97",
-        "port": "443",
-        "severity": "OK",
-        "finding": "A+"
-      },
-      {
-        "id": "service",
         "ip": "www.economie.gouv.fr/141.101.90.98",
         "port": "443",
         "severity": "INFO",
@@ -2781,7 +2781,7 @@
         "ip": "www.economie.gouv.fr/141.101.90.98",
         "port": "443",
         "severity": "OK",
-        "finding": "281 >= 60 days"
+        "finding": "274 >= 60 days"
       },
       {
         "id": "cert_notBefore",
@@ -2942,7 +2942,7 @@
         "ip": "www.economie.gouv.fr/141.101.90.98",
         "port": "443",
         "severity": "INFO",
-        "finding": "1705195847"
+        "finding": "1705800678"
       },
       {
         "id": "HSTS_time",
@@ -3544,77 +3544,77 @@
       },
       {
         "id": "service",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "HTTP"
       },
       {
         "id": "pre_128cipher",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "No 128 cipher limit bug"
       },
       {
         "id": "SSLv2",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "not offered"
       },
       {
         "id": "SSLv3",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "not offered"
       },
       {
         "id": "TLS1",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "not offered"
       },
       {
         "id": "TLS1_1",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "not offered"
       },
       {
         "id": "TLS1_2",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "offered"
       },
       {
         "id": "TLS1_3",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "offered with final"
       },
       {
         "id": "ALPN_HTTP2",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "h2"
       },
       {
         "id": "ALPN",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "http/1.1"
       },
       {
         "id": "cipherlist_NULL",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "cwe": "CWE-327",
@@ -3622,7 +3622,7 @@
       },
       {
         "id": "cipherlist_aNULL",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "cwe": "CWE-327",
@@ -3630,7 +3630,7 @@
       },
       {
         "id": "cipherlist_EXPORT",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "cwe": "CWE-327",
@@ -3638,7 +3638,7 @@
       },
       {
         "id": "cipherlist_LOW",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "cwe": "CWE-327",
@@ -3646,7 +3646,7 @@
       },
       {
         "id": "cipherlist_3DES_IDEA",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "cwe": "CWE-310",
@@ -3654,7 +3654,7 @@
       },
       {
         "id": "cipherlist_OBSOLETED",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "LOW",
         "cwe": "CWE-310",
@@ -3662,497 +3662,497 @@
       },
       {
         "id": "cipherlist_STRONG_NOFS",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "offered"
       },
       {
         "id": "cipherlist_STRONG_FS",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "offered"
       },
       {
         "id": "cipher_order-tls1_2",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "server"
       },
       {
         "id": "cipherorder_TLSv1_2",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "ECDHE-RSA-AES128-GCM-SHA256"
       },
       {
         "id": "cipher_order",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "server -- TLS 1.3 client determined"
       },
       {
         "id": "FS",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "offered"
       },
       {
         "id": "FS_ciphers",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES128-SHA256 ECDHE-RSA-AES128-SHA ECDHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES256-SHA384 ECDHE-RSA-AES256-SHA ECDHE-RSA-CHACHA20-POLY1305-OLD"
       },
       {
         "id": "FS_ECDHE_curves",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "prime256v1 secp384r1 secp521r1"
       },
       {
         "id": "TLS_extensions",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "'server name/#0' 'renegotiation info/#65281' 'EC point formats/#11' 'session ticket/#35' 'next protocol/#13172' 'key share/#51' 'supported versions/#43' 'extended master secret/#23' 'application layer protocol negotiation/#16' 'compress_certificate/#27'"
       },
       {
         "id": "TLS_session_ticket",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "valid for 64800 seconds only (<daily)"
       },
       {
         "id": "SSL_sessionID_support",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "yes"
       },
       {
         "id": "sessionresumption_ticket",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "supported"
       },
       {
         "id": "sessionresumption_ID",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "not supported"
       },
       {
         "id": "TLS_timestamp",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "random"
       },
       {
         "id": "certificate_compression",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "0002/Brotli"
       },
       {
         "id": "clientAuth",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "none"
       },
       {
         "id": "cert_numbers",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "1"
       },
       {
         "id": "cert_signatureAlgorithm",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "SHA256 with RSA"
       },
       {
         "id": "cert_keySize",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "RSA 2048 bits (exponent is 65537)"
       },
       {
         "id": "cert_keyUsage",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "Digital Signature, Key Encipherment"
       },
       {
         "id": "cert_extKeyUsage",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLS Web Server Authentication"
       },
       {
         "id": "cert_serialNumber",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "DE5067410C56A790B2562FBC0DC3AE6A"
       },
       {
         "id": "cert_serialNumberLen",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "16"
       },
       {
         "id": "cert_fingerprintSHA1",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "AD82701A38B93C8F2944E71A51758CFF8B384C55"
       },
       {
         "id": "cert_fingerprintSHA256",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "57B3674819AB773C4CB12C69D397E5AE7E16E45C02E2C98D0D008499C6FDE42A"
       },
       {
         "id": "cert",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
       },
       {
         "id": "cert_commonName",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "www.economie.gouv.fr"
       },
       {
         "id": "cert_commonName_wo_SNI",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "request w/o SNI didn't succeed"
       },
       {
         "id": "cert_subjectAltName",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "economie.gouv.fr www.economie.gouv.fr"
       },
       {
         "id": "cert_trust",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "Ok via SAN and CN (SNI mandatory)"
       },
       {
         "id": "cert_chain_of_trust",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "passed."
       },
       {
         "id": "cert_certificatePolicies_EV",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "no"
       },
       {
         "id": "cert_expirationStatus",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
-        "finding": "281 >= 60 days"
+        "finding": "274 >= 60 days"
       },
       {
         "id": "cert_notBefore",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "2023-10-22 22:00"
       },
       {
         "id": "cert_notAfter",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "2024-10-21 21:59"
       },
       {
         "id": "cert_extlifeSpan",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "certificate has no extended life time according to browser forum"
       },
       {
         "id": "cert_eTLS",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "not present"
       },
       {
         "id": "cert_crlDistributionPoints",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "http://crl.certigna.fr/servicesca.crl http://crl.dhimyotis.com/servicesca.crl"
       },
       {
         "id": "cert_ocspURL",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "http://servicesca.ocsp.dhimyotis.com http://servicesca.ocsp.certigna.fr"
       },
       {
         "id": "OCSP_stapling",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "LOW",
         "finding": "not offered"
       },
       {
         "id": "cert_mustStapleExtension",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "--"
       },
       {
         "id": "DNS_CAArecord",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "issue=certigna.com, issue=letsencrypt.org, issue=sectigo.com"
       },
       {
         "id": "certificate_transparency",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "yes (certificate extension)"
       },
       {
         "id": "certs_countServer",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "2"
       },
       {
         "id": "certs_list_ordering_problem",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "no"
       },
       {
         "id": "cert_caIssuers",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "Certigna Services CA (DHIMYOTIS from FR)"
       },
       {
         "id": "intermediate_cert <#1>",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "-----BEGIN CERTIFICATE-----\n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\n-----END CERTIFICATE-----"
       },
       {
         "id": "intermediate_cert_fingerprintSHA256 <#1>",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "71E653BFBF5E72515B4099BBD5EC8872812B47C6EC1FA9ADD327E1C92C9EA16D"
       },
       {
         "id": "intermediate_cert_notBefore <#1>",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "2015-11-25 11:33"
       },
       {
         "id": "intermediate_cert_notAfter <#1>",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "2025-11-22 11:33"
       },
       {
         "id": "intermediate_cert_expiration <#1>",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "ok > 40 days"
       },
       {
         "id": "intermediate_cert_chain <#1>",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "Certigna Services CA <-- Certigna"
       },
       {
         "id": "intermediate_cert_badOCSP",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "intermediate certificate(s) is/are ok"
       },
       {
         "id": "HTTP_status_code",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "403 Forbidden ('/')"
       },
       {
         "id": "HTTP_clock_skew",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "0 seconds from localtime"
       },
       {
         "id": "HTTP_headerTime",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
-        "finding": "1705195992"
+        "finding": "1705800823"
       },
       {
         "id": "HSTS_time",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "180 days (=15552000 seconds) > 15552000 seconds"
       },
       {
         "id": "HSTS_subdomains",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "includes subdomains"
       },
       {
         "id": "HSTS_preload",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "domain IS marked for preloading"
       },
       {
         "id": "HPKP",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "No support for HTTP Public Key Pinning"
       },
       {
         "id": "banner_server",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "cloudflare"
       },
       {
         "id": "banner_application",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "No application banner found"
       },
       {
         "id": "cookie_count",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "1 at '/' (30x detected, better try target URL of 30x)"
       },
       {
         "id": "cookie_secure",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "All (1) at '/' marked as secure"
       },
       {
         "id": "cookie_httponly",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "All (1) at '/' marked as HttpOnly (30x detected, better try target URL of 30x)"
       },
       {
         "id": "X-Frame-Options",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "SAMEORIGIN"
       },
       {
         "id": "X-Content-Type-Options",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "nosniff"
       },
       {
         "id": "Permissions-Policy",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "accelerometer=(),autoplay=(),browsing-topics=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),interest-cohort=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=()"
       },
       {
         "id": "Referrer-Policy",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "same-origin"
       },
       {
         "id": "Cache-Control",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
       },
       {
         "id": "banner_reverseproxy",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "cwe": "CWE-200",
@@ -4160,7 +4160,7 @@
       },
       {
         "id": "heartbleed",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2014-0160",
@@ -4169,7 +4169,7 @@
       },
       {
         "id": "CCS",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2014-0224",
@@ -4178,7 +4178,7 @@
       },
       {
         "id": "ticketbleed",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2016-9244",
@@ -4187,7 +4187,7 @@
       },
       {
         "id": "ROBOT",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2017-17382 CVE-2017-17427 CVE-2017-17428 CVE-2017-13098 CVE-2017-1000385 CVE-2017-13099 CVE-2016-6883 CVE-2012-5081 CVE-2017-6168",
@@ -4196,7 +4196,7 @@
       },
       {
         "id": "secure_renego",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "cwe": "CWE-310",
@@ -4204,7 +4204,7 @@
       },
       {
         "id": "secure_client_renego",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2011-1473",
@@ -4213,7 +4213,7 @@
       },
       {
         "id": "CRIME_TLS",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2012-4929",
@@ -4222,7 +4222,7 @@
       },
       {
         "id": "BREACH",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "MEDIUM",
         "cve": "CVE-2013-3587",
@@ -4231,7 +4231,7 @@
       },
       {
         "id": "POODLE_SSL",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2014-3566",
@@ -4240,14 +4240,14 @@
       },
       {
         "id": "fallback_SCSV",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "no protocol below TLS 1.2 offered"
       },
       {
         "id": "SWEET32",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2016-2183 CVE-2016-6329",
@@ -4256,7 +4256,7 @@
       },
       {
         "id": "FREAK",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2015-0204",
@@ -4265,7 +4265,7 @@
       },
       {
         "id": "DROWN",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2016-0800 CVE-2016-0703",
@@ -4274,7 +4274,7 @@
       },
       {
         "id": "DROWN_hint",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "cve": "CVE-2016-0800 CVE-2016-0703",
@@ -4283,7 +4283,7 @@
       },
       {
         "id": "LOGJAM",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2015-4000",
@@ -4292,7 +4292,7 @@
       },
       {
         "id": "LOGJAM-common_primes",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2015-4000",
@@ -4301,7 +4301,7 @@
       },
       {
         "id": "BEAST",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2011-3389",
@@ -4310,7 +4310,7 @@
       },
       {
         "id": "LUCKY13",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "LOW",
         "cve": "CVE-2013-0169",
@@ -4319,7 +4319,7 @@
       },
       {
         "id": "winshock",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2014-6321",
@@ -4328,7 +4328,7 @@
       },
       {
         "id": "RC4",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "cve": "CVE-2013-2566 CVE-2015-2808",
@@ -4337,322 +4337,322 @@
       },
       {
         "id": "clientsimulation-android_60",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305-OLD"
       },
       {
         "id": "clientsimulation-android_70",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
       },
       {
         "id": "clientsimulation-android_81",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
       },
       {
         "id": "clientsimulation-android_90",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-android_X",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-android_11",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-android_12",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-chrome_79_win10",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-chrome_101_win10",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-firefox_66_win81",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-firefox_100_win10",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-ie_6_xp",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "No connection"
       },
       {
         "id": "clientsimulation-ie_8_win7",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "No connection"
       },
       {
         "id": "clientsimulation-ie_8_xp",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "No connection"
       },
       {
         "id": "clientsimulation-ie_11_win7",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-SHA"
       },
       {
         "id": "clientsimulation-ie_11_win81",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-SHA"
       },
       {
         "id": "clientsimulation-ie_11_winphone81",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-SHA"
       },
       {
         "id": "clientsimulation-ie_11_win10",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
       },
       {
         "id": "clientsimulation-edge_15_win10",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
       },
       {
         "id": "clientsimulation-edge_101_win10_21h2",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-safari_121_ios_122",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
       },
       {
         "id": "clientsimulation-safari_130_osx_10146",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_CHACHA20_POLY1305_SHA256"
       },
       {
         "id": "clientsimulation-safari_154_osx_1231",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-java_7u25",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "No connection"
       },
       {
         "id": "clientsimulation-java_8u161",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
       },
       {
         "id": "clientsimulation-java1102",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-java1703",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_256_GCM_SHA384"
       },
       {
         "id": "clientsimulation-go_1178",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "clientsimulation-libressl_283",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305"
       },
       {
         "id": "clientsimulation-openssl_102e",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
       },
       {
         "id": "clientsimulation-openssl_110l",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305"
       },
       {
         "id": "clientsimulation-openssl_111d",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_256_GCM_SHA384"
       },
       {
         "id": "clientsimulation-openssl_303",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_256_GCM_SHA384"
       },
       {
         "id": "clientsimulation-apple_mail_16_0",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
       },
       {
         "id": "clientsimulation-thunderbird_91_9",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "TLSv1.3 TLS_AES_128_GCM_SHA256"
       },
       {
         "id": "rating_spec",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "SSL Labs's 'SSL Server Rating Guide' (version 2009q from 2020-01-30)"
       },
       {
         "id": "rating_doc",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "https://github.com/ssllabs/research/wiki/SSL-Server-Rating-Guide"
       },
       {
         "id": "protocol_support_score",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "100"
       },
       {
         "id": "protocol_support_score_weighted",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "30"
       },
       {
         "id": "key_exchange_score",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "90"
       },
       {
         "id": "key_exchange_score_weighted",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "27"
       },
       {
         "id": "cipher_strength_score",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "60"
       },
       {
         "id": "cipher_strength_score_weighted",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "24"
       },
       {
         "id": "final_score",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "81"
       },
       {
         "id": "overall_grade",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "OK",
         "finding": "A+"
       },
       {
         "id": "scanTime",
-        "ip": "www.economie.gouv.fr/141.101.90.99",
+        "ip": "www.economie.gouv.fr/141.101.90.97",
         "port": "443",
         "severity": "INFO",
         "finding": "583"
@@ -4670,7 +4670,7 @@
         },
         {
           "type": "cloudflare",
-          "url": "https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/if/ov2/av0/rcv0/0/vkjzv/0x4AAAAAAADnPIDROrmt1Wwj/light/normal",
+          "url": "https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/if/ov2/av0/rcv0/0/04a05/0x4AAAAAAADnPIDROrmt1Wwj/light/normal",
           "details": {
             "id": "cloudflare",
             "message": "Host files locally"
@@ -4680,10 +4680,10 @@
       "cookies": [
         {
           "name": "__cf_bm",
-          "value": "8lRV4o6ZEdVtbHczAocXwKyfu3O6ykREDt0w.RA.BOc-1705195491-1-AQknBOH5hq0FDsVAQJBQq5yTOC53h5Yut+R2TW18n2bmkJndZbDoFiVF3Jqh3UXGqRAXb6f+TnJPNm3S23kxoFE=",
+          "value": "kLtXt2rOCEpL_EpOPtpJnpKvU2QiA0CGrhDm04xS514-1705800322-1-AdcXJc6rvr/1j7IkOcH2RcZhhBO6k1FLSWdVTdUWUx0cm74VEzkqz8OnfIswPPK5AgR8y9k9O+1CenpjD6mYJM4=",
           "domain": ".economie.gouv.fr",
           "path": "/",
-          "expires": 1705197291.841821,
+          "expires": 1705802122.881086,
           "size": 152,
           "httpOnly": true,
           "secure": true,
@@ -4698,19 +4698,19 @@
         "alt-svc": "h3=\":443\"; ma=86400",
         "cache-control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
         "cf-mitigated": "challenge",
-        "cf-ray": "845214efa8347017-CDG",
+        "cf-ray": "848bc351bd30698e-CDG",
         "content-encoding": "br",
         "content-type": "text/html; charset=UTF-8",
         "cross-origin-embedder-policy": "require-corp",
         "cross-origin-opener-policy": "same-origin",
         "cross-origin-resource-policy": "same-origin",
-        "date": "Sun, 14 Jan 2024 01:24:51 GMT",
+        "date": "Sun, 21 Jan 2024 01:25:22 GMT",
         "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
         "origin-agent-cluster": "?1",
         "permissions-policy": "accelerometer=(),autoplay=(),browsing-topics=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),interest-cohort=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=()",
         "referrer-policy": "same-origin",
         "server": "cloudflare",
-        "set-cookie": "__cf_bm=8lRV4o6ZEdVtbHczAocXwKyfu3O6ykREDt0w.RA.BOc-1705195491-1-AQknBOH5hq0FDsVAQJBQq5yTOC53h5Yut+R2TW18n2bmkJndZbDoFiVF3Jqh3UXGqRAXb6f+TnJPNm3S23kxoFE=; path=/; expires=Sun, 14-Jan-24 01:54:51 GMT; domain=.economie.gouv.fr; HttpOnly; Secure; SameSite=None",
+        "set-cookie": "__cf_bm=kLtXt2rOCEpL_EpOPtpJnpKvU2QiA0CGrhDm04xS514-1705800322-1-AdcXJc6rvr/1j7IkOcH2RcZhhBO6k1FLSWdVTdUWUx0cm74VEzkqz8OnfIswPPK5AgR8y9k9O+1CenpjD6mYJM4=; path=/; expires=Sun, 21-Jan-24 01:55:22 GMT; domain=.economie.gouv.fr; HttpOnly; Secure; SameSite=None",
         "strict-transport-security": "max-age=15552000; includeSubDomains; preload",
         "vary": "Accept-Encoding",
         "x-content-type-options": "nosniff",
@@ -4719,7 +4719,7 @@
       "endpoints": [
         {
           "hostname": "www.economie.gouv.fr",
-          "ip": "141.101.90.97",
+          "ip": "141.101.90.99",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -4773,7 +4773,7 @@
         },
         {
           "hostname": "challenges.cloudflare.com",
-          "ip": "104.17.3.184",
+          "ip": "104.17.2.184",
           "geoip": {
             "registered_country": {
               "geoname_id": 6252001,
@@ -5041,7 +5041,7 @@
     "zap": {
       "@programName": "ZAP",
       "@version": "2.14.0",
-      "@generated": "Sun, 14 Jan 2024 01:24:13",
+      "@generated": "Sun, 21 Jan 2024 01:24:44",
       "site": [
         {
           "@name": "https://www.economie.gouv.fr",
@@ -5153,6 +5153,45 @@
     },
     "nuclei": [
       {
+        "template": "dns/nameserver-fingerprint.yaml",
+        "template-url": "https://templates.nuclei.sh/public/nameserver-fingerprint",
+        "template-id": "nameserver-fingerprint",
+        "template-path": "/home/runner/nuclei-templates/dns/nameserver-fingerprint.yaml",
+        "info": {
+          "name": "NS Record Detection",
+          "author": [
+            "pdteam"
+          ],
+          "tags": [
+            "dns",
+            "ns"
+          ],
+          "description": "An NS record was detected. An NS record delegates a subdomain to a set of name servers.",
+          "severity": "info",
+          "metadata": {
+            "max-request": 1
+          },
+          "classification": {
+            "cve-id": null,
+            "cwe-id": [
+              "cwe-200"
+            ]
+          }
+        },
+        "type": "dns",
+        "host": "www.economie.gouv.fr.",
+        "matched-at": "www.economie.gouv.fr",
+        "extracted-results": [
+          "dns1.impots.gouv.fr.",
+          "dns3.finances.gouv.fr.",
+          "dns2.finances.gouv.fr.",
+          "dns2.impots.gouv.fr.",
+          "dns1.finances.gouv.fr."
+        ],
+        "timestamp": "2024-01-21T01:35:55.293918003Z",
+        "matcher-status": true
+      },
+      {
         "template": "dns/dns-saas-service-detection.yaml",
         "template-url": "https://templates.nuclei.sh/public/dns-saas-service-detection",
         "template-id": "dns-saas-service-detection",
@@ -5184,46 +5223,7 @@
         "extracted-results": [
           "economie.gouv.fr."
         ],
-        "timestamp": "2024-01-14T01:35:23.793323708Z",
-        "matcher-status": true
-      },
-      {
-        "template": "dns/nameserver-fingerprint.yaml",
-        "template-url": "https://templates.nuclei.sh/public/nameserver-fingerprint",
-        "template-id": "nameserver-fingerprint",
-        "template-path": "/home/runner/nuclei-templates/dns/nameserver-fingerprint.yaml",
-        "info": {
-          "name": "NS Record Detection",
-          "author": [
-            "pdteam"
-          ],
-          "tags": [
-            "dns",
-            "ns"
-          ],
-          "description": "An NS record was detected. An NS record delegates a subdomain to a set of name servers.",
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          },
-          "classification": {
-            "cve-id": null,
-            "cwe-id": [
-              "cwe-200"
-            ]
-          }
-        },
-        "type": "dns",
-        "host": "www.economie.gouv.fr.",
-        "matched-at": "www.economie.gouv.fr",
-        "extracted-results": [
-          "dns2.finances.gouv.fr.",
-          "dns1.impots.gouv.fr.",
-          "dns2.impots.gouv.fr.",
-          "dns1.finances.gouv.fr.",
-          "dns3.finances.gouv.fr."
-        ],
-        "timestamp": "2024-01-14T01:35:23.802931146Z",
+        "timestamp": "2024-01-21T01:35:55.376147976Z",
         "matcher-status": true
       },
       {
@@ -5259,11 +5259,11 @@
         "host": "www.economie.gouv.fr.",
         "matched-at": "www.economie.gouv.fr",
         "extracted-results": [
-          "certigna.com",
           "sectigo.com",
+          "certigna.com",
           "letsencrypt.org"
         ],
-        "timestamp": "2024-01-14T01:35:23.860430353Z",
+        "timestamp": "2024-01-21T01:35:55.395207486Z",
         "matcher-status": true
       },
       {
@@ -5302,7 +5302,7 @@
         "extracted-results": [
           "10 relaismsg.finances.gouv.fr."
         ],
-        "timestamp": "2024-01-14T01:35:24.047966771Z",
+        "timestamp": "2024-01-21T01:35:55.455888761Z",
         "matcher-status": true
       },
       {
@@ -5338,10 +5338,10 @@
         "host": "www.economie.gouv.fr.",
         "matched-at": "www.economie.gouv.fr",
         "extracted-results": [
-          "\"google-site-verification=XWEo-slGE076bbc_Gfn-qHL7KfiY67ct9Fs6j8DFjhU\"",
-          "\"v=spf1 redirect=_spf.prd.finances.gouv.fr\""
+          "\"v=spf1 redirect=_spf.prd.finances.gouv.fr\"",
+          "\"google-site-verification=XWEo-slGE076bbc_Gfn-qHL7KfiY67ct9Fs6j8DFjhU\""
         ],
-        "timestamp": "2024-01-14T01:35:24.803196584Z",
+        "timestamp": "2024-01-21T01:35:56.5621981Z",
         "matcher-status": true
       },
       {
@@ -5372,46 +5372,7 @@
         "host": "https://www.economie.gouv.fr",
         "matched-at": "https://www.economie.gouv.fr",
         "ip": "141.101.90.99",
-        "timestamp": "2024-01-14T01:35:39.459615821Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.economie.gouv.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/misconfiguration/httponly-cookie-detect.yaml",
-        "template-url": "https://templates.nuclei.sh/public/httponly-cookie-detect",
-        "template-id": "httponly-cookie-detect",
-        "template-path": "/home/runner/nuclei-templates/http/misconfiguration/httponly-cookie-detect.yaml",
-        "info": {
-          "name": "HttpOnly Cookie - Detect",
-          "author": [
-            "mr. bobo hp"
-          ],
-          "tags": [
-            "misconfig",
-            "http",
-            "cookie",
-            "generic"
-          ],
-          "description": "Checks whether cookies in the HTTP response contain the HttpOnly attribute. If the HttpOnly flag is set, it means that the cookie is HTTP-only\n",
-          "reference": [
-            "https://stackoverflow.com/questions/4316539/how-do-i-test-httponly-cookie-flag"
-          ],
-          "severity": "info",
-          "metadata": {
-            "max-request": 1,
-            "verified": true
-          },
-          "classification": {
-            "cve-id": null,
-            "cwe-id": null,
-            "cvss-metrics": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
-          }
-        },
-        "type": "http",
-        "host": "https://www.economie.gouv.fr",
-        "matched-at": "https://www.economie.gouv.fr",
-        "ip": "141.101.90.99",
-        "timestamp": "2024-01-14T01:35:39.460249467Z",
+        "timestamp": "2024-01-21T01:36:10.634817685Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.economie.gouv.fr'",
         "matcher-status": true
       },
@@ -5438,7 +5399,7 @@
         "host": "https://www.economie.gouv.fr",
         "matched-at": "https://www.economie.gouv.fr",
         "ip": "141.101.90.99",
-        "timestamp": "2024-01-14T01:36:08.603657662Z",
+        "timestamp": "2024-01-21T01:36:40.267141594Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.economie.gouv.fr'",
         "matcher-status": true
       },
@@ -5475,7 +5436,7 @@
         "host": "https://www.economie.gouv.fr",
         "matched-at": "https://www.economie.gouv.fr",
         "ip": "141.101.90.99",
-        "timestamp": "2024-01-14T01:36:19.883893556Z",
+        "timestamp": "2024-01-21T01:36:51.438508091Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.economie.gouv.fr'",
         "matcher-status": true
       },
@@ -5512,7 +5473,7 @@
         "host": "https://www.economie.gouv.fr",
         "matched-at": "https://www.economie.gouv.fr",
         "ip": "141.101.90.99",
-        "timestamp": "2024-01-14T01:36:19.883937317Z",
+        "timestamp": "2024-01-21T01:36:51.438571148Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.economie.gouv.fr'",
         "matcher-status": true
       },
@@ -5549,7 +5510,7 @@
         "host": "https://www.economie.gouv.fr",
         "matched-at": "https://www.economie.gouv.fr",
         "ip": "141.101.90.99",
-        "timestamp": "2024-01-14T01:36:19.883955871Z",
+        "timestamp": "2024-01-21T01:36:51.438596826Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.economie.gouv.fr'",
         "matcher-status": true
       },
@@ -5589,7 +5550,7 @@
         "host": "https://www.economie.gouv.fr",
         "matched-at": "https://www.economie.gouv.fr/",
         "ip": "141.101.90.99",
-        "timestamp": "2024-01-14T01:36:49.452988247Z",
+        "timestamp": "2024-01-21T01:37:21.095351615Z",
         "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: www.economie.gouv.fr' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.economie.gouv.fr/'",
         "matcher-status": true
       },
@@ -5620,7 +5581,7 @@
           "DHIMYOTIS"
         ],
         "ip": "141.101.90.99",
-        "timestamp": "2024-01-14T01:37:58.056987725Z",
+        "timestamp": "2024-01-21T01:40:34.586415466Z",
         "matcher-status": true
       },
       {
@@ -5651,7 +5612,7 @@
           "www.economie.gouv.fr"
         ],
         "ip": "141.101.90.99",
-        "timestamp": "2024-01-14T01:37:58.057113037Z",
+        "timestamp": "2024-01-21T01:40:34.586575684Z",
         "matcher-status": true
       },
       {
@@ -5682,7 +5643,7 @@
           "tls12"
         ],
         "ip": "141.101.90.99",
-        "timestamp": "2024-01-14T01:38:19.525609579Z",
+        "timestamp": "2024-01-21T01:40:36.007392515Z",
         "matcher-status": true
       },
       {
@@ -5713,7 +5674,7 @@
           "tls13"
         ],
         "ip": "141.101.90.99",
-        "timestamp": "2024-01-14T01:38:20.499049893Z",
+        "timestamp": "2024-01-21T01:40:36.971362751Z",
         "matcher-status": true
       }
     ],
@@ -5721,7 +5682,7 @@
       {
         "requestedUrl": "https://www.economie.gouv.fr/",
         "finalUrl": "https://www.economie.gouv.fr/",
-        "fetchTime": "2024-01-14T01:24:27.368Z",
+        "fetchTime": "2024-01-21T01:24:58.664Z",
         "runWarnings": [],
         "categories": {
           "performance": {
@@ -5732,7 +5693,7 @@
               "snapshot"
             ],
             "id": "performance",
-            "score": 0.45543060302734373
+            "score": 0.45324859619140623
           },
           "accessibility": {
             "title": "Accessibility",
@@ -5784,53 +5745,53 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 7680,
+            "numericValue": 7707,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 2525,
-                  "firstMeaningfulPaint": 3352,
-                  "largestContentfulPaint": 7401,
-                  "interactive": 7680,
-                  "speedIndex": 4200,
-                  "totalBlockingTime": 290,
-                  "maxPotentialFID": 250,
-                  "cumulativeLayoutShift": 0.3157395833333333,
-                  "cumulativeLayoutShiftMainFrame": 0.3157395833333333,
-                  "totalCumulativeLayoutShift": 0.3157395833333333,
+                  "firstContentfulPaint": 2576,
+                  "firstMeaningfulPaint": 3649,
+                  "largestContentfulPaint": 6580,
+                  "interactive": 7707,
+                  "speedIndex": 4467,
+                  "totalBlockingTime": 487,
+                  "maxPotentialFID": 345,
+                  "cumulativeLayoutShift": 0.1994365234375,
+                  "cumulativeLayoutShiftMainFrame": 0.1994365234375,
+                  "totalCumulativeLayoutShift": 0.1994365234375,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 253499175,
+                  "observedTimeOriginTs": 314778436,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 253499175,
-                  "observedFirstPaint": 898,
-                  "observedFirstPaintTs": 254396686,
-                  "observedFirstContentfulPaint": 898,
-                  "observedFirstContentfulPaintTs": 254396686,
-                  "observedFirstContentfulPaintAllFrames": 898,
-                  "observedFirstContentfulPaintAllFramesTs": 254396686,
-                  "observedFirstMeaningfulPaint": 1110,
-                  "observedFirstMeaningfulPaintTs": 254609115,
-                  "observedLargestContentfulPaint": 1110,
-                  "observedLargestContentfulPaintTs": 254609115,
-                  "observedLargestContentfulPaintAllFrames": 1110,
-                  "observedLargestContentfulPaintAllFramesTs": 254609115,
-                  "observedTraceEnd": 3496,
-                  "observedTraceEndTs": 256994844,
-                  "observedLoad": 1187,
-                  "observedLoadTs": 254685910,
-                  "observedDomContentLoaded": 1033,
-                  "observedDomContentLoadedTs": 254531849,
-                  "observedCumulativeLayoutShift": 0.3157395833333333,
-                  "observedCumulativeLayoutShiftMainFrame": 0.3157395833333333,
-                  "observedTotalCumulativeLayoutShift": 0.3157395833333333,
-                  "observedFirstVisualChange": 907,
-                  "observedFirstVisualChangeTs": 254406175,
-                  "observedLastVisualChange": 1723,
-                  "observedLastVisualChangeTs": 255222175,
-                  "observedSpeedIndex": 1211,
-                  "observedSpeedIndexTs": 254709811
+                  "observedNavigationStartTs": 314778436,
+                  "observedFirstPaint": 950,
+                  "observedFirstPaintTs": 315728669,
+                  "observedFirstContentfulPaint": 950,
+                  "observedFirstContentfulPaintTs": 315728669,
+                  "observedFirstContentfulPaintAllFrames": 950,
+                  "observedFirstContentfulPaintAllFramesTs": 315728669,
+                  "observedFirstMeaningfulPaint": 1155,
+                  "observedFirstMeaningfulPaintTs": 315932944,
+                  "observedLargestContentfulPaint": 1135,
+                  "observedLargestContentfulPaintTs": 315913118,
+                  "observedLargestContentfulPaintAllFrames": 1135,
+                  "observedLargestContentfulPaintAllFramesTs": 315913118,
+                  "observedTraceEnd": 3503,
+                  "observedTraceEndTs": 318281859,
+                  "observedLoad": 1196,
+                  "observedLoadTs": 315974226,
+                  "observedDomContentLoaded": 1072,
+                  "observedDomContentLoadedTs": 315850735,
+                  "observedCumulativeLayoutShift": 0.1994365234375,
+                  "observedCumulativeLayoutShiftMainFrame": 0.1994365234375,
+                  "observedTotalCumulativeLayoutShift": 0.1994365234375,
+                  "observedFirstVisualChange": 942,
+                  "observedFirstVisualChangeTs": 315720436,
+                  "observedLastVisualChange": 1758,
+                  "observedLastVisualChangeTs": 316536436,
+                  "observedSpeedIndex": 1238,
+                  "observedSpeedIndexTs": 316016192
                 },
                 {
                   "lcpInvalidated": false
@@ -5852,19 +5813,19 @@
                   "numScripts": 45,
                   "numStylesheets": 71,
                   "numFonts": 5,
-                  "numTasks": 2119,
-                  "numTasksOver10ms": 10,
-                  "numTasksOver25ms": 6,
+                  "numTasks": 1986,
+                  "numTasksOver10ms": 12,
+                  "numTasksOver25ms": 5,
                   "numTasksOver50ms": 3,
-                  "numTasksOver100ms": 0,
+                  "numTasksOver100ms": 2,
                   "numTasksOver500ms": 0,
-                  "rtt": 5.788,
-                  "throughput": 24154747.186446436,
-                  "maxRtt": 89.369,
-                  "maxServerLatency": 119.807,
-                  "totalByteWeight": 1282248,
-                  "totalTaskTime": 583.9349999999981,
-                  "mainDocumentTransferSize": 18948
+                  "rtt": 5.225000000000001,
+                  "throughput": 26939488.67997722,
+                  "maxRtt": 89.65799999999999,
+                  "maxServerLatency": 118.736,
+                  "totalByteWeight": 1293688,
+                  "totalTaskTime": 807.7889999999935,
+                  "mainDocumentTransferSize": 19019
                 }
               ]
             }
@@ -5883,6 +5844,7 @@
     "betagouv": null,
     "ecoindex": null,
     "sonarcloud": null,
+    "dsfr": null,
     "summary": {
       "httpGrade": "B-",
       "testsslExpireSoon": false,
@@ -5892,7 +5854,7 @@
       "cookiesCount": 1,
       "trackersGrade": "B",
       "trackersCount": 2,
-      "lighthouse_performance": 0.45543060302734373,
+      "lighthouse_performance": 0.45324859619140623,
       "lighthouse_performanceGrade": "D",
       "lighthouse_accessibility": 1,
       "lighthouse_accessibilityGrade": "A",
