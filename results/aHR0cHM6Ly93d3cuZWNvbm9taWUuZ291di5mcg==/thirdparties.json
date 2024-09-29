@@ -10,7 +10,7 @@
     },
     {
       "type": "cloudflare",
-      "url": "https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/g/turnstile/if/ov2/av0/rcv0/0/1ckul/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/normal/auto/",
+      "url": "https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/g/turnstile/if/ov2/av0/rcv0/0/680ty/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/normal/auto/",
       "details": {
         "id": "cloudflare",
         "message": "Host files locally"
@@ -20,10 +20,10 @@
   "cookies": [
     {
       "name": "__cf_bm",
-      "value": "WftQzSTLSaoNS2vGGV9Io0Y3xOGLeAqBl88yN2ikE90-1726969800-1.0.1.1-zkORkpT61M3nfU6Dy9xs1jcpQS4M0H5mQ7Y7P9rPGpZKRVZOxVquZLGcjjeRgMkqpTeXbGBiIbmIpvjo2VeVug",
+      "value": "k927OC0.Aq4RBpzqHug5fFnUmcAvqNvpCMAs_TCkkHo-1727574728-1.0.1.1-udhfNQlUMW4ID_YySrASOoDCjx8ziwi64x6aqBeOXv8qt6_6zf97e3PA9h9tSeZrMr5aYqoambbCyJGLiuOvAA",
       "domain": ".economie.gouv.fr",
       "path": "/",
-      "expires": 1726971600.490033,
+      "expires": 1727576528.939931,
       "size": 156,
       "httpOnly": true,
       "secure": true,
@@ -36,23 +36,24 @@
   ],
   "headers": {
     "accept-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+    "alt-svc": "h3=\":443\"; ma=86400",
     "cache-control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
-    "cf-chl-out": "dsPgQaHuJeTf8CdgIouS8g9J/vqi3uPJio656lLmLE+ehnUaTIyVrK1Jcxavw0pW7PmVtGfuYqX0fdKyHFd2YT/QQQQvtF2cKKcSRuUh0RXOeDkjsGKoleP8+bGtEDhKsiH0eVW62rD+1pJiKloWYA==$KV3GyoXRSSVEJh2PHkXVQQ==",
+    "cf-chl-out": "MBAXzJgL6bTyBeJCtuM4+GZwE8dzCVinJuBwOGUrg4Qwl74ZNRhEGXjWEXX4uq9RA9jrvuaI85XmjCrjUc2oEqD/4jeT6rUWohhPLlHaSygZ7TzeYgFgIYM4mfCxMAIDZia7v7WHbq9/paramXdPPQ==$Htp45rvOMTW8FD/ryV/kIQ==",
     "cf-mitigated": "challenge",
-    "cf-ray": "8c6ea444ab7bcc47-MAD",
+    "cf-ray": "8ca855075dd97030-CDG",
     "content-encoding": "br",
     "content-type": "text/html; charset=UTF-8",
     "critical-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
     "cross-origin-embedder-policy": "require-corp",
     "cross-origin-opener-policy": "same-origin",
     "cross-origin-resource-policy": "same-origin",
-    "date": "Sun, 22 Sep 2024 01:50:00 GMT",
+    "date": "Sun, 29 Sep 2024 01:52:08 GMT",
     "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
     "origin-agent-cluster": "?1",
     "permissions-policy": "accelerometer=(),autoplay=(),browsing-topics=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),interest-cohort=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=()",
     "referrer-policy": "same-origin",
     "server": "cloudflare",
-    "set-cookie": "__cf_bm=WftQzSTLSaoNS2vGGV9Io0Y3xOGLeAqBl88yN2ikE90-1726969800-1.0.1.1-zkORkpT61M3nfU6Dy9xs1jcpQS4M0H5mQ7Y7P9rPGpZKRVZOxVquZLGcjjeRgMkqpTeXbGBiIbmIpvjo2VeVug; path=/; expires=Sun, 22-Sep-24 02:20:00 GMT; domain=.economie.gouv.fr; HttpOnly; Secure; SameSite=None",
+    "set-cookie": "__cf_bm=k927OC0.Aq4RBpzqHug5fFnUmcAvqNvpCMAs_TCkkHo-1727574728-1.0.1.1-udhfNQlUMW4ID_YySrASOoDCjx8ziwi64x6aqBeOXv8qt6_6zf97e3PA9h9tSeZrMr5aYqoambbCyJGLiuOvAA; path=/; expires=Sun, 29-Sep-24 02:22:08 GMT; domain=.economie.gouv.fr; HttpOnly; Secure; SameSite=None",
     "strict-transport-security": "max-age=15552000; includeSubDomains; preload",
     "vary": "Accept-Encoding",
     "x-content-options": "nosniff",
@@ -62,7 +63,7 @@
   "endpoints": [
     {
       "hostname": "www.economie.gouv.fr",
-      "ip": "141.101.90.96",
+      "ip": "141.101.90.97",
       "geoip": {
         "registered_country": {
           "geoname_id": 6252001,
@@ -82,7 +83,7 @@
     },
     {
       "hostname": "challenges.cloudflare.com",
-      "ip": "104.18.94.41",
+      "ip": "104.18.95.41",
       "geoip": {
         "registered_country": {
           "geoname_id": 6252001,
