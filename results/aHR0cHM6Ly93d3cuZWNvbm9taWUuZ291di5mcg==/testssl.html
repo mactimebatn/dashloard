@@ -20,14 +20,14 @@
 #####################################################################</span>
 
   Using <i>OpenSSL 1.0.2-bad </i>  [~183 ciphers]
-  on fv-az661-857:/home/testssl/bin/openssl.Linux.x86_64
+  on fv-az787-514:/home/testssl/bin/openssl.Linux.x86_64
 
-<span style="font-weight:bold;">Testing all IPv4 addresses (port 443): </span>141.101.90.99 141.101.90.98 141.101.90.96 141.101.90.97
+<span style="font-weight:bold;">Testing all IPv4 addresses (port 443): </span>141.101.90.98 141.101.90.99 141.101.90.96 141.101.90.97
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2025-01-05 01:52:35                --&gt;&gt; 141.101.90.99:443 (www.economie.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2025-01-12 01:54:43                --&gt;&gt; 141.101.90.98:443 (www.economie.gouv.fr) &lt;&lt;--</span>
 
- Further IP addresses:   141.101.90.96 141.101.90.97 141.101.90.98 
- rDNS (141.101.90.99):   --
+ Further IP addresses:   141.101.90.99 141.101.90.97 141.101.90.96 
+ rDNS (141.101.90.98):   --
  Service detected:       HTTP
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing protocols </span><u>via sockets except NPN+ALPN </u>
@@ -91,7 +91,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
                               &quot;compress_certificate/#27&quot;
 <span style="font-weight:bold;"> Session Ticket RFC 5077 hint </span>64800 seconds, session tickets keys seems to be rotated &lt; daily
 <span style="font-weight:bold;"> SSL Session ID support       </span>yes
-<span style="font-weight:bold;"> Session Resumption           </span>Tickets no, ID: no
+<span style="font-weight:bold;"> Session Resumption           </span>Tickets: yes, ID: no
 <span style="font-weight:bold;"> TLS clock skew</span>               Random values, no fingerprinting possible 
 <span style="font-weight:bold;"> Certificate Compression      </span>0002/Brotli
 <span style="font-weight:bold;"> Client Authentication        </span>none
@@ -107,7 +107,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">277 &gt;= 60 days</span> (2024-10-09 22:00 --&gt; 2025-10-09 21:59)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">270 &gt;= 60 days</span> (2024-10-09 22:00 --&gt; 2025-10-09 21:59)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>http://crl.dhimyotis.com/servicesca.crl
                               http://crl.certigna.fr/servicesca.crl
@@ -129,7 +129,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  403 Forbidden
 <span style="font-weight:bold;"> HTTP clock skew              </span>0 sec from localtime
-<span style="font-weight:bold;"> IPv4 address in header       </span><span style="color:#c05600;">Set-Cookie: __cf_bm=k_udApd4rhHAWRInbtrW9SxZ7njmEOEeG47cre26qGY-1736042008-1.0.1.1-t0lnZGW9FgNNKLhmJvgLZczJn4V.5KY2LEw_gRQrU0x9ekfeXlloNjp9GCYMbMKozMteS6otffHwfw8czwjOAw; path=/; expires=Sun, 05-Jan-25 02:23:28 GMT; domain=.economie.gouv.fr; HttpOnly; Secure; SameSite=None</span>
+<span style="font-weight:bold;"> IPv4 address in header       </span><span style="color:#c05600;">Set-Cookie: __cf_bm=ImHjjJx28RoTgIBAskJC9GZFMSkuaVtQ9t3T7.IBlPw-1736646941-1.0.1.1-pr_RO6ZKwLtWxPHSC._bi.wnvM4ZarNt.eoR1mMQHqp.2ew5KDPtTDVdACf6vF77T2EW3J309338ZqiGZwBmWA; path=/; expires=Sun, 12-Jan-25 02:25:41 GMT; domain=.economie.gouv.fr; HttpOnly; Secure; SameSite=None</span>
                               (check if it&apos;s your IP address or e.g. a cluster IP)
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#008817;">180 days</span>=15552000 s<span style="color:#008817;">, includeSubDomains</span><span style="color:#008817;">, preload</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
@@ -223,13 +223,13 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>81
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2025-01-05 01:55:03 [ 150s] --&gt;&gt; 141.101.90.99:443 (www.economie.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2025-01-12 01:57:27 [ 167s] --&gt;&gt; 141.101.90.98:443 (www.economie.gouv.fr) &lt;&lt;--</span>
 
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2025-01-05 01:55:03                --&gt;&gt; 141.101.90.98:443 (www.economie.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2025-01-12 01:57:27                --&gt;&gt; 141.101.90.99:443 (www.economie.gouv.fr) &lt;&lt;--</span>
 
- Further IP addresses:   141.101.90.99 141.101.90.96 141.101.90.97 
- rDNS (141.101.90.98):   --
+ Further IP addresses:   141.101.90.97 141.101.90.98 141.101.90.96 
+ rDNS (141.101.90.99):   --
  Service detected:       HTTP
 
 <span style="text-decoration:underline;font-weight:bold;"> Testing protocols </span><u>via sockets except NPN+ALPN </u>
@@ -293,7 +293,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
                               &quot;compress_certificate/#27&quot;
 <span style="font-weight:bold;"> Session Ticket RFC 5077 hint </span>64800 seconds, session tickets keys seems to be rotated &lt; daily
 <span style="font-weight:bold;"> SSL Session ID support       </span>yes
-<span style="font-weight:bold;"> Session Resumption           </span>Tickets no, ID: no
+<span style="font-weight:bold;"> Session Resumption           </span>Tickets: yes, ID: no
 <span style="font-weight:bold;"> TLS clock skew</span>               Random values, no fingerprinting possible 
 <span style="font-weight:bold;"> Certificate Compression      </span>0002/Brotli
 <span style="font-weight:bold;"> Client Authentication        </span>none
@@ -309,7 +309,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">277 &gt;= 60 days</span> (2024-10-09 22:00 --&gt; 2025-10-09 21:59)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">270 &gt;= 60 days</span> (2024-10-09 22:00 --&gt; 2025-10-09 21:59)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>http://crl.dhimyotis.com/servicesca.crl
                               http://crl.certigna.fr/servicesca.crl
@@ -331,7 +331,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  403 Forbidden
 <span style="font-weight:bold;"> HTTP clock skew              </span>0 sec from localtime
-<span style="font-weight:bold;"> IPv4 address in header       </span><span style="color:#c05600;">Set-Cookie: __cf_bm=3EC7oulgqzL65qYu2Iw1kp0lPSnErajvbDvzkzWx65A-1736042155-1.0.1.1-twMNY3wIzTXUoq6QAKfq8PbU6BCM8Krnrr9vN4y4_TTR.vwmK6mIVitSgQuf.OJGhVwSwcTKyItSXMZdBKYnCg; path=/; expires=Sun, 05-Jan-25 02:25:55 GMT; domain=.economie.gouv.fr; HttpOnly; Secure; SameSite=None</span>
+<span style="font-weight:bold;"> IPv4 address in header       </span><span style="color:#c05600;">Set-Cookie: __cf_bm=YT_4aM_wKhbeiWw.ktGgsOD5ufrwH2dWKhF0pkRf5n0-1736647103-1.0.1.1-ti_KwlamQ9AnwBtCnno.BHGZplsyf1nH0.gyGteJ4lghFYb0upYnxBFh28j9U2FRkkOal.MW4MowV.FRJs6_Tg; path=/; expires=Sun, 12-Jan-25 02:28:23 GMT; domain=.economie.gouv.fr; HttpOnly; Secure; SameSite=None</span>
                               (check if it&apos;s your IP address or e.g. a cluster IP)
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#008817;">180 days</span>=15552000 s<span style="color:#008817;">, includeSubDomains</span><span style="color:#008817;">, preload</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
@@ -353,7 +353,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="font-weight:bold;"> Heartbleed</span> (CVE-2014-0160)                <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>, no heartbeat extension
 <span style="font-weight:bold;"> CCS</span> (CVE-2014-0224)                       <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
-<span style="font-weight:bold;"> Ticketbleed</span> (CVE-2016-9244), experiment.  <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>, reply empty
+<span style="font-weight:bold;"> Ticketbleed</span> (CVE-2016-9244), experiment.  <span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
 <span style="font-weight:bold;"> ROBOT                                     </span><span style="color:#008817;font-weight:bold;">not vulnerable (OK)</span>
 <span style="font-weight:bold;"> Secure Renegotiation (RFC 5746)           </span><span style="color:#008817;font-weight:bold;">supported (OK)</span>
 <span style="font-weight:bold;"> Secure Client-Initiated Renegotiation     </span><span style="color:#008817;">not vulnerable (OK)</span>
@@ -425,10 +425,10 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>81
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2025-01-05 01:57:34 [ 301s] --&gt;&gt; 141.101.90.98:443 (www.economie.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2025-01-12 02:00:09 [ 329s] --&gt;&gt; 141.101.90.99:443 (www.economie.gouv.fr) &lt;&lt;--</span>
 
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2025-01-05 01:57:34                --&gt;&gt; 141.101.90.96:443 (www.economie.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2025-01-12 02:00:09                --&gt;&gt; 141.101.90.96:443 (www.economie.gouv.fr) &lt;&lt;--</span>
 
  Further IP addresses:   141.101.90.99 141.101.90.97 141.101.90.98 
  rDNS (141.101.90.96):   --
@@ -511,7 +511,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">277 &gt;= 60 days</span> (2024-10-09 22:00 --&gt; 2025-10-09 21:59)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">270 &gt;= 60 days</span> (2024-10-09 22:00 --&gt; 2025-10-09 21:59)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>http://crl.dhimyotis.com/servicesca.crl
                               http://crl.certigna.fr/servicesca.crl
@@ -533,7 +533,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  403 Forbidden
 <span style="font-weight:bold;"> HTTP clock skew              </span>0 sec from localtime
-<span style="font-weight:bold;"> IPv4 address in header       </span><span style="color:#c05600;">Set-Cookie: __cf_bm=iCZbp5M1d0baym_xOWKEs8iuO9wr06oes70A0hdA6CE-1736042305-1.0.1.1-yoCgV12JASmg2PXpatJzpamG7u9mbQiTF.jIoPs2T.m1oeAFq9w2d3UHIqsrTM9q.uKhX46c0l2jGMABZqqrCw; path=/; expires=Sun, 05-Jan-25 02:28:25 GMT; domain=.economie.gouv.fr; HttpOnly; Secure; SameSite=None</span>
+<span style="font-weight:bold;"> IPv4 address in header       </span><span style="color:#c05600;">Set-Cookie: __cf_bm=rk3NXq8GAcGtk96jDxjoFEkG.NwSzoubv_sUBMTcST8-1736647266-1.0.1.1-8alZhhw0inWBgUFsIF2oSnjXju9T_hvP0JbHKd0ro.iLGHlZH6zF7e4EeN4nINHtYSLTx76mfEF4xRLgWZQrWg; path=/; expires=Sun, 12-Jan-25 02:31:06 GMT; domain=.economie.gouv.fr; HttpOnly; Secure; SameSite=None</span>
                               (check if it&apos;s your IP address or e.g. a cluster IP)
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#008817;">180 days</span>=15552000 s<span style="color:#008817;">, includeSubDomains</span><span style="color:#008817;">, preload</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
@@ -627,12 +627,12 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>81
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2025-01-05 02:00:00 [ 447s] --&gt;&gt; 141.101.90.96:443 (www.economie.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2025-01-12 02:02:52 [ 492s] --&gt;&gt; 141.101.90.96:443 (www.economie.gouv.fr) &lt;&lt;--</span>
 
 -----------------------------------------------------
-<span style="color:white;background-color:black;"> Start 2025-01-05 02:00:00                --&gt;&gt; 141.101.90.97:443 (www.economie.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Start 2025-01-12 02:02:52                --&gt;&gt; 141.101.90.97:443 (www.economie.gouv.fr) &lt;&lt;--</span>
 
- Further IP addresses:   141.101.90.99 141.101.90.96 141.101.90.98 
+ Further IP addresses:   141.101.90.99 141.101.90.98 141.101.90.96 
  rDNS (141.101.90.97):   --
  Service detected:       HTTP
 
@@ -697,7 +697,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
                               &quot;compress_certificate/#27&quot;
 <span style="font-weight:bold;"> Session Ticket RFC 5077 hint </span>64800 seconds, session tickets keys seems to be rotated &lt; daily
 <span style="font-weight:bold;"> SSL Session ID support       </span>yes
-<span style="font-weight:bold;"> Session Resumption           </span>Tickets: yes, ID: yes
+<span style="font-weight:bold;"> Session Resumption           </span>Tickets: yes, ID: no
 <span style="font-weight:bold;"> TLS clock skew</span>               Random values, no fingerprinting possible 
 <span style="font-weight:bold;"> Certificate Compression      </span>0002/Brotli
 <span style="font-weight:bold;"> Client Authentication        </span>none
@@ -713,7 +713,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Trust (hostname)             </span><span style="color:#008817;">Ok via SAN and CN</span> (SNI mandatory)
 <span style="font-weight:bold;"> Chain of trust</span>               <span style="color:#008817;">Ok   </span><span style="color:#cd00cd;"></span>
 <span style="font-weight:bold;"> EV cert</span> (experimental)       no 
-<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">277 &gt;= 60 days</span> (2024-10-09 22:00 --&gt; 2025-10-09 21:59)
+<span style="font-weight:bold;"> Certificate Validity (UTC)   </span><span style="color:#008817;">270 &gt;= 60 days</span> (2024-10-09 22:00 --&gt; 2025-10-09 21:59)
 <span style="font-weight:bold;"> ETS/&quot;eTLS&quot;</span>, visibility info  not present
 <span style="font-weight:bold;"> Certificate Revocation List  </span>http://crl.dhimyotis.com/servicesca.crl
                               http://crl.certigna.fr/servicesca.crl
@@ -735,7 +735,7 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 
 <span style="font-weight:bold;"> HTTP Status Code           </span>  403 Forbidden
 <span style="font-weight:bold;"> HTTP clock skew              </span>0 sec from localtime
-<span style="font-weight:bold;"> IPv4 address in header       </span><span style="color:#c05600;">Set-Cookie: __cf_bm=UNtmaf6S4AGkh.GfGbNb5yoP5Qjt2lSn5q4RGq.g2Zw-1736042452-1.0.1.1-jtqYEQ7K05qaMB6qY7KD8PD3czH8HyxiO47LBCMkWGWX3OhgAPhTb6.9fOzWMAWrgufJLidSTaaBEpkkzYHhfQ; path=/; expires=Sun, 05-Jan-25 02:30:52 GMT; domain=.economie.gouv.fr; HttpOnly; Secure; SameSite=None</span>
+<span style="font-weight:bold;"> IPv4 address in header       </span><span style="color:#c05600;">Set-Cookie: __cf_bm=Z310_bWul7AnzG5uV6B2z.SiwuRYMK7FNDBnUAF8jmo-1736647429-1.0.1.1-gQm9_2mdF9MU9_sjgUvMC9T7xlUzHtYHM78ypdWqD4aK0GgT8NiT0M2lMu_IKlgDPRYHch.MYfuuYdnAO7O.mw; path=/; expires=Sun, 12-Jan-25 02:33:49 GMT; domain=.economie.gouv.fr; HttpOnly; Secure; SameSite=None</span>
                               (check if it&apos;s your IP address or e.g. a cluster IP)
 <span style="font-weight:bold;"> Strict Transport Security    </span><span style="color:#008817;">180 days</span>=15552000 s<span style="color:#008817;">, includeSubDomains</span><span style="color:#008817;">, preload</span>
 <span style="font-weight:bold;"> Public Key Pinning           </span>--
@@ -829,10 +829,10 @@ Hexcode  Cipher Suite Name (OpenSSL)       KeyExch.   Encryption  Bits     Ciphe
 <span style="font-weight:bold;"> Final Score                  </span>81
 <span style="font-weight:bold;"> Overall Grade                </span><span style="color:#008817;font-weight:bold;">A+</span>
 
-<span style="color:white;background-color:black;"> Done 2025-01-05 02:02:27 [ 594s] --&gt;&gt; 141.101.90.97:443 (www.economie.gouv.fr) &lt;&lt;--</span>
+<span style="color:white;background-color:black;"> Done 2025-01-12 02:05:35 [ 655s] --&gt;&gt; 141.101.90.97:443 (www.economie.gouv.fr) &lt;&lt;--</span>
 
 -----------------------------------------------------
-<span style="font-weight:bold;">Done testing now all IP addresses (on port 443): </span>141.101.90.99 141.101.90.98 141.101.90.96 141.101.90.97
+<span style="font-weight:bold;">Done testing now all IP addresses (on port 443): </span>141.101.90.98 141.101.90.99 141.101.90.96 141.101.90.97
 
 </pre>
 </body>
